@@ -1,0 +1,15 @@
+{
+  "name": "vuepress-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "wenking",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.9.8"
+  },
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "serve": "vuepress dev docs --temp .temp"
+  }
+}
