@@ -1,6 +1,10 @@
+---
+title: AOP
+---
 
+[[toc]]
 
-### 基本概念
+## 基本概念
 
 aspect(切面): 被@aspect 注解修饰的类
 
@@ -50,7 +54,7 @@ public class AopTest9 {
 
 
 
-### 切入点定义
+## 切入点定义
 
 within(x):
 
@@ -112,6 +116,6 @@ target.class.getAnnotation(指定的注解类型) != null
 
 
 
-### Other
+## Other
 
 [参考博客](https://blog.csdn.net/cocoa_geforce/article/details/116796155)

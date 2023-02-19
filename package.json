@@ -1,15 +1,20 @@
 {
-  "name": "vuepress-starter",
+  "name": "king-note",
   "version": "1.0.0",
   "main": "index.js",
   "author": "wenking",
   "license": "MIT",
   "devDependencies": {
-    "vuepress": "^1.9.8"
+    "@vuepress/plugin-pwa": "^1.9.8",
+    "vuepress": "^1.9.8",
+    "vuepress-plugin-auto-sidebar": "^2.3.2"
   },
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "serve": "vuepress dev docs --temp .temp"
+  },
+  "dependencies": {
+    "moment": "^2.29.4"
   }
 }

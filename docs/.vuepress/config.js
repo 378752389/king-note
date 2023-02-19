@@ -1,42 +1,72 @@
+const moment = require('moment')
+const navConf = require('./conf/navConf')
+
 module.exports = {
     title: '文金的个人博客',
     description: '文金的个人博客',
 
-    // seo 相关配置
+
     head: [
         // http://favicon.io  favicon 搜索网站
         ['link', {rel: 'icon', href: '/favicon.ico'}],
+
+        // seo 相关配置
         ['meta', {name: 'author', content: '文金'}],
         ['meta', {name: 'keywords', content: 'vuepress, 个人博客, king'}]
     ],
 
-    lastUpdated: 'Last Updated', // string | boolean
 
+    // 导入插件
+    plugins: [
+        // 修改最后更新日期插件
+        [
+
+            '@vuepress/last-updated',
+            {
+                transformer: (timestamp, lang) => {
+                    // 不要忘了安装 moment
+                    const moment = require('moment')
+                    // moment.locale(lang)
+                    moment.locale('zh-CN')
+                    // return moment(timestamp).fromNow()
+                    return moment(timestamp).format('LLLL')
+                }
+            },
+
+        ],
+
+        [
+            "vuepress-plugin-auto-sidebar",
+            {
+                // options
+            }
+        ]
+
+        // 导入 pwa 插件
+        // 搜索 manifest icons generator  or  https://manifest-gen.netlify.app/
+        // [
+        //     '@vuepress/pwa',
+        //     {
+        //         serviceWorker: true,
+        //         updatePopup: {
+        //             message: '有新内容更新',
+        //             buttonText: '刷新'
+        //             // '/': {
+        //             //
+        //             // }
+        //         }
+        //     }
+        // ]
+    ],
 
 
     themeConfig: {
         logo: '/assets/img/logo.png',
 
-        nav: [
-            {text: 'Home', link: '/'},
-            {
-                text: 'Java',
-                items: [
-                    {text: 'JUC', link: '/java/juc/'},
-                    {text: 'JVM', link: '/java/jvm/'},
-                    {text: 'Spring', link: '/java/spring/'},
-                ]
-            },
-            {text: 'About', link: '/about/'},
-            {
-                text: 'Language',
-                items: [
-                    {text: 'Chinese', link: '/language/chinese/'},
-                    {text: 'Japanese', link: '/language/japanese/'}
-                ]
-            },
-            {text: 'External', link: 'https://google.com'},
-        ],
+        // 显示文章最后更新时间
+        lastUpdated: '更新时间', // string | boolean
+
+        nav: navConf,
 
         // 只有文章标题
         // sidebar: 'auto',
@@ -47,29 +77,5 @@ module.exports = {
         //     '/about/'
         // ],
 
-        sidebar: {
-
-            '/about/': [
-                ''
-            ],
-
-            // '/java/': [
-            //     'juc',
-            //     'jvm',
-            //     'spring'
-            // ],
-
-            '/java/spring/': [
-                '/',
-                'spring核心概念',
-                'spring生命周期',
-            ],
-
-            '/': [
-                ''
-            ]
-        }
-
-        // 最后更新时间
     }
 }

@@ -1,4 +1,7 @@
-### ****导入依赖****
+---
+title: 验证码
+---
+### 导入依赖
 
 ```xml
 <!-- https://mvnrepository.com/artifact/com.github.penggle/kaptcha -->

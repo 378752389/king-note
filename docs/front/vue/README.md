@@ -1,5 +1,3 @@
 ---
-title: linux环境搭建
+title: 笔记
 ---
-
-

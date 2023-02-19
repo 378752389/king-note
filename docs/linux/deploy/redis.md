@@ -24,22 +24,20 @@ cp /root/redis-6.2.6/src/redis-trib.rb /usr/local/redis/bin/
 ```shell
 daemonize yes
 # 暴露外部连接redis服务ip
-bind 192.168.1.128
+bind 192.168.1.128 
+bind 0.0.0.0 
+# 开启集群功能
 cluster-enabled yes
 
 
 #---------------------------------可选配置--------------------------------------------------
 port 6379
-# 开启集群功能
-cluster-enabled yes
 # 集群的配置文件名称，不需要我们创建，由redis自己维护
 cluster-config-file /usr/local/src/6379/nodes.conf
 # 节点心跳失败的超时时间
 cluster-node-timeout 5000
 # 持久化文件存放目录
 dir /usr/local/src/6379
-# 绑定地址
-bind 0.0.0.0
 # 让redis后台运行
 daemonize yes
 # 注册的实例ip
@@ -51,7 +49,6 @@ databases 1
 # 日志
 logfile /usr/local/src/6379/run.log
 ```
-
 
 
 集群搭建

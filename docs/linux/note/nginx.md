@@ -1,3 +1,7 @@
+---
+title: nginx
+---
+
 #### nginx
 
 **nginx 安装**

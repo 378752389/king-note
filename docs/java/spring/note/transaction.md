@@ -1,4 +1,8 @@
-### 事务的传播行为
+---
+title: 事务
+---
+
+## 事务的传播行为
 
 [参考博客](https://www.jianshu.com/p/25c8e5a35ece)
 

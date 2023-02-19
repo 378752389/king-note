@@ -1,3 +1,7 @@
+---
+title: Freemarker
+---
+
 ### 导入依赖
 
 ```xml

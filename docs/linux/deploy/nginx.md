@@ -1,3 +1,8 @@
+---
+title: nginx环境搭建
+---
+
+
 ```
 #一键安装上面四个依赖
 yum -y install gcc zlib zlib-devel pcre-devel openssl openssl-devel

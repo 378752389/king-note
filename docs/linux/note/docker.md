@@ -1,4 +1,7 @@
-##### dcker-compose
+---
+title: docker
+---
+## 关联阿里云镜像仓库
 
 ```shell
 # 登录个人的镜像仓库
@@ -13,6 +16,7 @@ docker push registry.cn-shenzhen.aliyuncs.com/wenking/centos:[镜像版本号]
 ```
 
 
+## dcker-compose
 
 ```shell
 # 下载docker-compose 可执行二进制文件
