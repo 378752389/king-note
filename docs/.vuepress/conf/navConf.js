@@ -19,6 +19,7 @@ module.exports = [
                 text: '开发工具',
                 items: [
                     {text: 'Maven', link: '/java/devkits/maven/'},
+                    {text: 'Git', link: '/java/devkits/git/'},
                 ]
             },
             {
