@@ -1,4 +1,6 @@
-
+---
+title: java基础
+---
 ## 比较接口
 
 ### Comparable

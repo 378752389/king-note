@@ -1,6 +1,17 @@
 ---
 title: docker
 ---
+
+## 命令
+```shell
+# 进入容器
+docker exec -it [容器id] /bin/bash
+
+# 给某个镜像打上标签
+docker tag [容器id] [tagName]
+
+```
+
 ## 关联阿里云镜像仓库
 
 ```shell

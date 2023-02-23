@@ -2,7 +2,7 @@
 title: Dubbo
 ---
 
-### 导入依赖
+## 导入依赖
 
 ```xml
 <dependency>
@@ -26,7 +26,7 @@ title: Dubbo
 
 
 
-### yaml配置文件
+##yaml配置文件
 
 ```yaml
 spring:
@@ -48,9 +48,9 @@ spring:
 
 
 
-### 服务编写
+## 服务编写
 
-#### 1.主启动类
+### 1.主启动类
 
 ```java
 @EnableDubbo
@@ -64,7 +64,7 @@ public class ProviderApp {
 
 
 
-#### 2.服务编写
+### 2.服务编写
 
 ```java
 @Service
@@ -80,14 +80,6 @@ public class OrderServiceImpl implements OrderService {
 }
 ```
 
-
-
-#### 3.客户端引用
-
-```java
-@Reference(check = false)
-private OrderService orderService;
-```
 
 
 
