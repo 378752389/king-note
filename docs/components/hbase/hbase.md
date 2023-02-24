@@ -1,0 +1,51 @@
+## hbase安装
+
+### 单机部署， 使用自带的zk， 使用文件存储
+
+
+修改 `conf/hbase-env.sh` 文件， 文件末尾添加如下内容
+```shell
+# 配置 java 环境变量
+export JAVA_HOME=/root/services/jdk8
+
+# 不使用 自带的 zk
+export HBASE_MANAGES_ZK=false
+```
+
+
+修改`conf/hbase-site.xml`文件， 添加如下内容
+```xml
+<configuration>
+    
+<!--    如果为 false，表示 hbase单机允许， 依然会使用内部的zk-->
+    <property>
+        <name>hbase.cluster.distributed</name>
+        <value>true</value>
+    </property>
+
+<!--    hbase数据存储的位置-->
+    <property>
+        <name>hbase.rootdir</name>
+        <value>file:////root/data/hbase</value>
+    </property>
+
+<!--    zk 服务器的主机名 或 域名-->
+    <property>
+        <name>hbase.zookeeper.quorum</name>
+        <value>localhost.localdomain</value>
+    </property>
+
+<!--    zk服务器的端口号-->
+    <property>
+        <name>hbase.zookeeper.property.clientPort</name>
+        <value>2181</value>
+    </property>
+    
+</configuration>
+
+```
+
+执行启动脚本
+```shell
+./bin/start-hbase.sh
+```
