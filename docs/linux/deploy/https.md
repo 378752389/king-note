@@ -25,9 +25,9 @@ title: https环境搭建
 ```shell
 #---------------------生成ca根证书-------------------------------
 #1. 创建ca私钥
-openssl genrsa -out rootCA.key 1024
+openssl genrsa -out rootCA.key 2048
 
-#2. 创建ca自签名证书
+#2. 创建ca自签名证书  -nodes 不加密输出  -new 新的证书请求
 openssl req -x509 -new -nodes -key rootCA.key  -days 365 -out rootCA.crt
 ```
 
@@ -41,7 +41,7 @@ openssl req -x509 -new -nodes -key rootCA.key  -days 365 -out rootCA.crt
 
 ```shell
 #---------------------创建服务器私钥-------------------------------
-openssl genrsa -out server.key 1024
+openssl genrsa -out server.key 2048
 ```
 
 
@@ -49,10 +49,6 @@ openssl genrsa -out server.key 1024
 4. **编写cert.ext附加配置文件**
 
 ```toml
-[req]
-req_extensions = v3_req
-
-[ v3_req ]
 # Extensions to add to a certificate request
 basicConstraints = CA:FALSE
 keyUsage = nonRepudiation, digitalSignature, keyEncipherment, dataEncipherment
@@ -126,6 +122,43 @@ openssl x509 -in github.crt -text -noout
 # 连接github.com:443 获取tls 证书
 openssl s_client -connect github.com:443 -showcerts | sed -n '/-----BEGIN/,/-----END/p' > github.com.crt
 ```
+
+
+
+**pkcs12转换**
+
+```shell
+# 服务端证书和私钥打包为 pkcs12 文件
+openssl pkcs12 -export -clcerts -in server.crt -inkey server.key -out server.p12
+
+# 提取用户证书
+openssl pkcs12 -in server.p12 -clcerts -password pass:217 -nokeys -out server_cert.pem
+# 提取密钥
+openssl pkcs12 -in server.p12  -nocerts -password pass:217 -nodes -out private_key.pem
+# 从密钥中提取公钥
+openssl rsa -in private_key.pem -pubout -out pk_server.pub
+# 从密钥中提取私钥
+openssl rsa -in private_key.pem -out pk_server.key
+```
+
+
+
+> pkcs12 大致的组成包括密钥和证书， 密钥有公私钥对组成
+
+
+
+**jks和pkcs12转换**
+
+```shell
+# jks -> p12
+keytool -importkeystore -srckeystore server.jks -srcstoretype JKS -deststoretype PKCS12 -destkeystore server.p12
+# p12 -> jks
+keytool -importkeystore -srckeystore server.p12 -srcstoretype PKCS12 -deststoretype JKS -destkeystore server.jks
+```
+
+
+
+
 
 
 
