@@ -28,7 +28,7 @@ title: https环境搭建
 openssl genrsa -out rootCA.key 1024
 
 #2. 创建ca自签名证书
-openssl req -x509 -new -nodes -key rootCA.key -sha256 -days 3650 -out rootCA.crt
+openssl req -x509 -new -nodes -key rootCA.key  -days 365 -out rootCA.crt
 ```
 
 
