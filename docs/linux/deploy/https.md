@@ -25,7 +25,7 @@ title: https环境搭建
 ```shell
 #---------------------生成ca根证书-------------------------------
 #1. 创建ca私钥
-openssl genrsa -out rootCA.key 2048
+openssl genrsa -out rootCA.key 1024
 
 #2. 创建ca自签名证书
 openssl req -x509 -new -nodes -key rootCA.key -sha256 -days 3650 -out rootCA.crt
@@ -41,39 +41,24 @@ openssl req -x509 -new -nodes -key rootCA.key -sha256 -days 3650 -out rootCA.crt
 
 ```shell
 #---------------------创建服务器私钥-------------------------------
-openssl genrsa -out server.key 2048
+openssl genrsa -out server.key 1024
 ```
 
 
 
-4. **编写openssl.cnf配置文件**
+4. **编写cert.ext附加配置文件**
 
 ```toml
 [req]
-distinguished_name = req_distinguished_name
 req_extensions = v3_req
-
-[req_distinguished_name]
-countryName = Country Name 
-countryName_default = China
-stateOrProvinceName = State or Province Name 
-stateOrProvinceName_default = GuangDong
-localityName = Locality Name
-localityName_default = ShenZhen
-organizationalUnitName  = Organizational Unit Name (eg, section)
-organizationalUnitName_default  = ServiceUnit
-commonName = Internet Widgits Ltd
-commonName_default = *.wenking.com
-commonName_max  = 64
 
 [ v3_req ]
 # Extensions to add to a certificate request
 basicConstraints = CA:FALSE
-keyUsage = nonRepudiation, digitalSignature, keyEncipherment
+keyUsage = nonRepudiation, digitalSignature, keyEncipherment, dataEncipherment
 subjectAltName = @alt_names
 
 [alt_names]
-
 # 改成自己需要支持的服务器的域名
 DNS.1 = zx.wenking.com
 #DNS.2 = helpdesk.example.org
@@ -92,15 +77,43 @@ IP.1 = 172.16.24.143
 
 ```shell
 # 生成证书请求文件
-openssl req -new -key server.key -out server.csr -config openssl.cnf -extensions v3_req
+openssl req -new -key server.key -out server.csr
 
-#使用ca私钥对证书进行签名
-openssl x509 -req -in server.csr -CA rootCA.crt -CAkey rootCA.key -CAcreateserial -out server.crt -days 365 -sha256 -extensions v3_req -extfile openssl.cnf
+#使用ca私钥对证书进行签名    -CAcreateserial: 创建序号文件   -CAserial serial： 指定序号文件
+openssl x509 -req -in server.csr -out server.crt -days 365 -CAcreateserial -CA rootCA.crt -CAkey rootCA.key -CAserial serial -extfile cert.ext
 ```
 
 
 
 **部署**： 将server.key和server.crt文件放置到nginx配置文件中
+
+```
+server {
+        listen       443 ssl;
+        server_name  test.wenking.com;
+
+        ssl_certificate      /usr/local/nginx/ssl/server.crt;
+        ssl_certificate_key  /usr/local/nginx/ssl/server.key;
+        
+        location / {
+            root   html;
+            index  index.html index.htm;
+        }
+    }
+
+```
+
+
+
+
+
+**验证证书合法性**
+
+```shell
+openssl verify -CAfile rootCA.crt server.crt
+```
+
+
 
 
 
@@ -128,3 +141,6 @@ openssl s_client -connect github.com:443 -showcerts | sed -n '/-----BEGIN/,/----
 
 csr文件可以理解为没有签名的crt文件， 因为签名需要用issuer机构进行签名（此处为ca），同时还需要包含证书请求链。
 
+
+
+[使用openssl制作自定义CA、自签名ssl证书 (github.com)](https://gist.github.com/liuguangw/4d4b87b750be8edb700ff94c783b1dd4)

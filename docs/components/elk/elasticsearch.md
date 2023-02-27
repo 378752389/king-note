@@ -159,7 +159,7 @@ vim /etc/security/limits.conf
 *               hard    nofile          65536
 ```
 
-
+切换一下账号， 即可配置成功
 
 
 
