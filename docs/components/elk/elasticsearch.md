@@ -168,3 +168,50 @@ vim /etc/security/limits.conf
 * 对每个集群实例， 执行命令： `elasticsearch\bin\elasticsearch`
 * 验证：`http://localhost:9200/_cluster/state?pretty`
 
+
+
+
+
+## 安全配置
+
+* 生成证书： `bin/elasticsearch-certutil ca`    
+
+* 生成密钥： `bin/elasticsearch-certutil cert --ca ca.p12`
+
+* 将凭证移动到config目录下， 并修改权限为 755 `mkdir config/cert;  mv cert.p12 ca.p12 config/cert/;  chmod 755 cert.p12 ca.p12`
+
+* 修改 `config/elasticsearch.yml`配置文件：
+
+  ```yml
+  http.cors.enabled: true
+  http.cors.allow-origin: "*"
+  http.cors.allow-headers: Authorization,X-Requested-With,Content-Type,Content-Length
+  
+  xpack.security.enabled: true
+  xpack.security.authc.accept_default_password: true
+  xpack.security.transport.ssl.enabled: true
+  xpack.security.transport.ssl.verification_mode: certificate
+  xpack.security.transport.ssl.keystore.path: 【es的安装路径】/config/cert/cert.p12
+  xpack.security.transport.ssl.truststore.path: 【es的安装路径】/config/cert/cert.p12
+  ```
+
+* 每台集群节点上执行如下命令, 密码为创建证书输入内容
+
+  ```shell
+  bin/elasticsearch-keystore add xpack.security.transport.ssl.keystore.secure_password
+  bin/elasticsearch-keystore add xpack.security.transport.ssl.truststore.secure_password
+  
+  # 初始化账户密码
+  bin/elasticsearch-setup-passwords  interactive
+  ```
+
+
+
+elasticsearch_head 连接配置
+
+```
+http://192.168.1.129:9200/?auth_user=elastic&auth_password=123123
+```
+
+
+
