@@ -5,6 +5,7 @@ module.exports = {
     title: '文金的个人博客',
     description: '文金的个人博客',
 
+    base: '/king-note/',
 
     head: [
         // http://favicon.io  favicon 搜索网站
