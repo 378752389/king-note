@@ -2,8 +2,8 @@ const moment = require('moment')
 const navConf = require('./conf/navConf')
 
 module.exports = {
-    title: '文金的个人博客',
-    description: '文金的个人博客',
+    title: 'Kingの笔记',
+    description: '学习笔记',
 
     base: '/king-note/',
 
@@ -12,8 +12,8 @@ module.exports = {
         ['link', {rel: 'icon', href: '/favicon.ico'}],
 
         // seo 相关配置
-        ['meta', {name: 'author', content: '文金'}],
-        ['meta', {name: 'keywords', content: 'vuepress, 个人博客, king'}]
+        ['meta', {name: 'author', content: 'King'}],
+        ['meta', {name: 'keywords', content: 'vuepress, 个人博客, King'}]
     ],
 
 
