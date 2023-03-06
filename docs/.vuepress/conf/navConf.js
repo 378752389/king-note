@@ -5,7 +5,7 @@ module.exports = [
             {
                 text: '基础',
                 items: [
-                    {text: 'Netty', link: '/java/core/'}
+                    {text: 'Java核心', link: '/java/core/'}
                 ]
             },
             {
@@ -55,6 +55,10 @@ module.exports = [
     {
         text: '分布式',
         link: '/distributed/'
+    },
+    {
+      text: '导航',
+      link: '/nav/',
     },
     {
         text: '其他',
