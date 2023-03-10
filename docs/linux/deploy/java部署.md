@@ -2,159 +2,153 @@
 title: java项目搭建
 ---
 
-### 修改pom.xml 
+### 修改pom.xml
 
 ```xml
  <!-- 配置环境信息 -->
-    <profiles>
-        <!-- 开发环境 -->
-        <profile>
-            <id>dev</id>
-            <properties>
-                <!--                ***********************配置信息****************************************-->
-                <user>root</user>
-                <password>123</password>
-                <ip>192.168.1.133</ip>
-                <active>default</active>
+<profiles>
+    <!-- 开发环境 -->
+    <profile>
+        <id>dev</id>
+        <properties>
+            <!--                ***********************配置信息****************************************-->
+            <user>root</user>
+            <password>123</password>
+            <ip>192.168.1.133</ip>
+            <active>default</active>
 
-                <!--                项目目录-->
-                <xProjectPath>/root/wagon-test</xProjectPath>
-                <!--                打包文件暂存位置， 不能和项目目录重合-->
-                <xHomePath>/root</xHomePath>
-                <!--                项目名称-->
-                <xProjectName>${project.artifactId}-${project.version}</xProjectName>
+            <!--                项目目录-->
+            <xProjectPath>/root/wagon-test</xProjectPath>
+            <!--                打包文件暂存位置， 不能和项目目录重合-->
+            <xHomePath>/root</xHomePath>
+            <!--                项目名称-->
+            <xProjectName>${project.artifactId}-${project.version}</xProjectName>
 
-                <!--                ********************************************************************-->
-            </properties>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-        </profile>
-    </profiles>
+            <!--                ********************************************************************-->
+        </properties>
+        <activation>
+            <activeByDefault>true</activeByDefault>
+        </activation>
+    </profile>
+</profiles>
 
-    <build>
+<build>
 
-        <finalName>${xProjectName}</finalName>
+<finalName>${xProjectName}</finalName>
 
-        <extensions>
-            <!-- https://mvnrepository.com/artifact/org.apache.maven.wagon/wagon-ssh -->
-            <extension>
-                <groupId>org.apache.maven.wagon</groupId>
-                <artifactId>wagon-ssh</artifactId>
-                <version>3.5.2</version>
-            </extension>
+<extensions>
+    <!-- https://mvnrepository.com/artifact/org.apache.maven.wagon/wagon-ssh -->
+    <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+        <artifactId>wagon-ssh</artifactId>
+        <version>3.5.2</version>
+    </extension>
 
-        </extensions>
+</extensions>
 
-        <plugins>
-            <!-- Package 自动上传服务器插件 -->
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>wagon-maven-plugin</artifactId>
-                <version>2.0.2</version>
+<plugins>
+    <!-- Package 自动上传服务器插件 -->
+    <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>wagon-maven-plugin</artifactId>
+        <version>2.0.2</version>
 
-                <executions>
-                    <execution>
-                        <id>upload-wagon-test</id>
-                        <phase>install</phase>
-                        <goals>
-                            <goal>upload-single</goal>
-                            <goal>sshexec</goal>
-                        </goals>
-                    </execution>
-                </executions>
+        <executions>
+            <execution>
+                <id>upload-wagon-test</id>
+                <phase>install</phase>
+                <goals>
+                    <goal>upload-single</goal>
+                    <goal>sshexec</goal>
+                </goals>
+            </execution>
+        </executions>
 
-                <configuration>
-                    <!-- 指定上传文件: target/artifactId-version.jar -->
-                    <fromFile>target/${xProjectName}.zip</fromFile>
-                    <!-- scp协议传输：username:password@ip/destinationPath-->
-                    <url>scp://${user}:${password}@${ip}/${xHomePath}</url>
-                    <!-- scp传输完毕后执行的命令 -->
-                    <commands>
-                        <!-- 1) 备份旧包 -->
-                        <!--                        创建项目目录-->
-                        <command>mkdir -p ${xProjectPath}</command>
-                        <!--                        备份项目旧包-->
-                        <command>
-                            if [ -f ${xProjectPath}/${xProjectName}.zip ];
-                            then
-                            mv ${xProjectPath}/${xProjectName}.zip ${xProjectPath}/${xProjectName}.zip.`date
-                            +%Y-%m-%d@%H-%M-%S`.bak
-                            fi;
-                        </command>
-                        <!--                        移除旧的解压项目-->
-                        <command>
-                            if [ -d ${xProjectPath}/${xProjectName} ];
-                            then
-                            rm -rf ${xProjectPath}/${xProjectName}
-                            fi;
-                        </command>
-                        <!-- 2) 移动新包到工程目录 -->
-                        <command>\mv ${xHomePath}/${xProjectName}.zip ${xProjectPath}/${xProjectName}.zip</command>
-                        <!-- 3) 执行解压包 -->
-                        <command>unzip ${xProjectPath}/${xProjectName}.zip -d ${xProjectPath}</command>
-                        <command>/bin/bash ${xProjectPath}/${xProjectName}/bin/startup.sh restart</command>
-                    </commands>
-                    <!-- 显示执行命令的输出结果 -->
-                    <displayCommandOutputs>true</displayCommandOutputs>
-                </configuration>
-            </plugin>
+        <configuration>
+            <!-- 指定上传文件: target/artifactId-version.jar -->
+            <fromFile>target/${xProjectName}.zip</fromFile>
+            <!-- scp协议传输：username:password@ip/destinationPath-->
+            <url>scp://${user}:${password}@${ip}/${xHomePath}</url>
+            <!-- scp传输完毕后执行的命令 -->
+            <commands>
+                <!-- 1) 备份旧包 -->
+                <!--                        创建项目目录-->
+                <command>mkdir -p ${xProjectPath}</command>
+                <!--                        备份项目旧包-->
+                <command>
+                    if [ -f ${xProjectPath}/${xProjectName}.zip ];
+                    then
+                    mv ${xProjectPath}/${xProjectName}.zip ${xProjectPath}/${xProjectName}.zip.`date
+                    +%Y-%m-%d@%H-%M-%S`.bak
+                    fi;
+                </command>
+                <!--                        移除旧的解压项目-->
+                <command>
+                    if [ -d ${xProjectPath}/${xProjectName} ];
+                    then
+                    rm -rf ${xProjectPath}/${xProjectName}
+                    fi;
+                </command>
+                <!-- 2) 移动新包到工程目录 -->
+                <command>\mv ${xHomePath}/${xProjectName}.zip ${xProjectPath}/${xProjectName}.zip</command>
+                <!-- 3) 执行解压包 -->
+                <command>unzip ${xProjectPath}/${xProjectName}.zip -d ${xProjectPath}</command>
+                <command>/bin/bash ${xProjectPath}/${xProjectName}/bin/startup.sh restart</command>
+            </commands>
+            <!-- 显示执行命令的输出结果 -->
+            <displayCommandOutputs>true</displayCommandOutputs>
+        </configuration>
+    </plugin>
 
 
-            <!--boot 项目打包插件 -->
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>repackage</id>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+    <!--boot 项目打包插件 -->
+    <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <executions>
+            <execution>
+                <id>repackage</id>
+                <goals>
+                    <goal>repackage</goal>
+                </goals>
+            </execution>
+        </executions>
+    </plugin>
 
-            <!--            跳过测试阶段-->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <configuration>
-                    <skipTests>true</skipTests>
-                </configuration>
-            </plugin>
+    <!--            跳过测试阶段-->
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+            <skipTests>true</skipTests>
+        </configuration>
+    </plugin>
 
-            <!--            项目打包-->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <version>3.2.0</version>
-                <executions>
-                    <execution>
-                        <id>create-release-zip</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <finalName>${xProjectName}</finalName>
-                    <appendAssemblyId>false</appendAssemblyId>
-                    <descriptors>
-                        <descriptor>release.xml</descriptor>
-                    </descriptors>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+    <!--            项目打包-->
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <version>3.2.0</version>
+        <executions>
+            <execution>
+                <id>create-release-zip</id>
+                <phase>package</phase>
+                <goals>
+                    <goal>single</goal>
+                </goals>
+            </execution>
+        </executions>
+        <configuration>
+            <finalName>${xProjectName}</finalName>
+            <appendAssemblyId>false</appendAssemblyId>
+            <descriptors>
+                <descriptor>release.xml</descriptor>
+            </descriptors>
+        </configuration>
+    </plugin>
+</plugins>
+</build>
 ```
-
-
-
-
-
-
 
 ### 创建启动脚本
 
@@ -245,8 +239,6 @@ esac
 
 ```
 
-
-
 ### 添加logback.xml配置
 
 ```xml
@@ -255,16 +247,16 @@ esac
     <contextName>${APP_NAME}</contextName>
 
     <springProperty name="APP_NAME" scope="context" source="spring.application.name"/>
-<!--    **************************************配置信息***************************************************************-->
-<!--    <springProperty name="LOG_FILE" scope="context" source="logging.file" defaultValue="./logs/${APP_NAME}"/>-->
+    <!--    **************************************配置信息***************************************************************-->
+    <!--    <springProperty name="LOG_FILE" scope="context" source="logging.file" defaultValue="./logs/${APP_NAME}"/>-->
     <springProperty name="LOG_FILE" scope="context" source="logging.file" defaultValue="/root/logs/${APP_NAME}"/>
 
-<!--    <springProperty name="LOG_POINT_FILE" scope="context" source="logging.file" defaultValue="./logs/point"/>-->
+    <!--    <springProperty name="LOG_POINT_FILE" scope="context" source="logging.file" defaultValue="./logs/point"/>-->
     <springProperty name="LOG_MAXFILESIZE" scope="context" source="logback.filesize" defaultValue="100MB"/>
     <springProperty name="LOG_FILEMAXDAY" scope="context" source="logback.filemaxday" defaultValue="7"/>
     <springProperty name="ServerIP" scope="context" source="spring.cloud.client.ip-address" defaultValue="0.0.0.0"/>
     <springProperty name="ServerPort" scope="context" source="server.port" defaultValue="0000"/>
-<!--    ************************************************************************************************************-->
+    <!--    ************************************************************************************************************-->
     <!-- 彩色日志 -->
     <!-- 彩色日志依赖的渲染类 -->
     <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter"/>
@@ -343,3 +335,52 @@ esac
 </configuration>
 ```
 
+## 启动脚本
+
+```shell
+
+#!/bin/sh
+
+export APPMGR=appmgrserver.jar
+export APPMGR_log=../logs/appmgrserver.log
+export APPMGR_port=10092
+
+case "$1" in
+
+start)
+        ## 启动appmgr
+        echo "--------开始启动APPMGR-----------"
+        nohup java -Xms512m -Xmx512m -jar $APPMGR > $APPMGR_log 2>&1 &
+        APPMGR_pid=`lsof -i:$APPMGR_port|grep "LISTEN"|awk '{print $2}'`
+        if [ -n "$APPMGR_pid" ]; then
+            echo "------程序已经运行----------"
+        else 
+            until [ -n "$APPMGR_pid" ]
+            do
+              APPMGR_pid=`lsof -i:$APPMGR_port|grep "LISTEN"|awk '{print $2}'`  
+            done
+            echo "APPMGR pid is $APPMGR_pid"     
+            echo "---------APPMGR 启动成功-----------"
+        fi
+        ;;
+
+ stop)
+        P_ID=`ps -ef | grep -w $APPMGR | grep -v "grep" | awk '{print $2}'`
+        if [ "$P_ID" == "" ]; then
+            echo "===APPMGR process not exists or stop success"
+        else
+            kill -9 $P_ID
+            echo "APPMGR killed success"
+        fi
+        ;;   
+ 
+restart)
+        $0 stop
+        sleep 10
+        $0 start
+        echo "===restart success==="
+        ;;   
+esac    
+exit 0
+
+```
