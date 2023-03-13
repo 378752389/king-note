@@ -1,3 +1,9 @@
+---
+k8s
+---
+
+
+
 ## Pod
 
 为什么需要 pod
@@ -47,6 +53,57 @@ metatada:
   name: customer-namespace
 ```
 
+### 存活探针
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kubia-liveness
+spec:
+  containers:
+    - image: kubia
+      name: kubia
+      livenessProbe:
+        httpGet:
+          path: /
+          port: 8080
+      initialDelaySeconds: 15
+```
+
+
+
+当容器被强行终止时，会创建一个全新的容器—-而不是重启原来的容器
+
+```shell
+kubectl get po kubia-liveness --previous
+```
+
+### ReplicationController
+可以确保它的pod始终保持运行状态。如果pod因任何原因消失（例如节点从集群中消失或由于该pod已从节点中逐出）或者变多，
+则ReplicationController 会注意到缺少或者增加的pod并创建新的/删除现有pod，使其始终维持一个稳定的数值。
+
+主要组成包含： 标签选择器、副本个数、pod模板
+
+```yaml
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: kubia-rc
+spec:
+  replicas: 3
+  selector:
+    app: kubia
+  template:
+    metadata:
+      labels:
+        app: kubia
+    spec:
+      containers:
+        - name: kubia
+          image: kubia
+          ports: 
+            - containerPort: 8080
+```
 
 ## Service（服务）
 

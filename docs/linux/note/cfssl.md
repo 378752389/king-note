@@ -138,3 +138,7 @@ cfssl gencert -ca=ca.pem -ca-key=ca-key.pem -config=ca-config.json -profile=serv
 ```shell
 cfssl-certinfo -cert server.pem
 ```
+
+
+## 参考doc
+[张先生的深夜食堂](https://www.ethanzhang.xyz/cfssl%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/#31-%E8%8E%B7%E5%8F%96%E9%BB%98%E8%AE%A4%E8%AE%BE%E7%BD%AE)
