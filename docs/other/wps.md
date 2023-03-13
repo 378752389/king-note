@@ -1,5 +1,6 @@
-
-[[toc]]
+---
+title: wps
+---
 
 ## word
 
