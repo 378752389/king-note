@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>netty | Kingの笔记</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    <link rel="icon" href="/king-note/favicon.ico">
+    <meta name="description" content="学习笔记">
+    <meta name="author" content="King">
+    <meta name="keywords" content="vuepress, 个人博客, King">
+    
+    <link rel="preload" href="/king-note/assets/css/0.styles.2819cdbb.css" as="style"><link rel="preload" href="/king-note/assets/js/app.502cd6d7.js" as="script"><link rel="preload" href="/king-note/assets/js/2.845378f6.js" as="script"><link rel="preload" href="/king-note/assets/js/30.b9aa3a20.js" as="script"><link rel="prefetch" href="/king-note/assets/js/10.f6e8e596.js"><link rel="prefetch" href="/king-note/assets/js/11.79c0b872.js"><link rel="prefetch" href="/king-note/assets/js/12.0e1d2785.js"><link rel="prefetch" href="/king-note/assets/js/13.7721c2d2.js"><link rel="prefetch" href="/king-note/assets/js/14.37ed4b4c.js"><link rel="prefetch" href="/king-note/assets/js/15.bc0e9965.js"><link rel="prefetch" href="/king-note/assets/js/16.9ebf5061.js"><link rel="prefetch" href="/king-note/assets/js/17.c227c82f.js"><link rel="prefetch" href="/king-note/assets/js/18.d2b1b625.js"><link rel="prefetch" href="/king-note/assets/js/19.81742a06.js"><link rel="prefetch" href="/king-note/assets/js/20.01657bf2.js"><link rel="prefetch" href="/king-note/assets/js/21.00c7eb6b.js"><link rel="prefetch" href="/king-note/assets/js/22.611f0fc6.js"><link rel="prefetch" href="/king-note/assets/js/23.71adac13.js"><link rel="prefetch" href="/king-note/assets/js/24.4781a682.js"><link rel="prefetch" href="/king-note/assets/js/25.99382d92.js"><link rel="prefetch" href="/king-note/assets/js/26.658465da.js"><link rel="prefetch" href="/king-note/assets/js/27.f4f7bc28.js"><link rel="prefetch" href="/king-note/assets/js/28.5d04d630.js"><link rel="prefetch" href="/king-note/assets/js/29.a9bfe5ef.js"><link rel="prefetch" href="/king-note/assets/js/3.d5dd2cba.js"><link rel="prefetch" href="/king-note/assets/js/31.8764b475.js"><link rel="prefetch" href="/king-note/assets/js/32.5b20119c.js"><link rel="prefetch" href="/king-note/assets/js/33.13ad32ed.js"><link rel="prefetch" href="/king-note/assets/js/34.77bdf5b4.js"><link rel="prefetch" href="/king-note/assets/js/35.3a736192.js"><link rel="prefetch" href="/king-note/assets/js/36.341ad4bb.js"><link rel="prefetch" href="/king-note/assets/js/37.1fa3ba02.js"><link rel="prefetch" href="/king-note/assets/js/38.1977e644.js"><link rel="prefetch" href="/king-note/assets/js/39.b2a6de4b.js"><link rel="prefetch" href="/king-note/assets/js/4.47d9a46a.js"><link rel="prefetch" href="/king-note/assets/js/40.ba333a6c.js"><link rel="prefetch" href="/king-note/assets/js/41.b8d4c557.js"><link rel="prefetch" href="/king-note/assets/js/42.f5fd8724.js"><link rel="prefetch" href="/king-note/assets/js/43.44532d02.js"><link rel="prefetch" href="/king-note/assets/js/44.1bf3e9fc.js"><link rel="prefetch" href="/king-note/assets/js/45.439208bd.js"><link rel="prefetch" href="/king-note/assets/js/46.b34c4181.js"><link rel="prefetch" href="/king-note/assets/js/47.2328e72d.js"><link rel="prefetch" href="/king-note/assets/js/48.9be0874b.js"><link rel="prefetch" href="/king-note/assets/js/49.53d88d35.js"><link rel="prefetch" href="/king-note/assets/js/5.06163824.js"><link rel="prefetch" href="/king-note/assets/js/50.e6d7416b.js"><link rel="prefetch" href="/king-note/assets/js/51.9b428973.js"><link rel="prefetch" href="/king-note/assets/js/52.9e525a62.js"><link rel="prefetch" href="/king-note/assets/js/53.31a7d46b.js"><link rel="prefetch" href="/king-note/assets/js/54.504836e6.js"><link rel="prefetch" href="/king-note/assets/js/55.af393f01.js"><link rel="prefetch" href="/king-note/assets/js/56.761f2c0c.js"><link rel="prefetch" href="/king-note/assets/js/57.9837acac.js"><link rel="prefetch" href="/king-note/assets/js/58.7f63ebe2.js"><link rel="prefetch" href="/king-note/assets/js/59.dd2b9db8.js"><link rel="prefetch" href="/king-note/assets/js/6.8aca83c8.js"><link rel="prefetch" href="/king-note/assets/js/60.58eef89e.js"><link rel="prefetch" href="/king-note/assets/js/61.d9c6d850.js"><link rel="prefetch" href="/king-note/assets/js/62.03349a5f.js"><link rel="prefetch" href="/king-note/assets/js/63.1a582cbd.js"><link rel="prefetch" href="/king-note/assets/js/64.b9a76bac.js"><link rel="prefetch" href="/king-note/assets/js/65.41e83262.js"><link rel="prefetch" href="/king-note/assets/js/66.4ec60e21.js"><link rel="prefetch" href="/king-note/assets/js/67.c30dad01.js"><link rel="prefetch" href="/king-note/assets/js/68.a8630d70.js"><link rel="prefetch" href="/king-note/assets/js/69.086770e4.js"><link rel="prefetch" href="/king-note/assets/js/7.13ad1ed6.js"><link rel="prefetch" href="/king-note/assets/js/70.5d00104f.js"><link rel="prefetch" href="/king-note/assets/js/71.3c01a9d2.js"><link rel="prefetch" href="/king-note/assets/js/72.ee44c614.js"><link rel="prefetch" href="/king-note/assets/js/73.fc5fb5d1.js"><link rel="prefetch" href="/king-note/assets/js/74.fd31b98d.js"><link rel="prefetch" href="/king-note/assets/js/75.13eff198.js"><link rel="prefetch" href="/king-note/assets/js/76.cad72369.js"><link rel="prefetch" href="/king-note/assets/js/77.44a3244c.js"><link rel="prefetch" href="/king-note/assets/js/78.3fe79529.js"><link rel="prefetch" href="/king-note/assets/js/79.9844fe0d.js"><link rel="prefetch" href="/king-note/assets/js/8.5dc04c6c.js"><link rel="prefetch" href="/king-note/assets/js/80.a58aa42d.js"><link rel="prefetch" href="/king-note/assets/js/81.d46aed9b.js"><link rel="prefetch" href="/king-note/assets/js/82.2da07900.js"><link rel="prefetch" href="/king-note/assets/js/83.0aecac51.js"><link rel="prefetch" href="/king-note/assets/js/9.f3284a70.js">
+    <link rel="stylesheet" href="/king-note/assets/css/0.styles.2819cdbb.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/king-note/" class="home-link router-link-active"><img src="/king-note/assets/img/logo.png" alt="Kingの笔记" class="logo"> <span class="site-name can-hide">Kingの笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java" class="mobile-dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/core/" class="nav-link router-link-active">
+  Java核心
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Spring
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/spring/note/" class="nav-link">
+  spring笔记
+</a></li><li class="dropdown-subitem"><a href="/king-note/java/spring/integration/" class="nav-link">
+  spring整合
+</a></li></ul></li><li class="dropdown-item"><h4>
+          开发工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/devkits/maven/" class="nav-link">
+  Maven
+</a></li><li class="dropdown-subitem"><a href="/king-note/java/devkits/git/" class="nav-link">
+  Git
+</a></li></ul></li><li class="dropdown-item"><h4>
+          安全
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/security/" class="nav-link">
+  安全
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/linux/note/" class="nav-link">
+  笔记
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/linux/deploy/" class="nav-link">
+  部署
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/front/css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/front/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="中间件" class="dropdown-title"><span class="title">中间件</span> <span class="arrow down"></span></button> <button type="button" aria-label="中间件" class="mobile-dropdown-title"><span class="title">中间件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/components/mysql/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/components/kafka/" class="nav-link">
+  Kafka
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/components/redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><a href="/king-note/distributed/" class="nav-link">
+  分布式
+</a></div><div class="nav-item"><a href="/king-note/nav/" class="nav-link">
+  导航
+</a></div><div class="nav-item"><a href="/king-note/other/" class="nav-link">
+  其他
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java" class="mobile-dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/core/" class="nav-link router-link-active">
+  Java核心
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Spring
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/spring/note/" class="nav-link">
+  spring笔记
+</a></li><li class="dropdown-subitem"><a href="/king-note/java/spring/integration/" class="nav-link">
+  spring整合
+</a></li></ul></li><li class="dropdown-item"><h4>
+          开发工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/devkits/maven/" class="nav-link">
+  Maven
+</a></li><li class="dropdown-subitem"><a href="/king-note/java/devkits/git/" class="nav-link">
+  Git
+</a></li></ul></li><li class="dropdown-item"><h4>
+          安全
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/security/" class="nav-link">
+  安全
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/linux/note/" class="nav-link">
+  笔记
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/linux/deploy/" class="nav-link">
+  部署
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/front/css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/front/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="中间件" class="dropdown-title"><span class="title">中间件</span> <span class="arrow down"></span></button> <button type="button" aria-label="中间件" class="mobile-dropdown-title"><span class="title">中间件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/components/mysql/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/components/kafka/" class="nav-link">
+  Kafka
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/components/redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><a href="/king-note/distributed/" class="nav-link">
+  分布式
+</a></div><div class="nav-item"><a href="/king-note/nav/" class="nav-link">
+  导航
+</a></div><div class="nav-item"><a href="/king-note/other/" class="nav-link">
+  其他
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Core</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/king-note/java/core/" aria-current="page" class="sidebar-link">Netty笔记</a></li><li><a href="/king-note/java/core/java.html" class="sidebar-link">java基础</a></li><li><a href="/king-note/java/core/jvm.html" class="sidebar-link">jvm优化</a></li><li><a href="/king-note/java/core/netty.html" aria-current="page" class="active sidebar-link">netty</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/king-note/java/core/netty.html#channel生命周期" class="sidebar-link">channel生命周期</a></li><li class="sidebar-sub-header"><a href="/king-note/java/core/netty.html#连接假死" class="sidebar-link">连接假死</a></li><li class="sidebar-sub-header"><a href="/king-note/java/core/netty.html#参数调优" class="sidebar-link">参数调优</a></li></ul></li><li><a href="/king-note/java/core/多线程.html" class="sidebar-link">JUC</a></li><li><a href="/king-note/java/core/算法.html" class="sidebar-link">算法</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="channel生命周期"><a href="#channel生命周期" class="header-anchor">#</a> channel生命周期</h2> <ul><li>registered： channel 和 eventloop 已经绑定完成</li> <li>actived： channel 连接建立成功</li> <li>inactived ： channel 连接断开</li> <li>unregisted： channel 和 eventloop 已经断开</li></ul> <h2 id="连接假死"><a href="#连接假死" class="header-anchor">#</a> 连接假死</h2> <p>原因</p> <ul><li>网络设备故障（网卡、机房等）但应用程序没有感知到</li> <li>公网网络不稳定，客户端一直丢包，服务端收不到消息，就这么耗着</li> <li>应用程序线程阻塞，无法进行读写</li></ul> <p>问题</p> <ul><li>假死连接占用的资源不能释放</li> <li>向假死的连接发送数据，得到的反馈是发送超时</li></ul> <p>解决方案</p> <ul><li>服务端进行读idle监控，超过一定时间（5s）没有收到消息就进行连接断开</li> <li>客户端进行定时心跳发送，如果有有一定时间没有发送数据（3s)，客户端就自动发送一个心跳包</li></ul> <blockquote><p>服务端的读空间时间要大于客户端的写空闲时间</p></blockquote> <h2 id="参数调优"><a href="#参数调优" class="header-anchor">#</a> 参数调优</h2> <p><code>CONNECT_TIMEOUT_MILLIS</code></p> <ul><li>属于SocketChannel参数</li> <li>客户端建立连接时，如果在指定毫秒内无法连接，抛出异常  <code>ConnectTimeoutException</code></li> <li>SO_TIMEOUT 主要用于阻塞IO中，阻塞IO中 accept、read都是无限等待的， 可以通过它修改超时时间</li></ul> <p><code>SO_BACKLOG</code></p> <p>ServerSocketChannel 参数</p> <ul><li>在linux2.2之前， backlog包括了半连接队列和全连接队列的大小， 在2.2之后， 通过下面2个参数控制
+<ul><li>sync queue：半连接队列， 大小通过 /proc/sys/net/ipv4/tcp_max_syn_backlog指定， 逻辑上没有最大限制</li> <li>accept queue： 全连接队列， 大小通过 /proc/sys/net/core/somaxconn指定，使用listen函数， 内核会根据传入的backlog参数与系统参数，取二者最小值，队列值满将发送一个 拒绝连接的错误信息到 client</li></ul></li></ul> <p>tcp连接建立流程</p> <ol><li>首先服务端调用 bind 绑定本地端口号， 然后开始监听 listen 客户端的连接</li> <li>client发送 调用 connect 时间 发送连接请求， 请求中将TCP包的 SYN=1 ， client 状态为 SYN_SEND</li> <li>服务端收到连接请求后， 将发送 应答包， 将应答包的 SYN=1， ACK=1， server 状态为 SYN_RECV， 并将连接请求放入半连接队列中</li> <li>client 收到服务端应答包后， 将发送数据和 ACK=1， client 状态为 ESTABLISHED</li> <li>server 收到客户端的确认包后， server状态为ESTABLISHED， 并将半连接队列请求 转移到 全连接队列中</li> <li>服务端调用 accept 接收请求</li></ol> <p><code>ulimit -n</code></p> <p>操作系统参数， 操作系统可以允许一个进程打开的最大 fp(文件描述符) 数量</p> <p><code>TCP_NODELAY</code></p> <p>SocketChannel 参数</p> <p>默认开启了nagle算法， 数据量达到一定数量在发送</p> <p><code>SO_SNDBUF &amp;&amp; SO_RECVBUF</code></p> <p>调整滑动窗口的大小，现在操作系统可以自动调整， 不需要手动调整；</p> <p><code>ALLOCATOR</code></p> <ul><li>用来分配ByteBuf,  ctx.alloc()</li></ul> <p><code>RECVBUF_ALLOCATOR</code></p> <ul><li>用来控制 netty 接收缓冲区 大小</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/king-note/java/core/jvm.html" class="prev">
+        jvm优化
+      </a></span> <span class="next"><a href="/king-note/java/core/多线程.html">
+        JUC
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/king-note/assets/js/app.502cd6d7.js" defer></script><script src="/king-note/assets/js/2.845378f6.js" defer></script><script src="/king-note/assets/js/30.b9aa3a20.js" defer></script>
+  </body>
+</html>

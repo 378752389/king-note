@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>AOP | Kingの笔记</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    <link rel="icon" href="/king-note/favicon.ico">
+    <meta name="description" content="学习笔记">
+    <meta name="author" content="King">
+    <meta name="keywords" content="vuepress, 个人博客, King">
+    
+    <link rel="preload" href="/king-note/assets/css/0.styles.2819cdbb.css" as="style"><link rel="preload" href="/king-note/assets/js/app.502cd6d7.js" as="script"><link rel="preload" href="/king-note/assets/js/2.845378f6.js" as="script"><link rel="preload" href="/king-note/assets/js/52.9e525a62.js" as="script"><link rel="prefetch" href="/king-note/assets/js/10.f6e8e596.js"><link rel="prefetch" href="/king-note/assets/js/11.79c0b872.js"><link rel="prefetch" href="/king-note/assets/js/12.0e1d2785.js"><link rel="prefetch" href="/king-note/assets/js/13.7721c2d2.js"><link rel="prefetch" href="/king-note/assets/js/14.37ed4b4c.js"><link rel="prefetch" href="/king-note/assets/js/15.bc0e9965.js"><link rel="prefetch" href="/king-note/assets/js/16.9ebf5061.js"><link rel="prefetch" href="/king-note/assets/js/17.c227c82f.js"><link rel="prefetch" href="/king-note/assets/js/18.d2b1b625.js"><link rel="prefetch" href="/king-note/assets/js/19.81742a06.js"><link rel="prefetch" href="/king-note/assets/js/20.01657bf2.js"><link rel="prefetch" href="/king-note/assets/js/21.00c7eb6b.js"><link rel="prefetch" href="/king-note/assets/js/22.611f0fc6.js"><link rel="prefetch" href="/king-note/assets/js/23.71adac13.js"><link rel="prefetch" href="/king-note/assets/js/24.4781a682.js"><link rel="prefetch" href="/king-note/assets/js/25.99382d92.js"><link rel="prefetch" href="/king-note/assets/js/26.658465da.js"><link rel="prefetch" href="/king-note/assets/js/27.f4f7bc28.js"><link rel="prefetch" href="/king-note/assets/js/28.5d04d630.js"><link rel="prefetch" href="/king-note/assets/js/29.a9bfe5ef.js"><link rel="prefetch" href="/king-note/assets/js/3.d5dd2cba.js"><link rel="prefetch" href="/king-note/assets/js/30.b9aa3a20.js"><link rel="prefetch" href="/king-note/assets/js/31.8764b475.js"><link rel="prefetch" href="/king-note/assets/js/32.5b20119c.js"><link rel="prefetch" href="/king-note/assets/js/33.13ad32ed.js"><link rel="prefetch" href="/king-note/assets/js/34.77bdf5b4.js"><link rel="prefetch" href="/king-note/assets/js/35.3a736192.js"><link rel="prefetch" href="/king-note/assets/js/36.341ad4bb.js"><link rel="prefetch" href="/king-note/assets/js/37.1fa3ba02.js"><link rel="prefetch" href="/king-note/assets/js/38.1977e644.js"><link rel="prefetch" href="/king-note/assets/js/39.b2a6de4b.js"><link rel="prefetch" href="/king-note/assets/js/4.47d9a46a.js"><link rel="prefetch" href="/king-note/assets/js/40.ba333a6c.js"><link rel="prefetch" href="/king-note/assets/js/41.b8d4c557.js"><link rel="prefetch" href="/king-note/assets/js/42.f5fd8724.js"><link rel="prefetch" href="/king-note/assets/js/43.44532d02.js"><link rel="prefetch" href="/king-note/assets/js/44.1bf3e9fc.js"><link rel="prefetch" href="/king-note/assets/js/45.439208bd.js"><link rel="prefetch" href="/king-note/assets/js/46.b34c4181.js"><link rel="prefetch" href="/king-note/assets/js/47.2328e72d.js"><link rel="prefetch" href="/king-note/assets/js/48.9be0874b.js"><link rel="prefetch" href="/king-note/assets/js/49.53d88d35.js"><link rel="prefetch" href="/king-note/assets/js/5.06163824.js"><link rel="prefetch" href="/king-note/assets/js/50.e6d7416b.js"><link rel="prefetch" href="/king-note/assets/js/51.9b428973.js"><link rel="prefetch" href="/king-note/assets/js/53.31a7d46b.js"><link rel="prefetch" href="/king-note/assets/js/54.504836e6.js"><link rel="prefetch" href="/king-note/assets/js/55.af393f01.js"><link rel="prefetch" href="/king-note/assets/js/56.761f2c0c.js"><link rel="prefetch" href="/king-note/assets/js/57.9837acac.js"><link rel="prefetch" href="/king-note/assets/js/58.7f63ebe2.js"><link rel="prefetch" href="/king-note/assets/js/59.dd2b9db8.js"><link rel="prefetch" href="/king-note/assets/js/6.8aca83c8.js"><link rel="prefetch" href="/king-note/assets/js/60.58eef89e.js"><link rel="prefetch" href="/king-note/assets/js/61.d9c6d850.js"><link rel="prefetch" href="/king-note/assets/js/62.03349a5f.js"><link rel="prefetch" href="/king-note/assets/js/63.1a582cbd.js"><link rel="prefetch" href="/king-note/assets/js/64.b9a76bac.js"><link rel="prefetch" href="/king-note/assets/js/65.41e83262.js"><link rel="prefetch" href="/king-note/assets/js/66.4ec60e21.js"><link rel="prefetch" href="/king-note/assets/js/67.c30dad01.js"><link rel="prefetch" href="/king-note/assets/js/68.a8630d70.js"><link rel="prefetch" href="/king-note/assets/js/69.086770e4.js"><link rel="prefetch" href="/king-note/assets/js/7.13ad1ed6.js"><link rel="prefetch" href="/king-note/assets/js/70.5d00104f.js"><link rel="prefetch" href="/king-note/assets/js/71.3c01a9d2.js"><link rel="prefetch" href="/king-note/assets/js/72.ee44c614.js"><link rel="prefetch" href="/king-note/assets/js/73.fc5fb5d1.js"><link rel="prefetch" href="/king-note/assets/js/74.fd31b98d.js"><link rel="prefetch" href="/king-note/assets/js/75.13eff198.js"><link rel="prefetch" href="/king-note/assets/js/76.cad72369.js"><link rel="prefetch" href="/king-note/assets/js/77.44a3244c.js"><link rel="prefetch" href="/king-note/assets/js/78.3fe79529.js"><link rel="prefetch" href="/king-note/assets/js/79.9844fe0d.js"><link rel="prefetch" href="/king-note/assets/js/8.5dc04c6c.js"><link rel="prefetch" href="/king-note/assets/js/80.a58aa42d.js"><link rel="prefetch" href="/king-note/assets/js/81.d46aed9b.js"><link rel="prefetch" href="/king-note/assets/js/82.2da07900.js"><link rel="prefetch" href="/king-note/assets/js/83.0aecac51.js"><link rel="prefetch" href="/king-note/assets/js/9.f3284a70.js">
+    <link rel="stylesheet" href="/king-note/assets/css/0.styles.2819cdbb.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/king-note/" class="home-link router-link-active"><img src="/king-note/assets/img/logo.png" alt="Kingの笔记" class="logo"> <span class="site-name can-hide">Kingの笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java" class="mobile-dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/core/" class="nav-link">
+  Java核心
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Spring
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/spring/note/" class="nav-link router-link-active">
+  spring笔记
+</a></li><li class="dropdown-subitem"><a href="/king-note/java/spring/integration/" class="nav-link">
+  spring整合
+</a></li></ul></li><li class="dropdown-item"><h4>
+          开发工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/devkits/maven/" class="nav-link">
+  Maven
+</a></li><li class="dropdown-subitem"><a href="/king-note/java/devkits/git/" class="nav-link">
+  Git
+</a></li></ul></li><li class="dropdown-item"><h4>
+          安全
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/security/" class="nav-link">
+  安全
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/linux/note/" class="nav-link">
+  笔记
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/linux/deploy/" class="nav-link">
+  部署
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/front/css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/front/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="中间件" class="dropdown-title"><span class="title">中间件</span> <span class="arrow down"></span></button> <button type="button" aria-label="中间件" class="mobile-dropdown-title"><span class="title">中间件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/components/mysql/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/components/kafka/" class="nav-link">
+  Kafka
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/components/redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><a href="/king-note/distributed/" class="nav-link">
+  分布式
+</a></div><div class="nav-item"><a href="/king-note/nav/" class="nav-link">
+  导航
+</a></div><div class="nav-item"><a href="/king-note/other/" class="nav-link">
+  其他
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java" class="mobile-dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/core/" class="nav-link">
+  Java核心
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Spring
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/spring/note/" class="nav-link router-link-active">
+  spring笔记
+</a></li><li class="dropdown-subitem"><a href="/king-note/java/spring/integration/" class="nav-link">
+  spring整合
+</a></li></ul></li><li class="dropdown-item"><h4>
+          开发工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/devkits/maven/" class="nav-link">
+  Maven
+</a></li><li class="dropdown-subitem"><a href="/king-note/java/devkits/git/" class="nav-link">
+  Git
+</a></li></ul></li><li class="dropdown-item"><h4>
+          安全
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/security/" class="nav-link">
+  安全
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/linux/note/" class="nav-link">
+  笔记
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/linux/deploy/" class="nav-link">
+  部署
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/front/css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/front/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="中间件" class="dropdown-title"><span class="title">中间件</span> <span class="arrow down"></span></button> <button type="button" aria-label="中间件" class="mobile-dropdown-title"><span class="title">中间件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/components/mysql/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/components/kafka/" class="nav-link">
+  Kafka
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/components/redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><a href="/king-note/distributed/" class="nav-link">
+  分布式
+</a></div><div class="nav-item"><a href="/king-note/nav/" class="nav-link">
+  导航
+</a></div><div class="nav-item"><a href="/king-note/other/" class="nav-link">
+  其他
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Note</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/king-note/java/spring/note/" aria-current="page" class="sidebar-link">Spring笔记</a></li><li><a href="/king-note/java/spring/note/aop.html" aria-current="page" class="active sidebar-link">AOP</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/king-note/java/spring/note/aop.html#基本概念" class="sidebar-link">基本概念</a></li><li class="sidebar-sub-header"><a href="/king-note/java/spring/note/aop.html#切入点定义" class="sidebar-link">切入点定义</a></li><li class="sidebar-sub-header"><a href="/king-note/java/spring/note/aop.html#other" class="sidebar-link">Other</a></li></ul></li><li><a href="/king-note/java/spring/note/transaction.html" class="sidebar-link">事务</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p></p><div class="table-of-contents"><ul><li><a href="#基本概念">基本概念</a></li><li><a href="#切入点定义">切入点定义</a></li><li><a href="#other">Other</a></li></ul></div><p></p> <h2 id="基本概念"><a href="#基本概念" class="header-anchor">#</a> 基本概念</h2> <p>aspect(切面): 被@aspect 注解修饰的类</p> <p>join point(连接点): 方法的执行， 增强的方法内容</p> <p>advice(建议): 在方法的什么时候执行 连接点（之前， 之后， 前后...）</p> <p>pointcut(切入点): 在哪些类、方法上执行</p> <p>Weaving(织入):  将aspect和连接点结合， 形成新的代理类</p> <p>target: 需要通过aop 增强的对象</p> <p>proxy: 通过aop增强后生成的对象</p> <p><code>@Aspect</code>标注的类上，这个类中，可以通过通过<code>@Pointcut</code>来定义切入点，可以通过<code>@Before、@Around、@After、@AfterRunning、@AfterThrowing</code>标注在方法上来定义通知，定义好了之后，将<code>@Aspect</code>标注的这个类交给<code>AspectJProxyFactory</code>来解析生成<code>Advisor</code>链，进而结合目标对象一起来生成代理对象.</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AopTest9</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Test</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            <span class="token comment">//对应目标对象</span>
+            <span class="token class-name">Service1</span> target <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Service1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">//创建AspectJProxyFactory对象</span>
+            <span class="token class-name">AspectJProxyFactory</span> proxyFactory <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AspectJProxyFactory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">//设置被代理的目标对象</span>
+            proxyFactory<span class="token punctuation">.</span><span class="token function">setTarget</span><span class="token punctuation">(</span>target<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">//设置标注了@Aspect注解的类</span>
+            proxyFactory<span class="token punctuation">.</span><span class="token function">addAspect</span><span class="token punctuation">(</span><span class="token class-name">Aspect1</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">//生成代理对象</span>
+            <span class="token class-name">Service1</span> proxy <span class="token operator">=</span> proxyFactory<span class="token punctuation">.</span><span class="token function">getProxy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">//使用代理对象</span>
+            proxy<span class="token punctuation">.</span><span class="token function">m1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            proxy<span class="token punctuation">.</span><span class="token function">m2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="切入点定义"><a href="#切入点定义" class="header-anchor">#</a> 切入点定义</h2> <p>within(x):</p> <p>x.equals(target.getClass())</p> <p>note：目标对象target必须和指定类型相同</p> <p>within(x+)</p> <p>note：目标对象target必须和指定类型或子类型相同</p> <p>this(x)：</p> <p>x.getClass().isAssignableFrom(proxy.getClass());     // 不代理接口（jdk动态代理），代理target对象（cglib动态代理）</p> <p>note：代理对象proxy类型是指定对象的子类型</p> <p>target(x)：</p> <p>x.getClass().isAssignableFrom(target.getClass());</p> <p>note： 目标对象target类型是指定对象的子类型</p> <p>arg(String):</p> <p>匹配只有一个参数且传入的参数类型是String的方法</p> <p>@within(注解类型)：</p> <p>被调用的目标方法Method对象.getDeclaringClass().getAnnotation(within中指定的注解类型) != null</p> <p>@target(注解类型)：</p> <p>target.class.getAnnotation(指定的注解类型) != null</p> <p>@args（注解类型）：</p> <p>@Pointcut(&quot;@args(Ann8)&quot;)：匹配方法只有一个参数，并且参数所属的类上有Ann8注解</p> <p>@annotation(注解类型)：</p> <p>匹配被调用的方法上有指定的注解。</p> <h2 id="other"><a href="#other" class="header-anchor">#</a> Other</h2> <p><a href="https://blog.csdn.net/cocoa_geforce/article/details/116796155" target="_blank" rel="noopener noreferrer">参考博客<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/king-note/java/spring/note/" class="prev router-link-active">
+        Spring笔记
+      </a></span> <span class="next"><a href="/king-note/java/spring/note/transaction.html">
+        事务
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/king-note/assets/js/app.502cd6d7.js" defer></script><script src="/king-note/assets/js/2.845378f6.js" defer></script><script src="/king-note/assets/js/52.9e525a62.js" defer></script>
+  </body>
+</html>

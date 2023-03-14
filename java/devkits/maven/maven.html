@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>maven | Kingの笔记</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    <link rel="icon" href="/king-note/favicon.ico">
+    <meta name="description" content="学习笔记">
+    <meta name="author" content="King">
+    <meta name="keywords" content="vuepress, 个人博客, King">
+    
+    <link rel="preload" href="/king-note/assets/css/0.styles.2819cdbb.css" as="style"><link rel="preload" href="/king-note/assets/js/app.502cd6d7.js" as="script"><link rel="preload" href="/king-note/assets/js/2.845378f6.js" as="script"><link rel="preload" href="/king-note/assets/js/36.341ad4bb.js" as="script"><link rel="prefetch" href="/king-note/assets/js/10.f6e8e596.js"><link rel="prefetch" href="/king-note/assets/js/11.79c0b872.js"><link rel="prefetch" href="/king-note/assets/js/12.0e1d2785.js"><link rel="prefetch" href="/king-note/assets/js/13.7721c2d2.js"><link rel="prefetch" href="/king-note/assets/js/14.37ed4b4c.js"><link rel="prefetch" href="/king-note/assets/js/15.bc0e9965.js"><link rel="prefetch" href="/king-note/assets/js/16.9ebf5061.js"><link rel="prefetch" href="/king-note/assets/js/17.c227c82f.js"><link rel="prefetch" href="/king-note/assets/js/18.d2b1b625.js"><link rel="prefetch" href="/king-note/assets/js/19.81742a06.js"><link rel="prefetch" href="/king-note/assets/js/20.01657bf2.js"><link rel="prefetch" href="/king-note/assets/js/21.00c7eb6b.js"><link rel="prefetch" href="/king-note/assets/js/22.611f0fc6.js"><link rel="prefetch" href="/king-note/assets/js/23.71adac13.js"><link rel="prefetch" href="/king-note/assets/js/24.4781a682.js"><link rel="prefetch" href="/king-note/assets/js/25.99382d92.js"><link rel="prefetch" href="/king-note/assets/js/26.658465da.js"><link rel="prefetch" href="/king-note/assets/js/27.f4f7bc28.js"><link rel="prefetch" href="/king-note/assets/js/28.5d04d630.js"><link rel="prefetch" href="/king-note/assets/js/29.a9bfe5ef.js"><link rel="prefetch" href="/king-note/assets/js/3.d5dd2cba.js"><link rel="prefetch" href="/king-note/assets/js/30.b9aa3a20.js"><link rel="prefetch" href="/king-note/assets/js/31.8764b475.js"><link rel="prefetch" href="/king-note/assets/js/32.5b20119c.js"><link rel="prefetch" href="/king-note/assets/js/33.13ad32ed.js"><link rel="prefetch" href="/king-note/assets/js/34.77bdf5b4.js"><link rel="prefetch" href="/king-note/assets/js/35.3a736192.js"><link rel="prefetch" href="/king-note/assets/js/37.1fa3ba02.js"><link rel="prefetch" href="/king-note/assets/js/38.1977e644.js"><link rel="prefetch" href="/king-note/assets/js/39.b2a6de4b.js"><link rel="prefetch" href="/king-note/assets/js/4.47d9a46a.js"><link rel="prefetch" href="/king-note/assets/js/40.ba333a6c.js"><link rel="prefetch" href="/king-note/assets/js/41.b8d4c557.js"><link rel="prefetch" href="/king-note/assets/js/42.f5fd8724.js"><link rel="prefetch" href="/king-note/assets/js/43.44532d02.js"><link rel="prefetch" href="/king-note/assets/js/44.1bf3e9fc.js"><link rel="prefetch" href="/king-note/assets/js/45.439208bd.js"><link rel="prefetch" href="/king-note/assets/js/46.b34c4181.js"><link rel="prefetch" href="/king-note/assets/js/47.2328e72d.js"><link rel="prefetch" href="/king-note/assets/js/48.9be0874b.js"><link rel="prefetch" href="/king-note/assets/js/49.53d88d35.js"><link rel="prefetch" href="/king-note/assets/js/5.06163824.js"><link rel="prefetch" href="/king-note/assets/js/50.e6d7416b.js"><link rel="prefetch" href="/king-note/assets/js/51.9b428973.js"><link rel="prefetch" href="/king-note/assets/js/52.9e525a62.js"><link rel="prefetch" href="/king-note/assets/js/53.31a7d46b.js"><link rel="prefetch" href="/king-note/assets/js/54.504836e6.js"><link rel="prefetch" href="/king-note/assets/js/55.af393f01.js"><link rel="prefetch" href="/king-note/assets/js/56.761f2c0c.js"><link rel="prefetch" href="/king-note/assets/js/57.9837acac.js"><link rel="prefetch" href="/king-note/assets/js/58.7f63ebe2.js"><link rel="prefetch" href="/king-note/assets/js/59.dd2b9db8.js"><link rel="prefetch" href="/king-note/assets/js/6.8aca83c8.js"><link rel="prefetch" href="/king-note/assets/js/60.58eef89e.js"><link rel="prefetch" href="/king-note/assets/js/61.d9c6d850.js"><link rel="prefetch" href="/king-note/assets/js/62.03349a5f.js"><link rel="prefetch" href="/king-note/assets/js/63.1a582cbd.js"><link rel="prefetch" href="/king-note/assets/js/64.b9a76bac.js"><link rel="prefetch" href="/king-note/assets/js/65.41e83262.js"><link rel="prefetch" href="/king-note/assets/js/66.4ec60e21.js"><link rel="prefetch" href="/king-note/assets/js/67.c30dad01.js"><link rel="prefetch" href="/king-note/assets/js/68.a8630d70.js"><link rel="prefetch" href="/king-note/assets/js/69.086770e4.js"><link rel="prefetch" href="/king-note/assets/js/7.13ad1ed6.js"><link rel="prefetch" href="/king-note/assets/js/70.5d00104f.js"><link rel="prefetch" href="/king-note/assets/js/71.3c01a9d2.js"><link rel="prefetch" href="/king-note/assets/js/72.ee44c614.js"><link rel="prefetch" href="/king-note/assets/js/73.fc5fb5d1.js"><link rel="prefetch" href="/king-note/assets/js/74.fd31b98d.js"><link rel="prefetch" href="/king-note/assets/js/75.13eff198.js"><link rel="prefetch" href="/king-note/assets/js/76.cad72369.js"><link rel="prefetch" href="/king-note/assets/js/77.44a3244c.js"><link rel="prefetch" href="/king-note/assets/js/78.3fe79529.js"><link rel="prefetch" href="/king-note/assets/js/79.9844fe0d.js"><link rel="prefetch" href="/king-note/assets/js/8.5dc04c6c.js"><link rel="prefetch" href="/king-note/assets/js/80.a58aa42d.js"><link rel="prefetch" href="/king-note/assets/js/81.d46aed9b.js"><link rel="prefetch" href="/king-note/assets/js/82.2da07900.js"><link rel="prefetch" href="/king-note/assets/js/83.0aecac51.js"><link rel="prefetch" href="/king-note/assets/js/9.f3284a70.js">
+    <link rel="stylesheet" href="/king-note/assets/css/0.styles.2819cdbb.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/king-note/" class="home-link router-link-active"><img src="/king-note/assets/img/logo.png" alt="Kingの笔记" class="logo"> <span class="site-name can-hide">Kingの笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java" class="mobile-dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/core/" class="nav-link">
+  Java核心
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Spring
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/spring/note/" class="nav-link">
+  spring笔记
+</a></li><li class="dropdown-subitem"><a href="/king-note/java/spring/integration/" class="nav-link">
+  spring整合
+</a></li></ul></li><li class="dropdown-item"><h4>
+          开发工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/devkits/maven/" class="nav-link router-link-active">
+  Maven
+</a></li><li class="dropdown-subitem"><a href="/king-note/java/devkits/git/" class="nav-link">
+  Git
+</a></li></ul></li><li class="dropdown-item"><h4>
+          安全
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/security/" class="nav-link">
+  安全
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/linux/note/" class="nav-link">
+  笔记
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/linux/deploy/" class="nav-link">
+  部署
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/front/css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/front/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="中间件" class="dropdown-title"><span class="title">中间件</span> <span class="arrow down"></span></button> <button type="button" aria-label="中间件" class="mobile-dropdown-title"><span class="title">中间件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/components/mysql/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/components/kafka/" class="nav-link">
+  Kafka
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/components/redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><a href="/king-note/distributed/" class="nav-link">
+  分布式
+</a></div><div class="nav-item"><a href="/king-note/nav/" class="nav-link">
+  导航
+</a></div><div class="nav-item"><a href="/king-note/other/" class="nav-link">
+  其他
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java" class="mobile-dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/core/" class="nav-link">
+  Java核心
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Spring
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/spring/note/" class="nav-link">
+  spring笔记
+</a></li><li class="dropdown-subitem"><a href="/king-note/java/spring/integration/" class="nav-link">
+  spring整合
+</a></li></ul></li><li class="dropdown-item"><h4>
+          开发工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/devkits/maven/" class="nav-link router-link-active">
+  Maven
+</a></li><li class="dropdown-subitem"><a href="/king-note/java/devkits/git/" class="nav-link">
+  Git
+</a></li></ul></li><li class="dropdown-item"><h4>
+          安全
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/security/" class="nav-link">
+  安全
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/linux/note/" class="nav-link">
+  笔记
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/linux/deploy/" class="nav-link">
+  部署
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/front/css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/front/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="中间件" class="dropdown-title"><span class="title">中间件</span> <span class="arrow down"></span></button> <button type="button" aria-label="中间件" class="mobile-dropdown-title"><span class="title">中间件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/components/mysql/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/components/kafka/" class="nav-link">
+  Kafka
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/components/redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><a href="/king-note/distributed/" class="nav-link">
+  分布式
+</a></div><div class="nav-item"><a href="/king-note/nav/" class="nav-link">
+  导航
+</a></div><div class="nav-item"><a href="/king-note/other/" class="nav-link">
+  其他
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Maven</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/king-note/java/devkits/maven/" aria-current="page" class="sidebar-link">笔记</a></li><li><a href="/king-note/java/devkits/maven/maven.html" aria-current="page" class="active sidebar-link">maven</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/king-note/java/devkits/maven/maven.html#package、install、deploy-三者之间区别" class="sidebar-link">package、install、deploy 三者之间区别</a></li><li class="sidebar-sub-header"><a href="/king-note/java/devkits/maven/maven.html#maven中snapshot和正式版本区别" class="sidebar-link">maven中snapshot和正式版本区别</a></li><li class="sidebar-sub-header"><a href="/king-note/java/devkits/maven/maven.html#repository" class="sidebar-link">repository</a></li><li class="sidebar-sub-header"><a href="/king-note/java/devkits/maven/maven.html#javaweb打包" class="sidebar-link">javaweb打包</a></li><li class="sidebar-sub-header"><a href="/king-note/java/devkits/maven/maven.html#依赖范围" class="sidebar-link">依赖范围</a></li><li class="sidebar-sub-header"><a href="/king-note/java/devkits/maven/maven.html#给项目打上标签版本" class="sidebar-link">给项目打上标签版本</a></li><li class="sidebar-sub-header"><a href="/king-note/java/devkits/maven/maven.html#仓库配置" class="sidebar-link">仓库配置</a></li><li class="sidebar-sub-header"><a href="/king-note/java/devkits/maven/maven.html#常用maven插件" class="sidebar-link">常用maven插件</a></li><li class="sidebar-sub-header"><a href="/king-note/java/devkits/maven/maven.html#依赖冲突解决插件" class="sidebar-link">依赖冲突解决插件</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="package、install、deploy-三者之间区别"><a href="#package、install、deploy-三者之间区别" class="header-anchor">#</a> package、install、deploy 三者之间区别</h2> <ul><li>package命令完成了项目编译、单元测试、打包功能，但没有把打好的可执行jar包（war包或其它形式的包）布署到本地maven仓库和远程maven私服仓库</li> <li>install命令完成了项目编译、单元测试、打包功能，同时把打好的可执行jar包（war包或其它形式的包）布署到本地maven仓库，但没有布署到远程maven私服仓库</li> <li>deploy命令完成了项目编译、单元测试、打包功能，同时把打好的可执行jar包（war包或其它形式的包）布署到本地maven仓库和远程maven私服仓库</li></ul> <h2 id="maven中snapshot和正式版本区别"><a href="#maven中snapshot和正式版本区别" class="header-anchor">#</a> maven中snapshot和正式版本区别</h2> <p>如果在项目的配置文件中（pom文件）指定的版本号带有‘-SNAPSHOT’后缀时，打包出来的就是一个快照版本；</p> <p>区别： 正式版本： 如果项目依赖某个库的正式版本， 项目构建的时候构建工具会先在本地仓库中查找是否已经有这个版本库的依赖， 如果不存在，则会去远程仓库中拉取，以后再次构建时都不会去访问远程仓库； <strong>问题是：</strong>
+当依赖的某个库发布了新的版本，且版本号同名，那么我们项目将不能获取新发布的依赖，而且如果某个依赖经常发布新版本， 我们需要依赖最新的版本， 则需要不断的修改版本号；</p> <p>snapshot版本： 如果项目依赖某个库的snapshot版本，每次构建项目时都会优先去远程仓库中查看是否有最新的snapshot.jar,如果有则下载使用，即使本地仓库已有最新版本；</p> <h2 id="repository"><a href="#repository" class="header-anchor">#</a> repository</h2> <ol><li>repositories中的repository</li></ol> <p>​ 表示从什么库地址可以下载项目依赖的库文件</p> <ol start="2"><li>distributionManagement中的repository</li></ol> <p>​ 表示的是项目打包成库文件后要上传到什么库地址</p> <ol start="3"><li>pluginRepositories中的repository</li></ol> <p>​ pluginRepositories中的repository是以pluginRepository表示的，它表示插件从什么库地址下载。</p> <h2 id="javaweb打包"><a href="#javaweb打包" class="header-anchor">#</a> javaweb打包</h2> <p>war模式：将WEB工程以包的形式上传到服务器 ； war exploded模式：将WEB工程以当前文件夹的位置关系上传到服务器；</p> <p>（1）war模式这种可以称之为是发布模式，看名字也知道，这是先打成war包，再发布；</p> <p>（2）war exploded模式是直接把文件夹、jsp页面 、classes等等移到Tomcat 部署文件夹里面，进行加载部署。因此这种方式支持热部署，一般在开发的时候也是用这种方式。</p> <h2 id="依赖范围"><a href="#依赖范围" class="header-anchor">#</a> 依赖范围</h2> <p>maven 在编译、测试和运行项目时会使用不同的 classpath（编译classpath、测试 classpath、运行 classpath）。依赖范围就是用来控制依赖和这三种 classpath 的关系。maven
+中有以下几种依赖范围：compile：默认值，使用该依赖范围的 maven 依赖，在编译、测试和运行时都需要使用该依赖test：只对测试 classpath 有效，在编译主代码和运行项目时无法使用此类依赖。如 JUnit
+只在编译测试代码和运行测试的时候才需要此类依赖provided：已提供依赖范围。对于编译和测试 classpath 有效，但在运行时无效。如 servlet-api，编译和测试时需要该依赖，但在运行项目时，由于容器已经提供此依赖，故不需要
+maven重复引入runtime：运行时依赖范围。对于测试和运行 classpath 有效，但在编译主代码时无效。如 JDBC 驱动实现，项目主代码的编译只需要 JDK 提供的 JDBC接口，只有在测试和运行时才需要实现 JDBC
+接口的具体实现system：系统依赖范围import：导入依赖范围 import 导入依赖管理</p> <ul><li>compile：默认值，使用该依赖范围的 maven 依赖，在编译、测试和运行时都需要使用该依赖</li> <li>test：只对测试 classpath 有效，在编译主代码和运行项目时无法使用此类依赖。如 JUnit 只在编译测试代码和运行测试的时候才需要此类依赖</li> <li>provided：已提供依赖范围。对于编译和测试 classpath 有效，但在运行时无效。如 servlet-api，编译和测试时需要该依赖，但在运行项目时，由于容器已经提供此依赖，故不需要 maven重复引入</li> <li>provided：已提供依赖范围。对于编译和测试 classpath 有效，但在运行时无效。如 servlet-api，编译和测试时需要该依赖，但在运行项目时，由于容器已经提供此依赖，故不需要 maven重复引入</li> <li>system：系统依赖范围， 导入本地jar包</li> <li>import：导入依赖范围，只在<dependencyManagement>内定义的<dependency>中支持import这一scope。 它表示，在当前这个pom文件的<dependencyManagement>
+内定义的<dependency>会被<strong>替换</strong>成一些系列的<dependency>。</dependency></dependency></dependencyManagement></dependency></dependencyManagement></li></ul> <p>system打包示例</p> <p>在依赖中添加如下内容</p> <div class="language-xml extra-class"><pre class="language-xml"><code>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>com.mytest<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>1.0<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scope</span><span class="token punctuation">&gt;</span></span>system<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scope</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>systemPath</span><span class="token punctuation">&gt;</span></span>${pom.basedir}/lib/test-1.0.jar<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>systemPath</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>在打包插件中包含依赖路径</p> <div class="language-xml extra-class"><pre class="language-xml"><code>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-maven-plugin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--设置为true，以便把本地的system的jar也包括进来--&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>includeSystemScope</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>includeSystemScope</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="给项目打上标签版本"><a href="#给项目打上标签版本" class="header-anchor">#</a> 给项目打上标签版本</h2> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 修改 maven version标签 版本号</span>
+mvn versions:set <span class="token parameter variable">-DnewVersion</span><span class="token operator">=</span><span class="token string">&quot;1.0.0&quot;</span>
+<span class="token comment"># 重新打包</span>
+mvn clean package    
+
+
+</code></pre></div><h2 id="仓库配置"><a href="#仓库配置" class="header-anchor">#</a> 仓库配置</h2> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token comment">&lt;!-- mvn:deploy 指定上传依赖路径 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>distributionManagement</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>repository</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>localhost<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">&gt;</span></span>http://localhost:8081/repository/maven-releases/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>repository</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>snapshotRepository</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>localhost<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">&gt;</span></span>http://localhost:8081/repository/maven-snapshots/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>snapshotRepository</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>distributionManagement</span><span class="token punctuation">&gt;</span></span>
+
+        <span class="token comment">&lt;!--  指定依赖下载路径  --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>repositories</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>repository</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>localhost<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>     <span class="token comment">&lt;!-- 对应在 maven setting.xml 中配置的 server 标签id --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>本地 nexus 下载测试<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">&gt;</span></span>http://localhost:8081/repository/maven-public/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>repository</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>repositories</span><span class="token punctuation">&gt;</span></span>
+
+
+        <span class="token comment">&lt;!--  阿里插件库  --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>repositories</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>repository</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>aliyun<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">&gt;</span></span>https://maven.aliyun.com/repository/public<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>releases</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>enabled</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>enabled</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>releases</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>snapshots</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>enabled</span><span class="token punctuation">&gt;</span></span>false<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>enabled</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>snapshots</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>repository</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>repositories</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pluginRepositories</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pluginRepository</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>aliyun-plugin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">&gt;</span></span>https://maven.aliyun.com/repository/public<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>releases</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>enabled</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>enabled</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>releases</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>snapshots</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>enabled</span><span class="token punctuation">&gt;</span></span>false<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>enabled</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>snapshots</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pluginRepository</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pluginRepositories</span><span class="token punctuation">&gt;</span></span>
+
+
+
+
+
+</code></pre></div><h2 id="常用maven插件"><a href="#常用maven插件" class="header-anchor">#</a> 常用maven插件</h2> <div class="language-xml extra-class"><pre class="language-xml"><code>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugins</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!-- maven-compiler-plugin 插件可以指定项目源码的 jdk 版本 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.apache.maven.plugins<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>maven-compiler-plugin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>3.3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">&gt;</span></span>
+                <span class="token comment">&lt;!-- 指定source和target的版本 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>source</span><span class="token punctuation">&gt;</span></span>${java.version}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>source</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>target</span><span class="token punctuation">&gt;</span></span>${java.version}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>target</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">&gt;</span></span>
+
+        <span class="token comment">&lt;!-- 跳过测试阶段插件 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.apache.maven.plugins<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>maven-surefire-plugin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>2.4.2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>skipTests</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>skipTests</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugins</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="依赖冲突解决插件"><a href="#依赖冲突解决插件" class="header-anchor">#</a> 依赖冲突解决插件</h2> <p><code>Maven Helper</code></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/king-note/java/devkits/maven/" class="prev router-link-active">
+        笔记
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/king-note/assets/js/app.502cd6d7.js" defer></script><script src="/king-note/assets/js/2.845378f6.js" defer></script><script src="/king-note/assets/js/36.341ad4bb.js" defer></script>
+  </body>
+</html>

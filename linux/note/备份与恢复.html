@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>备份与恢复 | Kingの笔记</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    <link rel="icon" href="/king-note/favicon.ico">
+    <meta name="description" content="学习笔记">
+    <meta name="author" content="King">
+    <meta name="keywords" content="vuepress, 个人博客, King">
+    
+    <link rel="preload" href="/king-note/assets/css/0.styles.2819cdbb.css" as="style"><link rel="preload" href="/king-note/assets/js/app.502cd6d7.js" as="script"><link rel="preload" href="/king-note/assets/js/2.845378f6.js" as="script"><link rel="preload" href="/king-note/assets/js/77.44a3244c.js" as="script"><link rel="prefetch" href="/king-note/assets/js/10.f6e8e596.js"><link rel="prefetch" href="/king-note/assets/js/11.79c0b872.js"><link rel="prefetch" href="/king-note/assets/js/12.0e1d2785.js"><link rel="prefetch" href="/king-note/assets/js/13.7721c2d2.js"><link rel="prefetch" href="/king-note/assets/js/14.37ed4b4c.js"><link rel="prefetch" href="/king-note/assets/js/15.bc0e9965.js"><link rel="prefetch" href="/king-note/assets/js/16.9ebf5061.js"><link rel="prefetch" href="/king-note/assets/js/17.c227c82f.js"><link rel="prefetch" href="/king-note/assets/js/18.d2b1b625.js"><link rel="prefetch" href="/king-note/assets/js/19.81742a06.js"><link rel="prefetch" href="/king-note/assets/js/20.01657bf2.js"><link rel="prefetch" href="/king-note/assets/js/21.00c7eb6b.js"><link rel="prefetch" href="/king-note/assets/js/22.611f0fc6.js"><link rel="prefetch" href="/king-note/assets/js/23.71adac13.js"><link rel="prefetch" href="/king-note/assets/js/24.4781a682.js"><link rel="prefetch" href="/king-note/assets/js/25.99382d92.js"><link rel="prefetch" href="/king-note/assets/js/26.658465da.js"><link rel="prefetch" href="/king-note/assets/js/27.f4f7bc28.js"><link rel="prefetch" href="/king-note/assets/js/28.5d04d630.js"><link rel="prefetch" href="/king-note/assets/js/29.a9bfe5ef.js"><link rel="prefetch" href="/king-note/assets/js/3.d5dd2cba.js"><link rel="prefetch" href="/king-note/assets/js/30.b9aa3a20.js"><link rel="prefetch" href="/king-note/assets/js/31.8764b475.js"><link rel="prefetch" href="/king-note/assets/js/32.5b20119c.js"><link rel="prefetch" href="/king-note/assets/js/33.13ad32ed.js"><link rel="prefetch" href="/king-note/assets/js/34.77bdf5b4.js"><link rel="prefetch" href="/king-note/assets/js/35.3a736192.js"><link rel="prefetch" href="/king-note/assets/js/36.341ad4bb.js"><link rel="prefetch" href="/king-note/assets/js/37.1fa3ba02.js"><link rel="prefetch" href="/king-note/assets/js/38.1977e644.js"><link rel="prefetch" href="/king-note/assets/js/39.b2a6de4b.js"><link rel="prefetch" href="/king-note/assets/js/4.47d9a46a.js"><link rel="prefetch" href="/king-note/assets/js/40.ba333a6c.js"><link rel="prefetch" href="/king-note/assets/js/41.b8d4c557.js"><link rel="prefetch" href="/king-note/assets/js/42.f5fd8724.js"><link rel="prefetch" href="/king-note/assets/js/43.44532d02.js"><link rel="prefetch" href="/king-note/assets/js/44.1bf3e9fc.js"><link rel="prefetch" href="/king-note/assets/js/45.439208bd.js"><link rel="prefetch" href="/king-note/assets/js/46.b34c4181.js"><link rel="prefetch" href="/king-note/assets/js/47.2328e72d.js"><link rel="prefetch" href="/king-note/assets/js/48.9be0874b.js"><link rel="prefetch" href="/king-note/assets/js/49.53d88d35.js"><link rel="prefetch" href="/king-note/assets/js/5.06163824.js"><link rel="prefetch" href="/king-note/assets/js/50.e6d7416b.js"><link rel="prefetch" href="/king-note/assets/js/51.9b428973.js"><link rel="prefetch" href="/king-note/assets/js/52.9e525a62.js"><link rel="prefetch" href="/king-note/assets/js/53.31a7d46b.js"><link rel="prefetch" href="/king-note/assets/js/54.504836e6.js"><link rel="prefetch" href="/king-note/assets/js/55.af393f01.js"><link rel="prefetch" href="/king-note/assets/js/56.761f2c0c.js"><link rel="prefetch" href="/king-note/assets/js/57.9837acac.js"><link rel="prefetch" href="/king-note/assets/js/58.7f63ebe2.js"><link rel="prefetch" href="/king-note/assets/js/59.dd2b9db8.js"><link rel="prefetch" href="/king-note/assets/js/6.8aca83c8.js"><link rel="prefetch" href="/king-note/assets/js/60.58eef89e.js"><link rel="prefetch" href="/king-note/assets/js/61.d9c6d850.js"><link rel="prefetch" href="/king-note/assets/js/62.03349a5f.js"><link rel="prefetch" href="/king-note/assets/js/63.1a582cbd.js"><link rel="prefetch" href="/king-note/assets/js/64.b9a76bac.js"><link rel="prefetch" href="/king-note/assets/js/65.41e83262.js"><link rel="prefetch" href="/king-note/assets/js/66.4ec60e21.js"><link rel="prefetch" href="/king-note/assets/js/67.c30dad01.js"><link rel="prefetch" href="/king-note/assets/js/68.a8630d70.js"><link rel="prefetch" href="/king-note/assets/js/69.086770e4.js"><link rel="prefetch" href="/king-note/assets/js/7.13ad1ed6.js"><link rel="prefetch" href="/king-note/assets/js/70.5d00104f.js"><link rel="prefetch" href="/king-note/assets/js/71.3c01a9d2.js"><link rel="prefetch" href="/king-note/assets/js/72.ee44c614.js"><link rel="prefetch" href="/king-note/assets/js/73.fc5fb5d1.js"><link rel="prefetch" href="/king-note/assets/js/74.fd31b98d.js"><link rel="prefetch" href="/king-note/assets/js/75.13eff198.js"><link rel="prefetch" href="/king-note/assets/js/76.cad72369.js"><link rel="prefetch" href="/king-note/assets/js/78.3fe79529.js"><link rel="prefetch" href="/king-note/assets/js/79.9844fe0d.js"><link rel="prefetch" href="/king-note/assets/js/8.5dc04c6c.js"><link rel="prefetch" href="/king-note/assets/js/80.a58aa42d.js"><link rel="prefetch" href="/king-note/assets/js/81.d46aed9b.js"><link rel="prefetch" href="/king-note/assets/js/82.2da07900.js"><link rel="prefetch" href="/king-note/assets/js/83.0aecac51.js"><link rel="prefetch" href="/king-note/assets/js/9.f3284a70.js">
+    <link rel="stylesheet" href="/king-note/assets/css/0.styles.2819cdbb.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/king-note/" class="home-link router-link-active"><img src="/king-note/assets/img/logo.png" alt="Kingの笔记" class="logo"> <span class="site-name can-hide">Kingの笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java" class="mobile-dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/core/" class="nav-link">
+  Java核心
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Spring
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/spring/note/" class="nav-link">
+  spring笔记
+</a></li><li class="dropdown-subitem"><a href="/king-note/java/spring/integration/" class="nav-link">
+  spring整合
+</a></li></ul></li><li class="dropdown-item"><h4>
+          开发工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/devkits/maven/" class="nav-link">
+  Maven
+</a></li><li class="dropdown-subitem"><a href="/king-note/java/devkits/git/" class="nav-link">
+  Git
+</a></li></ul></li><li class="dropdown-item"><h4>
+          安全
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/security/" class="nav-link">
+  安全
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/linux/note/" class="nav-link router-link-active">
+  笔记
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/linux/deploy/" class="nav-link">
+  部署
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/front/css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/front/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="中间件" class="dropdown-title"><span class="title">中间件</span> <span class="arrow down"></span></button> <button type="button" aria-label="中间件" class="mobile-dropdown-title"><span class="title">中间件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/components/mysql/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/components/kafka/" class="nav-link">
+  Kafka
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/components/redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><a href="/king-note/distributed/" class="nav-link">
+  分布式
+</a></div><div class="nav-item"><a href="/king-note/nav/" class="nav-link">
+  导航
+</a></div><div class="nav-item"><a href="/king-note/other/" class="nav-link">
+  其他
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java" class="mobile-dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/core/" class="nav-link">
+  Java核心
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Spring
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/spring/note/" class="nav-link">
+  spring笔记
+</a></li><li class="dropdown-subitem"><a href="/king-note/java/spring/integration/" class="nav-link">
+  spring整合
+</a></li></ul></li><li class="dropdown-item"><h4>
+          开发工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/devkits/maven/" class="nav-link">
+  Maven
+</a></li><li class="dropdown-subitem"><a href="/king-note/java/devkits/git/" class="nav-link">
+  Git
+</a></li></ul></li><li class="dropdown-item"><h4>
+          安全
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/security/" class="nav-link">
+  安全
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/linux/note/" class="nav-link router-link-active">
+  笔记
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/linux/deploy/" class="nav-link">
+  部署
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/front/css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/front/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="中间件" class="dropdown-title"><span class="title">中间件</span> <span class="arrow down"></span></button> <button type="button" aria-label="中间件" class="mobile-dropdown-title"><span class="title">中间件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/components/mysql/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/components/kafka/" class="nav-link">
+  Kafka
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/components/redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><a href="/king-note/distributed/" class="nav-link">
+  分布式
+</a></div><div class="nav-item"><a href="/king-note/nav/" class="nav-link">
+  导航
+</a></div><div class="nav-item"><a href="/king-note/other/" class="nav-link">
+  其他
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Note</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/king-note/linux/note/" aria-current="page" class="sidebar-link">linux笔记</a></li><li><a href="/king-note/linux/note/cfssl.html" class="sidebar-link">cfssl使用</a></li><li><a href="/king-note/linux/note/curl.html" class="sidebar-link">curl</a></li><li><a href="/king-note/linux/note/docker.html" class="sidebar-link">docker</a></li><li><a href="/king-note/linux/note/k8s.html" class="sidebar-link">k8s</a></li><li><a href="/king-note/linux/note/nginx.html" class="sidebar-link">nginx</a></li><li><a href="/king-note/linux/note/shell.html" class="sidebar-link">shell</a></li><li><a href="/king-note/linux/note/包管理.html" class="sidebar-link">包管理</a></li><li><a href="/king-note/linux/note/命令集合.html" class="sidebar-link">命令集合</a></li><li><a href="/king-note/linux/note/备份与恢复.html" class="active sidebar-link">备份与恢复</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/king-note/linux/note/备份与恢复.html#mysql备份和恢复" class="sidebar-link">mysql备份和恢复</a></li><li class="sidebar-sub-header"><a href="/king-note/linux/note/备份与恢复.html#kafka备份和恢复" class="sidebar-link">kafka备份和恢复</a></li><li class="sidebar-sub-header"><a href="/king-note/linux/note/备份与恢复.html#redis备份和恢复" class="sidebar-link">redis备份和恢复</a></li><li class="sidebar-sub-header"><a href="/king-note/linux/note/备份与恢复.html#logrotate" class="sidebar-link">logrotate</a></li></ul></li><li><a href="/king-note/linux/note/网络.html" class="sidebar-link">网络名称空间</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="mysql备份和恢复"><a href="#mysql备份和恢复" class="header-anchor">#</a> mysql备份和恢复</h2> <p>导出数据库</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 导出某个数据库</span>
+mysqldump <span class="token parameter variable">-u</span> root <span class="token parameter variable">-p</span> test_db <span class="token operator">&gt;</span> /root/test_db.sql
+
+<span class="token comment"># 导出所有数据库</span>
+mysqldump <span class="token parameter variable">-u</span> root <span class="token parameter variable">-p</span> <span class="token parameter variable">-A</span> <span class="token operator">&gt;</span> /root/all_db.sql
+
+<span class="token comment"># 导出一张表</span>
+mysqldump <span class="token parameter variable">-u</span> root <span class="token parameter variable">-p</span> test_db t_service <span class="token operator">&gt;</span> /root/service.sql
+
+<span class="token comment"># 导出数据库结构  -d 没有数据 --add-drop-table 在每个create语句之前增加一个drop table</span>
+mysqldump <span class="token parameter variable">-u</span> root <span class="token parameter variable">-h</span> localhost <span class="token parameter variable">-p</span> <span class="token parameter variable">-d</span> --add-drop-table bss <span class="token operator">&gt;</span>/root/test_db.sql
+</code></pre></div><p>导入数据库</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 需要提前创建好数据名</span>
+mysql <span class="token parameter variable">-u</span> root <span class="token parameter variable">-p</span>
+use bss
+<span class="token builtin class-name">source</span> /root/bss_db.sql
+</code></pre></div><div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 修改密码</span>
+update user <span class="token builtin class-name">set</span> <span class="token assign-left variable">password</span><span class="token operator">=</span>password<span class="token punctuation">(</span><span class="token string">&quot;123&quot;</span><span class="token punctuation">)</span> where <span class="token assign-left variable">user</span><span class="token operator">=</span><span class="token string">&quot;root&quot;</span><span class="token punctuation">;</span>
+<span class="token comment"># 刷新权限</span>
+flush privileges<span class="token punctuation">;</span>
+</code></pre></div><h2 id="kafka备份和恢复"><a href="#kafka备份和恢复" class="header-anchor">#</a> kafka备份和恢复</h2> <h2 id="redis备份和恢复"><a href="#redis备份和恢复" class="header-anchor">#</a> redis备份和恢复</h2> <h2 id="logrotate"><a href="#logrotate" class="header-anchor">#</a> logrotate</h2> <p>logrotate配置项目</p> <p><code>vim /etc/logrotate.d/hello.conf</code></p> <div class="language- extra-class"><pre class="language-text"><code>/root/script/hello.log {
+    create 644 root root
+    #daily  monthly  weekly
+    rotate 7
+    dateext
+    missingok
+    copytruncate
+    noolddir
+    nomail
+    notifempty
+    compress
+}
+
+logrotate -f /etc/logrotate.d/hello.conf
+</code></pre></div><p>logrotate相关配置</p> <div class="language-shell extra-class"><pre class="language-shell"><code>compress                                  通过gzip 压缩转储以后的日志
+nocompress                                不做gzip压缩处理
+copytruncate                              用于还在打开中的日志文件，把当前日志备份并截断；是先拷贝再清空的方式，拷贝和清空之间有一个时间差，可能会丢失部分日志数据。
+nocopytruncate                            备份日志文件不过不截断
+create mode owner group                   轮转时指定创建新文件的属性，如create 0777 nobody nobody
+nocreate                                  不建立新的日志文件
+delaycompress                             和compress 一起使用时，转储的日志文件到下一次转储时才压缩
+nodelaycompress                           覆盖 delaycompress 选项，转储同时压缩。
+missingok                                 如果日志丢失，不报错继续滚动下一个日志
+errors address                            专储时的错误信息发送到指定的Email 地址
+ifempty                                   即使日志文件为空文件也做轮转，这个是logrotate的缺省选项。
+notifempty                                当日志文件为空时，不进行轮转
+mail address                              把转储的日志文件发送到指定的E-mail 地址
+nomail                                    转储时不发送日志文件
+
+olddir directory                          转储后的日志文件放入指定的目录，必须和当前日志文件在同一个文件系统
+
+noolddir                                  转储后的日志文件和当前日志文件放在同一个目录下
+
+sharedscripts                             运行postrotate脚本，作用是在所有日志都轮转后统一执行一次脚本。如果没有配置这个，那么每个日志轮转后都会执行一次脚本
+
+prerotate                                 在logrotate转储之前需要执行的指令，例如修改文件的属性等动作；必须独立成行
+
+postrotate                                在logrotate转储之后需要执行的指令，例如重新启动 <span class="token punctuation">(</span>kill -HUP<span class="token punctuation">)</span> 某个服务！必须独立成行
+
+daily                                     指定转储周期为每天
+weekly                                    指定转储周期为每周
+monthly                                   指定转储周期为每月
+
+rotate count                              指定日志文件删除之前转储的次数，0 指没有备份，5 指保留5 个备份
+
+dateext                                   使用当期日期作为命名格式
+
+dateformat .%s                            配合dateext使用，紧跟在下一行出现，定义文件切割后的文件名，必须配合dateext使用，只支持 %Y %m %d %s 这四个参数
+
+size<span class="token punctuation">(</span>或minsize<span class="token punctuation">)</span> log-size                  当日志文件到达指定的大小时才转储，log-size能指定bytes<span class="token punctuation">(</span>缺省<span class="token punctuation">)</span>及KB <span class="token punctuation">(</span>sizek<span class="token punctuation">)</span>或MB<span class="token punctuation">(</span>sizem<span class="token punctuation">)</span>；当日志文件 <span class="token operator">&gt;=</span> log-size 的时候就转储。 以下为合法格式：（其他格式的单位大小写没有试过）：size <span class="token operator">=</span> <span class="token number">5</span> 或 size <span class="token number">5</span> （<span class="token operator">&gt;=</span> <span class="token number">5</span> 个字节就转储）；size <span class="token operator">=</span> 100k 或 size 100k；size <span class="token operator">=</span> 100M 或 size 100M
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/king-note/linux/note/命令集合.html" class="prev">
+        命令集合
+      </a></span> <span class="next"><a href="/king-note/linux/note/网络.html">
+        网络名称空间
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/king-note/assets/js/app.502cd6d7.js" defer></script><script src="/king-note/assets/js/2.845378f6.js" defer></script><script src="/king-note/assets/js/77.44a3244c.js" defer></script>
+  </body>
+</html>

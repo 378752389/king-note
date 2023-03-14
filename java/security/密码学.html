@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>加密算法 | Kingの笔记</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    <link rel="icon" href="/king-note/favicon.ico">
+    <meta name="description" content="学习笔记">
+    <meta name="author" content="King">
+    <meta name="keywords" content="vuepress, 个人博客, King">
+    
+    <link rel="preload" href="/king-note/assets/css/0.styles.2819cdbb.css" as="style"><link rel="preload" href="/king-note/assets/js/app.502cd6d7.js" as="script"><link rel="preload" href="/king-note/assets/js/2.845378f6.js" as="script"><link rel="preload" href="/king-note/assets/js/39.b2a6de4b.js" as="script"><link rel="prefetch" href="/king-note/assets/js/10.f6e8e596.js"><link rel="prefetch" href="/king-note/assets/js/11.79c0b872.js"><link rel="prefetch" href="/king-note/assets/js/12.0e1d2785.js"><link rel="prefetch" href="/king-note/assets/js/13.7721c2d2.js"><link rel="prefetch" href="/king-note/assets/js/14.37ed4b4c.js"><link rel="prefetch" href="/king-note/assets/js/15.bc0e9965.js"><link rel="prefetch" href="/king-note/assets/js/16.9ebf5061.js"><link rel="prefetch" href="/king-note/assets/js/17.c227c82f.js"><link rel="prefetch" href="/king-note/assets/js/18.d2b1b625.js"><link rel="prefetch" href="/king-note/assets/js/19.81742a06.js"><link rel="prefetch" href="/king-note/assets/js/20.01657bf2.js"><link rel="prefetch" href="/king-note/assets/js/21.00c7eb6b.js"><link rel="prefetch" href="/king-note/assets/js/22.611f0fc6.js"><link rel="prefetch" href="/king-note/assets/js/23.71adac13.js"><link rel="prefetch" href="/king-note/assets/js/24.4781a682.js"><link rel="prefetch" href="/king-note/assets/js/25.99382d92.js"><link rel="prefetch" href="/king-note/assets/js/26.658465da.js"><link rel="prefetch" href="/king-note/assets/js/27.f4f7bc28.js"><link rel="prefetch" href="/king-note/assets/js/28.5d04d630.js"><link rel="prefetch" href="/king-note/assets/js/29.a9bfe5ef.js"><link rel="prefetch" href="/king-note/assets/js/3.d5dd2cba.js"><link rel="prefetch" href="/king-note/assets/js/30.b9aa3a20.js"><link rel="prefetch" href="/king-note/assets/js/31.8764b475.js"><link rel="prefetch" href="/king-note/assets/js/32.5b20119c.js"><link rel="prefetch" href="/king-note/assets/js/33.13ad32ed.js"><link rel="prefetch" href="/king-note/assets/js/34.77bdf5b4.js"><link rel="prefetch" href="/king-note/assets/js/35.3a736192.js"><link rel="prefetch" href="/king-note/assets/js/36.341ad4bb.js"><link rel="prefetch" href="/king-note/assets/js/37.1fa3ba02.js"><link rel="prefetch" href="/king-note/assets/js/38.1977e644.js"><link rel="prefetch" href="/king-note/assets/js/4.47d9a46a.js"><link rel="prefetch" href="/king-note/assets/js/40.ba333a6c.js"><link rel="prefetch" href="/king-note/assets/js/41.b8d4c557.js"><link rel="prefetch" href="/king-note/assets/js/42.f5fd8724.js"><link rel="prefetch" href="/king-note/assets/js/43.44532d02.js"><link rel="prefetch" href="/king-note/assets/js/44.1bf3e9fc.js"><link rel="prefetch" href="/king-note/assets/js/45.439208bd.js"><link rel="prefetch" href="/king-note/assets/js/46.b34c4181.js"><link rel="prefetch" href="/king-note/assets/js/47.2328e72d.js"><link rel="prefetch" href="/king-note/assets/js/48.9be0874b.js"><link rel="prefetch" href="/king-note/assets/js/49.53d88d35.js"><link rel="prefetch" href="/king-note/assets/js/5.06163824.js"><link rel="prefetch" href="/king-note/assets/js/50.e6d7416b.js"><link rel="prefetch" href="/king-note/assets/js/51.9b428973.js"><link rel="prefetch" href="/king-note/assets/js/52.9e525a62.js"><link rel="prefetch" href="/king-note/assets/js/53.31a7d46b.js"><link rel="prefetch" href="/king-note/assets/js/54.504836e6.js"><link rel="prefetch" href="/king-note/assets/js/55.af393f01.js"><link rel="prefetch" href="/king-note/assets/js/56.761f2c0c.js"><link rel="prefetch" href="/king-note/assets/js/57.9837acac.js"><link rel="prefetch" href="/king-note/assets/js/58.7f63ebe2.js"><link rel="prefetch" href="/king-note/assets/js/59.dd2b9db8.js"><link rel="prefetch" href="/king-note/assets/js/6.8aca83c8.js"><link rel="prefetch" href="/king-note/assets/js/60.58eef89e.js"><link rel="prefetch" href="/king-note/assets/js/61.d9c6d850.js"><link rel="prefetch" href="/king-note/assets/js/62.03349a5f.js"><link rel="prefetch" href="/king-note/assets/js/63.1a582cbd.js"><link rel="prefetch" href="/king-note/assets/js/64.b9a76bac.js"><link rel="prefetch" href="/king-note/assets/js/65.41e83262.js"><link rel="prefetch" href="/king-note/assets/js/66.4ec60e21.js"><link rel="prefetch" href="/king-note/assets/js/67.c30dad01.js"><link rel="prefetch" href="/king-note/assets/js/68.a8630d70.js"><link rel="prefetch" href="/king-note/assets/js/69.086770e4.js"><link rel="prefetch" href="/king-note/assets/js/7.13ad1ed6.js"><link rel="prefetch" href="/king-note/assets/js/70.5d00104f.js"><link rel="prefetch" href="/king-note/assets/js/71.3c01a9d2.js"><link rel="prefetch" href="/king-note/assets/js/72.ee44c614.js"><link rel="prefetch" href="/king-note/assets/js/73.fc5fb5d1.js"><link rel="prefetch" href="/king-note/assets/js/74.fd31b98d.js"><link rel="prefetch" href="/king-note/assets/js/75.13eff198.js"><link rel="prefetch" href="/king-note/assets/js/76.cad72369.js"><link rel="prefetch" href="/king-note/assets/js/77.44a3244c.js"><link rel="prefetch" href="/king-note/assets/js/78.3fe79529.js"><link rel="prefetch" href="/king-note/assets/js/79.9844fe0d.js"><link rel="prefetch" href="/king-note/assets/js/8.5dc04c6c.js"><link rel="prefetch" href="/king-note/assets/js/80.a58aa42d.js"><link rel="prefetch" href="/king-note/assets/js/81.d46aed9b.js"><link rel="prefetch" href="/king-note/assets/js/82.2da07900.js"><link rel="prefetch" href="/king-note/assets/js/83.0aecac51.js"><link rel="prefetch" href="/king-note/assets/js/9.f3284a70.js">
+    <link rel="stylesheet" href="/king-note/assets/css/0.styles.2819cdbb.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/king-note/" class="home-link router-link-active"><img src="/king-note/assets/img/logo.png" alt="Kingの笔记" class="logo"> <span class="site-name can-hide">Kingの笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java" class="mobile-dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/core/" class="nav-link">
+  Java核心
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Spring
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/spring/note/" class="nav-link">
+  spring笔记
+</a></li><li class="dropdown-subitem"><a href="/king-note/java/spring/integration/" class="nav-link">
+  spring整合
+</a></li></ul></li><li class="dropdown-item"><h4>
+          开发工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/devkits/maven/" class="nav-link">
+  Maven
+</a></li><li class="dropdown-subitem"><a href="/king-note/java/devkits/git/" class="nav-link">
+  Git
+</a></li></ul></li><li class="dropdown-item"><h4>
+          安全
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/security/" class="nav-link router-link-active">
+  安全
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/linux/note/" class="nav-link">
+  笔记
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/linux/deploy/" class="nav-link">
+  部署
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/front/css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/front/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="中间件" class="dropdown-title"><span class="title">中间件</span> <span class="arrow down"></span></button> <button type="button" aria-label="中间件" class="mobile-dropdown-title"><span class="title">中间件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/components/mysql/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/components/kafka/" class="nav-link">
+  Kafka
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/components/redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><a href="/king-note/distributed/" class="nav-link">
+  分布式
+</a></div><div class="nav-item"><a href="/king-note/nav/" class="nav-link">
+  导航
+</a></div><div class="nav-item"><a href="/king-note/other/" class="nav-link">
+  其他
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java" class="mobile-dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/core/" class="nav-link">
+  Java核心
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Spring
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/spring/note/" class="nav-link">
+  spring笔记
+</a></li><li class="dropdown-subitem"><a href="/king-note/java/spring/integration/" class="nav-link">
+  spring整合
+</a></li></ul></li><li class="dropdown-item"><h4>
+          开发工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/devkits/maven/" class="nav-link">
+  Maven
+</a></li><li class="dropdown-subitem"><a href="/king-note/java/devkits/git/" class="nav-link">
+  Git
+</a></li></ul></li><li class="dropdown-item"><h4>
+          安全
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/king-note/java/security/" class="nav-link router-link-active">
+  安全
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/linux/note/" class="nav-link">
+  笔记
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/linux/deploy/" class="nav-link">
+  部署
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/front/css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/front/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="中间件" class="dropdown-title"><span class="title">中间件</span> <span class="arrow down"></span></button> <button type="button" aria-label="中间件" class="mobile-dropdown-title"><span class="title">中间件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/components/mysql/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/components/kafka/" class="nav-link">
+  Kafka
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/components/redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><a href="/king-note/distributed/" class="nav-link">
+  分布式
+</a></div><div class="nav-item"><a href="/king-note/nav/" class="nav-link">
+  导航
+</a></div><div class="nav-item"><a href="/king-note/other/" class="nav-link">
+  其他
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Security</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/king-note/java/security/" aria-current="page" class="sidebar-link">笔记</a></li><li><a href="/king-note/java/security/jwt.html" class="sidebar-link">jwt</a></li><li><a href="/king-note/java/security/密码学.html" class="active sidebar-link">加密算法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/king-note/java/security/密码学.html#加密算法" class="sidebar-link">加密算法</a></li><li class="sidebar-sub-header"><a href="/king-note/java/security/密码学.html#专业名词" class="sidebar-link">专业名词</a></li><li class="sidebar-sub-header"><a href="/king-note/java/security/密码学.html#命令" class="sidebar-link">命令</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="加密算法"><a href="#加密算法" class="header-anchor">#</a> 加密算法</h2> <h3 id="密码"><a href="#密码" class="header-anchor">#</a> 密码</h3> <p>分组密码：每次只能处理特定长度的一块数据的一类密码算法，这里的&quot;一块&quot;就称为分组。此外，一个分组的比特数就称为分组长度。
+流密码：对数据流进行连续处理的一类密码算法。流密码中一般以1bit、8bit、32bit等为单位进行加密存储。</p> <p>一次性密码属于流密码，DES、3DES、AES等大部分对称密码算法都是分组密码。</p> <h3 id="对称加密算法"><a href="#对称加密算法" class="header-anchor">#</a> 对称加密算法</h3> <p>对称加密算法使用一个密钥；</p> <p>给定一个明文和一个密钥，加密产生密文。解密时使用的读密钥和 加密密钥一致；</p> <p>常见的对称加密算法：</p> <ul><li><p>电子密码本 Electronic Code Book(ECB)</p> <p>将加密的数据分成若干组，每组的大小跟加密密钥长度相同，然后每组都用相同的密钥进行加密。</p></li> <li><p>加密块链模式 Cipher Block Chaining(CBC)</p> <p>CBC模式的加密首先也是将明文分成固定长度的块，然后将前面一个加密块输出的密文与下一个要加密的明文块进行异或操作，将计算结果再用密钥进行加密得到密文。第一明文块加密的时候，因为前面没有加密的密文，所以需要一个初始化向量。</p></li> <li><p>加密反馈模式 Cipher Feedback Mode(CFB)</p> <ul><li>使用64位的初始化向量。初始化向量放在移位寄存器中，在第一步加密，产生相应的64位初始化密文；</li> <li>始化向量最左边的8位与明文前8位(假设为a)进行异或运算，产生密文第一部分（假设为c），然后将c传输到接收方；</li> <li>向量的位（即初始化向量所在的移位寄存器内容）左移8位，使移位寄存器最右边的8位为不可预测的数据，在其中填入c的内容；</li> <li>第1-3步，直到加密所有的明文单元。</li></ul></li> <li><p>输出反馈模式 Output Feedback Mode(OFB)</p> <ul><li>使用64位的初始化向量。初始化向量放在移位寄存器中，在第一步加密，产生相应的64位初始化密文；</li> <li>始化向量最左边的8位与明文前8位(假设为a)进行异或运算，产生密文第一部分（假设为c），然后将c传输到接收方；</li> <li>向量的位（即初始化向量所在的移位寄存器内容）左移8位，使移位寄存器最右边的8位为不可预测的数据，在其中填入a的内容；</li> <li>第1-3步，直到加密所有的明文单元。</li></ul></li></ul> <h3 id="摘要算法"><a href="#摘要算法" class="header-anchor">#</a> 摘要算法</h3> <p>无论用户输入什么长度的原始数据，经过计算后输出的密文都是固定长度的</p> <p>常用的摘要算法 常用的摘要算法主要有MD5和SHA1。D5的输出结果为16字节，sha1的输出结果为20字节。</p> <h3 id="公钥算法"><a href="#公钥算法" class="header-anchor">#</a> 公钥算法</h3> <p>加密和解密使用的是不同的密钥，用其中任一个密钥加密的信息只能用另一个密钥进行解密。这使得通信双方无需事先交换密钥就可进行保密通信。</p> <p>常见的公钥算法： RSA、DSA、DH和ECC。</p> <ol><li>RSA算法</li></ol> <p>其算法如下：</p> <p>A. 选择两质数p、q</p> <p>B. 计算n = p * q</p> <p>C. 计算n的欧拉函数Φ(n) = (p - 1)(q - 1)</p> <p>D. 选择整数e，使e与Φ(n)互质，且1 &lt; e &lt; Φ(n)</p> <p>E. 计算d，使d * e = 1 mod Φ(n)</p> <p>其中，公钥KU＝{e, n}，私钥KR={d, n}。</p> <p>加密/解密过程：</p> <p>利用RSA加密，首先需将明文数字化，取长度小于log2n位的数字作为明文块。</p> <p>对于明文块M和密文块C，加/解密的形式如下：</p> <p>加密： C = Me mod n</p> <p>解密： M = Cd mod n = (Me)d mod n = Med mod n</p> <p>RSA的安全性基于大数分解质因子的困难性。因为若n被分解为n = p * q，则Φ(n)、e、d可依次求得。目前，因式分解速度最快的方法的时间复杂性为exp(sqrt(ln(n)lnln(n)))。统计数据表明，在重要应用中，使用512位的密钥已不安全，需要采用1024位的密钥。</p> <p>::: tips 互质： 公约数只有1的两个整数，叫做互质整数
+:::</p> <ol start="2"><li><p>DSA算法 Digital Signature Algorithm</p> <p>只能用于数字签名，不能用于数字加密</p></li> <li><p>DH 算法 Diffie-Hellman密钥交换</p> <p>通信双方进行密钥协定的协议：两个实体中的任何一个使用自己的私钥和另一实体的公钥，得到一个对称密钥，这一对称密钥其它实体都计算不出来。</p> <p>DH算法的安全性基于有限域上计算离散对数的困难性。 至少需要1024位，才能保证有足够的中、长期安全。</p></li> <li><p>ECC算法 椭圆曲线密码体制</p> <p>ECC算法的安全性基于椭圆曲线点群上的离散对数问题的难解性。</p></li></ol> <h2 id="专业名词"><a href="#专业名词" class="header-anchor">#</a> 专业名词</h2> <ul><li>PEM(Privacy-Enhanced Mail): PEM格式文件后缀通常为&quot;.pem&quot;、“.cer”、“.crt”、“.key”，后缀名并不会影响 PEM 格式文件的解析。</li> <li>DER（Distinguished Encoding Rules）：DER格式文件后缀通常为 “.der” 和 “.cer”，后缀名并不会影响 DER 格式文件的解析。</li></ul> <blockquote><p>pem 和 der 关系：</p> <p>ASN.1 ---序列化--- DER ---BASE64编码--- PEM</p></blockquote> <p>对 ASN.1 序列化后，就会生成一个二进制串，这个就是 DER 格式，将二进制进行 Base64 编码，再加上 PEM 格式特有的头尾两行，就生成了 PEM 格式</p> <ul><li>PKCS7 (Public-Key Cryptography Standards)： 主要用来存储私钥，证书。 可以用der格式或pem格式存储； .pem or .p7b</li> <li>PKCS8: 主要用来存储私钥。 首先进行 PKCS5 进行加密， 然后进行base64编码，转换为PEM格式存储, 可以理解为就是Pem</li> <li>PKCS12: 可以看做是 PKCS7 的扩展，在 PKCS12 中可以存储证书，私钥或者 CRL。 .p12 or .pfx</li></ul> <h2 id="命令"><a href="#命令" class="header-anchor">#</a> 命令</h2> <h3 id="dgst"><a href="#dgst" class="header-anchor">#</a> dgst</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 对 a.txt 文件进行摘要算法， 常用的摘要算法包括： -md5, -sha1, -sha256, -sha512</span>
+openssl dgst <span class="token punctuation">[</span>算法 default -md5<span class="token punctuation">]</span> a.txt 
+4ace36445f5ab4bbcc2b9dd55e2f0e3a
+
+<span class="token comment"># 用：分隔</span>
+openssl dgst <span class="token parameter variable">-c</span> a.txt
+<span class="token number">91</span>:0c:8b:c7:31:10:b0:cd:1b:c5:d2:bc:ae:78:25:11
+
+<span class="token comment"># 对 a.txt 文件进行sha1摘要算法, 并用 privatekey.pem 对文件进行签名</span>
+openssl dgst –sign privatekey.pem –sha1 –keyform PEM –c a.txt
+
+</code></pre></div><h3 id="pem-和-der-文件互相转换"><a href="#pem-和-der-文件互相转换" class="header-anchor">#</a> pem 和 der 文件互相转换</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># pem --&gt; der</span>
+openssl rsa <span class="token parameter variable">-inform</span> PEM <span class="token parameter variable">-in</span> rsa_private.pem <span class="token parameter variable">-outform</span> DER <span class="token parameter variable">-out</span> rsa_private.der
+<span class="token comment"># def --&gt; pem</span>
+openssl rsa <span class="token parameter variable">-inform</span> DER <span class="token parameter variable">-in</span> rsa_private.der <span class="token parameter variable">-outform</span> PEM <span class="token parameter variable">-out</span> rsa_private.pem
+
+<span class="token comment"># 查看 ASN.1 密钥结构</span>
+openssl rsa <span class="token parameter variable">-inform</span> der <span class="token parameter variable">-in</span> rsa_private.der <span class="token parameter variable">-text</span> <span class="token parameter variable">-noout</span>
+openssl rsa <span class="token parameter variable">-inform</span> pem <span class="token parameter variable">-in</span> rsa_private.pem <span class="token parameter variable">-text</span> <span class="token parameter variable">-noout</span>
+
+<span class="token comment"># 输出公钥</span>
+openssl rsa <span class="token parameter variable">-in</span> rsa_private.pem <span class="token parameter variable">-outform</span> pem <span class="token parameter variable">-pubout</span> <span class="token parameter variable">-out</span> rsa_public.pem
+
+<span class="token comment"># 查看公钥信息</span>
+openssl rsa <span class="token parameter variable">-pubin</span> <span class="token parameter variable">-in</span> public_aa.pem <span class="token parameter variable">-text</span> <span class="token parameter variable">-modulus</span> <span class="token parameter variable">-noout</span>
+</code></pre></div><p>密钥结构大致如下</p> <div class="language-shell extra-class"><pre class="language-shell"><code>Private-Key: <span class="token punctuation">(</span><span class="token number">1024</span> bit<span class="token punctuation">)</span>
+modulus:
+    00:a9:27:a4:2b:6d:a3:fb:06:9f:2e:0a:93:e0:84:
+    7f:bb:61:d6:8a:b9:0d:1e:9b:ab:a4:3e:f4:cf:e6:
+    <span class="token number">37</span>:8c:7a:90:dd:e6:79:de:76:d0:2d:8d:b4:a6:cf:
+    <span class="token number">29</span>:3d:d5:44:03:1a:39:7b:b2:21:e2:5b:44:3c:14:
+    be:53:a9:e3:a0:72:41:06:87:32:b1:8c:c8:06:90:
+    <span class="token number">33</span>:f7:5a:ee:4d:c7:de:cf:71:99:4b:c4:a5:bf:11:
+    a7:ba:2c:42:89:ea:36:b6:74:ef:ab:b2:26:97:03:
+    05:81:d3:a5:12:0e:3f:1c:d1:f6:9e:cc:68:37:98:
+    7d:0b:46:fb:47:ce:23:29:e9
+publicExponent: <span class="token number">65537</span> <span class="token punctuation">(</span>0x10001<span class="token punctuation">)</span>
+privateExponent:
+    7b:16:8e:7e:cf:8c:98:98:cb:f2:0b:de:69:6c:e1:
+    <span class="token number">29</span>:b0:5b:16:9c:eb:b0:0f:25:0a:22:89:b0:52:dc:
+    af:0b:6d:29:1b:92:28:d0:9a:51:db:a0:ce:15:46:
+    f4:68:a0:d2:05:1e:39:25:79:44:a6:96:f3:85:40:
+    ad:ce:9d:04:af:e3:66:54:be:20:3f:ea:26:06:ed:
+    ef:82:7b:13:5d:8e:4e:bf:45:3f:46:db:7d:51:b6:
+    c5:00:71:84:ae:ae:9a:c8:8f:55:f3:79:f5:8d:96:
+    b1:ad:a8:fc:be:04:3e:28:fc:7c:fa:6d:a2:65:63:
+    <span class="token number">54</span>:9c:1e:e0:ff:18:9e:a5
+prime1:
+    00:d1:71:c3:7b:03:2d:25:d0:8d:bd:44:ae:2f:73:
+    a0:29:d9:c3:d0:a7:c4:15:62:94:87:67:56:66:57:
+    9f:e9:e6:17:48:6b:a7:35:61:23:da:7d:29:1f:b8:
+    <span class="token number">64</span>:30:29:77:e8:0a:88:0c:a5:ee:11:75:fe:79:32:
+    <span class="token number">63</span>:37:a9:24:3b
+prime2:
+    00:ce:c1:3d:3d:10:b1:8a:df:32:9a:6e:1d:ab:76:
+    <span class="token number">70</span>:2e:61:7b:93:dd:e5:58:cf:65:7f:38:35:d3:87:
+    <span class="token number">43</span>:dc:c5:67:10:c3:0c:14:33:6e:7d:91:4c:90:49:
+    <span class="token number">93</span>:dd:46:27:a7:27:cf:2f:ea:c2:24:bb:c4:80:f0:
+    03:de:30:fc:2b
+exponent1:
+    <span class="token number">52</span>:7a:4a:50:96:df:a0:94:90:3c:88:5f:4f:b0:68:
+    d2:12:3f:5a:5b:b6:8b:f5:56:28:3c:39:79:f3:e7:
+    b5:64:36:a6:fe:3d:ca:77:86:76:f3:f2:cd:da:ff:
+    <span class="token number">19</span>:38:3b:4f:d5:55:de:25:39:ab:06:9c:3f:7d:e8:
+    <span class="token number">34</span>:73:17:21
+exponent2:
+    <span class="token number">45</span>:cb:de:4c:7b:12:34:7b:5c:ad:dd:76:8e:a7:90:
+    ff:57:51:4c:7d:a0:2a:f6:f8:a0:95:ed:35:d7:78:
+    05:53:6e:93:ae:04:a9:dd:22:f3:a8:d5:5b:f0:3a:
+    c6:7c:24:6e:bd:75:a8:0b:6c:36:d2:5c:67:da:9e:
+    b3:a7:7d:b9
+coefficient:
+    <span class="token number">70</span>:09:e4:1c:ae:e1:a6:2e:2c:49:eb:20:cb:59:d5:
+    1b:2c:cc:e5:17:20:8c:3b:5d:6e:67:7a:f7:d1:e7:
+    5d:f7:a3:38:03:d6:81:af:9a:65:f1:3a:a5:b9:57:
+    fb:18:70:8c:21:50:8c:f5:f6:54:44:cd:4c:8a:33:
+    <span class="token number">86</span>:f9:9b:a0
+</code></pre></div><h3 id="rand"><a href="#rand" class="header-anchor">#</a> rand</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 生成100 位随机数并用 base64编码</span>
+openssl rand <span class="token parameter variable">-base64</span> <span class="token number">100</span>
+<span class="token comment"># 生成100 位随机数并用 hex 显示</span>
+openssl rand <span class="token parameter variable">-hex</span> <span class="token number">100</span>
+</code></pre></div><h3 id="genrsa"><a href="#genrsa" class="header-anchor">#</a> genrsa</h3> <div class="language-shell extra-class"><pre class="language-shell"><code>openssl genrsa <span class="token parameter variable">-out</span> pk_king.pem <span class="token number">1024</span>
+</code></pre></div><h3 id="req"><a href="#req" class="header-anchor">#</a> req</h3> <p>默认使用<code>/etc/pki/tls/openssl.cnf</code>配置文件， 如需自定义， 请指定选项 -config myconfig.cnf</p> <p><code>-days</code> 指定证书的有效天数，默认值为<code>/etc/pki/tls/openssl.cnf</code>中配置的 <code>default_days	= 365</code></p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 需要输入subject 相关信息</span>
+openssl req <span class="token parameter variable">-key</span> test.key <span class="token parameter variable">-new</span> <span class="token parameter variable">-out</span> test.csr 
+
+<span class="token comment"># 提前输入 subject 相关信息</span>
+openssl req <span class="token parameter variable">-key</span> test.key <span class="token parameter variable">-subj</span> /C<span class="token operator">=</span>CN/ST<span class="token operator">=</span>hn/L<span class="token operator">=</span>CS/O<span class="token operator">=</span>k/OU<span class="token operator">=</span>dev/CN<span class="token operator">=</span>www.wenking.com/emailAddress<span class="token operator">=</span>abc@qq.com <span class="token parameter variable">-new</span> <span class="token parameter variable">-out</span> test.csr
+
+<span class="token comment"># 查看证书请求文件</span>
+openssl req <span class="token parameter variable">-inform</span> pem <span class="token parameter variable">-in</span> test.csr <span class="token parameter variable">-text</span> <span class="token parameter variable">-noout</span>
+</code></pre></div><blockquote><p>参考</p> <p>https://www.openssl.net.cn/</p></blockquote></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/king-note/java/security/jwt.html" class="prev">
+        jwt
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/king-note/assets/js/app.502cd6d7.js" defer></script><script src="/king-note/assets/js/2.845378f6.js" defer></script><script src="/king-note/assets/js/39.b2a6de4b.js" defer></script>
+  </body>
+</html>
