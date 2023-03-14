@@ -1,8 +1,6 @@
 ---
-k8s
+title: k8s
 ---
-
-
 
 ## Pod
 
@@ -25,7 +23,7 @@ metadata:
     create_method: manual
     env: prod
 spec:
-  nodeSelector:          # 节点选择器， 给节点打上标签后，可以指定部署到某个节点上
+  nodeSelector: # 节点选择器， 给节点打上标签后，可以指定部署到某个节点上
     gpu: "true"
   containers:
     - images: kubia
@@ -35,14 +33,11 @@ spec:
           protocel: TCP
 ```
 
-
 label
 
 app: 指定pod 属于哪个应用，组件或微服务
 
 rel: 在pod中运行的应用程序版本， stable， beta， canary
-
-
 
 namespace
 
@@ -54,6 +49,7 @@ metatada:
 ```
 
 ### 存活探针
+
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -70,8 +66,6 @@ spec:
       initialDelaySeconds: 15
 ```
 
-
-
 当容器被强行终止时，会创建一个全新的容器—-而不是重启原来的容器
 
 ```shell
@@ -79,8 +73,9 @@ kubectl get po kubia-liveness --previous
 ```
 
 ### ReplicationController
-可以确保它的pod始终保持运行状态。如果pod因任何原因消失（例如节点从集群中消失或由于该pod已从节点中逐出）或者变多，
-则ReplicationController 会注意到缺少或者增加的pod并创建新的/删除现有pod，使其始终维持一个稳定的数值。
+
+可以确保它的pod始终保持运行状态。如果pod因任何原因消失（例如节点从集群中消失或由于该pod已从节点中逐出）或者变多， 则ReplicationController
+会注意到缺少或者增加的pod并创建新的/删除现有pod，使其始终维持一个稳定的数值。
 
 主要组成包含： 标签选择器、副本个数、pod模板
 
@@ -101,7 +96,7 @@ spec:
       containers:
         - name: kubia
           image: kubia
-          ports: 
+          ports:
             - containerPort: 8080
 ```
 
@@ -402,6 +397,65 @@ spec:
 
 headless 服务任然提供跨pod的负载平衡，但是是通过dns轮询机制而不是客户端代理
 
+## 配置Pod
+
+### 为容器设置环境变量
+
+环境变量无法在pod创建后被修改
+
+```yaml
+apiVersion: v1
+kind: Pod
+spec:
+  containers:
+    - image: kubia-env
+      env:
+        - name: INTERVAL
+          value: "30"
+        - name: TEXT
+          value: "hello, k8s"
+
+```
+
+> k8s 会暴露相同命名空间下每个service对应的环境变量。
+
+### configmap
+
+```shell
+# 使用指令创建 configmap
+kubectl create configmap kubia-cfg --from-literal=interval=20 --from-literal=text="hello,k8s"
+
+# 从文件中创建 config.conf configmap条目 key ：config.conf 内容为 文件内容
+kubectl create configmap my-cfg --from-file=config.conf
+```
+
+
+pod中使用 configmap
+```yaml
+apiVersion: v1
+kind: Pod
+spec:
+  containers:
+    - image: kubia-cfg
+      name: INTERVAL
+      valueFrom:
+        configMapKeyRef:
+          # optional: true         # 容器是 启动如果缺少 configmap 会启动失败， 加上该配置 可以 忽略 configmap
+          name: kubia-cfg
+          key: interval
+```
+
+
+
+
+
+
+```yaml
+apiVersion: v1
+kind: Pod
+spec:
+  
+```
 
 ## 命令
 
