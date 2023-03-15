@@ -35,9 +35,6 @@ Comparable是排序接口；若一个类实现了Comparable接口，就意味着
 * LinkedBlockingQueue:阻塞，线程安全，无边界（可选有边界），链表实现
 * DelayQueue: 阻塞、线程安全、无边界，使用优先级队列实现的无界阻塞队列实现类，只有在延迟期满时才能从中提取元素。
 
-
-
-
 ### set
 
 * HashSet: 底层实现是HashMap， 线程不安全， 可以存储 null 值
@@ -46,14 +43,87 @@ Comparable是排序接口；若一个类实现了Comparable接口，就意味着
 
 ### map
 
-
-
-
-
 ### 常用并发集合
 
 * ConcurrentLinkedQueue:非阻塞，线程安全，无边界，基于链接节点的队列实现。
-* **CopyOnWriteArrayList:** 线程安全的 List，在读多写少的场合性能非常好。
-* **ConcurrentLinkedQueue:** 高效的并发队列，使用链表实现。可以看做一个线程安全的 LinkedList，这是一个非阻塞队列。
-* **ConcurrentSkipListMap:** 跳表的实现。使用跳表的数据结构进行快速查找。
+* CopyOnWriteArrayList: 线程安全的 List，在读多写少的场合性能非常好。
+* ConcurrentLinkedQueue: 高效的并发队列，使用链表实现。可以看做一个线程安全的 LinkedList，这是一个非阻塞队列。
+* ConcurrentSkipListMap: 跳表的实现。使用跳表的数据结构进行快速查找。
 
+## BigDecimal
+
+尽量避免是用 double 的构造函数， 如果需要对 double 进行构造， 可以使用 `Double.toString(val)` 转为 str， 再用 str 进行构造
+
+BigDecimal 进行除法时当不整除出现无限循环小数时，会抛异常，解决办法是为 divide方法设置精度的小数点
+
+NumberFormat 可以对 BigDecimal 进行数据格式化
+
+## 日期
+
+### UTC和GMT区别
+
+GMT（Greenwich Mean Time）， 格林威治平时（也称格林威治时间）。
+
+它规定太阳每天经过位于英国伦敦郊区的皇家格林威治天文台的时间为中午12点。
+
+UTC（Coodinated Universal Time），协调世界时，又称世界统一时间、世界标准时间、国际协调时间。
+
+UTC 是现在全球通用的时间标准，全球各地都同意将各自的时间进行同步协调。UTC 时间是经过平均太阳时（以格林威治时间GMT为准）、 地轴运动修正后的新时标以及以秒为单位的国际原子时所综合精算而成。
+
+### Instant、Date和LocalDate区别
+
+* Instant： 表示的是时间线上的一个点，也就是时刻， 获取的是UTC的时间。
+* Date: 根据当前服务器所处的环境的默认时区来获取的当前时间。 线程不安全。
+* LocalDateTime: 是一个不可变类，线程安全。
+
+
+
+### 日期转换
+
+Date <----> Instant <----> ZonedDateTime <----> LocalDate
+
+> LocalDateTime总是表示本地日期和时间，要表示一个带时区的日期和时间，我们就需要ZonedDateTime。
+> 可以简单地把ZonedDateTime理解成LocalDateTime加ZoneId
+
+```
+// Date to Localdate
+
+Date now = new Date();
+Instant instant = now.toInstant();
+ZonedDateTime zdt = instant.atZone(ZoneId.of("UTC+8"));
+// ZonedDateTime zdt = instant.atZone(ZoneId.systemDefault());
+LocalDate localDate = zdt.toLocalDate();
+
+
+// Localdate to Date
+LocalDate now = LocalDate.now();
+ZonedDateTime zdt = now.atStartOfDay(ZoneId.of("UTC+8"));
+Instant instant = zdt.toInstant();
+Date date = Date.from(instant);
+
+
+// Localdate  Localdatetime
+ LocalDateTime ldt = ld.atStartOfDay();  
+ LocalDateTime ldt = ld.atTime(23, 11, 22);
+ 
+ LocalDate ld = ldt.toLocalDate();
+```
+
+
+
+### 日期格式化工具
+
+* DateTimeFormatter
+* SimpleDateFormat
+
+
+
+### 日期计算
+
+| 计算方式 | Date | LocalDate | LocalDateTime |
+| --- | ---  | --- | ---|
+|计算2个日期差值| TimeUnit.DAYS.convert(d2.getTime() - d1.getTime(), TimeUnit.MILLISECONDS) | Period.between(ld1, ld2).getDays() | ChronoUnit.HOURS.between(ldt1, ldt2)|
+|日期比较大小| d1.after(d2) | ld1.isAfter(ld2) | ldt1.isAfter(ldt2) |
+|日期加减|  | ld1.plus(2, TimeUnit.DAYS) | ld1.plus(2, TimeUnit.HOURS) |
+
+> 要想在JDBC中，使用Java8的日期LocalDate、LocalDateTime，则必须要求数据库驱动的版本不能低于4.2
