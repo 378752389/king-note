@@ -1,5 +1,6 @@
 ---
 title: AOP
+permalink: /java/spring/note/
 ---
 
 [[toc]]

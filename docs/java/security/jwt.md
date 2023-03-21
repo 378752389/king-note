@@ -1,5 +1,6 @@
 ---
 title: jwt
+permalink: /java/security
 ---
 
 ### jwt

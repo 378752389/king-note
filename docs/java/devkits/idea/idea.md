@@ -1,4 +1,9 @@
-#### idea启动参数
+---
+title: idea
+permalink: /java/devkits/idea
+---
+
+## idea启动参数
 
 IDEA中vm options与program arguments区别：
 

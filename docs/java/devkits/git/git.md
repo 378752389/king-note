@@ -1,3 +1,8 @@
+---
+title: git
+permalink: /java/devkits/git
+---
+
 ## 仓库初始化
 
 ```shell

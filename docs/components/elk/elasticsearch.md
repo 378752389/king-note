@@ -1,3 +1,8 @@
+---
+title: elasticsearch
+permalink: /components/elasticsearch
+---
+
 ## elasticsearch集群搭建
 
 默认情况下，每个节点都会自动分配一个唯一标识，用于管理

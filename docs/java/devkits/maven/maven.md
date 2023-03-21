@@ -1,5 +1,6 @@
 ---
 title: maven
+permalink: /java/devkits/maven
 ---
 
 ## package、install、deploy 三者之间区别

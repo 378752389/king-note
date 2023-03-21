@@ -1,5 +1,6 @@
 ---
 title: java基础
+permalink: /java/core
 ---
 
 ## 比较接口

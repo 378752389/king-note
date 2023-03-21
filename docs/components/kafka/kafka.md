@@ -1,4 +1,7 @@
-
+---
+title: 笔记
+permalink: /components/kafka
+---
 
 ## kafka 存储机制
 

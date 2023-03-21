@@ -1,5 +1,6 @@
 ---
 title: 笔记
+permalink: /components/mysql
 ---
 
 

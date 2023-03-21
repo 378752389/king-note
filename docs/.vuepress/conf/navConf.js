@@ -20,6 +20,7 @@ module.exports = [
                 items: [
                     {text: 'Maven', link: '/java/devkits/maven/'},
                     {text: 'Git', link: '/java/devkits/git/'},
+                    {text: 'Idea', link: '/java/devkits/idea/'},
                 ]
             },
             {
@@ -33,6 +34,7 @@ module.exports = [
     {
         text: 'Linux',
         items: [
+            {text: '命令', link: '/linux/command/'},
             {text: '笔记', link: '/linux/note/'},
             {text: '部署', link: '/linux/deploy/'},
         ]
@@ -50,6 +52,7 @@ module.exports = [
             {text: 'MySQL', link: '/components/mysql/'},
             {text: 'Kafka', link: '/components/kafka/'},
             {text: 'Redis', link: '/components/redis/'},
+            {text: 'ELK', link: '/components/elk/'},
         ]
     },
     {
@@ -57,8 +60,8 @@ module.exports = [
         link: '/distributed/'
     },
     {
-      text: '导航',
-      link: '/nav/',
+        text: '导航',
+        link: '/nav/',
     },
     {
         text: '其他',

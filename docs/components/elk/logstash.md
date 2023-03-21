@@ -1,3 +1,8 @@
+---
+title: logstash
+permalink: /components/logstash
+---
+
 ```shell
 # -e 指定 配置   -f 从文件中 获取配置
 bin/logstash -e 'input{stdin{}}output{stdout{codec=>rubydebug}}'

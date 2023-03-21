@@ -1,3 +1,8 @@
+---
+title: elk搭建
+permalink: /components/elk
+---
+
 ## 下载
 
 ```shell

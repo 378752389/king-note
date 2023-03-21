@@ -1,5 +1,6 @@
 ---
 title: 分布式id
+permalink: /distributed/
 ---
 
 #### 分布式id

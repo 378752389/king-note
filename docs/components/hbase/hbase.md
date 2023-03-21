@@ -1,3 +1,8 @@
+---
+title: 笔记
+permalink: /components/hbase
+---
+
 ## hbase安装
 
 ### 单机部署， 使用自带的zk， 使用文件存储
