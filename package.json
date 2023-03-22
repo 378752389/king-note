@@ -15,6 +15,7 @@
     "serve": "vuepress dev docs --temp .temp"
   },
   "dependencies": {
-    "moment": "^2.29.4"
+    "moment": "^2.29.4",
+    "vuepress-plugin-code-copy": "^1.0.6"
   }
 }

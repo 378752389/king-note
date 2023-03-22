@@ -44,6 +44,13 @@ module.exports = {
             {
                 // options
             }
+        ],
+
+        [
+            'vuepress-plugin-code-copy',
+            {
+                align: "top"
+            }
         ]
 
         // 导入 pwa 插件
