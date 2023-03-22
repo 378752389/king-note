@@ -16,6 +16,9 @@ module.exports = {
         ['meta', {name: 'keywords', content: 'vuepress, 个人博客, King'}]
     ],
 
+    markdown: {
+        lineNumbers: true
+    },
 
     // 导入插件
     plugins: [
