@@ -56,9 +56,3 @@ JAVA_OPTS="$JAVA_OPTS -server -Xms4096m -Xmx6144m -XX:MetaspaceSize=512m -XX:Com
 4. 查看数据源配置文件， 发现设置的初始值为20，最大激活数为 1500，dubbo服务线程数为500， 配置没有问题。
 5. 大量线程需要创建connection对象，却发现堆内存没有这么大的空间，因此请求大量阻塞。
 
-
-
-
-
-日访问量600w+, 40w+的用户，日活2w左右，70 qps, 高峰 qps ____
-设备销量 900w+

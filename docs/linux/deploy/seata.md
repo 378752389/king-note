@@ -1,9 +1,9 @@
 ---
-title: seata 单机部署
+title: seata 部署
 permalink: /linux/deploy/seata
 ---
 
-# 概述
+## 概述
 
 一、seata 中角色分为 TC、TM、RM， TC（server）为单独服务端部署， TM和RM（client）由业务系统集成
 
