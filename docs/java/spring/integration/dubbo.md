@@ -37,9 +37,6 @@ spring:
     registry:
       address: zookeeper://127.0.0.1:2181
       check: false
-      # client: curator
-      # username: ystrm
-      # password: mnKj1ZpAU725z0dXWaY3RGMq
     protocol:
       name: dubbo
       port: 20880
@@ -81,5 +78,5 @@ public class OrderServiceImpl implements OrderService {
 ```
 
 
-
+>dubbo官网示例：  https://github.com/apache/dubbo-samples
 
