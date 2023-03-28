@@ -4,6 +4,27 @@ title: java常见加密算法
 
 ## 编码与解码
 
+### URL编码
+
+目的： 出于兼容性考虑，因为很多服务器只识别ASCII字符。
+
+编码规则：
+* 如果字符是A~Z，a~z，0~9以及-、_、.、*，则保持不变；
+* 如果是其他字符，先转换为UTF-8编码，然后对每个字节以%XX表示。
+
+### base64编码
+
+目的： Base64编码是对二进制数据进行编码，表示成文本格式。可以把任意长度的二进制数据变为纯文本，且只包含A~Z、a~z、0~9、+、/、=这些字符。
+
+原理：把3字节的二进制数据按6bit一组，用4个int整数表示。
+因为6位整数的范围总是0-63，所以能用64个字符表示：A~Z对应0~25、a~z对应26~51，0~9对应52~61，+对应62，/对应63
+
+如果输入的byte数组长度不是3的整数倍，需要对输入的末尾补一个或两个0x00,编码后在结尾加一个=表示补充了一个0x00,解码的时候去掉补充的0x00即可
+
+> 变种
+> 
+> Base64URL编码： 把 + 变成 -， 把 / 变成 _
+
 ## 签名
 
 |算法|    输出长度（位）|    输出长度（字节）|
@@ -124,10 +145,10 @@ byte[]bytes1=instance.doFinal();
 
 |算法|    输出长度（位）| 块大小（位）|   工作模式| 填充模式| 
 |---|---|---| ---|---|
-|DES|56/64| 64|ECB/CBC/PCBC/CTR/...|NoPadding/PKCS5Padding/...|
+|DES|56| 64|ECB/CBC/PCBC/CTR/...|NoPadding/PKCS5Padding/...|
 |AES|    128/192/256| 128|   ECB/CBC/PCBC/CTR/...|    NoPadding/PKCS5Padding/PKCS7Padding/...|
 
-DES算法由于密钥过短，可以在短时间内被暴力破解，所以现在已经不安全了。
+DES算法密钥每7个bit位都将包含一个奇偶校验位。因此虽然生成的密钥长度位8byte，但其中包含一个byte的奇偶校验。由于密钥过短，可以在短时间内被暴力破解，所以现在已经不安全了。
 
 如果需要加密的数据（明文）的字节码的长度不是块大小的整数倍，那么就需要在末尾进行填充。
 
@@ -206,3 +227,61 @@ printHex(bytes);
 ```
 
 ### 非对称加密
+
+#### RSA
+
+rsa 加密
+
+```java
+
+// 生成 公钥 和 私钥
+KeyPairGenerator rsa = KeyPairGenerator.getInstance("RSA");
+rsa.initialize(1024);
+KeyPair keyPair = rsa.generateKeyPair();
+PrivateKey sk = keyPair.getPrivate();
+PublicKey pk = keyPair.getPublic();
+
+// 用 公钥和私钥 对数据进行加密/解密
+Cipher alg = Cipher.getInstance("RSA");
+
+// 加密
+alg.init(Cipher.ENCRYPT_MODE, pk);
+alg.update(msg.getBytes(StandardCharsets.UTF_8));
+byte[] bytes = alg.doFinal();
+
+// 解密
+alg.init(Cipher.DECRYPT_MODE, sk);
+alg.update(bytes);
+System.out.println(new String(alg.doFinal()));
+```
+
+恢复公钥和私钥
+
+```java
+byte[] pkData = ...
+byte[] skData = ...
+        
+KeyFactory kf = KeyFactory.getInstance("RSA");
+// 恢复公钥:
+X509EncodedKeySpec pkSpec = new X509EncodedKeySpec(pkData);
+PublicKey pk = kf.generatePublic(pkSpec);
+// 恢复私钥:
+PKCS8EncodedKeySpec skSpec = new PKCS8EncodedKeySpec(skData);
+PrivateKey sk = kf.generatePrivate(skSpec);
+
+```
+
+
+数字签名算法
+```java
+KeyPairGenerator rsa = KeyPairGenerator.getInstance("RSA");
+rsa.initialize(1024);
+KeyPair keyPair = rsa.generateKeyPair();
+PrivateKey sk = keyPair.getPrivate();
+PublicKey pk = keyPair.getPublic();
+
+Signature signature = Signature.getInstance("sha1withrsa");
+signature.initSign(sk);
+signature.update(msg.getBytes(StandardCharsets.UTF_8));
+byte[] res2 = signature.sign();
+```
