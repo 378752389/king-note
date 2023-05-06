@@ -59,6 +59,21 @@ BigDecimal 进行除法时当不整除出现无限循环小数时，会抛异常
 
 NumberFormat 可以对 BigDecimal 进行数据格式化
 
+舍入模式
+
+| 舍入模式          | 说明                                                         |
+| ----------------- | ------------------------------------------------------------ |
+| ROUND_UP          | 该模式远离0，总是在非零丢弃分数之前增加数字，朝远离数轴的方向进位 |
+| ROUND_DOWN        | 该模式向0靠近，永远不要在一个被丢弃的分数前增加数字(即截断)  |
+| ROUND_CEILING     | 该模式向正无穷舍入                                           |
+| ROUND_FLOOR       | 该模式向负无穷舍入                                           |
+| ROUND_HALF_UP     | 该模式向“最近的邻居”四舍五入。如果丢弃的分数是≥ 0.5，则行为与ROUND_UP相同;否则，行为与ROUND_DOWN相同（**四舍五入**） |
+| ROUND_HALF_DOWN   | 该模式向“最近的邻居”四舍五入。如果丢弃的分数是> 0.5，则行为与ROUND_UP相同；否则，行为与ROUND_DOWN相同（**五舍六入**） |
+| ROUND_HALF_EVEN   | 四舍六入，五看前一位是偶数舍，奇数进位                       |
+| ROUND_UNNECESSARY | 在产生不精确结果的操作上指定了此舍入模式，则会抛出ArithmeticException |
+
+
+
 ## 日期
 
 ### UTC和GMT区别
@@ -76,8 +91,6 @@ UTC 是现在全球通用的时间标准，全球各地都同意将各自的时�
 * Instant： 表示的是时间线上的一个点，也就是时刻， 获取的是UTC的时间。
 * Date: 根据当前服务器所处的环境的默认时区来获取的当前时间。 线程不安全。
 * LocalDateTime: 是一个不可变类，线程安全。
-
-
 
 ### 日期转换
 
@@ -110,14 +123,10 @@ Date date = Date.from(instant);
  LocalDate ld = ldt.toLocalDate();
 ```
 
-
-
 ### 日期格式化工具
 
 * DateTimeFormatter
 * SimpleDateFormat
-
-
 
 ### 日期计算
 
@@ -128,7 +137,6 @@ Date date = Date.from(instant);
 |日期加减|  | ld1.plus(2, TimeUnit.DAYS) | ld1.plus(2, TimeUnit.HOURS) |
 
 > 要想在JDBC中，使用Java8的日期LocalDate、LocalDateTime，则必须要求数据库驱动的版本不能低于4.2
-
 
 ## 源码调试技巧
 
