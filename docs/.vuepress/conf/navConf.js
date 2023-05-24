@@ -42,6 +42,7 @@ module.exports = [
     {
         text: '前端',
         items: [
+            {text: '基础', link: '/front/base/'},
             {text: 'Css', link: '/front/css/'},
             {text: 'Vue', link: '/front/vue/'},
         ]
