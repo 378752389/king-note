@@ -5,7 +5,7 @@ module.exports = [
             {
                 text: '基础',
                 items: [
-                    {text: 'Java核心', link: '/java/core/'}
+                    {text: 'Java核心', link: '/java/基础/'}
                 ]
             },
             {
@@ -62,9 +62,5 @@ module.exports = [
     {
         text: '导航',
         link: '/nav/',
-    },
-    {
-        text: '其他',
-        link: '/other/'
     }
 ]

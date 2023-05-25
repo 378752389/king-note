@@ -1,6 +1,6 @@
 ---
 title: java基础
-permalink: /java/core
+permalink: /java/基础
 ---
 
 ## 比较接口
