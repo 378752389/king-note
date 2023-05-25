@@ -1,6 +1,6 @@
 ---
 title: javascript基础
-permalink: /font/javascript基础/
+permalink: /font/javascript基础
 ---
 
 ## 正则表达式
