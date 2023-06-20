@@ -59,59 +59,148 @@ permalink: /java/core/http
     * 多工： 在一个TCP连接里面，服务器同时收到了A请求和B请求，于是先回应A请求，结果发现处理过程非常耗时，于是就发送A请求已经处理好的部分， 接着回应B请求，完成后，再发送A请求剩下的部分。
     * 头信息压缩： 头信息使用压缩算法后在发送，并且客户端和服务器都是生成一张头信息表，所有字段都存入表中，生成一个索引号， 以后发送只需发送索引号就行
     * 服务器推送：
+    
+## http restful 请求格式解析
 
-## restTemplate使用
+### get (delete 同理)
 
-http 中数据提交的方式有2种， 分别为 form 和 payload， 这2种方式往后端提交数据解析的方式是不同的， 错误的指定提交方式将会报405错
+请求url： `http://localhost:8080/user?name=admin&roles=1,2,3`
 
-区别：
+前端发送数据方式
 
-* form：
-    1. 请求头设置为 ContentType: 'application/x-www-form-urlencoded';
-    2. httpbody 为 MultivalueMap；
+```js
+import axios from "axios";
 
-* payload： form 提交 payload 提交请求头
-    1. 请求头设置为 ContentType: 'application/json';
-    2. httpbody 为 字符串；
+// const query = "name=admin&roles=1,2,3";
+
+// 效果同上面一行
+const queryObj = {
+    name: "admin",
+    roles: [1, 2, 3]
+}
+const query = new URLSearchParams(queryObj).toString();
+
+// 获取数据
+axios.get("http://localhost:8080/user?" + query).then(res => {
+  console.log(res.data);
+});
+
+// 批量删除数据
+axios.delete("http://localhost:8080/user/batch?roles=1,2,3").then(res => {
+    console.log(res.data);
+});
+```
+
+后端接受数据方式
 
 ```java
-import java.util.HashMap;
 
-public class RestTemplateTest {
+@RestController
+@RequestMapping("user")
+public class UserController {
 
-    public void testForm() {
-        String url = "http://localhost:8080";
-        MultiValueMap<String, String> params = new LinkedMultiValueMap<>();
-        params.add("data", "1");
+    @GetMapping
+    public User getUser(@RequestParam("name") String name, @RequestParam("roles") List<Integer> roles) {
 
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Host", "192.168.1.217");
-        headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
-
-        HttpEntity<MultiValueMap<String, String>> httpEntity = new HttpEntity<>(params, headers);
-        Map map = restTemplate.postForObject(url, httpEntity, Map.class);
-    }
-
-    public void testPayload() {
-        String url = "http://localhost:8080";
-        Map<String, String> params = new HashMap<>();
-        params.add("data", "1");
-        
-        String payload = JSON.toJSONString(params);
-
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Host", "192.168.1.217");
-        headers.setContentType(MediaType.APPLICATION_JSON);
-
-        HttpEntity<MultiValueMap<String, String>> httpEntity = new HttpEntity<>(params, headers);
-        Map map = restTemplate.postForObject(url, httpEntity, Map.class);
+        return new User();
     }
     
+    @DeleteMapping("batch")
+    public Result deleteUser(@RequestParam("roles") List<Integer> roles) {
+        return new Result();
+    }
+}
+```
+
+### post (put 同理)
+
+>x-www-from-urlencoded
+
+
+请求url： `http://localhost:8080/user`
+
+请求payload：`name=admin&roles=1,2,3`
+
+前端发送数据方式
+
+```js
+import axios from "axios";
+
+axios.post("http://localhost:8080/user", "name=admin&roles=1,2,3").then(res => {
+  console.log(res.data);
+});
+
+// axios.post("http://localhost:8080/user", "name=admin&roles=1&role=2&role=3").then(res => {
+//     console.log(res.data);
+// });
+```
+
+后端接受数据方式
+
+```java
+
+@RestController
+@RequestMapping("user")
+public class UserController {
+
+    @PostMapping
+    public User createUser(@RequestParam("name") String name, @RequestParam("roles") List<Integer> roles) {
+
+        return new User();
+    }
     
 }
 ```
 
 
-> HttpEntity 与 UriVariables 区别：
-> 
-> HttpEntity用于传递具体的参数值，而UriVariables则用于格式化URL地址，而不是地址参数;
+> json
+
+请求url： `http://localhost:8080/user`
+
+请求payload：`{"name": "admin", "roles": [1, 2, 3]}`
+
+
+前端发送数据方式
+
+```js
+import axios from "axios";
+const data = {name: "admin", roles: [1, 2, 3]}
+axios.post("http://localhost:8080/user", data).then(res => {
+  console.log(res.data);
+});
+
+const dataList = [{name: "admin", roles: [1, 2, 3]}]
+axios.post("http://localhost:8080/user/batch", dataList).then(res => {
+    console.log(res.data);
+});
+```
+
+后端接受数据方式
+
+```java
+
+@RestController
+@RequestMapping("user")
+public class UserController {
+
+    @Data
+    public static class UserDto {
+        private String name;
+        
+        private List<Integer> roles;
+    }
+    
+    @PostMapping
+    public Result createUser(@RequestBody UserDto userDto) {
+        
+        return new Result();
+    }
+    
+    @PostMapping("batch")
+    public Result createUserBatch(@RequestBody List<UserDto> userDtoList) {
+        return new Result();
+    }
+    
+    
+}
+```
