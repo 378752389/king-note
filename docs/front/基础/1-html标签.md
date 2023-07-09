@@ -293,7 +293,7 @@ permalink: /front/html标签
 
 ## 八、表单标签
 
-#### 1、input
+### 1、input
 
 **通用属性**
 
@@ -375,7 +375,7 @@ input {
 
 
 
-#### 2、下拉菜单
+### 2、下拉菜单
 
 ```html
 <select>
@@ -394,7 +394,7 @@ input {
 
 
 
-#### 3、文本域
+### 3、文本域
 
 多行文本
 
@@ -413,7 +413,7 @@ input {
 
 
 
-#### 4、label标签
+### 4、label标签
 
 **增大点击范围**
 
@@ -439,7 +439,7 @@ input {
 
 
 
-#### 5、按钮
+### 5、按钮
 
 ```html
 <button type="">
@@ -455,7 +455,7 @@ input {
 
 
 
-#### 6、表单
+### 6、表单
 
 
 
@@ -481,6 +481,74 @@ input {
 |          |  空格  | &nbsp；  |
 |    <     | 小于号 | \&lt;    |
 |    >     | 大于号 | \&gt;    |
+
+
+
+### 1、常见字体文件
+
+常见的字体文件包含：
+
+* TTF(TrueType Font)
+
+  `TrueType`是由美国苹果公司和微软公司共同开发的一种电脑轮廓字体（曲线描边字）类型标准。只需要一个文件，包含一个单独的字体样式文件（普通、斜体、粗体等） ；`TrueType`文件格式仅用于屏幕；
+
+* OTF(OpenType Font)
+
+  `OpenType` 是 Adobe 和 Microsoft 联合开发的跨平台字体文件格式，也叫 Type 2 字体，它的字体格式采用 Unicode 编码，是一种兼容各种语言的字体格式：
+
+  - 包含 `TrueType`字体的 `OpenType` 文件后缀名为 `.ttf`。
+  - 包含 `PostScript` 字体的文件后缀名为 `.OTF`。
+  - 如果是包含一系列 `TrueType` 字体的字体包文件，那么后缀名为`.TTC`。
+
+* WOFF(Web Open Font Format)
+
+  `Web 开放字体格式`是一种网页所采用的字体格式标准。本质上是包含了基于 `sfnt` 的字体（如 `TrueType`、`OpenType` 或开放字体格式），且这些字体均经过 `WOFF`的编码工具压缩，以便嵌入网页中。
+
+* WOFF2
+
+  对 `WOFF` 字体的升级。
+
+
+
+### 2、引入外部字体文件
+
+> 写法如下
+
+```css
+@font-face {
+    // 自定义字体名称
+    font-family: "KING_FONT";
+    // 字体资源
+    src: url("http://xxx") format("woff"), url("http://yyy")  format("truetype");
+}
+```
+
+
+
+> 示例
+
+```css
+@font-face {
+    font-family: KING_FONT;
+    src: url(https://dragon-chen777.github.io/assets/fonts/Alimama_DongFangDaKai_Regular.woff) format("woff");
+}
+```
+
+
+
+> 使用字体阴影做出空洞字体
+
+```css
+.empty-font {
+	font-size: 30px;
+	// 字体内芯颜色
+	color: white;
+	// 字体边框颜色
+	text-shadow: 2px 0 red, -2px 0 red, 0 2px red, 0 -2px red;
+}
+```
+
+
 
 
 
