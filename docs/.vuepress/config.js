@@ -78,7 +78,7 @@ module.exports = {
         // 显示文章最后更新时间
         lastUpdated: '更新时间', // string | boolean
 
-        // nav: navConf,
+        // 其他: navConf,
         nav: navbarConf,
 
         // 只有文章标题

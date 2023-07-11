@@ -1,6 +1,11 @@
 ---
-title: http 
-permalink: /java/core/http
+title: http
+date: '2023-07-11 09:00:00'
+categories:
+  - 计算机基础
+  - 网络
+tags:
+  - http
 ---
 
 ## http各个版本之间区别

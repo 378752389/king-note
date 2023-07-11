@@ -4,7 +4,7 @@ module.exports = {
         {
             text: '基础',
             items: [
-                {text: 'Java核心', link: '/java/基础/'}
+                {text: 'Java核心', link: '/java/基础/JavaSE常用类合集'}
             ]
         },
         {

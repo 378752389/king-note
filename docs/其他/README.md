@@ -1,6 +1,6 @@
 ---
 title: 网站导航
-permalink: /nav/site
+permalink: /其他/site
 ---
 
 ## 画图软件

@@ -1,5 +1,10 @@
 ---
-title: jvm优化
+title: JVM
+date: '2023-07-11 09:00:00'
+categories:
+  - JavaSE
+tags:
+  - JVM
 ---
 
 ## 操作命令

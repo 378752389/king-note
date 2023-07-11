@@ -11,7 +11,7 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "serve": "vuepress dev docs --temp .temp"
+    "serve": "vuepress dev docs"
   },
   "dependencies": {
     "moment": "^2.29.4",

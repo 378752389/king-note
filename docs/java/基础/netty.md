@@ -1,7 +1,11 @@
 ---
-title: netty
+title: Netty
+date: '2023-07-11 09:00:00'
+categories:
+  - 网络
+tags:
+  - netty
 ---
-
 ## channel生命周期
 
 * registered： channel 和 eventloop 已经绑定完成

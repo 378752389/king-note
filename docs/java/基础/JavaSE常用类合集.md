@@ -1,6 +1,8 @@
 ---
 title: java基础
-permalink: /java/基础
+date: '2023-07-11 08:00:00'
+categories:
+  - JavaSE
 ---
 
 ## 比较接口
@@ -138,16 +140,3 @@ Date date = Date.from(instant);
 
 > 要想在JDBC中，使用Java8的日期LocalDate、LocalDateTime，则必须要求数据库驱动的版本不能低于4.2
 
-## 源码调试技巧
-
-### 修改源码
-
-如果想修改源代码，可以在当前项目下建立一个和源码同名类，并且具有相同的包路径。
-
-原理是由java类加载机制决定的，会有限加载当前类路径下的类文件。
-
-### bean生命周期调试
-
-1. 如果想判断bean是什么时候实例化的， 可以在bean的所有构造方法上都打上断点
-
-2. 如果想控制bean初始化，可以实现`BeanPostProcessor`类型，然后在初始化请求对bean实例进行判断，在判断中加入自己的逻辑
