@@ -1,9 +1,10 @@
 const moment = require('moment')
-const navConf = require('./conf/navConf')
+const navbarConf = require('./conf/navbar')
 
 module.exports = {
-    title: 'Kingの笔记',
-    description: '学习笔记',
+    title: 'Kingの博客',
+    description: '记录学习、工作中碰到有趣技术',
+    theme: 'reco',
 
     base: '/king-note/',
 
@@ -17,8 +18,7 @@ module.exports = {
     ],
 
     markdown: {
-        lineNumbers: true,
-        extractHeaders: [ 'h2', 'h3', 'h4' ]
+        lineNumbers: true
     },
 
     // 导入插件
@@ -78,16 +78,25 @@ module.exports = {
         // 显示文章最后更新时间
         lastUpdated: '更新时间', // string | boolean
 
-        nav: navConf,
+        // nav: navConf,
+        nav: navbarConf,
 
         // 只有文章标题
         // sidebar: 'auto',
 
-        // 所有配置的文章标题
-        // sidebar: [
-        //     '/',
-        //     '/about/'
-        // ],
+        // 每篇问文章的子菜单配置
+        subSidebar: 'auto',
+
+        blogConfig: {
+            category: {
+                location: 6,     // 在导航栏菜单中所占的位置，默认2
+                text: 'Category' // 默认文案 “分类”
+            },
+            tag: {
+                location: 7,     // 在导航栏菜单中所占的位置，默认3
+                text: 'Tag'      // 默认文案 “标签”
+            }
+        }
 
     }
 }
