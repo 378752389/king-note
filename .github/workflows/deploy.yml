@@ -1,4 +1,4 @@
-name: build and deploy to gh_pages
+name: build and 部署 to gh_pages
 on: [push]
 jobs:
   build-and-deploy:
@@ -7,8 +7,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
 
-      - name: vuepress-deploy
-        uses: jenkey2011/vuepress-deploy@master
+      - name: vuepress-部署
+        uses: jenkey2011/vuepress-部署@master
         env:
           ACCESS_TOKEN: ${{ secrets.KING_NOTE_ACCESS_TOKEN }}
           TARGET_REPO: 378752389/king-note

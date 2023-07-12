@@ -1,5 +1,6 @@
 const moment = require('moment')
 const navbarConf = require('./conf/navbar')
+const sidebarConf = require('./conf/sidebar')
 
 module.exports = {
     title: 'Kingの博客',
@@ -82,7 +83,7 @@ module.exports = {
         nav: navbarConf,
 
         // 只有文章标题
-        // sidebar: 'auto',
+        sidebar: sidebarConf,
 
         // 每篇问文章的子菜单配置
         subSidebar: 'auto',

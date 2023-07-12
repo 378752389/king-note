@@ -99,7 +99,7 @@ mvn clean package
 ## 仓库配置
 
 ```xml
-<!-- mvn:deploy 指定上传依赖路径 -->
+<!-- mvn:部署 指定上传依赖路径 -->
 <distributionManagement>
     <repository>
         <id>localhost</id>
