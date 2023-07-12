@@ -1,6 +1,6 @@
 ---
 title: IO流
-date: '2023-07-11 05:00:00'
+date: 2023-07-11
 categories:
   - JavaSE
 tags:

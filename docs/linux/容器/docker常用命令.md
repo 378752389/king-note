@@ -1,6 +1,6 @@
 ---
 title: docker常用命令
-date: '2023-07-11 14:00:00'
+date: 2023-07-11
 categories:
   - 容器
 tags:

@@ -1,6 +1,6 @@
 ---
 title: openssl生成自签名证书
-date: '2023-07-11 03:00:00'
+date: 2023-07-11
 categories:
   - 网络安全
 tags:

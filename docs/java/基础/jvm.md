@@ -1,6 +1,6 @@
 ---
 title: JVM
-date: '2023-07-11 09:00:00'
+date: 2023-07-11
 categories:
   - JavaSE
 tags:

@@ -1,6 +1,6 @@
 ---
 title: idea代码重构快捷键
-date: '2023-07-11 09:00:00'
+date: 2023-07-11
 categories:
   - Idea
 ---

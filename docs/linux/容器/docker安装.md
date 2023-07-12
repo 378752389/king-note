@@ -1,6 +1,6 @@
 ---
 title: cfssl生成自签名证书
-date: '2023-07-11 22:00:00'
+date: 2023-07-11
 categories:
   - 容器
 tags:

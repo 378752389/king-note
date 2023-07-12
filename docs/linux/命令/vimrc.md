@@ -1,6 +1,6 @@
 ---
 title: vim配置
-date: '2023-07-11 23:00:00'
+date: 2023-07-11
 categories:
   - linux
 tags:

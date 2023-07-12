@@ -26,7 +26,6 @@ module.exports = {
     plugins: [
         // 修改最后更新日期插件
         [
-
             '@vuepress/last-updated',
             {
                 transformer: (timestamp, lang) => {
@@ -38,38 +37,13 @@ module.exports = {
                     return moment(timestamp).format('LLLL')
                 }
             },
-
         ],
-
-        [
-            "vuepress-plugin-auto-sidebar",
-            {
-                // options
-            }
-        ],
-
         [
             'vuepress-plugin-code-copy',
             {
                 align: "top"
             }
         ]
-
-        // 导入 pwa 插件
-        // 搜索 manifest icons generator  or  https://manifest-gen.netlify.app/
-        // [
-        //     '@vuepress/pwa',
-        //     {
-        //         serviceWorker: true,
-        //         updatePopup: {
-        //             message: '有新内容更新',
-        //             buttonText: '刷新'
-        //             // '/': {
-        //             //
-        //             // }
-        //         }
-        //     }
-        // ]
     ],
 
 

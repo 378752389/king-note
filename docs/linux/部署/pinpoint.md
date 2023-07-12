@@ -1,6 +1,6 @@
 ---
 title: pinpoint环境搭建
-date: '2023-07-11 11:00:00'
+date: 2023-07-11
 categories:
   - 中间件
 tags:
