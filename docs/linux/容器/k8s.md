@@ -79,7 +79,8 @@ kubectl get po kubia-liveness --previous
 
 ### ReplicationController
 
-可以确保它的pod始终保持运行状态。如果pod因任何原因消失（例如节点从集群中消失或由于该pod已从节点中逐出）或者变多， 则ReplicationController
+可以确保它的pod始终保持运行状态。如果pod因任何原因消失（例如节点从集群中消失或由于该pod已从节点中逐出）或者变多，
+则ReplicationController
 会注意到缺少或者增加的pod并创建新的/删除现有pod，使其始终维持一个稳定的数值。
 
 主要组成包含： 标签选择器、副本个数、pod模板
@@ -157,7 +158,8 @@ kubectl exec kubia-7nogl -- curl -s http: //10 .111. 249 .153
 
 服务的会话亲和性
 
-通常服务将每个请求随机指向后端pod中的一个，如果希望客户端所有请求每次指向同一个pod，可以设置服务 的sessionAffinity属性为ClientIP（None 为默认值）
+通常服务将每个请求随机指向后端pod中的一个，如果希望客户端所有请求每次指向同一个pod，可以设置服务
+的sessionAffinity属性为ClientIP（None 为默认值）
 
 ```yaml
 apiVersion: vl
@@ -241,7 +243,8 @@ pod开始运行时， k8s会初始化一系列的环境变量指向现存服务�
 
 2.通过DNS服务发现
 
-kube-system命名空间下有个 kube-dns的 pod，集群中的其他pod（k8s修改容器的 /etc/resolv.conf文件实现） 在进行dns查询都会被k8s自身的DNS服务响应，该服务器知道系统中运行的所有服务。
+kube-system命名空间下有个 kube-dns的 pod，集群中的其他pod（k8s修改容器的 /etc/resolv.conf文件实现）
+在进行dns查询都会被k8s自身的DNS服务响应，该服务器知道系统中运行的所有服务。
 
 通过pod中的spec的dnsPolicy属性决定是否使用内部的DNS服务器。
 
@@ -322,7 +325,8 @@ spec:
 
 防止不必要的跳数
 
-当外部客户端通过节点端口连接到服务时，**随机选择的pod**并不一定在接收连接的同一**节点**上运行， 需要额外的网络跳转才能到达pod。可以通过将服务设置为仅将外部通信重定向到接收连接的节点上运行的pod来 阻止此额外跳数。
+当外部客户端通过节点端口连接到服务时，**随机选择的pod**并不一定在接收连接的同一**节点**上运行，
+需要额外的网络跳转才能到达pod。可以通过将服务设置为仅将外部通信重定向到接收连接的节点上运行的pod来 阻止此额外跳数。
 如果本地没有pod存在，则连接将会挂起，因此需要确保负载均衡器 将连接转发到只有具有 1个pod 的节点上
 
 ```yaml
@@ -330,7 +334,8 @@ spec:
   externalTrafficPolicy: Local
 ```
 
-使用local外部流量策略的服务可能会导致跨pod的负载分布不均衡 eg： node1上有1个pod， node2上有2个pod， 则 node1: pod1 -> 50% , node2: pod1 -> 25%, node2: pod2
+使用local外部流量策略的服务可能会导致跨pod的负载分布不均衡 eg： node1上有1个pod， node2上有2个pod， 则 node1: pod1 -> 50% ,
+node2: pod1 -> 25%, node2: pod2
 -> 25%
 
 同时 nodeport 是不记录客户端ip 的，因为： 当节点端口收到连接时， 对数据包执行了（SNAT）
@@ -368,7 +373,8 @@ spec:
 * Http GET 探针， 根据返回的状态码确认容器是否准备好
 * TCP Socket探针， 连接容器指定端口，如果连接建立成功，则准备就绪
 
-容器启动可以为 k8s 配置一个等待时间， 等待时间过后开始执行第一次就绪检查。 之后会周期性的调用就绪探针， 如果pod未就绪，则会从服务中删除pod， 如果pod就绪，则会重新添加pod
+容器启动可以为 k8s 配置一个等待时间， 等待时间过后开始执行第一次就绪检查。 之后会周期性的调用就绪探针，
+如果pod未就绪，则会从服务中删除pod， 如果pod就绪，则会重新添加pod
 
 ```yaml
 spec:
@@ -434,8 +440,8 @@ kubectl create configmap kubia-cfg --from-literal=interval=20 --from-literal=tex
 kubectl create configmap my-cfg --from-file=config.conf
 ```
 
-
 pod中使用 configmap
+
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -450,16 +456,11 @@ spec:
           key: interval
 ```
 
-
-
-
-
-
 ```yaml
 apiVersion: v1
 kind: Pod
 spec:
-  
+
 ```
 
 ## 命令

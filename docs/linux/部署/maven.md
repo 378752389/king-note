@@ -2,7 +2,7 @@
 title: maven安装
 date: 2023-07-11
 categories:
-  - JavaEE
+  - 其他
 tags:
   - maven
 ---

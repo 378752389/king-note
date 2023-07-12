@@ -1,8 +1,9 @@
 module.exports = [
     {
-        title: 'Java基础', children: [
+        title: 'Java基础',
+        children: [
             '/java/基础/io',
-            '/java/基础/JavaSE常用类集合',
+            '/java/基础/JavaSE常用类合集',
             '/java/基础/java环境搭建',
             '/java/基础/jvm',
             '/java/基础/netty',
@@ -10,7 +11,8 @@ module.exports = [
         ]
     },
     {
-        title: 'SpringBoot整合', children: [
+        title: 'SpringBoot整合',
+        children: [
             '/java/spring/integration/auth-code',
             '/java/spring/integration/dynamic-datasource',
             '/java/spring/integration/dubbo',

@@ -1,6 +1,10 @@
 ---
-title: logstash
-permalink: /components/logstash
+title: Logstash环境搭建
+date: 2023-07-11
+categories:
+  - 中间件
+tags:
+  - elk
 ---
 
 ```shell
@@ -8,17 +12,13 @@ permalink: /components/logstash
 bin/logstash -e 'input{stdin{}}output{stdout{codec=>rubydebug}}'
 ```
 
-
-
-
-
-### 数据处理流程
+## 数据处理流程
 
 `input | decode | filter | encode | output`
 
 
 
-### 文件配置
+## 文件配置
 
 注意点：
 
@@ -42,10 +42,6 @@ output {
 }
 ```
 
-
-
-
-
-### 其他配置
+## 其他配置
 
 >参考： [file · ELKstack 中文指南 (elasticsearch.cn)](https://elkguide.elasticsearch.cn/logstash/plugins/input/file.html)

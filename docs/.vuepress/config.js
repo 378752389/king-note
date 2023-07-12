@@ -48,18 +48,18 @@ module.exports = {
 
 
     themeConfig: {
+        // 文章作者信息配置
+        author: 'wenking',
+        // 主题类型
         type: 'blog',
+        // logo
         logo: '/assets/img/logo.png',
-
         // 显示文章最后更新时间
         lastUpdated: '更新时间', // string | boolean
-
         // 其他: navConf,
         nav: navbarConf,
-
         // 只有文章标题
         sidebar: sidebarConf,
-
         // 每篇问文章的子菜单配置
         subSidebar: 'auto',
 

@@ -1,6 +1,11 @@
 ---
 title: 网关
-permalink: /java/spring/note/gateway
+date: 2023-07-09
+categories:
+  - 微服务
+tags:
+  - 网关
+  - springcloud
 ---
 
 ## 概述

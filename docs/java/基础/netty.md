@@ -2,7 +2,7 @@
 title: Netty
 date: 2023-07-11
 categories:
-  - 网络
+  - 计算机基础
 tags:
   - netty
 ---

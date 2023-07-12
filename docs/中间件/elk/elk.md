@@ -1,6 +1,10 @@
 ---
-title: elk搭建
-permalink: /components/elk
+title: ELK环境搭建
+date: 2023-07-11
+categories:
+  - 中间件
+tags:
+  - elk
 ---
 
 ## 下载

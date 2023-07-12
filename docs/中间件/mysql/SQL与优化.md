@@ -2,7 +2,7 @@
 title: SQL与优化
 date: 2023-07-11
 categories:
-  - MySQL
+  - 中间件
 tags:
   - MySQL
 ---

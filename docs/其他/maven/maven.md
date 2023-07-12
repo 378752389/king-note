@@ -26,15 +26,15 @@ snapshot版本： 如果项目依赖某个库的snapshot版本，每次构建项
 
 1. repositories中的repository
 
-​ 表示从什么库地址可以下载项目依赖的库文件
+表示从什么库地址可以下载项目依赖的库文件
 
 2. distributionManagement中的repository
 
-​ 表示的是项目打包成库文件后要上传到什么库地址
+表示的是项目打包成库文件后要上传到什么库地址
 
 3. pluginRepositories中的repository
 
-​ pluginRepositories中的repository是以pluginRepository表示的，它表示插件从什么库地址下载。
+pluginRepositories中的repository是以pluginRepository表示的，它表示插件从什么库地址下载。
 
 ## javaweb打包
 
@@ -150,17 +150,11 @@ mvn clean package
     </snapshots>
 </pluginRepository>
 </pluginRepositories>
-
-
-
-
-
 ```
 
 ## 常用maven插件
 
 ```xml
-
 <build>
     <plugins>
         <!-- maven-compiler-plugin 插件可以指定项目源码的 jdk 版本 -->
@@ -187,7 +181,3 @@ mvn clean package
     </plugins>
 </build>
 ```
-
-## 依赖冲突解决插件
-
-`Maven Helper`

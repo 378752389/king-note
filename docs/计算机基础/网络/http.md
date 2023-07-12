@@ -3,7 +3,6 @@ title: http
 date: 2023-07-11
 categories:
   - 计算机基础
-  - 网络
 tags:
   - http
 ---

@@ -3,6 +3,8 @@ title: java基础
 date: 2023-07-11
 categories:
   - JavaSE
+tags:
+  - JavaSE
 ---
 
 ## 比较接口
