@@ -1,6 +1,6 @@
 ---
 title: maven安装
-date: '2023-07-11 08:00:00'
+date: '2023-07-11 04:00:00'
 categories:
   - JavaEE
 tags:

@@ -1,0 +1,47 @@
+.hero h1,
+.hero .description
+  color: white;
+  font-family: "KING_FONT";
+
+//text-shadow: -2px 0 #666, 2px 0 #666, 0 2px #666, 0 -2px #666;
+
+
+.hero .description
+  overflow: hidden;
+  line-height: 2rem;
+  height: 2rem;
+  transition: none !important;
+  transform: none !important;
+  opacity: 1 !important;
+  animation: 3s typing steps(23) forwards;
+  width: 2ch;
+  position: relative;
+  padding-right: 1ch;
+
+
+.hero .description::after
+  content: "_";
+  display: inline-block;
+  position: absolute;
+  width: 0.5ch;
+  animation: 1s cursor steps(2) infinite;
+  height: 2rem;
+
+
+@keyframes typing
+  from
+    width: 0;
+
+
+  to
+    width: 36ch;
+
+
+@keyframes cursor
+  from
+    opacity 0;
+
+
+  to
+    opacity: 1;
+

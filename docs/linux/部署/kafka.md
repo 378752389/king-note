@@ -1,6 +1,6 @@
 ---
 title: kafka环境搭建
-date: '2023-07-11 08:00:00'
+date: '2023-07-11 13:00:00'
 categories:
   - 中间件
 tags:

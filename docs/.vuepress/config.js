@@ -74,6 +74,7 @@ module.exports = {
 
 
     themeConfig: {
+        type: 'blog',
         logo: '/assets/img/logo.png',
 
         // 显示文章最后更新时间
