@@ -1,6 +1,10 @@
 ---
-title: 整合fastjson
-permalink: /java/spring/fastjson
+title: SpringBoot整合FastJSON
+date: 2023-07-06
+categories:
+  - SpringBoot
+tags:
+  - Spring整合
 ---
 
 ## 导入依赖

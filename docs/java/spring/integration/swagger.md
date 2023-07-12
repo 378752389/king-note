@@ -1,8 +1,12 @@
 ---
-title: 整合swagger3
-permalink: /java/spring/swagger
+title: SpringBoot整合Swagger3
+date: 2023-07-06
+categories:
+  - SpringBoot
+tags:
+  - Spring整合
+  - swagger3
 ---
-
 
 ## 导入依赖
 ```xml

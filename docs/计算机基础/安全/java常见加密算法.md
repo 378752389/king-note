@@ -1,5 +1,11 @@
 ---
-title: java常见加密算法
+title: 常见加密算法
+date: 2023-07-08
+categories:
+  - 网络安全
+tags:
+  - JavaSE
+  - 加密算法
 ---
 
 ## 编码与解码

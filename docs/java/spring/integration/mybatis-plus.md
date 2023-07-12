@@ -1,5 +1,11 @@
 ---
-title: Mybatis-plus
+title: SpringBoot整合MybatisPlus
+date: 2023-07-06
+categories:
+  - SpringBoot
+tags:
+  - Spring整合
+  - mybatis
 ---
 
 ### 导入依赖

@@ -1,6 +1,10 @@
 ---
-title: javascript基础
-permalink: /font/javascript基础
+title: 【js】基础
+date: 2023-07-10
+categories:
+  - 前端基础
+tags:
+  - js
 ---
 
 ## 正则表达式

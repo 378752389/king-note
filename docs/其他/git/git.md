@@ -1,6 +1,10 @@
 ---
-title: git
-permalink: /java/devkits/git
+title: git基础
+date: 2023-07-08
+categories:
+  - 其他
+tags:
+  - git
 ---
 
 ## 仓库初始化

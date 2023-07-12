@@ -1,6 +1,10 @@
 ---
-title: css布局
-permalink: /front/css布局
+title: 【css3】布局
+date: 2023-07-10
+categories:
+- 前端基础
+tags:
+- css3
 ---
 
 **注意点**

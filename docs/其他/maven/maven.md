@@ -1,6 +1,10 @@
 ---
 title: maven
-permalink: /java/devkits/maven
+date: 2023-07-08
+categories:
+  - 其他
+tags:
+  - maven
 ---
 
 ## package、install、deploy 三者之间区别

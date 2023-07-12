@@ -1,6 +1,10 @@
 ---
 title: 分布式id
-permalink: /distributed/
+date: 2023-07-09
+categories:
+   - 微服务
+tags:
+   - 分布式id
 ---
 
 #### 分布式id

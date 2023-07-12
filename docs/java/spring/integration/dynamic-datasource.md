@@ -1,5 +1,10 @@
 ---
-title: 动态数据源
+title: SpringBoot整合动态数据源
+date: 2023-07-06
+categories:
+  - SpringBoot
+tags:
+  - Spring整合
 ---
 
 ## 导入依赖

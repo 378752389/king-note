@@ -1,6 +1,10 @@
 ---
-title: html标签
-permalink: /front/html标签
+title: 【html】标签
+date: 2023-07-10
+categories:
+- 前端基础
+tags:
+- html
 ---
 
 

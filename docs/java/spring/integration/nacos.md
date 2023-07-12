@@ -1,6 +1,11 @@
 ---
-title: Nacos
-permalink: /java/spring/integration/nacos
+title: SpringBoot整合Nacos
+date: 2023-07-06
+categories:
+  - SpringBoot
+tags:
+  - Spring整合
+  - 注册中心
 ---
 
 # 导入依赖

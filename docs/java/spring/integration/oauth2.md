@@ -1,5 +1,12 @@
 ---
-title: Oauth2
+title: SpringBoot整合Oauth2
+date: 2023-07-06
+categories:
+  - SpringBoot
+tags:
+  - Spring整合
+  - mybatis
+published: false
 ---
 
 ### 导入依赖

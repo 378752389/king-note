@@ -25,7 +25,7 @@ module.exports = {
         {
             text: '安全',
             items: [
-                {text: '安全', link: '/java/security/'}
+                {text: '安全', link: '/java/安全/'}
             ]
         },
     ]

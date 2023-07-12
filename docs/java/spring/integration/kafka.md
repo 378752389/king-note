@@ -1,5 +1,11 @@
 ---
-title: Kafka
+title: SpringBoot整合整合Kafka
+date: 2023-07-06
+categories:
+  - SpringBoot
+tags:
+  - Spring整合
+  - kafka
 ---
 
 ### 导入依赖

@@ -3,5 +3,5 @@ module.exports = [
     require("./modules/linux"),
     require("./modules/front"),
     require("./modules/middleComponents"),
-    require("./modules/distributes")
+    require("./modules/nav")
 ]

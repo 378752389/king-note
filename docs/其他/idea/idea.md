@@ -1,8 +1,10 @@
 ---
-title: idea代码重构快捷键
-date: 2023-07-11
+title: idea启动参数
+date: 2023-07-08
 categories:
-  - Idea
+  - 其他
+tags:
+  - idea
 ---
 
 ## idea启动参数

@@ -1,5 +1,10 @@
 ---
-title: Dubbo
+title: SpringBoot整合Dubbo
+date: 2023-07-06
+categories:
+  - SpringBoot
+tags:
+  - Spring整合
 ---
 
 ## 导入依赖

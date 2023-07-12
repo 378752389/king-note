@@ -1,6 +1,10 @@
 ---
-title: vue基础
-permalink: /front/vue
+title: 【vue】基础
+date: 2023-07-10
+categories:
+  - Vue
+tags:
+  - vue
 ---
 
 

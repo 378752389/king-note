@@ -1,6 +1,12 @@
 ---
-title: 验证码
+title: SpringBoot整合验证码
+date: 2023-07-06
+categories:
+  - SpringBoot
+tags:
+  - Spring整合
 ---
+
 ### 导入依赖
 
 ```xml
