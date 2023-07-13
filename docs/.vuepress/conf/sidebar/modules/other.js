@@ -16,7 +16,7 @@ module.exports = [
         ]
     },
     {
-        title: 'nav', children: [
+        title: '导航', children: [
             '/其他/nav/推荐站点导航',
         ]
     },
