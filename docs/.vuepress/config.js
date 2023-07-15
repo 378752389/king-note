@@ -12,6 +12,7 @@ module.exports = {
     head: [
         // http://favicon.io  favicon 搜索网站
         ['link', {rel: 'icon', href: '/favicon.ico'}],
+        ['link', {rel: 'stylesheet', href: '/assets/icon-font/iconfont.css'}],
 
         // seo 相关配置
         ['meta', {name: 'author', content: 'King'}],
