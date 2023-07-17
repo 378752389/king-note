@@ -29,5 +29,11 @@ module.exports = [
             '/linux/部署/seata',
             '/linux/部署/springboot运行脚本',
         ]
+    },
+    {
+        title: '系统', children: [
+            '/linux/系统/linux环境变量',
+            '/linux/系统/login和non-login区别',
+        ]
     }
 ]

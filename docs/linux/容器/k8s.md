@@ -1,6 +1,6 @@
 ---
 title: k8s笔记
-date: '2023-07-12 01:00:00'
+date: 2023-02-11
 categories:
   - 容器
 tags:

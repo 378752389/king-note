@@ -88,7 +88,9 @@ ssh-keygen -t rsa
 cat /root/id_rsa.pub >> /root/.ssh/authorized_keys
 
 # 密码的方式登录
-ssh -p 6688 ymtar@128.14.9.130
+# ssh 用户名:密码@主机地址
+
+ssh -p 6688 root:123@192.168.1.128
 ```
 
 
