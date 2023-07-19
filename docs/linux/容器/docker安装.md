@@ -7,11 +7,6 @@ tags:
   - docker
 ---
 
-
-## 安装
-
-[参考教程](https://www.cnblogs.com/xiao987334176/p/11771657.html)
-
 ```shell
 # 安装epel更新源
 yum install -y vim wget epel-release
@@ -53,3 +48,6 @@ sudo systemctl enable docker
 # 安装docker命令补全工具
 yum install -y bash-completion
 ```
+
+[参考教程](https://www.cnblogs.com/xiao987334176/p/11771657.html)
+

@@ -5,6 +5,7 @@ categories:
   - linux
 tags:
   - http
+  - linux命令
 ---
 
 ```shell

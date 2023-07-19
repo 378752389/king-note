@@ -4,7 +4,7 @@ date: 2023-07-11
 categories:
   - linux
 tags:
-  - vim
+  - linux配置
 ---
 
 ## 简单基础配置

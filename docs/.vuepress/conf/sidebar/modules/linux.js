@@ -5,16 +5,17 @@ module.exports = [
             '/linux/命令/cfssl',
             '/linux/命令/openssl',
             '/linux/命令/curl',
-            '/linux/命令/ssh',
-            '/linux/命令/vimrc',
-            '/linux/命令/包管理'
+            '/linux/命令/包管理',
+            '/linux/命令/常用防火墙命令',
         ]
     },
     {
         title: '容器', children: [
             '/linux/容器/docker安装',
+            '/linux/容器/docker进阶',
             '/linux/容器/docker常用命令',
-            '/linux/容器/k8s',
+            // '/linux/容器/k8s',
+            '/linux/容器/docker快速部署常见应用',
         ]
     },
     {
@@ -34,6 +35,12 @@ module.exports = [
         title: '系统', children: [
             '/linux/系统/linux环境变量',
             '/linux/系统/login和non-login区别',
+        ]
+    },
+    {
+        title: '配置', children: [
+            '/linux/配置/ssh',
+            '/linux/配置/vimrc',
         ]
     }
 ]
