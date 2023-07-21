@@ -16,6 +16,8 @@ module.exports = [
             '/linux/容器/docker常用命令',
             // '/linux/容器/k8s',
             '/linux/容器/docker快速部署常见应用',
+            '/linux/容器/dockerfile详解',
+            '/linux/容器/Idea中docker插件使用',
         ]
     },
     {

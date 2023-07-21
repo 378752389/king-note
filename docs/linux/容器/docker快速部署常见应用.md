@@ -24,9 +24,30 @@ firewall-cmd --zone=public --add-port=3306/tcp --permanent
 firewall-cmd --reload
 ```
 
+## nginx
+
+容器常用文件存放位置
+```
+日志文件位置：/var/log/nginx
+配置文件位置: /etc/nginx
+静态资源存放的位置: /usr/share/nginx/html
+```
+
+```shell
+# 拉取 nginx 镜像
+docker pull nginx
+
+docker run -d -p 80:80 --name mynginx nginx
+```
+
 
 
 ## mysql
+
+容器常用文件存放位置
+```
+数据存放位置：/var/lib/mysql
+```
 
 ```shell
 # 拉取 mysql 镜像
