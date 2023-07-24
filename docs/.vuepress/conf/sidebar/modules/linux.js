@@ -4,6 +4,8 @@ module.exports = [
             '/linux/命令/命令集合',
             '/linux/命令/cfssl',
             '/linux/命令/openssl',
+            '/linux/命令/openssl进阶',
+            '/linux/命令/x509v3扩展配置',
             '/linux/命令/curl',
             '/linux/命令/包管理',
             '/linux/命令/常用防火墙命令',

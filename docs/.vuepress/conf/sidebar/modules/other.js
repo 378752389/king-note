@@ -15,9 +15,10 @@ module.exports = [
     //         '/其他/maven/maven',
     //     ]
     // },
-    {
-        title: '导航', children: [
-            '/其他/nav/推荐站点导航',
-        ]
-    },
+    // {
+    //     title: '导航', children: [
+    //         '/其他/nav/推荐站点导航',
+    //     ]
+    // },
+    '/其他/nav/推荐站点导航',
 ]
