@@ -8,6 +8,17 @@ tags:
   - linux配置
 ---
 
+## vim 黏贴的时候自动缩进问题解决
+
+```shell
+# 在命令模式下输入如下内容
+:set paste
+
+# 之后取消只需在命令模式下输入
+:set nopaste
+```
+
+
 
 ## vim配置1
 

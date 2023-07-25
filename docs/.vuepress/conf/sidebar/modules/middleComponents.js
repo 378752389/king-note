@@ -22,7 +22,11 @@ module.exports = [
     {
         title: 'nginx', children: [
             '/中间件/nginx/环境搭建',
-            '/中间件/nginx/基础配置',
+            '/中间件/nginx/Location路径配置',
+            '/中间件/nginx/静态服务配置',
+            '/中间件/nginx/动态代理配置',
+            '/中间件/nginx/SSL证书配置',
+
         ]
     },
     {
