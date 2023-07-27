@@ -5,9 +5,16 @@ module.exports = [
             '/java/基础/io',
             '/java/基础/JavaSE常用类合集',
             '/java/基础/java环境搭建',
-            '/java/基础/jvm',
             '/java/基础/netty',
             '/java/基础/多线程',
+        ]
+    },
+    {
+        title: 'JVM',
+        children: [
+            '/java/jvm/常用命令',
+            '/java/基础/jstack线程栈分析',
+            '/java/基础/cpu飙升问题排查',
         ]
     },
     {
