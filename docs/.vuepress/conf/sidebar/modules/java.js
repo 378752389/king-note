@@ -13,8 +13,9 @@ module.exports = [
         title: 'JVM',
         children: [
             '/java/jvm/常用命令',
-            '/java/基础/jstack线程栈分析',
-            '/java/基础/cpu飙升问题排查',
+            '/java/jvm/jstack线程栈分析',
+            '/java/jvm/cpu飙升问题排查',
+            '/java/jvm/常见线程状态分析',
         ]
     },
     {
