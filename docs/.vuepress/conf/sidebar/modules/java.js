@@ -19,6 +19,13 @@ module.exports = [
         ]
     },
     {
+        title: '网络编程',
+        children: [
+            '/java/网络编程/BIO',
+            '/java/网络编程/NIO',
+        ]
+    },
+    {
         title: 'SpringBoot整合',
         children: [
             '/java/spring/integration/auth-code',
