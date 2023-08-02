@@ -33,5 +33,11 @@ module.exports = [
             '/java/spring/integration/nacos',
             '/java/spring/integration/swagger',
         ]
+    },
+    {
+        title: 'Spring',
+        children: [
+            '/java/spring/integration/事务失效场景',
+        ]
     }
 ]
