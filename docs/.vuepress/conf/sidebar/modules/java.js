@@ -37,7 +37,7 @@ module.exports = [
     {
         title: 'Spring',
         children: [
-            '/java/spring/integration/事务失效场景',
+            '/java/spring/note/事务失效场景',
         ]
     }
 ]
