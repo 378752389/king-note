@@ -5,7 +5,7 @@ sidebar: false
 categories:
   - 其他
 tags:
-  - vmware
+  - 虚拟机
 ---
 
 

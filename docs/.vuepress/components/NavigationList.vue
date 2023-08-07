@@ -46,6 +46,11 @@ export default {
               icon: "icon-link",
               title: "redis命令速查",
               url: "https://www.redis.net.cn/order/"
+            },
+            {
+              icon: "icon-link",
+              title: "站长工具",
+              url: "https://tool.chinaz.com/"
             }
           ]
         },

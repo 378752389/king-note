@@ -26,12 +26,9 @@ module.exports = [
     {
         title: '部署', children: [
             '/linux/部署/zookeeper',
-            '/linux/部署/kafka',
             '/linux/部署/k8s',
             '/linux/部署/maven',
-            '/linux/部署/nginx',
             '/linux/部署/pinpoint',
-            '/linux/部署/redis',
             '/linux/部署/seata',
             '/linux/部署/springboot运行脚本',
         ]
