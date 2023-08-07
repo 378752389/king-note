@@ -5,7 +5,6 @@ module.exports = [
             '/java/基础/io',
             '/java/基础/JavaSE常用类合集',
             '/java/基础/java环境搭建',
-            '/java/基础/netty',
             '/java/基础/多线程',
         ]
     },
