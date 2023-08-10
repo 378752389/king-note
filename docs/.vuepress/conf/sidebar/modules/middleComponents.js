@@ -17,6 +17,8 @@ module.exports = [
             '/中间件/kafka/环境搭建',
             '/中间件/kafka/理论',
             '/中间件/kafka/客户端命令',
+            '/中间件/kafka/Kafka生产者JavaAPI',
+            '/中间件/kafka/Kafka消费者JavaAPI',
         ]
     },
     {
