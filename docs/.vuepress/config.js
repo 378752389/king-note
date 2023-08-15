@@ -65,10 +65,10 @@ module.exports = {
         subSidebar: 'auto',
 
         blogConfig: {
-            category: {
-                location: 6,     // 在导航栏菜单中所占的位置，默认2
-                text: 'Category' // 默认文案 “分类”
-            },
+            // category: {
+            //     location: 6,     // 在导航栏菜单中所占的位置，默认2
+            //     text: 'Category' // 默认文案 “分类”
+            // },
             tag: {
                 location: 7,     // 在导航栏菜单中所占的位置，默认3
                 text: 'Tag'      // 默认文案 “标签”
