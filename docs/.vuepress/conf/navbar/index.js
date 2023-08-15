@@ -13,7 +13,8 @@ module.exports = [
         items: [
             {text: '命令', link: '/linux/命令/命令集合'},
             {text: '容器', link: '/linux/容器/docker常用命令'},
-            {text: '部署', link: '/linux/部署/zookeeper'}
+            {text: '系统', link: '/linux/系统/linux环境变量'},
+            {text: '配置', link: '/linux/配置/ssh'}
         ]
     },
     {
@@ -30,10 +31,10 @@ module.exports = [
             {text: 'seata', link: '/中间件/seata/环境搭建/'},
         ]
     },
-    {
-        text: '站点推荐',
-        link: '/其他/推荐站点导航',
-    },
+    // {
+    //     text: '站点推荐',
+    //     link: '/其他/推荐站点导航',
+    // },
     {
         text: "时间线",
         link: "/timeline/"

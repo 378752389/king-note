@@ -23,16 +23,16 @@ module.exports = [
             '/linux/容器/Idea中docker插件使用',
         ]
     },
-    {
-        title: '部署', children: [
-            '/linux/部署/zookeeper',
-            '/linux/部署/k8s',
-            '/linux/部署/maven',
-            '/linux/部署/pinpoint',
-            '/linux/部署/seata',
-            '/linux/部署/springboot运行脚本',
-        ]
-    },
+    // {
+    //     title: '部署', children: [
+    //         '/linux/部署/zookeeper',
+    //         '/linux/部署/k8s',
+    //         '/linux/部署/maven',
+    //         '/linux/部署/pinpoint',
+    //         '/linux/部署/seata',
+    //         '/linux/部署/springboot运行脚本',
+    //     ]
+    // },
     {
         title: '系统', children: [
             '/linux/系统/linux环境变量',
