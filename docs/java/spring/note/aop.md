@@ -1,7 +1,13 @@
 ---
-title: AOP
-permalink: /java/spring/note/
+title: aop
+date: 2023-08-02
+categories:
+  - spring
+tags:
+  - aop
+  - 事务
 ---
+
 
 
 
