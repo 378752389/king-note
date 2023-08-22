@@ -28,6 +28,9 @@ module.exports = [
             '/中间件/nginx/静态服务配置',
             '/中间件/nginx/动态代理配置',
             '/中间件/nginx/SSL证书配置',
+            '/中间件/nginx/防盗链',
+            '/中间件/nginx/路径重写',
+            '/中间件/nginx/线上处理',
 
         ]
     },
