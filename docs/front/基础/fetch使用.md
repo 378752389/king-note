@@ -327,10 +327,30 @@ source.loop = true;
 ```
 
 
+### body属性
+
+```js
+const response = await fetch('flower.jpg');
+const reader = response.body.getReader();
+
+while(true) {
+  const {done, value} = await reader.read();
+
+  if (done) {
+    break;
+  }
+
+  console.log(`Received ${value.length} bytes`)
+}
+```
+
+上面示例中，response.body.getReader()方法返回一个遍历器。这个遍历器的read()方法每次返回一个对象，表示本次读取的内容块。
+这个对象的done属性是一个布尔值，用来判断有没有读完；value属性是一个 arrayBuffer 数组，表示内容块的内容，而value.length属性是当前块的大小。
+
 
 ### 重复读取响应内容
 
-Stream 对象只能读取一次，读取完就没了。这意味着，前一节的五个读取方法，只能使用一个，否则会报错。
+Response(Stream) 对象只能读取一次，读取完就没了。这意味着，前一节的五个读取方法，只能使用一个，否则会报错。
 
 ```js
 const response1 = await fetch('flowers.jpg');

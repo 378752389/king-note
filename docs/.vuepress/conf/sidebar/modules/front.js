@@ -8,6 +8,8 @@ module.exports = [
             '/front/基础/盒子居中方式',
             '/front/基础/z-index和层叠上下文',
             '/front/基础/js操作dom对象',
+            '/front/基础/Blob使用',
+            '/front/基础/FileReader使用',
             '/front/基础/fetch使用',
         ]
     },
