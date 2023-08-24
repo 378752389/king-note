@@ -38,6 +38,8 @@ module.exports = [
             '/java/spring/integration/mybatis-plus',
             '/java/spring/integration/nacos',
             '/java/spring/integration/swagger',
+
+            '/java/springboot/文件上传和下载',
         ]
     },
     {

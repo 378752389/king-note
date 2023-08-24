@@ -72,6 +72,10 @@ export default {
               title: "程序员大彬",
               url: "https://topjavaer.cn/"
             },
+            {
+              title: "现代 JavaScript 教程",
+              url: "https://zh.javascript.info/"
+            }
           ]
         },
       ]
