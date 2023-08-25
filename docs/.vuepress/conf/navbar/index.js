@@ -31,10 +31,10 @@ module.exports = [
             {text: 'seata', link: '/中间件/seata/环境搭建/'},
         ]
     },
-    // {
-    //     text: '站点推荐',
-    //     link: '/其他/推荐站点导航',
-    // },
+    {
+        text: '站点推荐',
+        link: '/其他/推荐站点导航',
+    },
     {
         text: "时间线",
         link: "/timeline/"
