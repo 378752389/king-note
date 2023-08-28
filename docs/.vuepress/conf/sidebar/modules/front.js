@@ -24,5 +24,10 @@ module.exports = [
             '/front/vuepress/使用vuepress-theme-reco主题配置',
             '/front/vuepress/MD中使用Vue',
         ]
+    },
+    {
+        title: '通用组件', children: [
+            '/front/通用组件/搜索框',
+        ]
     }
 ]

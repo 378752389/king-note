@@ -78,8 +78,8 @@ export default {
               icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAfCAMAAACxiD++AAAAYFBMVEVHcEwAHckAHskAHskAHskAHskAHskAHskAHskAHskAHskAHskAHskAHskAHskAHcnoESPoECLoESPoESMAHsnoESPoESPoECLoECPoESPoESPoESPoESPoESPoESPoESNoVtKkAAAAIHRSTlMAC1+n0uziwZdPNf9uQ4gZeB9g//ZIuQ8yx6hS75B95Oe73cIAAAEwSURBVHgBXdEFEsMwDATACzMqjP//Ze34pmq6AwGDzjKU5wdhFMVJmkGpPClU6uGPp8NOiZeqUJRAwefPoMwqv44Kq4LKCititqawfKDt8PsnfX3VQC/CGfEr1MDZoxgMwPWczYBiTTAiWx8UFkYIYxZrAfJvZC+IokJnL2KsQG1+DTC8gjw4m0uRMAECjjegToz9ieCzvJXj6zATTjACuEMGdP2iNTZoRrZj4/GA83kbWMLwfY/RZNQJobaJP61LSwTumNSKM4IhW2SM9ujFWWF0bGWhW4xiHcf52yjUvB42V/rfPj1TC87oGI9uMWaA15Xx+k7Qql8oTYM4vsGZn/U3qEzdmdhBdoMFtKKxXvu4X6s4HVR3yL9jhuKplaZVyypq0+VQc7+t932v5wj1AUpcIew07dayAAAAAElFTkSuQmCC"
             },
             {
-              title: "程序员大彬",
-              url: "https://topjavaer.cn/",
+              title: "ES6入门教程",
+              url: "https://es6.ruanyifeng.com/",
               icon: ""
             },
             {
