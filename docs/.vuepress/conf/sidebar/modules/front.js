@@ -28,6 +28,12 @@ module.exports = [
     {
         title: '通用组件', children: [
             '/front/通用组件/搜索框',
+            '/front/通用组件/前端数据下载',
+        ]
+    },
+    {
+        title: '样式效果', children: [
+            '/front/样式效果/九宫格拼凑'
         ]
     }
 ]
