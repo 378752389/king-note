@@ -130,7 +130,7 @@ sysctl -p
 ```yaml
 server.port: 5601
 server.host: "localhost"
-elasticsearch.hosts: [ "http://172.16.52.7:9200" ]
+elasticsearch.hosts: [ "http://192.168.1.128:9200" ]
 #elasticsearch.username: "elastic"
 #elasticsearch.password: "asadasdasdas"
 i18n.locale: "zh-CN"
@@ -177,7 +177,7 @@ setup.template.pattern: "log-*"
 setup.ilm.enabled: false
 
 output.elasticsearch:
-  hosts: [ "172.16.52.7:9200" ]
+  hosts: [ "192.168.1.128:9200" ]
   index: "log-demo-%{[fields][name]}_%{+yyy-MM-dd}"
   # 如果 es 有配置密码，则打开该处注释
   #  username: "elastic"
@@ -228,7 +228,7 @@ xpack.security.transport.ssl.enabled: true
 ```shell
 username=elastic
 password=123
-curl -H 'Content-Type: application/json' -u elastic:WEY8PqqgPfdzVkZFKV86 http://172.16.52.7:9200
+curl -H 'Content-Type: application/json' -u $username:$password http://192.168.1.128:9200
 ```
 
 ## kibana进行索引配置
@@ -266,11 +266,11 @@ function delete_indices() {
 
     if [ $t1 -le $t2 ]; then
         echo "$1时间早于$comp_date，进行索引删除"
-        curl -XDELETE -u $username:$password http://172.16.52.7:9200/log-*$1
+        curl -XDELETE -u $username:$password http://192.168.1.128:9200/log-*$1
     fi
 }
 
-curl  -u $username:$password http://172.16.52.7:9200/_cat/indices | grep $log_prefix | awk -F" " '{print $3}' | awk -F "_" '{print $NF}' | sort | uniq | while read line
+curl  -u $username:$password http://192.168.1.128:9200/_cat/indices | grep $log_prefix | awk -F" " '{print $3}' | awk -F "_" '{print $NF}' | sort | uniq | while read line
 do
   delete_indices $line
 done
