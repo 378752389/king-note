@@ -11,6 +11,7 @@ module.exports = [
             '/front/基础/Blob使用',
             '/front/基础/FileReader使用',
             '/front/基础/fetch使用',
+            '/front/基础/XMLHttpRequest使用',
         ]
     },
     {

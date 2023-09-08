@@ -46,6 +46,7 @@ module.exports = [
             '/中间件/elk/elk',
             '/中间件/elk/kibana',
             '/中间件/elk/logstash',
+            '/中间件/elk/efk',
         ]
     },
     {
