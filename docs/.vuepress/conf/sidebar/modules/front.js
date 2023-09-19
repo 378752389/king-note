@@ -34,7 +34,8 @@ module.exports = [
     },
     {
         title: '样式效果', children: [
-            '/front/样式效果/九宫格拼凑'
+            '/front/样式效果/九宫格拼凑',
+            '/front/样式效果/flex两栏布局'
         ]
     }
 ]
