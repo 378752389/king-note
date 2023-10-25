@@ -30,12 +30,14 @@ module.exports = [
         title: '通用组件', children: [
             '/front/通用组件/搜索框',
             '/front/通用组件/前端数据下载',
+            '/front/通用组件/文件上传进度显示',
         ]
     },
     {
         title: '样式效果', children: [
             '/front/样式效果/九宫格拼凑',
-            '/front/样式效果/flex两栏布局'
+            '/front/样式效果/flex两栏布局',
+            '/front/样式效果/宽高等比缩放',
         ]
     }
 ]
