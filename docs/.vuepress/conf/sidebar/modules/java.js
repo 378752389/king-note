@@ -47,5 +47,10 @@ module.exports = [
         children: [
             '/java/spring/note/事务失效场景',
         ]
+    }, {
+        title: '三方依赖库',
+        children: [
+            '/java/三方依赖库/mapstruct',
+        ]
     }
 ]
