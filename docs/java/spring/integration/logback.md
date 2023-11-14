@@ -1,10 +1,8 @@
 ---
-title: SpringBoot整合LogBack
+title: 整合LogBack
 date: 2023-07-06
 categories:
-  - SpringBoot
-tags:
-  - Spring整合
+  - SpringBoot整合
 ---
 
 ## 介绍

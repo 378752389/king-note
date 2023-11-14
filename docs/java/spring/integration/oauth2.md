@@ -1,11 +1,8 @@
 ---
-title: SpringBoot整合Oauth2
+title: 整合Oauth2
 date: 2023-07-06
 categories:
-  - SpringBoot
-tags:
-  - Spring整合
-  - mybatis
+  - SpringBoot整合
 published: false
 ---
 

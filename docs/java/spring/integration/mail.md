@@ -1,10 +1,8 @@
 ---
-title: SpringBoot整合Mail
+title: 整合Mail
 date: 2023-07-06
 categories:
-  - SpringBoot
-tags:
-  - Spring整合
+  - SpringBoot整合
 ---
 
 ### 导入依赖

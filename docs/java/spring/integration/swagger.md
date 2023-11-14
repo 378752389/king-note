@@ -1,11 +1,8 @@
 ---
-title: SpringBoot整合Swagger3
+title: 整合Swagger3
 date: 2023-07-06
 categories:
-  - SpringBoot
-tags:
-  - Spring整合
-  - swagger3
+  - SpringBoot整合
 ---
 
 ## 导入依赖

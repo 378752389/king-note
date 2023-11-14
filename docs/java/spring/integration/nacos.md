@@ -1,11 +1,8 @@
 ---
-title: SpringBoot整合Nacos
+title: 整合Nacos
 date: 2023-07-06
 categories:
-  - SpringBoot
-tags:
-  - Spring整合
-  - 注册中心
+  - SpringBoot整合
 ---
 
 # 导入依赖

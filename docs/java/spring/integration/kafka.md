@@ -1,11 +1,8 @@
 ---
-title: SpringBoot整合整合Kafka
+title: 整合整合Kafka
 date: 2023-07-06
 categories:
-  - SpringBoot
-tags:
-  - Spring整合
-  - kafka
+  - SpringBoot整合
 ---
 
 ### 导入依赖
