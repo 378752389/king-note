@@ -43,11 +43,22 @@ module.exports = [
         ]
     },
     {
+        title: 'MybatisPlus',
+        children: [
+            '/java/mybatisplus/实体类枚举',
+            '/java/mybatisplus/乐观锁',
+            '/java/mybatisplus/逻辑删除',
+            '/java/mybatisplus/表名映射（分表）',
+            '/java/mybatisplus/通用字段填充',
+        ]
+    },
+    {
         title: 'Spring',
         children: [
             '/java/spring/note/事务失效场景',
         ]
-    }, {
+    },
+    {
         title: '三方依赖库',
         children: [
             '/java/三方依赖库/mapstruct',
