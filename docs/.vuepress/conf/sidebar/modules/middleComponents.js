@@ -54,4 +54,11 @@ module.exports = [
             '/中间件/hbase/环境搭建',
         ]
     },
+    {
+        title: 'elasticsearch', children: [
+            '/中间件/elasticsearch/JavaAPI',
+            '/中间件/elasticsearch/RestAPI',
+            '/中间件/elasticsearch/DSL查询',
+        ]
+    }
 ]
