@@ -4,6 +4,7 @@ module.exports = [
             '/中间件/mysql/环境搭建',
             '/中间件/mysql/SQL与优化',
             '/中间件/mysql/运维',
+            '/中间件/mysql/权限管理',
         ]
     },
     {
