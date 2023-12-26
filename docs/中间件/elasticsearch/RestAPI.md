@@ -461,3 +461,27 @@ Content-Type: application/json
 }
 ```
 
+## 测试
+
+### 分词器
+
+作用：可以使用分词器对输入内容进行分词测试
+
+```http request
+POST /_analyze
+
+{
+  "text": ["es真好学"],
+  "analyzer": "pinyin"
+}
+```
+
+如果存在自定义分词器在某个索引下，想使用该分词器进行测试，默认是找不到的。使用分词器时需要指定索引库名称。
+
+```http request
+POST /hotel/_analyze
+
+{
+  ...
+}
+```
