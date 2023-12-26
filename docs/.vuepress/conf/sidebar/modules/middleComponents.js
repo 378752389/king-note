@@ -60,6 +60,8 @@ module.exports = [
             '/中间件/elasticsearch/JavaAPI',
             '/中间件/elasticsearch/RestAPI',
             '/中间件/elasticsearch/DSL查询',
+            '/中间件/elasticsearch/JavaAPI测试类示例',
+            '/中间件/elasticsearch/高级用法',
         ]
     }
 ]
