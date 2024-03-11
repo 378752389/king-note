@@ -3,8 +3,41 @@
 
 @font-face
   font-family: "KING_FONT";
-  //src: url(https://dragon-chen777.github.io/assets/fonts/Alimama_DongFangDaKai_Regular.woff) format("woff");
-  //src: url("/assets/font/鸿雷拙书简体.ttf");
-  //src: url("/assets/font/沐瑶随心手写体.ttf");
+  src: url(https://dragon-chen777.github.io/assets/fonts/Alimama_DongFangDaKai_Regular.woff) format("woff");
+
+//src: url("/assets/font/鸿雷拙书简体.ttf");
+//src: url("/assets/font/沐瑶随心手写体.ttf");
+
+themeColor = rgb(62, 175, 124);
+titleHeight = 50px;
+
+h1
+  font-size 40px !important;
+
+h2
+  color white;
+  width fit-content;
+  margin 30px 0 !important;
+  padding 0 titleHeight 0 (titleHeight / 2) !important;
+  border-radius 0 0 titleHeight 0;
+  height titleHeight;
+  line-height 1;
+  font-size 30px !important;
+  background-color rgba(136, 177, 141, 0.13);
+  background themeColor !important;
+
+  &::before
+    display none !important;
+
+  &::after
+    content "";
+    width 950px;
+    background-color rgba(136, 177, 141, 0.13);
+    position absolute;
+    inset 0;
 
 
+h3
+  margin 20px 0 !important;
+  padding 0 !important;
+  color themeColor !important;
