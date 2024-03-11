@@ -4,39 +4,66 @@ export default {
     return {
       pageData: [
         {
-          head: "画图软件",
-          recommendSites: [
-            {
-              title: "excalidraw",
-              url: "https://excalidraw.com/",
-              icon: ""
-            },
-          ]
-        },
-        {
           head: "Java开发常用网址",
           recommendSites: [
             {
               title: "hutool",
               url: "https://www.hutool.cn/docs/#/",
-              icon: ""
+              icon: "https://plus.hutool.cn/images/logo.jpg"
             },
             {
               title: "maven",
               url: "https://mvnrepository.com/",
-              icon: ""
+              icon: "https://mvnrepository.com/img/8152945916bbc1ec8c179d03d0c986db"
             },
             {
 
               title: "redis命令速查",
               url: "https://www.redis.net.cn/order/",
+              icon: "https://www.redis.net.cn/Application/Home/View/Public/img/redis-white.png"
+            },
+          ]
+        },
+        {
+          head: "前端开发常用网址",
+          recommendSites: [
+            {
+              title: "Vue官网",
+              url: "https://vuejs.org/",
+              icon: "https://vuejs.org/logo.svg"
+            },
+            {
+              title: "ElementPlus",
+              url: "https://element-plus.org/zh-CN/",
+              icon: "https://element-plus.org/images/element-plus-logo.svg",
+              desc: "基于Vue3的后台管理UI框架"
+            },
+            {
+              title: "uniapp",
+              url: "https://uniapp.dcloud.net.cn/",
+              icon: "https://240e03b060230cedd2a638815e9b7ad6.qnqcdn.net:22443/qn-EZgB35KGnOztcKgEuGTAkfEMtBSkeOmQ8Vzc.web-ext-storage.dcloud.net.cn/uni-app-x/logo.ico",
+            }
+          ]
+        },
+        {
+          head: "资源站推荐",
+          recommendSites: [
+            {
+              title: "iconfont",
+              url: "https://www.iconfont.cn/",
+              icon: "https://img.alicdn.com/imgextra/i4/O1CN01Z5paLz1O0zuCC7osS_!!6000000001644-55-tps-83-82.svg",
+              desc: "alibaba图标字体库"
+            },
+            {
+              title: "excalidraw",
+              url: "https://excalidraw.com/",
               icon: ""
             },
             {
               title: "站长工具",
               url: "https://tool.chinaz.com/",
               icon: ""
-            }
+            },
           ]
         },
         {
@@ -60,12 +87,12 @@ export default {
             {
               title: "清华镜像站",
               url: "https://mirrors.tuna.tsinghua.edu.cn/",
-              icon: ""
+              icon: "https://mirrors.tuna.tsinghua.edu.cn/static/img/logo-small@2x.png"
             },
             {
               title: "阿里镜像站",
               url: "https://developer.aliyun.com/mirror/",
-              icon: ""
+              icon: "https://img.alicdn.com/tfs/TB13DzOjXP7gK0jSZFjXXc5aXXa-212-48.png"
             },
           ]
         },
@@ -80,7 +107,7 @@ export default {
             {
               title: "ES6入门教程",
               url: "https://es6.ruanyifeng.com/",
-              icon: ""
+              icon: "/king-note/assets/img/other/laughyouth.png"
             },
             {
               title: "现代 JavaScript 教程",
@@ -91,97 +118,69 @@ export default {
         },
       ]
     }
-  },
-  methods: {
-    getOneColor() {
-      let size = this.colors.length;
-      let index = Math.floor(Math.random() * size);
-      let nextIndex = (index + 1) % size;
-      return [this.colors[index], this.colors[nextIndex]];
-    }
   }
 }
 </script>
 
 <template>
-  <div>
-    <div v-for="types in pageData">
-      <h3 class="header">{{ types.head }}</h3>
-
-      <ul class="card-container">
-        <li class="card-item"
-            :key="site.title" v-for="(site, index) in types.recommendSites">
-
-          <a class="content-wrapper" :href="site.url" target="_blank" :title="site.title">
-            <img class="content-icon" alt="" height="30" width="30"
-                 :src="site.icon || 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAb1BMVEX////4+Pi3ubtvcnZNUVU+Q0cpLjLr6+x3en0sMTYkKS59gIORk5aUl5n8/Pzw8PFTV1tbX2Pc3d5DSEzn5+g3PECLjpFKTlKFh4qxs7XCxMUwNTq/wcLh4uPV1tZzd3o/Q0jOz9CmqKpjZ2qfoaSrd37mAAABPUlEQVR4AW3TBZKEMBAF0B8GCHzcnbW5/xm30qEyknklcU/DgQpuYRTHUXgLFHw6SemkmcYrlcd8kRYlnlQ1PU0Fp434Qde75Qd+1FUQKiRZjyGfTGNjKhWMmSQXYO3Ibao3MlqBnSRzADhk/ycAdcqclSSHnEUD+KLt8KalMQMqpl3izU5jKxHQGCq8Ud80fq4VfuFZaIyQO4wVPEre5g+RrIAPJrkQSL8OPjv3htQmH8guU5uwgseeP7ITMYBnpdFgvlJPcx0zoLjjzS/FDrVRvH6xsqDYlLx29huRUaFx6YuI1mhKMbddf9trEzca7rmRk/FxpiRXiJO8FDBURyb4yfO7glC8TOpacmAc4ElMEWlc2oGckjwvYVFEB5wjouE6uLBwquypQym/scKrM4njElYaJy182q15aDj/oQMZkS8JH3IAAAAASUVORK5CYII='">
-            <span class="content-text">{{ site.title }}</span>
-          </a>
-        </li>
-      </ul>
-
-      <!--      <div class="container">-->
-      <!--        <a class="item"-->
-      <!--           :href="site.url"-->
-      <!--           target="_blank"-->
-      <!--           :style="{background: 'linear-gradient(' + colors[index % colors.length] + ',' +  colors[(index + 1) % colors.length] + ')'}"-->
-      <!--           :key="site.title" v-for="(site, index) in types.recommendSites">-->
-      <!--          <p class="title">{{ site.title }}</p>-->
-      <!--        </a>-->
-      <!--      </div>-->
-
+  <div class="wrapper">
+    <div class="card" :key="card.head" v-for="card in pageData">
+      <div class="head">{{ card.head }}</div>
+      <div class="body">
+        <a class="item" :href="site.url" target="_blank" :key="index" v-for="(site, index) in card.recommendSites">
+          <img class="pic" :src="site.icon || '/king-note/assets/img/other/laughyouth.png'" :alt="site.title"/>
+          <div>
+            <div class="title">{{ site.title }}</div>
+            <div class="desc">{{ site.desc || site.title }}</div>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </template>
 
-<style scoped>
+<style lang="stylus" scoped>
+.wrapper
 
-* {
-  margin: 0;
-  padding: 0;
-}
 
-.header {
-  margin-bottom: 30px;
-  padding-top: 20px;
-}
+  .card
+    border-radius 10px;
+    margin 30px 0;
+    background-color #eaecef;
+    padding 20px; 30px;
 
-.card-container {
-  overflow: hidden;
+    .head
+      font-size 28px;
+      font-weight 700;
+      line-height 2;
+      border-bottom 1px solid rgba(0, 0, 0, 0.3);
+      margin-bottom 10px;
 
-  .card-item {
-    float: left;
-    width: 180px;
-    height: 50px;
-    margin: 5px 10px;
-    list-style: none;
-    background-color: rgb(246, 246, 246);
+    .body
+      display flex;
+      flex-wrap wrap;
 
-    &:hover {
-      background-color: #55a532;
+      .item
+        display flex;
+        padding 20px 10px;
+        text-decoration none;
+        color black;
+        margin 0 5px;
 
-      .content-text {
-        color: white;
-      }
-    }
+        &:hover
+          box-shadow 0 5px 5px 0 rgba(108, 135, 135, .2);
 
-    .content-wrapper {
-      height: 100%;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
+        .pic
+          margin-right 10px;
+          width 30px;
+          height 30px;
 
-      .content-icon {
-        margin: 0 10px;
+        .title
+          font-weight 700;
+          line-height 1.5;
+          font-size 20px;
 
-      }
-
-      .content-text {
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-      }
-    }
-  }
-}
+        .desc
+          margin-top 10px;
+          font-size 10px;
 </style>
