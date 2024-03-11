@@ -18,7 +18,7 @@
         <div class="container" :key="column.index" v-for="column in columns">
           <div class="card" v-show="column.index === currentColumn" :key="index" v-for="(item, index) in column?.list" @click="onCardClick(item.path || '/')">
             <i :class="['iconfont', 'card-pic', item.pic]"></i>
-            <h2 class="card-title">{{ item.title }}</h2>
+            <div class="card-title">{{ item.title }}</div>
             <p class="card-desc overflow-truncate">{{ item.desc }}</p>
           </div>
         </div>
@@ -215,6 +215,10 @@ themeColor = green;
 
           .card-title
             color: themeColor;
+
+        .card-title
+          font-size 30px;
+          font-weight 700;
 
         .card-pic
           margin: 30px 0;
