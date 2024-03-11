@@ -4,8 +4,7 @@ const sidebarConf = require('./conf/sidebar')
 
 module.exports = {
     title: 'Kingの博客',
-    description: '记录学习、工作中碰到有趣技术',
-    theme: 'reco',
+    description: 'Java全栈的成长之路！',
 
     base: '/king-note/',
 
@@ -47,16 +46,16 @@ module.exports = {
         ]
     ],
 
-
+    theme: 'reco',
     themeConfig: {
         // 文章作者信息配置
         author: 'wenking',
         // 主题类型
-        type: 'blog',
+        type: 'KingHome',
         // logo
         logo: '/assets/img/logo.png',
         // 显示文章最后更新时间
-        lastUpdated: '更新时间', // string | boolean
+        lastUpdated: '最后更新时间', // string | boolean
         // 其他: navConf,
         nav: navbarConf,
         // 只有文章标题
