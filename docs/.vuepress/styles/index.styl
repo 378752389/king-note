@@ -1,48 +1,67 @@
 @import "cursor.styl"
+@import "iconfont.styl"
 
 * {
   margin 0;
   padding 0;
   box-sizing border-box;
+  font-family KING_FONT;
 }
 
 @font-face
   font-family: "KING_FONT";
   src: url(https://dragon-chen777.github.io/assets/fonts/Alimama_DongFangDaKai_Regular.woff) format("woff");
+  //src: url("/assets/font/沐瑶随心手写体.ttf");
 
-//src: url("/assets/font/鸿雷拙书简体.ttf");
-//src: url("/assets/font/沐瑶随心手写体.ttf");
 
-themeColor = rgb(62, 175, 124);
+.overflow-truncate
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  overflow: hidden;
+
+themeColor = $accentColor;
 titleHeight = 50px;
 
-h1
-  font-size 40px !important;
+.theme-reco-content
+  position relative;
 
-h2
-  color white;
-  width fit-content;
-  margin 30px 0 !important;
-  padding 0 titleHeight 0 (titleHeight / 2) !important;
-  border-radius 0 0 titleHeight 0;
-  height titleHeight;
-  line-height 1;
-  font-size 30px !important;
-  background-color rgba(136, 177, 141, 0.13);
-  background themeColor !important;
+  h1
+    font-size 40px !important;
 
-  &::before
-    display none !important;
-
-  &::after
-    content "";
-    width 52vw;
+  h2
+    color white;
+    width fit-content;
+    margin 30px 0 !important;
+    padding 0 titleHeight 0 (titleHeight / 2) !important;
+    border-radius 0 0 titleHeight 0;
+    height titleHeight;
+    line-height 1.8;
+    font-size 26px !important;
     background-color rgba(136, 177, 141, 0.13);
-    position absolute;
-    inset 0;
+    background themeColor !important;
+    position static !important;
+
+    &::before
+      display none !important;
+
+    &::after
+      content "";
+      width 100%;
+      background-color rgba(136, 177, 141, 0.13);
+      position absolute;
+      left 55px;
+      right 0;
+      height titleHeight;
 
 
-h3
-  margin 20px 0 !important;
-  padding 0 !important;
-  color themeColor !important;
+  h3
+    margin 20px 0 !important;
+    padding 0 !important;
+    color themeColor !important;
+
+
+//.sub-sidebar
+//  .level-2
+//    .sidebar-link
+//      font-weight 700

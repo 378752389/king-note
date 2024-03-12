@@ -140,14 +140,6 @@ export default {
 
 
 <style lang="stylus" scoped>
-@import "https://at.alicdn.com/t/c/font_4461289_fqauwuwxaev.css";
-
-@font-face
-  font-family: 'iconfont';  /* Project id 4461289 */
-  src: url('https://at.alicdn.com/t/c/font_4461289_xhehbickwg.woff2?t=1710128193485') format('woff2'),
-      url('https://at.alicdn.com/t/c/font_4461289_xhehbickwg.woff?t=1710128193485') format('woff'),
-      url('https://at.alicdn.com/t/c/font_4461289_xhehbickwg.ttf?t=1710128193485') format('truetype');
-
 
 @keyframes extend {
   to {
@@ -159,13 +151,6 @@ export default {
   font-size: 80px;
 
 themeColor = #3eaf7c;
-
-.overflow-truncate
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 6;
-  overflow: hidden;
-
 
 .wrapper
   margin-top: 60px;
