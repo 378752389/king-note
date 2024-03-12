@@ -132,7 +132,7 @@ export default {
           ]
         },
         {
-          head: "刷题",
+          head: "刷题/学习",
           recommendSites: [
             {
               title: "力扣",
@@ -144,6 +144,12 @@ export default {
               url: "https://www.nowcoder.com/",
               icon: "https://static.nowcoder.com/fe/file/images/nowpick/web/www-favicon.ico",
             },
+            {
+              title: "Web Dev",
+              url: "https://web.dev/",
+              icon: "https://www.gstatic.com/devrel-devsite/prod/v98430d67869e4c9fcc4f6174e040606a1a4469c1d96401a32bd7505543a55772/web/images/favicon.png",
+              desc: "web端相关技术学习网站"
+            }
           ]
         },
         {
@@ -191,15 +197,37 @@ export default {
             }
           ]
         },
-      ]
+      ],
+      currentIdx: 0,
+      cardTopOffset: []
     }
+  },
+  mounted() {
+    this.cardTopOffset.length = 0;
+    const cards = document.querySelectorAll(".card");
+    cards.forEach(x => {
+      const distance = x.getBoundingClientRect().top + window.scrollY;
+      this.cardTopOffset.push(distance);
+    })
+
+    let that = this;
+    window.addEventListener('scroll', function (e) {
+      const scrollDistance = window.scrollY;
+      for(let i=0; i< that.cardTopOffset.length; i++) {
+        if (scrollDistance < that.cardTopOffset[i]) {
+          that.currentIdx = i;
+
+          break;
+        }
+      }
+    })
   }
 }
 </script>
 
 <template>
   <div class="nav-wrapper">
-    <div class="card" :key="card.head" v-for="card in pageData">
+    <div :id="card.head" class="card" :key="card.head" v-for="card in pageData">
       <div class="head">{{ card.head }}</div>
       <div class="body">
         <a class="item" :href="site.url" target="_blank" :key="index" v-for="(site, index) in card.recommendSites">
@@ -211,16 +239,25 @@ export default {
         </a>
       </div>
     </div>
+
+    <div class="elevator">
+        <a :href="`#${item.head}`" @click="currentIdx = index" :class="['level', {'active': index === currentIdx}]" :key="item.head" v-for="(item, index) in pageData">
+          {{item.head}}
+        </a>
+    </div>
   </div>
 </template>
 
 <style lang="stylus" scoped>
 .nav-wrapper
+  margin: auto;
+  width 60vw;
+  min-width 600px;
 
   .card
     border-radius 10px;
     margin 30px 0;
-    background-color #eaecef;
+    background-color #f6f6f6;
     padding 20px;
     30px;
 
@@ -259,4 +296,22 @@ export default {
         .desc
           margin-top 10px;
           font-size 10px;
+
+
+@media(min-width: 900px)
+  .elevator
+    position fixed;
+    left 40px;
+    top 60px;
+
+    .level
+      height 60px;
+      width 200px;
+      display flex;
+      justify-content flex-start;
+      align-items center;
+      color black;
+
+    .active
+      color $accentColor;
 </style>
