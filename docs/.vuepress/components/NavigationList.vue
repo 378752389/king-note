@@ -244,6 +244,7 @@ export default {
         <a :href="`#${item.head}`" @click="currentIdx = index" :class="['level', {'active': index === currentIdx}]" :key="item.head" v-for="(item, index) in pageData">
           {{item.head}}
         </a>
+      <a href="/king-note/" class="level back-index">回到主页</a>
     </div>
   </div>
 </template>
@@ -311,7 +312,10 @@ export default {
       justify-content flex-start;
       align-items center;
       color black;
+      text-decoration none;
 
+    .back-index
+      color red;
     .active
       color $accentColor;
 </style>
