@@ -214,9 +214,8 @@ export default {
     window.addEventListener('scroll', function (e) {
       const scrollDistance = window.scrollY;
       for(let i=0; i< that.cardTopOffset.length; i++) {
-        if (scrollDistance < that.cardTopOffset[i]) {
+        if (scrollDistance <= that.cardTopOffset[i]) {
           that.currentIdx = i;
-
           break;
         }
       }
