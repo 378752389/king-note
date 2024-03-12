@@ -38,40 +38,38 @@ export default {
           index: 0,
           list: [
             {
-              path: '/中间件/mysql/',
+              path: '/中间件/mysql/环境搭建',
               pic: 'icon-mysql',
               title: 'MySQL',
               desc: 'MySQL是目前IT行业最流行的开源数据库管理系统，本栏目记录数据库设计思想、设计方式以及常见问题及解决方案、主从数据库的搭建等'
             },
             {
               pic: 'icon-redis',
+              path: '/中间件/redis/环境搭建',
               title: 'Redis',
-              desc: 'MySQL是目前IT行业最流行的开源数据库管理系统，本栏目记录数据库设计思想、设计方式以及常见问题及解决方案、主从数据库的搭建等'
+              desc: 'Redis是一款内存键值存储系统，兼具数据库和缓存功能，支持数据持久化、多种数据结构及高速读写。'
             },
             {
+              path: '/中间件/kafka/环境搭建',
               pic: 'icon-shujujieruKafkajiqun',
               title: 'Kafka',
-              desc: 'MySQL是目前IT行业最流行的开源数据库管理系统，本栏目记录数据库设计思想、设计方式以及常见问题及解决方案、主从数据库的搭建等'
+              desc: 'Kafka是一个高吞吐量的分布式消息队列系统，常用于构建实时数据管道和流处理平台。'
             },
             {
               pic: 'icon-elasticsearch',
+              path: '/中间件/elasticsearch/RestAPI',
               title: 'Elasticsearch',
-              desc: 'MySQL是目前IT行业最流行的开源数据库管理系统，本栏目记录数据库设计思想、设计方式以及常见问题及解决方案、主从数据库的搭建等'
+              desc: 'Elasticsearch是基于Lucene的分布式全文搜索引擎，支持实时检索、分析和大规模数据处理。'
             },
             {
               pic: 'icon-springboot',
               title: 'SpringBoot',
-              desc: 'MySQL是目前IT行业最流行的开源数据库管理系统，本栏目记录数据库设计思想、设计方式以及常见问题及解决方案、主从数据库的搭建等'
+              desc: 'Spring Boot简化了Spring应用开发，提供自动配置、起步依赖和内置服务器，加速构建微服务应用。'
             },
             {
               pic: 'icon-fenbushi',
               title: '分布式/微服务',
-              desc: 'MySQL是目前IT行业最流行的开源数据库管理系统，本栏目记录数据库设计思想、设计方式以及常见问题及解决方案、主从数据库的搭建等'
-            },
-            {
-              pic: 'icon-linux',
-              title: 'Linux',
-              desc: 'MySQL是目前IT行业最流行的开源数据库管理系统，本栏目记录数据库设计思想、设计方式以及常见问题及解决方案、主从数据库的搭建等'
+              desc: '分布式系统通过网络互联多个独立服务，微服务架构则将其细化为小型自治服务，增强可扩展性和维护性。'
             },
           ],
         },
@@ -79,9 +77,28 @@ export default {
           index: 1,
           list: [
             {
-              pic: 'icon-redis',
-              title: 'Redis',
-              desc: 'MySQL是目前IT行业最流行的开源数据库管理系统，本栏目记录数据库设计思想、设计方式以及常见问题及解决方案、主从数据库的搭建等'
+              pic: 'icon-H',
+              title: '前端基础',
+              path: "/front/基础/html标签",
+              desc: "HTML5是最新一代超文本标记语言标准，集成了多媒体元素、图形绘制、离线存储等功能。它使得开发者能创建富互联网应用，跨平台兼容性更强，同时强化了Web应用的功能性和互动体验。",
+            },
+            {
+              pic: 'icon-vuejs',
+              title: 'Vue',
+              path: "/front/vue/vue",
+              desc: "Vue是一款流行的渐进式JavaScript框架，用于构建用户界面。它易于上手且高度可组件化，通过声明式的数据绑定和响应式系统简化了前后端交互与动态网页开发。"
+            },
+            {
+              pic: 'icon-style',
+              title: '常用样式效果',
+              path: "/front/样式效果/flex两栏布局",
+              desc: "CSS即层叠样式表，负责网页布局、外观美化，实现内容与表现分离，支持响应式设计和动画效果。",
+            },
+            {
+              pic: 'icon-component',
+              title: '通用组件',
+              path: "/front/通用组件/前端数据下载",
+              desc: "Vue组件是可复用UI模块，封装HTML/CSS/JS，实现独立逻辑和样式，通过组件化开发提升效率。",
             },
           ]
         },
@@ -89,9 +106,22 @@ export default {
           index: 2,
           list: [
             {
-              pic: 'icon-redis',
-              title: 'Redis',
-              desc: 'MySQL是目前IT行业最流行的开源数据库管理系统，本栏目记录数据库设计思想、设计方式以及常见问题及解决方案、主从数据库的搭建等'
+              path: "/linux/命令/命令集合",
+              pic: 'icon-linux',
+              title: 'Linux',
+              desc: 'Linux是一种开源操作系统内核，支持多种发行版如Ubuntu、Red Hat等。以其稳定性、安全性、灵活性著称，广泛应用于服务器、嵌入式设备及桌面计算环境。'
+            },
+            {
+              path: "/linux/容器/docker安装",
+              pic: 'icon-docker',
+              title: '容器化',
+              desc: 'Docker是一个容器化平台，通过轻量级虚拟化技术打包应用及其依赖，形成可移植、隔离性强的容器。开发者和运维人员可以快速构建、部署和运行分布式应用，实现持续集成和交付。'
+            },
+            {
+              path: "/linux/配置/ssh",
+              pic: 'icon-peizhi-xitongpeizhi',
+              title: '系统配置',
+              desc: 'Linux系统配置涵盖网络、服务、安全等方面的个性化设定，通过修改配置文件和命令行工具优化系统性能和服务行为。'
             },
           ]
         },
@@ -110,7 +140,7 @@ export default {
 
 
 <style lang="stylus" scoped>
-@import "https://at.alicdn.com/t/c/font_4461289_xhehbickwg.css";
+@import "https://at.alicdn.com/t/c/font_4461289_fqauwuwxaev.css";
 
 @font-face
   font-family: 'iconfont';  /* Project id 4461289 */
@@ -128,7 +158,7 @@ export default {
 .iconfont
   font-size: 80px;
 
-themeColor = green;
+themeColor = #3eaf7c;
 
 .overflow-truncate
   display: -webkit-box;
@@ -209,6 +239,9 @@ themeColor = green;
         &:hover
           cursor: pointer;
           box-shadow: 0 10px 20px 0 rgba(108, 135, 135, .2);
+
+          .iconfont
+            color themeColor;
 
           &::after
             animation: extend 0.5s forwards;
