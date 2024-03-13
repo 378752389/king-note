@@ -3,7 +3,7 @@
   "background_color": "#3eaf7c",
   "display": "standalone",
   "scope": "/",
-  "start_url": "/",
+  "start_url": "/king-note",
   "name": "KingNote",
   "short_name": "KingNote",
   "description": "\u5168\u6808\u5de5\u7a0b\u5e08\u6210\u957f\u4e4b\u8def",
