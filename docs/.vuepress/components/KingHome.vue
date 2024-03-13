@@ -4,19 +4,19 @@
     <div class="main">
       <div class="tab">
         <div class="switch">
-          <div :class="[{active: currentColumn === 0}]" @click="currentColumn=0">
+          <div :class="[{active: currentColumn === 0}, 'pointer-select']" @click="currentColumn=0">
             <div>Java后端技术</div>
           </div>
-          <div :class="[{active: currentColumn === 1}]" @click="currentColumn=1">
+          <div :class="[{active: currentColumn === 1}, 'pointer-select']" @click="currentColumn=1">
             <div>前端技术</div>
           </div>
-          <div :class="[{active: currentColumn === 2}]" @click="currentColumn=2">
+          <div :class="[{active: currentColumn === 2}, 'pointer-select']" @click="currentColumn=2">
             <div>运维与自动化技术</div>
           </div>
         </div>
 
         <div class="container" :key="column.index" v-for="column in columns">
-          <div class="card" v-show="column.index === currentColumn" :key="index" v-for="(item, index) in column?.list" @click="onCardClick(item.path || '/')">
+          <div class="card pointer-select" v-show="column.index === currentColumn" :key="index" v-for="(item, index) in column?.list" @click="onCardClick(item.path || '/')">
             <i :class="['iconfont', 'card-pic', item.pic]"></i>
             <div class="card-title">{{ item.title }}</div>
             <p class="card-desc overflow-truncate">{{ item.desc }}</p>
@@ -169,7 +169,7 @@ themeColor = #3eaf7c;
       height: 50px;
 
       & > div
-        cursor: pointer;
+        cursor: $cursorSelect;
         position: relative;
         margin: 0 30px;
 
@@ -222,7 +222,7 @@ themeColor = #3eaf7c;
 
 
         &:hover
-          cursor: pointer;
+          cursor: $cursorSelect;
           box-shadow: 0 10px 20px 0 rgba(108, 135, 135, .2);
 
           .iconfont

@@ -3,7 +3,7 @@ const navbarConf = require('./conf/navbar')
 const sidebarConf = require('./conf/sidebar')
 
 module.exports = {
-    title: 'Kingの博客',
+    title: 'KingのNote',
     description: 'Java全栈的成长之路！',
 
     base: '/king-note/',

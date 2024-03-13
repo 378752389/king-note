@@ -1,18 +1,24 @@
+$cursorDefault = url('/assets/cursors/default.cur') , auto
+$cursorSelect = url('/assets/cursors/select.cur') , auto
+$cursorText = url('/assets/cursors/text.cur') , auto
+
+
+.pointer-default
+  cursor $cursorDefault;
+
+.pointer-select
+  cursor $cursorSelect;
+
+.pointer-text
+  cursor $cursorText;
+
+
 body
-  cursor url(https://dragon-chen777.github.io/assets/cursors/1/default.cur) , auto
+  cursor: $cursorDefault
 
+.hover:hover, .social-item, .tags span, a, button, i, input .abstract-item, .sidebar-heading, .jump, .back-to-ceiling, .dropdown-wrapper, .custom-block.details summary
+  cursor: $cursorSelect !important;
 
-.hover:hover, .social-item, .tags span, a, button, i, input
-  cursor: url(https://dragon-chen777.github.io/assets/cursors/1/select.cur), auto !important
+input:focus, input:hover
+  cursor: $cursorText !important;
 
-
-input:focus
-  cursor: url(https://dragon-chen777.github.io/assets/cursors/1/text.cur), auto !important
-
-
-.abstract-item
-  cursor: url(https://dragon-chen777.github.io/assets/cursors/1/default.cur), auto
-
-
-.abstract-item, .sidebar-heading, .jump, .back-to-ceiling, .dropdown-wrapper, .custom-block.details summary
-  cursor: url(https://dragon-chen777.github.io/assets/cursors/1/select.cur), auto !important
