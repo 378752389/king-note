@@ -10,7 +10,17 @@ module.exports = {
 
     head: [
         // http://favicon.io  favicon 搜索网站
-        ['link', {rel: 'icon', href: '/favicon.ico'}],
+        // ['link', {rel: 'icon', href: '/favicon.ico'}],
+        ['link', { rel: 'icon', href: '/icon-256x256.png' }],
+        ['link', { rel: 'manifest', href: '/manifest.json' }],
+        ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+        ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+        ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+        ['link', { rel: 'apple-touch-icon', href: '/icon-192x192.png' }],
+        ['link', { rel: 'mask-icon', href: '/icons/safari-pinned-tab.svg', color: '#3eaf7c' }],
+        ['meta', { name: 'msapplication-TileImage', content: '/icon-192x192.png' }],
+        ['meta', { name: 'msapplication-TileColor', content: '#000000' }],
+
         ['link', {rel: 'stylesheet', href: '/assets/icon-font/iconfont.css'}],
 
         // seo 相关配置
@@ -42,6 +52,16 @@ module.exports = {
             'vuepress-plugin-code-copy',
             {
                 align: "top"
+            }
+        ],
+        [
+            '@vuepress/pwa',
+            {
+                serviceWorker: true,
+                updatePopup: {
+                    message: "网站有更新，可刷新获取最新内容",
+                    buttonText: "立即刷新",
+                }
             }
         ]
     ],
