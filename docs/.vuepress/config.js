@@ -83,6 +83,9 @@ module.exports = {
         // 每篇问文章的子菜单配置
         subSidebar: 'auto',
 
+        // 暂时 取消取色选项
+        modePicker: false,
+
         blogConfig: {
             // category: {
             //     location: 6,     // 在导航栏菜单中所占的位置，默认2
