@@ -9,4 +9,4 @@ tags:
 
 ## uniapp环境搭建
 
-调整头部link
+调整头部link, 调整manifest.json 图片位置
