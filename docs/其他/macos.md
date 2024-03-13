@@ -1,5 +1,5 @@
 ---
-title: 【macos】包管理器
+title: macos
 date: 2023-07-08
 categories:
   - 其他
@@ -7,7 +7,9 @@ tags:
   - macos
 ---
 
-## 介绍
+## homebrew
+
+### 介绍：
 
 homebrew是Mac OS X上的强大的包管理工具，可以高效管理各种软件包，使用 Homebrew 不用去了解在哪里下载安装包，不用思考到底安装在电脑哪个位置。
 
@@ -18,10 +20,10 @@ homebrew按照安装的软件类型进行分类：
 2 编程使用的软件依赖环境： jdk、mysql
 3 带有GUI的软件： chrome、jetbrains
 
-对于1、2类软件，可以通过 `brew install app_name` 进行安装， 对于3类软件，需要cask进行辅助安装，安装命令为： `brew install --cask app_name`
+对于1、2类软件，可以通过 `brew install app_name` 进行安装，
+对于3类软件，需要cask进行辅助安装，安装命令为： `brew install --cask app_name`
 
-
-## 常用命令
+### 常用命令
 
 ```shell
 brew install              安装软件

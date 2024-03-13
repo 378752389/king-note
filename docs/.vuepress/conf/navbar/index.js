@@ -38,6 +38,11 @@ module.exports = [
         ]
     },
     {
+        text: '其他',
+        link: '/其他/idea',
+        icon: 'iconfont icon-menu',
+    },
+    {
         text: '站点推荐',
         link: '/其他/推荐站点导航',
         icon: 'iconfont icon-menu2',

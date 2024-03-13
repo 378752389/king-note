@@ -1,5 +1,5 @@
 ---
-title: git基础
+title: git
 date: 2023-07-08
 categories:
   - 其他

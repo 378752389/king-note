@@ -7,11 +7,24 @@ tags:
   - maven
 ---
 
+## 中央仓库配置
+
+找到`mirrors`标签，删除旧配置，使用如下配置：
+
+```xml
+<mirror>
+    <id>nexus-aliyun</id>
+    <mirrorOf>central</mirrorOf>
+    <name>Nexus aliyun</name>
+    <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+</mirror>
+```
+
 ## package、install、deploy 三者之间区别
 
-* package命令完成了项目编译、单元测试、打包功能，但没有把打好的可执行jar包（war包或其它形式的包）布署到本地maven仓库和远程maven私服仓库
-* install命令完成了项目编译、单元测试、打包功能，同时把打好的可执行jar包（war包或其它形式的包）布署到本地maven仓库，但没有布署到远程maven私服仓库
-* deploy命令完成了项目编译、单元测试、打包功能，同时把打好的可执行jar包（war包或其它形式的包）布署到本地maven仓库和远程maven私服仓库
+- package命令完成了项目编译、单元测试、打包功能，但没有把打好的可执行jar包（war包或其它形式的包）布署到本地maven仓库和远程maven私服仓库
+- install命令完成了项目编译、单元测试、打包功能，同时把打好的可执行jar包（war包或其它形式的包）布署到本地maven仓库，但没有布署到远程maven私服仓库
+- deploy命令完成了项目编译、单元测试、打包功能，同时把打好的可执行jar包（war包或其它形式的包）布署到本地maven仓库和远程maven私服仓库
 
 ## maven中snapshot和正式版本区别
 
@@ -57,37 +70,9 @@ maven重复引入runtime：运行时依赖范围。对于测试和运行 classpa
 * provided：已提供依赖范围。对于编译和测试 classpath 有效，但在运行时无效。如 servlet-api，编译和测试时需要该依赖，但在运行项目时，由于容器已经提供此依赖，故不需要 maven重复引入
 * provided：已提供依赖范围。对于编译和测试 classpath 有效，但在运行时无效。如 servlet-api，编译和测试时需要该依赖，但在运行项目时，由于容器已经提供此依赖，故不需要 maven重复引入
 * system：系统依赖范围， 导入本地jar包
-* import：导入依赖范围，只在<dependencyManagement>内定义的<dependency>中支持import这一scope。 它表示，在当前这个pom文件的<dependencyManagement>
-  内定义的<dependency>会被**替换**成一些系列的<dependency>。
+* import：导入依赖范围，只在`<dependencyManagement>`内定义的`<dependency>`中支持import这一scope。 它表示，在当前这个pom文件的`<dependencyManagement>`
+  内定义的`<dependency>`会被**替换**成一些系列的`<dependency>`。
 
-system打包示例
-
-在依赖中添加如下内容
-
-```xml
-
-<dependency>
-    <groupId>com.mytest</groupId>
-    <artifactId>test</artifactId>
-    <version>1.0</version>
-    <scope>system</scope>
-    <systemPath>${pom.basedir}/lib/test-1.0.jar</systemPath>
-</dependency>
-```
-
-在打包插件中包含依赖路径
-
-```xml
-
-<plugin>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-maven-plugin</artifactId>
-    <configuration>
-        <!--设置为true，以便把本地的system的jar也包括进来-->
-        <includeSystemScope>true</includeSystemScope>
-    </configuration>
-</plugin>
-```
 
 ## 给项目打上标签版本
 
@@ -96,88 +81,4 @@ system打包示例
 mvn versions:set -DnewVersion="1.0.0"
 # 重新打包
 mvn clean package    
-
-
-```
-
-## 仓库配置
-
-```xml
-<!-- mvn:部署 指定上传依赖路径 -->
-<distributionManagement>
-    <repository>
-        <id>localhost</id>
-        <url>http://localhost:8081/repository/maven-releases/</url>
-    </repository>
-    <snapshotRepository>
-        <id>localhost</id>
-        <url>http://localhost:8081/repository/maven-snapshots/</url>
-    </snapshotRepository>
-</distributionManagement>
-
-        <!--  指定依赖下载路径  -->
-<repositories>
-<repository>
-    <id>localhost</id>     <!-- 对应在 maven setting.xml 中配置的 server 标签id -->
-    <name>本地 nexus 下载测试</name>
-    <url>http://localhost:8081/repository/maven-public/</url>
-</repository>
-</repositories>
-
-
-        <!--  阿里插件库  -->
-<repositories>
-<repository>
-    <id>aliyun</id>
-    <url>https://maven.aliyun.com/repository/public</url>
-    <releases>
-        <enabled>true</enabled>
-    </releases>
-    <snapshots>
-        <enabled>false</enabled>
-    </snapshots>
-</repository>
-</repositories>
-<pluginRepositories>
-<pluginRepository>
-    <id>aliyun-plugin</id>
-    <url>https://maven.aliyun.com/repository/public</url>
-    <releases>
-        <enabled>true</enabled>
-    </releases>
-    <snapshots>
-        <enabled>false</enabled>
-    </snapshots>
-</pluginRepository>
-</pluginRepositories>
-```
-
-## 常用maven插件
-
-```xml
-<build>
-    <plugins>
-        <!-- maven-compiler-plugin 插件可以指定项目源码的 jdk 版本 -->
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.3</version>
-            <configuration>
-                <!-- 指定source和target的版本 -->
-                <source>${java.version}</source>
-                <target>${java.version}</target>
-            </configuration>
-        </plugin>
-
-        <!-- 跳过测试阶段插件 -->
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>2.4.2</version>
-            <configuration>
-                <skipTests>true</skipTests>
-            </configuration>
-        </plugin>
-    </plugins>
-</build>
 ```
