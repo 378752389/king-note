@@ -66,6 +66,9 @@ module.exports = [
     },
     {
         title: 'zookeeper', children: [
+            '/中间件/zookeeper/环境搭建',
+            '/中间件/zookeeper/核心概念',
+            '/中间件/zookeeper/客户端命令',
             '/中间件/zookeeper/Java客户端操作',
         ]
     }

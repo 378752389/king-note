@@ -203,29 +203,35 @@ public class CuratorAPITest {
 }
 ```
 
-> 3.6 版本之后，持久化订阅
+:::tip
+
+监听机制的注意事项
+
+使用不同的命令进行监听，可触发的事件类型是不一样的；
+- 使用 `getData`, `checkExists` 命令进行 watcher 配置，会监听到：NodeCreated、NodeDeleted、NodeDataChanged事件
+- 使用 `getChildren` 命令进行 watcher 配置，会监听到：NodeChildrenChanged 事件
+
+:::
 
 ```java
 public class CuratorAPITest {
     public static void curatorOperation(CuratorFramework curator) {
-        String node = "/node";
-        CuratorCache curatorCache = CuratorCache.
-            build(curator, node, CuratorCache.Options.SINGLE_NODE_CACHE);
-        CuratorCacheListener listener = CuratorCacheListener
-                .builder()
-                .forAll(new ZookeeperWatcherListener())
-                .build();
-        curatorCache.listenable().addListener(listener);
-        curatorCache.start();
-    }
-}
+        CountDownLatch latch = new CountDownLatch(1);
+        CuratorWatcher watcher = new CuratorWatcher() {
+        
+            @Override
+            public void process(WatchedEvent watchedEvent) throws Exception {
+                System.out.println("watcher监听到的事件类型" + watchedEvent.getType());
+                System.out.println("watcher监听到的节点路径" + watchedEvent.getPath());
+                System.out.println("监听到的节点状态" + watchedEvent.getState());
 
+                latch.countDown();
+            }
+        };
 
-public static class ZookeeperWatcherListener implements CuratorCacheListener {
-
-    @Override
-    public void event(Type type, ChildData oldData, ChildData data) {
-        System.out.println("事件类型：" + type + ":oldData:" + oldData + ":data" + data);
-    }
+        //        curator.checkExists().usingWatcher(watcher).forPath("/w/asd");
+        curator.getData().usingWatcher(watcher).forPath("/w/asd");
+        latch.await();
+        System.out.println("事件监听结束");
 }
 ```
