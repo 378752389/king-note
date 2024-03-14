@@ -1,5 +1,5 @@
 ---
-title: JavaAPI
+title: Elasticsearch-JavaAPI
 date: 2023-12-19
 categories:
   - 中间件

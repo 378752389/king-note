@@ -1,5 +1,5 @@
 ---
-title: JavaAPI测试类示例
+title: Elasticsearch-JavaAPI测试类示例
 date: 2023-12-26
 categories:
   - 中间件

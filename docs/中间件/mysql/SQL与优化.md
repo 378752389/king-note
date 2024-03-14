@@ -1,5 +1,5 @@
 ---
-title: SQL与优化
+title: MySQL-优化
 date: 2023-07-11
 categories:
   - 中间件

@@ -1,5 +1,5 @@
 ---
-title: DSL查询
+title: Elasticsearch-DSL查询
 date: 2023-12-19
 categories:
   - 中间件

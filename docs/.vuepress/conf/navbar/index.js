@@ -30,10 +30,10 @@ module.exports = [
         items: [
             {text: 'mysql', link: '/中间件/mysql/环境搭建/', icon: 'iconfont icon-mysql',},
             {text: 'redis', link: '/中间件/redis/环境搭建/', icon: 'iconfont icon-redis',},
-            {text: 'hbase', link: '/中间件/hbase/环境搭建/', icon: 'iconfont icon-HBASE',},
+            // {text: 'hbase', link: '/中间件/hbase/环境搭建/', icon: 'iconfont icon-HBASE',},
             {text: 'kafka', link: '/中间件/kafka/环境搭建/', icon: 'iconfont icon-shujujieruKafkajiqun',},
             {text: 'nginx', link: '/中间件/nginx/环境搭建/', icon: 'iconfont icon-nginx',},
-            {text: 'seata', link: '/中间件/seata/环境搭建/', icon: 'iconfont icon-SEATA',},
+            // {text: 'seata', link: '/中间件/seata/环境搭建/', icon: 'iconfont icon-SEATA',},
             {text: 'elasticsearch', link: '/中间件/elasticsearch/JavaAPI/', icon: 'iconfont icon-elasticsearch'},
         ]
     },

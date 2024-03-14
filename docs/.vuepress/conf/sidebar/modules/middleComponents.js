@@ -35,26 +35,26 @@ module.exports = [
 
         ]
     },
-    {
-        title: 'seata', children: [
-            '/中间件/seata/环境搭建',
-            '/中间件/seata/理论',
-        ]
-    },
-    {
-        title: 'elk', children: [
-            '/中间件/elk/elasticsearch',
-            '/中间件/elk/elk',
-            '/中间件/elk/kibana',
-            '/中间件/elk/logstash',
-            '/中间件/elk/efk',
-        ]
-    },
-    {
-        title: 'hbase', children: [
-            '/中间件/hbase/环境搭建',
-        ]
-    },
+    // {
+    //     title: 'seata', children: [
+    //         '/中间件/seata/环境搭建',
+    //         '/中间件/seata/理论',
+    //     ]
+    // },
+    // {
+    //     title: 'elk', children: [
+    //         '/中间件/elk/elasticsearch',
+    //         '/中间件/elk/elk',
+    //         '/中间件/elk/kibana',
+    //         '/中间件/elk/logstash',
+    //         '/中间件/elk/efk',
+    //     ]
+    // },
+    // {
+    //     title: 'hbase', children: [
+    //         '/中间件/hbase/环境搭建',
+    //     ]
+    // },
     {
         title: 'elasticsearch', children: [
             '/中间件/elasticsearch/JavaAPI',
@@ -62,6 +62,11 @@ module.exports = [
             '/中间件/elasticsearch/DSL查询',
             '/中间件/elasticsearch/JavaAPI测试类示例',
             '/中间件/elasticsearch/高级用法',
+        ]
+    },
+    {
+        title: 'zookeeper', children: [
+            '/中间件/zookeeper/Java客户端操作',
         ]
     }
 ]
