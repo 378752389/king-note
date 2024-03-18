@@ -38,6 +38,7 @@ module.exports = [
             '/front/样式效果/九宫格拼凑',
             '/front/样式效果/flex两栏布局',
             '/front/样式效果/宽高等比缩放',
+            '/front/样式效果/旋转轮播图',
         ]
     }
 ]

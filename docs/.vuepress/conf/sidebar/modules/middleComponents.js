@@ -71,5 +71,13 @@ module.exports = [
             '/中间件/zookeeper/客户端命令',
             '/中间件/zookeeper/Java客户端操作',
         ]
+    },
+    {
+        title: 'rabbitmq', children: [
+            '/中间件/rabbitmq/环境搭建',
+            '/中间件/rabbitmq/核心概念',
+            '/中间件/rabbitmq/Java客户端操作',
+            // '/中间件/rabbitmq/整合Springboot',
+        ]
     }
 ]
