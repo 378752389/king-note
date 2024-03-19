@@ -14,13 +14,13 @@ export default {
             {
               title: "maven",
               url: "https://mvnrepository.com/",
-              icon: "https://mvnrepository.com/img/8152945916bbc1ec8c179d03d0c986db"
+              icon: "https://mvnrepository.com/assets/images/7080b8b0f6f48e6fbaffd5f9d85fcc7f-favicon.ico"
             },
             {
 
               title: "redis命令速查",
               url: "https://www.redis.net.cn/order/",
-              icon: "https://www.redis.net.cn/Application/Home/View/Public/img/redis-white.png"
+              icon: "https://redis.io/images/favicons/apple-touch-icon.png"
             },
             {
               title: "通义千问",
@@ -58,13 +58,19 @@ export default {
             {
               title: "uniapp",
               url: "https://uniapp.dcloud.net.cn/",
-              icon: "https://240e03b060230cedd2a638815e9b7ad6.qnqcdn.net:22443/qn-EZgB35KGnOztcKgEuGTAkfEMtBSkeOmQ8Vzc.web-ext-storage.dcloud.net.cn/uni-app-x/logo.ico",
+              icon: "https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/icon.png",
             },
             {
               title: "picsum",
               url: "https://picsum.photos/",
               icon: "data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMUExQTFBIiB4bWxuczp4PSJodHRwOi8vbnMuYWRvYmUuY29tL0V4dGVuc2liaWxpdHkvMS4wLyIgeG1sbnM6aT0iaHR0cDovL25zLmFkb2JlLmNvbS9BZG9iZUlsbHVzdHJhdG9yLzEwLjAvIiB4bWxuczpncmFwaD0iaHR0cDovL25zLmFkb2JlLmNvbS9HcmFwaHMvMS4wLyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEwMCAxMDA7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48c3dpdGNoPjxmb3JlaWduT2JqZWN0IHJlcXVpcmVkRXh0ZW5zaW9ucz0iaHR0cDovL25zLmFkb2JlLmNvbS9BZG9iZUlsbHVzdHJhdG9yLzEwLjAvIiB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIj48L2ZvcmVpZ25PYmplY3Q+PGcgaTpleHRyYW5lb3VzPSJzZWxmIj48Zz48cGF0aCBkPSJNODYuNSwyOC42aC04LjFsLTEtNy4xYy0wLjQtMi45LTEuOS01LjUtNC4yLTcuM2MtMi4zLTEuOC01LjItMi41LTguMS0yLjFMMTIsMTkuNWMtNiwwLjgtMTAuMiw2LjQtOS40LDEyLjRsNSwzNyAgICAgYzAuOCw1LjUsNS41LDkuNSwxMC45LDkuNWMwLjUsMCwxLDAsMS41LTAuMWwyLjEtMC4zYzAuNSw1LjYsNS4yLDEwLDEwLjksMTBoNTMuNmM2LDAsMTEtNC45LDExLTExVjM5LjYgICAgIEM5Ny41LDMzLjYsOTIuNiwyOC42LDg2LjUsMjguNnogTTkxLjUsMzkuNlY3MUw3NS43LDUyLjljLTIuNi0zLTcuNC0zLTEwLDBMNTIuMSw2OC41bC00LjktNS40Yy0yLjUtMi43LTYuOC0yLjctOS4yLDBMMjgsNzQgICAgIFYzOS42YzAtMi43LDIuMi01LDUtNWg1My42Qzg5LjMsMzQuNiw5MS41LDM2LjksOTEuNSwzOS42eiBNMjIsMzkuNnYzMi4ybC0yLjgsMC40Yy0yLjcsMC40LTUuMi0xLjUtNS42LTQuM0w4LjUsMzEgICAgIGMtMC40LTIuNywxLjUtNS4yLDQuMy01LjZsNTMuMS03LjNjMC4yLDAsMC41LDAsMC43LDBjMi40LDAsNC42LDEuOCw0LjksNC4zbDAuOSw2LjNIMzNDMjYuOSwyOC42LDIyLDMzLjYsMjIsMzkuNnoiPjwvcGF0aD48Y2lyY2xlIGN4PSI0Mi41IiBjeT0iNDcuOCIgcj0iNiI+PC9jaXJjbGU+PC9nPjwvZz48L3N3aXRjaD48L3N2Zz4=",
               desc: "模拟图片生成站点"
+            },
+            {
+              title: "pexels",
+              url: "https://www.pexels.com/zh-cn/videos/",
+              icon: "https://www.pexels.com/assets/static/images/meta/pexels-icon.png",
+              desc: "高清视频资源站点",
             },
             {
               title: "iconfont",
@@ -174,11 +180,6 @@ export default {
               title: "星空小屋",
               url: "https://www.xk857.com/",
               icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAfCAMAAACxiD++AAAAYFBMVEVHcEwAHckAHskAHskAHskAHskAHskAHskAHskAHskAHskAHskAHskAHskAHskAHcnoESPoECLoESPoESMAHsnoESPoESPoECLoECPoESPoESPoESPoESPoESPoESPoESNoVtKkAAAAIHRSTlMAC1+n0uziwZdPNf9uQ4gZeB9g//ZIuQ8yx6hS75B95Oe73cIAAAEwSURBVHgBXdEFEsMwDATACzMqjP//Ze34pmq6AwGDzjKU5wdhFMVJmkGpPClU6uGPp8NOiZeqUJRAwefPoMwqv44Kq4LKCititqawfKDt8PsnfX3VQC/CGfEr1MDZoxgMwPWczYBiTTAiWx8UFkYIYxZrAfJvZC+IokJnL2KsQG1+DTC8gjw4m0uRMAECjjegToz9ieCzvJXj6zATTjACuEMGdP2iNTZoRrZj4/GA83kbWMLwfY/RZNQJobaJP61LSwTumNSKM4IhW2SM9ujFWWF0bGWhW4xiHcf52yjUvB42V/rfPj1TC87oGI9uMWaA15Xx+k7Qql8oTYM4vsGZn/U3qEzdmdhBdoMFtKKxXvu4X6s4HVR3yL9jhuKplaZVyypq0+VQc7+t932v5wj1AUpcIew07dayAAAAAElFTkSuQmCC"
-            },
-            {
-              title: "ES6入门教程",
-              url: "https://es6.ruanyifeng.com/",
-              icon: "/king-note/assets/img/other/laughyouth.png"
             },
             {
               title: "现代 JavaScript 教程",
