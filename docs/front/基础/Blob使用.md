@@ -1,5 +1,5 @@
 ---
-title: Blob使用
+title: JS-Blob使用
 date: 2023-08-24
 categories:
   - 前端基础

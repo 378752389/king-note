@@ -1,7 +1,6 @@
 ---
-title: fetch使用
+title: JS-XMLHttpRequest使用
 date: 2023-09-08
-sidebar: false
 categories:
   - 前端基础
 tags:

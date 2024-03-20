@@ -1,10 +1,10 @@
 ---
-title: 【css3】布局
+title: CSS-基础
 date: 2023-07-10
 categories:
 - 前端基础
 tags:
-- css3
+- css
 ---
 
 **注意点**

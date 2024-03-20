@@ -1,5 +1,5 @@
 ---
-title: fetch使用
+title: JS-fetch使用
 date: 2023-08-23
 sidebar: false
 categories:

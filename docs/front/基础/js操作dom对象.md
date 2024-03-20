@@ -1,5 +1,5 @@
 ---
-title: js操作dom对象
+title: JS-操作dom对象
 date: 2023-08-11
 categories:
   - 前端基础

@@ -1,5 +1,5 @@
 ---
-title: FileReader使用
+title: JS-FileReader使用
 date: 2023-08-24
 categories:
 - 前端基础

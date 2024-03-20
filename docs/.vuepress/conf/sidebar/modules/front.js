@@ -2,16 +2,19 @@ module.exports = [
     {
         title: '前端基础', children: [
             '/front/基础/html标签',
-            '/front/基础/css3布局',
-            '/front/基础/javascript基础',
-            '/front/基础/动画',
+
+            '/front/基础/css基础',
             '/front/基础/盒子居中方式',
             '/front/基础/z-index和层叠上下文',
+
+            '/front/基础/正则表达式',
             '/front/基础/js操作dom对象',
             '/front/基础/Blob使用',
             '/front/基础/FileReader使用',
             '/front/基础/fetch使用',
             '/front/基础/XMLHttpRequest使用',
+            '/front/基础/位置属性',
+            '/front/基础/拖拽API',
         ]
     },
     {

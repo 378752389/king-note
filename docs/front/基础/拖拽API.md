@@ -1,10 +1,10 @@
 ---
-title: 拖拽API
+title: JS-拖拽API
 date: 2023-11-03
 categories:
 - 前端基础
 tags:
-- WEBAPI
+- js
 ---
 
 ```html

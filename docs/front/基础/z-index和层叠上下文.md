@@ -1,10 +1,10 @@
 ---
-title: 【css3】z-index和层叠上下文
+title: CSS-z-index和层叠上下文
 date: 2023-07-10
 categories:
   - 前端基础
 tags:
-  - css3
+  - css
 ---
 
 ## z-index
