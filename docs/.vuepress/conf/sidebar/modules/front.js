@@ -17,11 +17,11 @@ module.exports = [
             '/front/基础/拖拽API',
         ]
     },
-    {
-        title: 'Vue', children: [
-            '/front/vue/vue',
-        ]
-    },
+    // {
+    //     title: 'Vue', children: [
+    //         '/front/vue/vue',
+    //     ]
+    // },
     {
         title: 'Vuepress建站笔记', children: [
             '/front/vuepress/默认主题和基础配置',
