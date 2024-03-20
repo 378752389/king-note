@@ -155,7 +155,7 @@ themeColor = #3eaf7c;
 .wrapper
   margin-top: 60px;
   overflow hidden;
-  background: url("https://gzfhsw.oss-cn-guangzhou.aliyuncs.com/typora/2022/07/section2-bg.png") no-repeat fixed 0 150px;
+  background: url("/assets/img/bg.svg") no-repeat fixed 0 150px;
 
   .main
     width: 1200px;
