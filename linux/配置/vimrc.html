@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vim配置 | KingのNote</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/king-note/icon-256x256.png">
+    <link rel="manifest" href="/king-note/manifest.json">
+    <link rel="apple-touch-icon" href="/king-note/icon-192x192.png">
+    <link rel="mask-icon" href="/king-note/safari-pinned-tab.svg" color="#3eaf7c">
+    <link rel="stylesheet" href="/king-note/assets/icon-font/iconfont.css">
+    <meta name="description" content="Java全栈的成长之路！">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icon-192x192.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="author" content="King">
+    <meta name="keywords" content="vuepress, 个人博客, King">
+    
+    <link rel="preload" href="/king-note/assets/css/0.styles.98f879e0.css" as="style"><link rel="preload" href="/king-note/assets/js/app.c35e827b.js" as="script"><link rel="preload" href="/king-note/assets/js/3.0c58560d.js" as="script"><link rel="preload" href="/king-note/assets/js/1.106b7e41.js" as="script"><link rel="preload" href="/king-note/assets/js/106.827286b4.js" as="script"><link rel="preload" href="/king-note/assets/js/13.9e611a45.js" as="script"><link rel="prefetch" href="/king-note/assets/js/10.9f7c3e9e.js"><link rel="prefetch" href="/king-note/assets/js/100.e3c6162c.js"><link rel="prefetch" href="/king-note/assets/js/101.7f3b707c.js"><link rel="prefetch" href="/king-note/assets/js/102.3fd60534.js"><link rel="prefetch" href="/king-note/assets/js/103.3c912be0.js"><link rel="prefetch" href="/king-note/assets/js/104.150f0b74.js"><link rel="prefetch" href="/king-note/assets/js/105.e36ea1ff.js"><link rel="prefetch" href="/king-note/assets/js/107.0e74a628.js"><link rel="prefetch" href="/king-note/assets/js/108.9d298900.js"><link rel="prefetch" href="/king-note/assets/js/109.1d38cc16.js"><link rel="prefetch" href="/king-note/assets/js/11.8582c9d4.js"><link rel="prefetch" href="/king-note/assets/js/110.43bdf7a4.js"><link rel="prefetch" href="/king-note/assets/js/111.581404fb.js"><link rel="prefetch" href="/king-note/assets/js/112.a5123599.js"><link rel="prefetch" href="/king-note/assets/js/113.1c98501a.js"><link rel="prefetch" href="/king-note/assets/js/114.2350184f.js"><link rel="prefetch" href="/king-note/assets/js/115.e9412ef0.js"><link rel="prefetch" href="/king-note/assets/js/116.7ca492e1.js"><link rel="prefetch" href="/king-note/assets/js/117.46fa9a15.js"><link rel="prefetch" href="/king-note/assets/js/118.072c0951.js"><link rel="prefetch" href="/king-note/assets/js/119.1f7eaebb.js"><link rel="prefetch" href="/king-note/assets/js/12.a536a535.js"><link rel="prefetch" href="/king-note/assets/js/120.30b0eef3.js"><link rel="prefetch" href="/king-note/assets/js/121.df90e302.js"><link rel="prefetch" href="/king-note/assets/js/122.c0337676.js"><link rel="prefetch" href="/king-note/assets/js/123.9458f6dc.js"><link rel="prefetch" href="/king-note/assets/js/124.f9ac444d.js"><link rel="prefetch" href="/king-note/assets/js/125.7997d8b6.js"><link rel="prefetch" href="/king-note/assets/js/126.73878af6.js"><link rel="prefetch" href="/king-note/assets/js/127.85d9ccd9.js"><link rel="prefetch" href="/king-note/assets/js/128.792c4981.js"><link rel="prefetch" href="/king-note/assets/js/129.64e89248.js"><link rel="prefetch" href="/king-note/assets/js/130.ef613731.js"><link rel="prefetch" href="/king-note/assets/js/131.9ac34cca.js"><link rel="prefetch" href="/king-note/assets/js/132.35d92291.js"><link rel="prefetch" href="/king-note/assets/js/133.e9693b98.js"><link rel="prefetch" href="/king-note/assets/js/134.de3f6b0b.js"><link rel="prefetch" href="/king-note/assets/js/135.394337f9.js"><link rel="prefetch" href="/king-note/assets/js/136.5b09cb85.js"><link rel="prefetch" href="/king-note/assets/js/137.0e9a0bee.js"><link rel="prefetch" href="/king-note/assets/js/138.4e71c893.js"><link rel="prefetch" href="/king-note/assets/js/139.52fe266c.js"><link rel="prefetch" href="/king-note/assets/js/14.ae9db993.js"><link rel="prefetch" href="/king-note/assets/js/140.56097299.js"><link rel="prefetch" href="/king-note/assets/js/141.826d4223.js"><link rel="prefetch" href="/king-note/assets/js/142.683939db.js"><link rel="prefetch" href="/king-note/assets/js/143.51c507ba.js"><link rel="prefetch" href="/king-note/assets/js/144.3a699ff4.js"><link rel="prefetch" href="/king-note/assets/js/145.7cc5c279.js"><link rel="prefetch" href="/king-note/assets/js/146.df158b70.js"><link rel="prefetch" href="/king-note/assets/js/147.2086e096.js"><link rel="prefetch" href="/king-note/assets/js/148.e545f315.js"><link rel="prefetch" href="/king-note/assets/js/149.bdb77460.js"><link rel="prefetch" href="/king-note/assets/js/15.72316799.js"><link rel="prefetch" href="/king-note/assets/js/150.b54319ea.js"><link rel="prefetch" href="/king-note/assets/js/151.b4078cf6.js"><link rel="prefetch" href="/king-note/assets/js/152.ea370eac.js"><link rel="prefetch" href="/king-note/assets/js/153.a2a86c48.js"><link rel="prefetch" href="/king-note/assets/js/154.558f9935.js"><link rel="prefetch" href="/king-note/assets/js/155.b141a13a.js"><link rel="prefetch" href="/king-note/assets/js/156.2f040fe2.js"><link rel="prefetch" href="/king-note/assets/js/157.05d171c3.js"><link rel="prefetch" href="/king-note/assets/js/158.f7c2ec4e.js"><link rel="prefetch" href="/king-note/assets/js/159.b80c1b25.js"><link rel="prefetch" href="/king-note/assets/js/16.9aa1810d.js"><link rel="prefetch" href="/king-note/assets/js/160.e01529f8.js"><link rel="prefetch" href="/king-note/assets/js/161.d14a7783.js"><link rel="prefetch" href="/king-note/assets/js/162.68e30c7c.js"><link rel="prefetch" href="/king-note/assets/js/163.def84183.js"><link rel="prefetch" href="/king-note/assets/js/164.bf401923.js"><link rel="prefetch" href="/king-note/assets/js/165.76e3e328.js"><link rel="prefetch" href="/king-note/assets/js/166.61115496.js"><link rel="prefetch" href="/king-note/assets/js/167.39c73abb.js"><link rel="prefetch" href="/king-note/assets/js/168.50b9536f.js"><link rel="prefetch" href="/king-note/assets/js/169.84a22563.js"><link rel="prefetch" href="/king-note/assets/js/17.714a746c.js"><link rel="prefetch" href="/king-note/assets/js/170.26ec7d8d.js"><link rel="prefetch" href="/king-note/assets/js/171.3050615f.js"><link rel="prefetch" href="/king-note/assets/js/18.81c24874.js"><link rel="prefetch" href="/king-note/assets/js/19.0afd5a27.js"><link rel="prefetch" href="/king-note/assets/js/20.9177bcbc.js"><link rel="prefetch" href="/king-note/assets/js/21.76505acd.js"><link rel="prefetch" href="/king-note/assets/js/22.76d037c6.js"><link rel="prefetch" href="/king-note/assets/js/23.6a676052.js"><link rel="prefetch" href="/king-note/assets/js/24.67c37a9d.js"><link rel="prefetch" href="/king-note/assets/js/25.d1ecb96f.js"><link rel="prefetch" href="/king-note/assets/js/26.657c410a.js"><link rel="prefetch" href="/king-note/assets/js/27.6c70436d.js"><link rel="prefetch" href="/king-note/assets/js/28.b2c54b6e.js"><link rel="prefetch" href="/king-note/assets/js/29.3c1f9400.js"><link rel="prefetch" href="/king-note/assets/js/30.389159ea.js"><link rel="prefetch" href="/king-note/assets/js/31.936cf894.js"><link rel="prefetch" href="/king-note/assets/js/32.0e8f4423.js"><link rel="prefetch" href="/king-note/assets/js/33.b6fb6106.js"><link rel="prefetch" href="/king-note/assets/js/34.f2c846b9.js"><link rel="prefetch" href="/king-note/assets/js/35.2132b7a4.js"><link rel="prefetch" href="/king-note/assets/js/36.db39b3e6.js"><link rel="prefetch" href="/king-note/assets/js/37.d7bd11f0.js"><link rel="prefetch" href="/king-note/assets/js/38.c6806504.js"><link rel="prefetch" href="/king-note/assets/js/39.33db0edb.js"><link rel="prefetch" href="/king-note/assets/js/4.eb29b0db.js"><link rel="prefetch" href="/king-note/assets/js/40.b937d5f4.js"><link rel="prefetch" href="/king-note/assets/js/41.c2df9002.js"><link rel="prefetch" href="/king-note/assets/js/42.92da6c8a.js"><link rel="prefetch" href="/king-note/assets/js/43.2b3c571d.js"><link rel="prefetch" href="/king-note/assets/js/44.8b3a7235.js"><link rel="prefetch" href="/king-note/assets/js/45.54cb68f7.js"><link rel="prefetch" href="/king-note/assets/js/46.be899df6.js"><link rel="prefetch" href="/king-note/assets/js/47.829f986b.js"><link rel="prefetch" href="/king-note/assets/js/48.b81f2683.js"><link rel="prefetch" href="/king-note/assets/js/49.aeb063b3.js"><link rel="prefetch" href="/king-note/assets/js/5.73ac522d.js"><link rel="prefetch" href="/king-note/assets/js/50.7d8d6af1.js"><link rel="prefetch" href="/king-note/assets/js/51.f880fe73.js"><link rel="prefetch" href="/king-note/assets/js/52.8c15b0fe.js"><link rel="prefetch" href="/king-note/assets/js/53.80e60ce9.js"><link rel="prefetch" href="/king-note/assets/js/54.4e9241e8.js"><link rel="prefetch" href="/king-note/assets/js/55.c71ba978.js"><link rel="prefetch" href="/king-note/assets/js/56.0cdcbb59.js"><link rel="prefetch" href="/king-note/assets/js/57.18d7c6e6.js"><link rel="prefetch" href="/king-note/assets/js/58.36f039ec.js"><link rel="prefetch" href="/king-note/assets/js/59.8120ce6c.js"><link rel="prefetch" href="/king-note/assets/js/6.611e3224.js"><link rel="prefetch" href="/king-note/assets/js/60.21c68c57.js"><link rel="prefetch" href="/king-note/assets/js/61.f5b67641.js"><link rel="prefetch" href="/king-note/assets/js/62.20c203f0.js"><link rel="prefetch" href="/king-note/assets/js/63.27cc2d95.js"><link rel="prefetch" href="/king-note/assets/js/64.8bce7306.js"><link rel="prefetch" href="/king-note/assets/js/65.76b14406.js"><link rel="prefetch" href="/king-note/assets/js/66.2098492d.js"><link rel="prefetch" href="/king-note/assets/js/67.2d44d7d5.js"><link rel="prefetch" href="/king-note/assets/js/68.ccbeb032.js"><link rel="prefetch" href="/king-note/assets/js/69.dda30607.js"><link rel="prefetch" href="/king-note/assets/js/7.ac83456f.js"><link rel="prefetch" href="/king-note/assets/js/70.8d2b295b.js"><link rel="prefetch" href="/king-note/assets/js/71.24585b2d.js"><link rel="prefetch" href="/king-note/assets/js/72.1e1049f0.js"><link rel="prefetch" href="/king-note/assets/js/73.33fcb48c.js"><link rel="prefetch" href="/king-note/assets/js/74.33958229.js"><link rel="prefetch" href="/king-note/assets/js/75.0f29925a.js"><link rel="prefetch" href="/king-note/assets/js/76.e60f61c4.js"><link rel="prefetch" href="/king-note/assets/js/77.17c40deb.js"><link rel="prefetch" href="/king-note/assets/js/78.7ae5e3a0.js"><link rel="prefetch" href="/king-note/assets/js/79.b455f456.js"><link rel="prefetch" href="/king-note/assets/js/8.31a563e4.js"><link rel="prefetch" href="/king-note/assets/js/80.f9c2c924.js"><link rel="prefetch" href="/king-note/assets/js/81.6f07ed5b.js"><link rel="prefetch" href="/king-note/assets/js/82.8535b1f2.js"><link rel="prefetch" href="/king-note/assets/js/83.14357127.js"><link rel="prefetch" href="/king-note/assets/js/84.6ed15a58.js"><link rel="prefetch" href="/king-note/assets/js/85.42adf7a7.js"><link rel="prefetch" href="/king-note/assets/js/86.459f3e0b.js"><link rel="prefetch" href="/king-note/assets/js/87.5a8b4b45.js"><link rel="prefetch" href="/king-note/assets/js/88.600a4ea1.js"><link rel="prefetch" href="/king-note/assets/js/89.c95946aa.js"><link rel="prefetch" href="/king-note/assets/js/9.a1abcc8a.js"><link rel="prefetch" href="/king-note/assets/js/90.f224309f.js"><link rel="prefetch" href="/king-note/assets/js/91.e9d8b2f6.js"><link rel="prefetch" href="/king-note/assets/js/92.876540be.js"><link rel="prefetch" href="/king-note/assets/js/93.b2445663.js"><link rel="prefetch" href="/king-note/assets/js/94.35082f90.js"><link rel="prefetch" href="/king-note/assets/js/95.7c3a296f.js"><link rel="prefetch" href="/king-note/assets/js/96.e95e2a67.js"><link rel="prefetch" href="/king-note/assets/js/97.1b35b55a.js"><link rel="prefetch" href="/king-note/assets/js/98.027abd90.js"><link rel="prefetch" href="/king-note/assets/js/99.42ba2a89.js">
+    <link rel="stylesheet" href="/king-note/assets/css/0.styles.98f879e0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>KingのNote</h3> <p class="description" data-v-59e6cb88>Java全栈的成长之路！</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>wenking</span>
+          
+        <!---->
+        2024
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/king-note/" class="home-link router-link-active"><img src="/king-note/assets/img/logo.png" alt="KingのNote" class="logo"> <span class="site-name">KingのNote</span></a> <div class="links"><!----> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/king-note/java/基础/JavaSE常用类合集.html" class="nav-link"><i class="iconfont icon-redis"></i>
+  Java
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont icon-linux"></i>
+      Linux
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/linux/命令/命令集合.html" class="nav-link"><i class="iconfont icon-command"></i>
+  命令
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/linux/容器/docker常用命令.html" class="nav-link"><i class="iconfont icon-docker"></i>
+  容器
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/linux/系统/linux环境变量.html" class="nav-link"><i class="iconfont icon-system"></i>
+  系统
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/linux/配置/ssh.html" class="nav-link"><i class="iconfont icon-setting"></i>
+  配置
+</a></li></ul></div></div><div class="nav-item"><a href="/king-note/front/基础/html标签/" class="nav-link"><i class="iconfont icon-web"></i>
+  前端
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont icon-component"></i>
+      中间件
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/中间件/mysql/环境搭建/" class="nav-link"><i class="iconfont icon-mysql"></i>
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/中间件/redis/环境搭建/" class="nav-link"><i class="iconfont icon-redis"></i>
+  redis
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/中间件/kafka/环境搭建/" class="nav-link"><i class="iconfont icon-shujujieruKafkajiqun"></i>
+  kafka
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/中间件/nginx/环境搭建/" class="nav-link"><i class="iconfont icon-nginx"></i>
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/中间件/elasticsearch/JavaAPI/" class="nav-link"><i class="iconfont icon-elasticsearch"></i>
+  elasticsearch
+</a></li></ul></div></div><div class="nav-item"><a href="/king-note/其他/idea.html" class="nav-link"><i class="iconfont icon-menu"></i>
+  其他
+</a></div><div class="nav-item"><a href="/king-note/其他/推荐站点导航.html" class="nav-link"><i class="iconfont icon-menu2"></i>
+  站点推荐
+</a></div><div class="nav-item"><a href="/king-note/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/king-note/timeline/" class="nav-link"><i class="iconfont icon-timeline"></i>
+  时间线
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><!----> <h3 class="name" data-v-1fad0c41>
+    wenking
+  </h3> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>154</h3> <h6 data-v-1fad0c41>Articles</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>53</h3> <h6 data-v-1fad0c41>Tags</h6></div></div> <ul class="social-links" data-v-1fad0c41><li class="social-item" data-v-1fad0c41><i class="iconfont reco-github" style="color:#f8b26a;" data-v-1fad0c41></i></li></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/king-note/java/基础/JavaSE常用类合集.html" class="nav-link"><i class="iconfont icon-redis"></i>
+  Java
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont icon-linux"></i>
+      Linux
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/linux/命令/命令集合.html" class="nav-link"><i class="iconfont icon-command"></i>
+  命令
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/linux/容器/docker常用命令.html" class="nav-link"><i class="iconfont icon-docker"></i>
+  容器
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/linux/系统/linux环境变量.html" class="nav-link"><i class="iconfont icon-system"></i>
+  系统
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/linux/配置/ssh.html" class="nav-link"><i class="iconfont icon-setting"></i>
+  配置
+</a></li></ul></div></div><div class="nav-item"><a href="/king-note/front/基础/html标签/" class="nav-link"><i class="iconfont icon-web"></i>
+  前端
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont icon-component"></i>
+      中间件
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/中间件/mysql/环境搭建/" class="nav-link"><i class="iconfont icon-mysql"></i>
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/中间件/redis/环境搭建/" class="nav-link"><i class="iconfont icon-redis"></i>
+  redis
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/中间件/kafka/环境搭建/" class="nav-link"><i class="iconfont icon-shujujieruKafkajiqun"></i>
+  kafka
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/中间件/nginx/环境搭建/" class="nav-link"><i class="iconfont icon-nginx"></i>
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/中间件/elasticsearch/JavaAPI/" class="nav-link"><i class="iconfont icon-elasticsearch"></i>
+  elasticsearch
+</a></li></ul></div></div><div class="nav-item"><a href="/king-note/其他/idea.html" class="nav-link"><i class="iconfont icon-menu"></i>
+  其他
+</a></div><div class="nav-item"><a href="/king-note/其他/推荐站点导航.html" class="nav-link"><i class="iconfont icon-menu2"></i>
+  站点推荐
+</a></div><div class="nav-item"><a href="/king-note/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/king-note/timeline/" class="nav-link"><i class="iconfont icon-timeline"></i>
+  时间线
+</a></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>命令</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>容器</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>系统</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>配置</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/king-note/linux/配置/ssh.html" class="sidebar-link">ssh登录</a></li><li><a href="/king-note/linux/配置/vimrc.html" class="active sidebar-link">vim配置</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>vim配置</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>wenking</span>
+          
+        <!---->
+        2024
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page" style="padding-right:0;"><section style="display:;"><div class="page-title"><h1 class="title">vim配置</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>wenking</span></i> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>7/11/2023</span></i> <!----> <i class="tags iconfont reco-tag" data-v-8a445198><span class="tag-item" data-v-8a445198>linux配置</span></i></div></div> <div class="theme-reco-content content__default"><h2 id="vim-黏贴的时候自动缩进问题解决"><a href="#vim-黏贴的时候自动缩进问题解决" class="header-anchor">#</a> vim 黏贴的时候自动缩进问题解决</h2> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 在命令模式下输入如下内容</span>
+:set <span class="token function">paste</span>
+
+<span class="token comment"># 之后取消只需在命令模式下输入</span>
+:set nopaste
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="vim配置1"><a href="#vim配置1" class="header-anchor">#</a> vim配置1</h2> <div class="language-.vimrc line-numbers-mode"><pre class="language-text"><code>set number   &quot;显示行号
+set nowrap   &quot;不换行
+set shiftwidth=4  &quot;默认缩进4个空格
+set softtabstop=4  &quot;使用tab时 tab空格数
+set tabstop=4  &quot;tab代表4个空格
+set laststatus=2  &quot;总是显示状态行
+&quot; #backspace键
+&quot; indent 删除自动缩进的值
+&quot; eol 删除上一行行末尾的回车，两行合并
+&quot; start 除了刚输入的，还删除原来的字符
+set backspace=indent,eol,start
+set expandtab &quot;使用空格替换tab
+
+set autoindent &quot; 自动缩进
+
+colorscheme evening  &quot;颜色模式
+
+syn on  &quot;语法高亮
+filetype on &quot;文件类型
+
+set encoding=utf-8 &quot;编码为utf8
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><h2 id="vim配置2"><a href="#vim配置2" class="header-anchor">#</a> vim配置2</h2> <blockquote><p>如果格式复制有问题， 记得先清空当前家目录的下的 ~/.vimrc  和 配置文件目录下的  /etc/vimrc, 保存后重新编辑</p></blockquote> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;
+<span class="token string">&quot; Maintainer:
+&quot;</span>       Amir Salihefendic - @amix3k
+<span class="token string">&quot;
+&quot;</span> Awesome_version:
+<span class="token string">&quot;       Get this config, nice color schemes and lots of plugins!
+&quot;</span>
+<span class="token string">&quot;       Install the awesome version from:
+&quot;</span>
+<span class="token string">&quot;           https://github.com/amix/vimrc
+&quot;</span>
+<span class="token string">&quot; Sections:
+&quot;</span>    -<span class="token operator">&gt;</span> General
+<span class="token string">&quot;    -&gt; VIM user interface
+&quot;</span>    -<span class="token operator">&gt;</span> Colors and Fonts
+<span class="token string">&quot;    -&gt; Files and backups
+&quot;</span>    -<span class="token operator">&gt;</span> Text, tab and indent related
+<span class="token string">&quot;    -&gt; Visual mode related
+&quot;</span>    -<span class="token operator">&gt;</span> Moving around, tabs and buffers
+<span class="token string">&quot;    -&gt; Status line
+&quot;</span>    -<span class="token operator">&gt;</span> Editing mappings
+<span class="token string">&quot;    -&gt; vimgrep searching and cope displaying
+&quot;</span>    -<span class="token operator">&gt;</span> Spell checking
+<span class="token string">&quot;    -&gt; Misc
+&quot;</span>    -<span class="token operator">&gt;</span> Helper functions
+<span class="token string">&quot;
+&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;
+
+
+&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;
+&quot;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> General
+<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;
+<span class="token string">&quot; Sets how many lines of history VIM has to remember
+set history=500
+
+&quot;</span> Enable filetype plugins
+filetype plugin on
+filetype indent on
+
+<span class="token string">&quot; Set to auto read when a file is changed from the outside
+set autoread
+au FocusGained,BufEnter * checktime
+
+&quot;</span> With a map leader it<span class="token string">'s possible to do extra key combinations
+&quot; like &lt;leader&gt;w saves the current file
+let mapleader = &quot;,&quot;
+
+&quot; Fast saving
+nmap &lt;leader&gt;w :w!&lt;cr&gt;
+
+&quot; :W sudo saves the file
+&quot; (useful for handling the permission-denied error)
+命令! W execute '</span>w <span class="token operator">!</span>sudo <span class="token function">tee</span> % <span class="token operator">&gt;</span> /dev/null<span class="token string">' &lt;bar&gt; edit!
+
+
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot; =&gt; VIM user interface
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot; Set 7 lines to the cursor - when moving vertically using j/k
+set so=7
+
+&quot; Avoid garbled characters in Chinese language windows OS
+let $LANG='</span>en<span class="token string">'
+set langmenu=en
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+
+&quot; Turn on the Wild menu
+set wildmenu
+
+&quot; Ignore compiled files
+set wildignore=*.o,*~,*.pyc
+if has(&quot;win16&quot;) || has(&quot;win32&quot;)
+    set wildignore+=.git\*,.hg\*,.svn\*
+else
+    set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
+endif
+
+&quot; Always show current position
+set ruler
+
+&quot; Height of the 命令 bar
+set cmdheight=1
+
+&quot; A buffer becomes hidden when it is abandoned
+set hid
+
+&quot; Configure backspace so it acts as it should act
+set backspace=eol,start,indent
+set whichwrap+=&lt;,&gt;,h,l
+
+&quot; Ignore case when searching
+set ignorecase
+
+&quot; When searching try to be smart about cases
+set smartcase
+
+&quot; Highlight search results
+set hlsearch
+
+&quot; Makes search act like search in modern browsers
+set incsearch
+
+&quot; Don'</span>t redraw <span class="token keyword">while</span> executing macros <span class="token punctuation">(</span>good performance config<span class="token punctuation">)</span>
+<span class="token builtin class-name">set</span> lazyredraw
+
+<span class="token string">&quot; For regular expressions turn magic on
+set magic
+
+&quot;</span> Show matching brackets when text indicator is over them
+<span class="token builtin class-name">set</span> showmatch
+
+<span class="token string">&quot; How many tenths of a second to blink when matching brackets
+set mat=2
+
+&quot;</span> No annoying sound on errors
+<span class="token builtin class-name">set</span> noerrorbells
+<span class="token builtin class-name">set</span> novisualbell
+<span class="token builtin class-name">set</span> <span class="token assign-left variable">t_vb</span><span class="token operator">=</span>
+<span class="token builtin class-name">set</span> <span class="token assign-left variable">tm</span><span class="token operator">=</span><span class="token number">500</span>
+
+<span class="token string">&quot; Properly disable sound on errors on MacVim
+if has(&quot;</span>gui_macvim<span class="token string">&quot;)
+    autocmd GUIEnter * set vb t_vb=
+endif
+
+&quot;</span> Add a bit extra margin to the left
+<span class="token builtin class-name">set</span> <span class="token assign-left variable">foldcolumn</span><span class="token operator">=</span><span class="token number">1</span>
+
+
+<span class="token string">&quot;&quot;</span><span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;
+&quot;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> Colors and Fonts
+<span class="token string">&quot;&quot;</span><span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;
+&quot;</span> Enable syntax highlighting
+syntax <span class="token builtin class-name">enable</span>
+
+<span class="token string">&quot; Set regular expression engine automatically
+set regexpengine=0
+
+&quot;</span> Enable <span class="token number">256</span> colors palette <span class="token keyword">in</span> Gnome Terminal
+<span class="token keyword">if</span> <span class="token environment constant">$COLORTERM</span> <span class="token operator">==</span> <span class="token string">'gnome-terminal'</span>
+    <span class="token builtin class-name">set</span> <span class="token assign-left variable">t_Co</span><span class="token operator">=</span><span class="token number">256</span>
+endif
+
+try
+    colorscheme desert
+catch
+endtry
+
+<span class="token builtin class-name">set</span> <span class="token assign-left variable">background</span><span class="token operator">=</span>dark
+
+<span class="token string">&quot; Set extra options when running in GUI mode
+if has(&quot;</span>gui_running<span class="token string">&quot;)
+    set guioptions-=T
+    set guioptions-=e
+    set t_Co=256
+    set guitablabel=%M\ %t
+endif
+
+&quot;</span> Set utf8 as standard encoding and en_US as the standard language
+<span class="token builtin class-name">set</span> <span class="token assign-left variable">encoding</span><span class="token operator">=</span>utf8
+
+<span class="token string">&quot; Use Unix as the standard file type
+set ffs=unix,dos,mac
+
+
+&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;
+&quot;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> Files, backups and undo
+<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;
+<span class="token string">&quot; Turn backup off, since most stuff is in SVN, git etc. anyway...
+set nobackup
+set nowb
+set noswapfile
+
+
+&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;
+&quot;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> Text, tab and indent related
+<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;
+<span class="token string">&quot; Use spaces instead of tabs
+set expandtab
+
+&quot;</span> Be smart when using tabs <span class="token punctuation">;</span><span class="token punctuation">)</span>
+<span class="token builtin class-name">set</span> smarttab
+
+<span class="token string">&quot; 1 tab == 4 spaces
+set shiftwidth=4
+set tabstop=4
+
+&quot;</span> Linebreak on <span class="token number">500</span> characters
+<span class="token builtin class-name">set</span> lbr
+<span class="token builtin class-name">set</span> <span class="token assign-left variable">tw</span><span class="token operator">=</span><span class="token number">500</span>
+
+<span class="token builtin class-name">set</span> ai <span class="token string">&quot;Auto indent
+set si &quot;</span>Smart indent
+<span class="token builtin class-name">set</span> wrap <span class="token string">&quot;Wrap lines
+
+
+&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;
+&quot;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> Visual mode related
+<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;
+<span class="token string">&quot; Visual mode pressing * or # searches for the current selection
+&quot;</span> Super useful<span class="token operator">!</span> From an idea by Michael Naumann
+vnoremap <span class="token operator">&lt;</span>silent<span class="token operator">&gt;</span> * :<span class="token operator">&lt;</span>C-u<span class="token operator">&gt;</span>call VisualSelection<span class="token punctuation">(</span><span class="token string">''</span>, <span class="token string">''</span><span class="token punctuation">)</span><span class="token operator">&lt;</span>CR<span class="token operator">&gt;</span>/<span class="token operator">&lt;</span>C-R<span class="token operator">&gt;=</span>@/<span class="token operator">&lt;</span>CR<span class="token operator">&gt;</span><span class="token operator">&lt;</span>CR<span class="token operator">&gt;</span>
+vnoremap <span class="token operator">&lt;</span>silent<span class="token operator">&gt;</span> <span class="token comment"># :&lt;C-u&gt;call VisualSelection('', '')&lt;CR&gt;?&lt;C-R&gt;=@/&lt;CR&gt;&lt;CR&gt;</span>
+
+
+<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;
+<span class="token string">&quot; =&gt; Moving around, tabs, windows and buffers
+&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;&quot;</span>&quot;<span class="token string">&quot;
+&quot;</span> Map <span class="token operator">&lt;</span>Space<span class="token operator">&gt;</span> to / <span class="token punctuation">(</span>search<span class="token punctuation">)</span> and Ctrl-<span class="token operator">&lt;</span>Space<span class="token operator">&gt;</span> to ? <span class="token punctuation">(</span>backwards search<span class="token punctuation">)</span>
+map <span class="token operator">&lt;</span>space<span class="token operator">&gt;</span> /
+map <span class="token operator">&lt;</span>C-space<span class="token operator">&gt;</span> ?
+
+<span class="token string">&quot; Disable highlight when &lt;leader&gt;&lt;cr&gt; is pressed
+map &lt;silent&gt; &lt;leader&gt;&lt;cr&gt; :noh&lt;cr&gt;
+
+&quot;</span> Smart way to move between windows
+map <span class="token operator">&lt;</span>C-j<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>C-W<span class="token operator">&gt;</span>j
+map <span class="token operator">&lt;</span>C-k<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>C-W<span class="token operator">&gt;</span>k
+map <span class="token operator">&lt;</span>C-h<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>C-W<span class="token operator">&gt;</span>h
+map <span class="token operator">&lt;</span>C-l<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>C-W<span class="token operator">&gt;</span>l
+
+<span class="token string">&quot; Close the current buffer
+map &lt;leader&gt;bd :Bclose&lt;cr&gt;:tabclose&lt;cr&gt;gT
+
+&quot;</span> Close all the buffers
+map <span class="token operator">&lt;</span>leader<span class="token operator">&gt;</span>ba :bufdo bd<span class="token operator">&lt;</span>cr<span class="token operator">&gt;</span>
+
+map <span class="token operator">&lt;</span>leader<span class="token operator">&gt;</span>l :bnext<span class="token operator">&lt;</span>cr<span class="token operator">&gt;</span>
+map <span class="token operator">&lt;</span>leader<span class="token operator">&gt;</span>h :bprevious<span class="token operator">&lt;</span>cr<span class="token operator">&gt;</span>
+
+<span class="token string">&quot; Useful mappings for managing tabs
+map &lt;leader&gt;tn :tabnew&lt;cr&gt;
+map &lt;leader&gt;to :tabonly&lt;cr&gt;
+map &lt;leader&gt;tc :tabclose&lt;cr&gt;
+map &lt;leader&gt;tm :tabmove
+map &lt;leader&gt;t&lt;leader&gt; :tabnext&lt;cr&gt;
+
+&quot;</span> Let <span class="token string">'tl'</span> toggle between this and the last accessed tab
+<span class="token builtin class-name">let</span> g:lasttab <span class="token operator">=</span> <span class="token number">1</span>
+nmap <span class="token operator">&lt;</span>leader<span class="token operator">&gt;</span>tl :exe <span class="token string">&quot;tabn &quot;</span>.g:lasttab<span class="token operator">&lt;</span>CR<span class="token operator">&gt;</span>
+au TabLeave * <span class="token builtin class-name">let</span> g:lasttab <span class="token operator">=</span> tabpagenr<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+<span class="token string">&quot; Opens a new tab with the current buffer's path
+&quot;</span> Super useful when editing files <span class="token keyword">in</span> the same directory
+map <span class="token operator">&lt;</span>leader<span class="token operator">&gt;</span>te :tabedit <span class="token operator">&lt;</span>C-r<span class="token operator">&gt;=</span>escape<span class="token punctuation">(</span>expand<span class="token punctuation">(</span><span class="token string">&quot;%:p:h&quot;</span><span class="token punctuation">)</span>, <span class="token string">&quot; &quot;</span><span class="token punctuation">)</span><span class="token operator">&lt;</span>cr<span class="token operator">&gt;</span>/
+
+<span class="token string">&quot; Switch CWD to the directory of the open buffer
+map &lt;leader&gt;cd :cd %:p:h&lt;cr&gt;:pwd&lt;cr&gt;
+
+&quot;</span> Specify the behavior when switching between buffers
+try
+  <span class="token builtin class-name">set</span> <span class="token assign-left variable">switchbuf</span><span class="token operator">=</span>useopen,usetab,newtab
+  <span class="token builtin class-name">set</span> <span class="token assign-left variable">stal</span><span class="token operator">=</span><span class="token number">2</span>
+catch
+endtry
+
+<span class="token string">&quot; Return to last edit position when opening files (You want this!)
+au BufReadPost * if line(&quot;</span><span class="token string">'\&quot;&quot;) &gt; 1 &amp;&amp; line(&quot;'</span><span class="token punctuation">\</span>&quot;<span class="token string">&quot;) &lt;= line(&quot;</span>$<span class="token string">&quot;) | exe &quot;</span>normal<span class="token operator">!</span> g<span class="token string">'\&quot;&quot; | endif
+
+
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot; =&gt; Status line
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot; Always show the status line
+set laststatus=2
+
+&quot; Format the status line
+set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
+
+
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot; =&gt; Editing mappings
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot; Remap VIM 0 to first non-blank character
+map 0 ^
+
+&quot; Move a line of text using ALT+[jk] or Command+[jk] on mac
+nmap &lt;M-j&gt; mz:m+&lt;cr&gt;`z
+nmap &lt;M-k&gt; mz:m-2&lt;cr&gt;`z
+vmap &lt;M-j&gt; :m'</span><span class="token operator">&gt;</span>+<span class="token operator">&lt;</span>cr<span class="token operator">&gt;</span><span class="token variable"><span class="token variable">`</span><span class="token operator">&lt;</span>my<span class="token variable">`</span></span><span class="token operator">&gt;</span>mzgv<span class="token variable"><span class="token variable">`</span>yo<span class="token variable">`</span></span>z
+vmap <span class="token operator">&lt;</span>M-k<span class="token operator">&gt;</span> :m<span class="token string">'&lt;-2&lt;cr&gt;`&gt;my`&lt;mzgv`yo`z
+
+if has(&quot;mac&quot;) || has(&quot;macunix&quot;)
+  nmap &lt;D-j&gt; &lt;M-j&gt;
+  nmap &lt;D-k&gt; &lt;M-k&gt;
+  vmap &lt;D-j&gt; &lt;M-j&gt;
+  vmap &lt;D-k&gt; &lt;M-k&gt;
+endif
+
+&quot; Delete trailing white space on save, useful for some filetypes ;)
+fun! CleanExtraSpaces()
+    let save_cursor = getpos(&quot;.&quot;)
+    let old_query = getreg('</span>/<span class="token string">')
+    silent! %s/\s\+$//e
+    call setpos('</span><span class="token builtin class-name">.</span><span class="token string">', save_cursor)
+    call setreg('</span>/<span class="token string">', old_query)
+endfun
+
+if has(&quot;autocmd&quot;)
+    autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
+endif
+
+
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot; =&gt; Spell checking
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot; Pressing ,ss will toggle and untoggle spell checking
+map &lt;leader&gt;ss :setlocal spell!&lt;cr&gt;
+
+&quot; Shortcuts using &lt;leader&gt;
+map &lt;leader&gt;sn ]s
+map &lt;leader&gt;sp [s
+map &lt;leader&gt;sa zg
+map &lt;leader&gt;s? z=
+
+
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot; =&gt; Misc
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot; Remove the Windows ^M - when the encodings gets messed up
+noremap &lt;Leader&gt;m mmHmt:%s/&lt;C-V&gt;&lt;cr&gt;//ge&lt;cr&gt;'</span>tzt<span class="token string">'m
+
+&quot; Quickly open a buffer for scribble
+map &lt;leader&gt;q :e ~/buffer&lt;cr&gt;
+
+&quot; Quickly open a markdown buffer for scribble
+map &lt;leader&gt;x :e ~/buffer.md&lt;cr&gt;
+
+&quot; Toggle paste mode on and off
+map &lt;leader&gt;pp :setlocal paste!&lt;cr&gt;
+
+
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot; =&gt; Helper functions
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot; Returns true if paste mode is enabled
+function! HasPaste()
+    if &amp;paste
+        return '</span>PASTE MODE  <span class="token string">'
+    endif
+    return '</span>'
+endfunction
+
+<span class="token string">&quot; Don't close window, when deleting a buffer
+命令! Bclose call &lt;SID&gt;BufcloseCloseIt()
+function! &lt;SID&gt;BufcloseCloseIt()
+    let l:currentBufNum = bufnr(&quot;</span>%<span class="token string">&quot;)
+    let l:alternateBufNum = bufnr(&quot;</span>#<span class="token string">&quot;)
+
+    if buflisted(l:alternateBufNum)
+        buffer #
+    else
+        bnext
+    endif
+
+    if bufnr(&quot;</span>%<span class="token string">&quot;) == l:currentBufNum
+        new
+    endif
+
+    if buflisted(l:currentBufNum)
+        execute(&quot;</span>bdelete<span class="token operator">!</span> <span class="token string">&quot;.l:currentBufNum)
+    endif
+endfunction
+
+function! CmdLine(str)
+    call feedkeys(&quot;</span><span class="token builtin class-name">:</span><span class="token string">&quot; . a:str)
+endfunction
+
+function! VisualSelection(direction, extra_filter) range
+    let l:saved_reg = @&quot;</span>
+    execute <span class="token string">&quot;normal! vgvy&quot;</span>
+
+    <span class="token builtin class-name">let</span> l:pattern <span class="token operator">=</span> escape<span class="token punctuation">(</span>@<span class="token string">&quot;, &quot;</span><span class="token punctuation">\</span><span class="token punctuation">\</span>/.*<span class="token string">'$^~[]&quot;)
+    let l:pattern = substitute(l:pattern, &quot;\n$&quot;, &quot;&quot;, &quot;&quot;)
+
+    if a:direction == '</span>gv<span class="token string">'
+        call CmdLine(&quot;Ack '</span>&quot; <span class="token builtin class-name">.</span> l:pattern <span class="token builtin class-name">.</span> <span class="token string">&quot;' &quot;</span> <span class="token punctuation">)</span>
+    elseif a:direction <span class="token operator">==</span> <span class="token string">'replace'</span>
+        call CmdLine<span class="token punctuation">(</span><span class="token string">&quot;%s&quot;</span> <span class="token builtin class-name">.</span> <span class="token string">'/'</span><span class="token builtin class-name">.</span> l:pattern <span class="token builtin class-name">.</span> <span class="token string">'/'</span><span class="token punctuation">)</span>
+    endif
+
+    <span class="token builtin class-name">let</span> @/ <span class="token operator">=</span> l:pattern
+    <span class="token builtin class-name">let</span> @&quot; <span class="token operator">=</span> l:saved_reg
+endfunction
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br><span class="line-number">198</span><br><span class="line-number">199</span><br><span class="line-number">200</span><br><span class="line-number">201</span><br><span class="line-number">202</span><br><span class="line-number">203</span><br><span class="line-number">204</span><br><span class="line-number">205</span><br><span class="line-number">206</span><br><span class="line-number">207</span><br><span class="line-number">208</span><br><span class="line-number">209</span><br><span class="line-number">210</span><br><span class="line-number">211</span><br><span class="line-number">212</span><br><span class="line-number">213</span><br><span class="line-number">214</span><br><span class="line-number">215</span><br><span class="line-number">216</span><br><span class="line-number">217</span><br><span class="line-number">218</span><br><span class="line-number">219</span><br><span class="line-number">220</span><br><span class="line-number">221</span><br><span class="line-number">222</span><br><span class="line-number">223</span><br><span class="line-number">224</span><br><span class="line-number">225</span><br><span class="line-number">226</span><br><span class="line-number">227</span><br><span class="line-number">228</span><br><span class="line-number">229</span><br><span class="line-number">230</span><br><span class="line-number">231</span><br><span class="line-number">232</span><br><span class="line-number">233</span><br><span class="line-number">234</span><br><span class="line-number">235</span><br><span class="line-number">236</span><br><span class="line-number">237</span><br><span class="line-number">238</span><br><span class="line-number">239</span><br><span class="line-number">240</span><br><span class="line-number">241</span><br><span class="line-number">242</span><br><span class="line-number">243</span><br><span class="line-number">244</span><br><span class="line-number">245</span><br><span class="line-number">246</span><br><span class="line-number">247</span><br><span class="line-number">248</span><br><span class="line-number">249</span><br><span class="line-number">250</span><br><span class="line-number">251</span><br><span class="line-number">252</span><br><span class="line-number">253</span><br><span class="line-number">254</span><br><span class="line-number">255</span><br><span class="line-number">256</span><br><span class="line-number">257</span><br><span class="line-number">258</span><br><span class="line-number">259</span><br><span class="line-number">260</span><br><span class="line-number">261</span><br><span class="line-number">262</span><br><span class="line-number">263</span><br><span class="line-number">264</span><br><span class="line-number">265</span><br><span class="line-number">266</span><br><span class="line-number">267</span><br><span class="line-number">268</span><br><span class="line-number">269</span><br><span class="line-number">270</span><br><span class="line-number">271</span><br><span class="line-number">272</span><br><span class="line-number">273</span><br><span class="line-number">274</span><br><span class="line-number">275</span><br><span class="line-number">276</span><br><span class="line-number">277</span><br><span class="line-number">278</span><br><span class="line-number">279</span><br><span class="line-number">280</span><br><span class="line-number">281</span><br><span class="line-number">282</span><br><span class="line-number">283</span><br><span class="line-number">284</span><br><span class="line-number">285</span><br><span class="line-number">286</span><br><span class="line-number">287</span><br><span class="line-number">288</span><br><span class="line-number">289</span><br><span class="line-number">290</span><br><span class="line-number">291</span><br><span class="line-number">292</span><br><span class="line-number">293</span><br><span class="line-number">294</span><br><span class="line-number">295</span><br><span class="line-number">296</span><br><span class="line-number">297</span><br><span class="line-number">298</span><br><span class="line-number">299</span><br><span class="line-number">300</span><br><span class="line-number">301</span><br><span class="line-number">302</span><br><span class="line-number">303</span><br><span class="line-number">304</span><br><span class="line-number">305</span><br><span class="line-number">306</span><br><span class="line-number">307</span><br><span class="line-number">308</span><br><span class="line-number">309</span><br><span class="line-number">310</span><br><span class="line-number">311</span><br><span class="line-number">312</span><br><span class="line-number">313</span><br><span class="line-number">314</span><br><span class="line-number">315</span><br><span class="line-number">316</span><br><span class="line-number">317</span><br><span class="line-number">318</span><br><span class="line-number">319</span><br><span class="line-number">320</span><br><span class="line-number">321</span><br><span class="line-number">322</span><br><span class="line-number">323</span><br><span class="line-number">324</span><br><span class="line-number">325</span><br><span class="line-number">326</span><br><span class="line-number">327</span><br><span class="line-number">328</span><br><span class="line-number">329</span><br><span class="line-number">330</span><br><span class="line-number">331</span><br><span class="line-number">332</span><br><span class="line-number">333</span><br><span class="line-number">334</span><br><span class="line-number">335</span><br><span class="line-number">336</span><br><span class="line-number">337</span><br><span class="line-number">338</span><br><span class="line-number">339</span><br><span class="line-number">340</span><br><span class="line-number">341</span><br><span class="line-number">342</span><br><span class="line-number">343</span><br><span class="line-number">344</span><br><span class="line-number">345</span><br><span class="line-number">346</span><br><span class="line-number">347</span><br><span class="line-number">348</span><br><span class="line-number">349</span><br><span class="line-number">350</span><br><span class="line-number">351</span><br><span class="line-number">352</span><br><span class="line-number">353</span><br><span class="line-number">354</span><br><span class="line-number">355</span><br><span class="line-number">356</span><br><span class="line-number">357</span><br><span class="line-number">358</span><br><span class="line-number">359</span><br><span class="line-number">360</span><br><span class="line-number">361</span><br><span class="line-number">362</span><br><span class="line-number">363</span><br><span class="line-number">364</span><br><span class="line-number">365</span><br><span class="line-number">366</span><br><span class="line-number">367</span><br><span class="line-number">368</span><br><span class="line-number">369</span><br><span class="line-number">370</span><br><span class="line-number">371</span><br><span class="line-number">372</span><br><span class="line-number">373</span><br><span class="line-number">374</span><br><span class="line-number">375</span><br><span class="line-number">376</span><br><span class="line-number">377</span><br><span class="line-number">378</span><br><span class="line-number">379</span><br><span class="line-number">380</span><br><span class="line-number">381</span><br><span class="line-number">382</span><br><span class="line-number">383</span><br><span class="line-number">384</span><br><span class="line-number">385</span><br><span class="line-number">386</span><br></div></div><blockquote><p><a href="https://github.com/amix/vimrc" target="_blank" rel="noopener noreferrer">reference<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/king-note/linux/配置/ssh.html" class="prev">
+          ssh登录
+        </a></span> <!----></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:0;" data-v-b57cc07c data-v-7dd95ae2></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div><!----></div></div>
+    <script src="/king-note/assets/js/app.c35e827b.js" defer></script><script src="/king-note/assets/js/3.0c58560d.js" defer></script><script src="/king-note/assets/js/1.106b7e41.js" defer></script><script src="/king-note/assets/js/106.827286b4.js" defer></script><script src="/king-note/assets/js/13.9e611a45.js" defer></script>
+  </body>
+</html>

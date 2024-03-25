@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>k8s笔记 | KingのNote</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/king-note/icon-256x256.png">
+    <link rel="manifest" href="/king-note/manifest.json">
+    <link rel="apple-touch-icon" href="/king-note/icon-192x192.png">
+    <link rel="mask-icon" href="/king-note/safari-pinned-tab.svg" color="#3eaf7c">
+    <link rel="stylesheet" href="/king-note/assets/icon-font/iconfont.css">
+    <meta name="description" content="Java全栈的成长之路！">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icon-192x192.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="author" content="King">
+    <meta name="keywords" content="vuepress, 个人博客, King">
+    
+    <link rel="preload" href="/king-note/assets/css/0.styles.98f879e0.css" as="style"><link rel="preload" href="/king-note/assets/js/app.c35e827b.js" as="script"><link rel="preload" href="/king-note/assets/js/3.0c58560d.js" as="script"><link rel="preload" href="/king-note/assets/js/1.106b7e41.js" as="script"><link rel="preload" href="/king-note/assets/js/96.e95e2a67.js" as="script"><link rel="preload" href="/king-note/assets/js/13.9e611a45.js" as="script"><link rel="prefetch" href="/king-note/assets/js/10.9f7c3e9e.js"><link rel="prefetch" href="/king-note/assets/js/100.e3c6162c.js"><link rel="prefetch" href="/king-note/assets/js/101.7f3b707c.js"><link rel="prefetch" href="/king-note/assets/js/102.3fd60534.js"><link rel="prefetch" href="/king-note/assets/js/103.3c912be0.js"><link rel="prefetch" href="/king-note/assets/js/104.150f0b74.js"><link rel="prefetch" href="/king-note/assets/js/105.e36ea1ff.js"><link rel="prefetch" href="/king-note/assets/js/106.827286b4.js"><link rel="prefetch" href="/king-note/assets/js/107.0e74a628.js"><link rel="prefetch" href="/king-note/assets/js/108.9d298900.js"><link rel="prefetch" href="/king-note/assets/js/109.1d38cc16.js"><link rel="prefetch" href="/king-note/assets/js/11.8582c9d4.js"><link rel="prefetch" href="/king-note/assets/js/110.43bdf7a4.js"><link rel="prefetch" href="/king-note/assets/js/111.581404fb.js"><link rel="prefetch" href="/king-note/assets/js/112.a5123599.js"><link rel="prefetch" href="/king-note/assets/js/113.1c98501a.js"><link rel="prefetch" href="/king-note/assets/js/114.2350184f.js"><link rel="prefetch" href="/king-note/assets/js/115.e9412ef0.js"><link rel="prefetch" href="/king-note/assets/js/116.7ca492e1.js"><link rel="prefetch" href="/king-note/assets/js/117.46fa9a15.js"><link rel="prefetch" href="/king-note/assets/js/118.072c0951.js"><link rel="prefetch" href="/king-note/assets/js/119.1f7eaebb.js"><link rel="prefetch" href="/king-note/assets/js/12.a536a535.js"><link rel="prefetch" href="/king-note/assets/js/120.30b0eef3.js"><link rel="prefetch" href="/king-note/assets/js/121.df90e302.js"><link rel="prefetch" href="/king-note/assets/js/122.c0337676.js"><link rel="prefetch" href="/king-note/assets/js/123.9458f6dc.js"><link rel="prefetch" href="/king-note/assets/js/124.f9ac444d.js"><link rel="prefetch" href="/king-note/assets/js/125.7997d8b6.js"><link rel="prefetch" href="/king-note/assets/js/126.73878af6.js"><link rel="prefetch" href="/king-note/assets/js/127.85d9ccd9.js"><link rel="prefetch" href="/king-note/assets/js/128.792c4981.js"><link rel="prefetch" href="/king-note/assets/js/129.64e89248.js"><link rel="prefetch" href="/king-note/assets/js/130.ef613731.js"><link rel="prefetch" href="/king-note/assets/js/131.9ac34cca.js"><link rel="prefetch" href="/king-note/assets/js/132.35d92291.js"><link rel="prefetch" href="/king-note/assets/js/133.e9693b98.js"><link rel="prefetch" href="/king-note/assets/js/134.de3f6b0b.js"><link rel="prefetch" href="/king-note/assets/js/135.394337f9.js"><link rel="prefetch" href="/king-note/assets/js/136.5b09cb85.js"><link rel="prefetch" href="/king-note/assets/js/137.0e9a0bee.js"><link rel="prefetch" href="/king-note/assets/js/138.4e71c893.js"><link rel="prefetch" href="/king-note/assets/js/139.52fe266c.js"><link rel="prefetch" href="/king-note/assets/js/14.ae9db993.js"><link rel="prefetch" href="/king-note/assets/js/140.56097299.js"><link rel="prefetch" href="/king-note/assets/js/141.826d4223.js"><link rel="prefetch" href="/king-note/assets/js/142.683939db.js"><link rel="prefetch" href="/king-note/assets/js/143.51c507ba.js"><link rel="prefetch" href="/king-note/assets/js/144.3a699ff4.js"><link rel="prefetch" href="/king-note/assets/js/145.7cc5c279.js"><link rel="prefetch" href="/king-note/assets/js/146.df158b70.js"><link rel="prefetch" href="/king-note/assets/js/147.2086e096.js"><link rel="prefetch" href="/king-note/assets/js/148.e545f315.js"><link rel="prefetch" href="/king-note/assets/js/149.bdb77460.js"><link rel="prefetch" href="/king-note/assets/js/15.72316799.js"><link rel="prefetch" href="/king-note/assets/js/150.b54319ea.js"><link rel="prefetch" href="/king-note/assets/js/151.b4078cf6.js"><link rel="prefetch" href="/king-note/assets/js/152.ea370eac.js"><link rel="prefetch" href="/king-note/assets/js/153.a2a86c48.js"><link rel="prefetch" href="/king-note/assets/js/154.558f9935.js"><link rel="prefetch" href="/king-note/assets/js/155.b141a13a.js"><link rel="prefetch" href="/king-note/assets/js/156.2f040fe2.js"><link rel="prefetch" href="/king-note/assets/js/157.05d171c3.js"><link rel="prefetch" href="/king-note/assets/js/158.f7c2ec4e.js"><link rel="prefetch" href="/king-note/assets/js/159.b80c1b25.js"><link rel="prefetch" href="/king-note/assets/js/16.9aa1810d.js"><link rel="prefetch" href="/king-note/assets/js/160.e01529f8.js"><link rel="prefetch" href="/king-note/assets/js/161.d14a7783.js"><link rel="prefetch" href="/king-note/assets/js/162.68e30c7c.js"><link rel="prefetch" href="/king-note/assets/js/163.def84183.js"><link rel="prefetch" href="/king-note/assets/js/164.bf401923.js"><link rel="prefetch" href="/king-note/assets/js/165.76e3e328.js"><link rel="prefetch" href="/king-note/assets/js/166.61115496.js"><link rel="prefetch" href="/king-note/assets/js/167.39c73abb.js"><link rel="prefetch" href="/king-note/assets/js/168.50b9536f.js"><link rel="prefetch" href="/king-note/assets/js/169.84a22563.js"><link rel="prefetch" href="/king-note/assets/js/17.714a746c.js"><link rel="prefetch" href="/king-note/assets/js/170.26ec7d8d.js"><link rel="prefetch" href="/king-note/assets/js/171.3050615f.js"><link rel="prefetch" href="/king-note/assets/js/18.81c24874.js"><link rel="prefetch" href="/king-note/assets/js/19.0afd5a27.js"><link rel="prefetch" href="/king-note/assets/js/20.9177bcbc.js"><link rel="prefetch" href="/king-note/assets/js/21.76505acd.js"><link rel="prefetch" href="/king-note/assets/js/22.76d037c6.js"><link rel="prefetch" href="/king-note/assets/js/23.6a676052.js"><link rel="prefetch" href="/king-note/assets/js/24.67c37a9d.js"><link rel="prefetch" href="/king-note/assets/js/25.d1ecb96f.js"><link rel="prefetch" href="/king-note/assets/js/26.657c410a.js"><link rel="prefetch" href="/king-note/assets/js/27.6c70436d.js"><link rel="prefetch" href="/king-note/assets/js/28.b2c54b6e.js"><link rel="prefetch" href="/king-note/assets/js/29.3c1f9400.js"><link rel="prefetch" href="/king-note/assets/js/30.389159ea.js"><link rel="prefetch" href="/king-note/assets/js/31.936cf894.js"><link rel="prefetch" href="/king-note/assets/js/32.0e8f4423.js"><link rel="prefetch" href="/king-note/assets/js/33.b6fb6106.js"><link rel="prefetch" href="/king-note/assets/js/34.f2c846b9.js"><link rel="prefetch" href="/king-note/assets/js/35.2132b7a4.js"><link rel="prefetch" href="/king-note/assets/js/36.db39b3e6.js"><link rel="prefetch" href="/king-note/assets/js/37.d7bd11f0.js"><link rel="prefetch" href="/king-note/assets/js/38.c6806504.js"><link rel="prefetch" href="/king-note/assets/js/39.33db0edb.js"><link rel="prefetch" href="/king-note/assets/js/4.eb29b0db.js"><link rel="prefetch" href="/king-note/assets/js/40.b937d5f4.js"><link rel="prefetch" href="/king-note/assets/js/41.c2df9002.js"><link rel="prefetch" href="/king-note/assets/js/42.92da6c8a.js"><link rel="prefetch" href="/king-note/assets/js/43.2b3c571d.js"><link rel="prefetch" href="/king-note/assets/js/44.8b3a7235.js"><link rel="prefetch" href="/king-note/assets/js/45.54cb68f7.js"><link rel="prefetch" href="/king-note/assets/js/46.be899df6.js"><link rel="prefetch" href="/king-note/assets/js/47.829f986b.js"><link rel="prefetch" href="/king-note/assets/js/48.b81f2683.js"><link rel="prefetch" href="/king-note/assets/js/49.aeb063b3.js"><link rel="prefetch" href="/king-note/assets/js/5.73ac522d.js"><link rel="prefetch" href="/king-note/assets/js/50.7d8d6af1.js"><link rel="prefetch" href="/king-note/assets/js/51.f880fe73.js"><link rel="prefetch" href="/king-note/assets/js/52.8c15b0fe.js"><link rel="prefetch" href="/king-note/assets/js/53.80e60ce9.js"><link rel="prefetch" href="/king-note/assets/js/54.4e9241e8.js"><link rel="prefetch" href="/king-note/assets/js/55.c71ba978.js"><link rel="prefetch" href="/king-note/assets/js/56.0cdcbb59.js"><link rel="prefetch" href="/king-note/assets/js/57.18d7c6e6.js"><link rel="prefetch" href="/king-note/assets/js/58.36f039ec.js"><link rel="prefetch" href="/king-note/assets/js/59.8120ce6c.js"><link rel="prefetch" href="/king-note/assets/js/6.611e3224.js"><link rel="prefetch" href="/king-note/assets/js/60.21c68c57.js"><link rel="prefetch" href="/king-note/assets/js/61.f5b67641.js"><link rel="prefetch" href="/king-note/assets/js/62.20c203f0.js"><link rel="prefetch" href="/king-note/assets/js/63.27cc2d95.js"><link rel="prefetch" href="/king-note/assets/js/64.8bce7306.js"><link rel="prefetch" href="/king-note/assets/js/65.76b14406.js"><link rel="prefetch" href="/king-note/assets/js/66.2098492d.js"><link rel="prefetch" href="/king-note/assets/js/67.2d44d7d5.js"><link rel="prefetch" href="/king-note/assets/js/68.ccbeb032.js"><link rel="prefetch" href="/king-note/assets/js/69.dda30607.js"><link rel="prefetch" href="/king-note/assets/js/7.ac83456f.js"><link rel="prefetch" href="/king-note/assets/js/70.8d2b295b.js"><link rel="prefetch" href="/king-note/assets/js/71.24585b2d.js"><link rel="prefetch" href="/king-note/assets/js/72.1e1049f0.js"><link rel="prefetch" href="/king-note/assets/js/73.33fcb48c.js"><link rel="prefetch" href="/king-note/assets/js/74.33958229.js"><link rel="prefetch" href="/king-note/assets/js/75.0f29925a.js"><link rel="prefetch" href="/king-note/assets/js/76.e60f61c4.js"><link rel="prefetch" href="/king-note/assets/js/77.17c40deb.js"><link rel="prefetch" href="/king-note/assets/js/78.7ae5e3a0.js"><link rel="prefetch" href="/king-note/assets/js/79.b455f456.js"><link rel="prefetch" href="/king-note/assets/js/8.31a563e4.js"><link rel="prefetch" href="/king-note/assets/js/80.f9c2c924.js"><link rel="prefetch" href="/king-note/assets/js/81.6f07ed5b.js"><link rel="prefetch" href="/king-note/assets/js/82.8535b1f2.js"><link rel="prefetch" href="/king-note/assets/js/83.14357127.js"><link rel="prefetch" href="/king-note/assets/js/84.6ed15a58.js"><link rel="prefetch" href="/king-note/assets/js/85.42adf7a7.js"><link rel="prefetch" href="/king-note/assets/js/86.459f3e0b.js"><link rel="prefetch" href="/king-note/assets/js/87.5a8b4b45.js"><link rel="prefetch" href="/king-note/assets/js/88.600a4ea1.js"><link rel="prefetch" href="/king-note/assets/js/89.c95946aa.js"><link rel="prefetch" href="/king-note/assets/js/9.a1abcc8a.js"><link rel="prefetch" href="/king-note/assets/js/90.f224309f.js"><link rel="prefetch" href="/king-note/assets/js/91.e9d8b2f6.js"><link rel="prefetch" href="/king-note/assets/js/92.876540be.js"><link rel="prefetch" href="/king-note/assets/js/93.b2445663.js"><link rel="prefetch" href="/king-note/assets/js/94.35082f90.js"><link rel="prefetch" href="/king-note/assets/js/95.7c3a296f.js"><link rel="prefetch" href="/king-note/assets/js/97.1b35b55a.js"><link rel="prefetch" href="/king-note/assets/js/98.027abd90.js"><link rel="prefetch" href="/king-note/assets/js/99.42ba2a89.js">
+    <link rel="stylesheet" href="/king-note/assets/css/0.styles.98f879e0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>KingのNote</h3> <p class="description" data-v-59e6cb88>Java全栈的成长之路！</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>wenking</span>
+          
+        <!---->
+        2024
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/king-note/" class="home-link router-link-active"><img src="/king-note/assets/img/logo.png" alt="KingのNote" class="logo"> <span class="site-name">KingのNote</span></a> <div class="links"><!----> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/king-note/java/基础/JavaSE常用类合集.html" class="nav-link"><i class="iconfont icon-redis"></i>
+  Java
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont icon-linux"></i>
+      Linux
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/linux/命令/命令集合.html" class="nav-link"><i class="iconfont icon-command"></i>
+  命令
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/linux/容器/docker常用命令.html" class="nav-link"><i class="iconfont icon-docker"></i>
+  容器
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/linux/系统/linux环境变量.html" class="nav-link"><i class="iconfont icon-system"></i>
+  系统
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/linux/配置/ssh.html" class="nav-link"><i class="iconfont icon-setting"></i>
+  配置
+</a></li></ul></div></div><div class="nav-item"><a href="/king-note/front/基础/html标签/" class="nav-link"><i class="iconfont icon-web"></i>
+  前端
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont icon-component"></i>
+      中间件
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/中间件/mysql/环境搭建/" class="nav-link"><i class="iconfont icon-mysql"></i>
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/中间件/redis/环境搭建/" class="nav-link"><i class="iconfont icon-redis"></i>
+  redis
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/中间件/kafka/环境搭建/" class="nav-link"><i class="iconfont icon-shujujieruKafkajiqun"></i>
+  kafka
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/中间件/nginx/环境搭建/" class="nav-link"><i class="iconfont icon-nginx"></i>
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/中间件/elasticsearch/JavaAPI/" class="nav-link"><i class="iconfont icon-elasticsearch"></i>
+  elasticsearch
+</a></li></ul></div></div><div class="nav-item"><a href="/king-note/其他/idea.html" class="nav-link"><i class="iconfont icon-menu"></i>
+  其他
+</a></div><div class="nav-item"><a href="/king-note/其他/推荐站点导航.html" class="nav-link"><i class="iconfont icon-menu2"></i>
+  站点推荐
+</a></div><div class="nav-item"><a href="/king-note/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/king-note/timeline/" class="nav-link"><i class="iconfont icon-timeline"></i>
+  时间线
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><!----> <h3 class="name" data-v-1fad0c41>
+    wenking
+  </h3> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>154</h3> <h6 data-v-1fad0c41>Articles</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>53</h3> <h6 data-v-1fad0c41>Tags</h6></div></div> <ul class="social-links" data-v-1fad0c41><li class="social-item" data-v-1fad0c41><i class="iconfont reco-github" style="color:#f8b26a;" data-v-1fad0c41></i></li></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/king-note/java/基础/JavaSE常用类合集.html" class="nav-link"><i class="iconfont icon-redis"></i>
+  Java
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont icon-linux"></i>
+      Linux
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/linux/命令/命令集合.html" class="nav-link"><i class="iconfont icon-command"></i>
+  命令
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/linux/容器/docker常用命令.html" class="nav-link"><i class="iconfont icon-docker"></i>
+  容器
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/linux/系统/linux环境变量.html" class="nav-link"><i class="iconfont icon-system"></i>
+  系统
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/linux/配置/ssh.html" class="nav-link"><i class="iconfont icon-setting"></i>
+  配置
+</a></li></ul></div></div><div class="nav-item"><a href="/king-note/front/基础/html标签/" class="nav-link"><i class="iconfont icon-web"></i>
+  前端
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont icon-component"></i>
+      中间件
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/中间件/mysql/环境搭建/" class="nav-link"><i class="iconfont icon-mysql"></i>
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/中间件/redis/环境搭建/" class="nav-link"><i class="iconfont icon-redis"></i>
+  redis
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/中间件/kafka/环境搭建/" class="nav-link"><i class="iconfont icon-shujujieruKafkajiqun"></i>
+  kafka
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/中间件/nginx/环境搭建/" class="nav-link"><i class="iconfont icon-nginx"></i>
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/中间件/elasticsearch/JavaAPI/" class="nav-link"><i class="iconfont icon-elasticsearch"></i>
+  elasticsearch
+</a></li></ul></div></div><div class="nav-item"><a href="/king-note/其他/idea.html" class="nav-link"><i class="iconfont icon-menu"></i>
+  其他
+</a></div><div class="nav-item"><a href="/king-note/其他/推荐站点导航.html" class="nav-link"><i class="iconfont icon-menu2"></i>
+  站点推荐
+</a></div><div class="nav-item"><a href="/king-note/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/king-note/timeline/" class="nav-link"><i class="iconfont icon-timeline"></i>
+  时间线
+</a></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>命令</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/king-note/linux/命令/命令集合.html" class="sidebar-link">命令集合</a></li><li><a href="/king-note/linux/命令/cfssl.html" class="sidebar-link">cfssl生成自签名证书</a></li><li><a href="/king-note/linux/命令/openssl.html" class="sidebar-link">openssl生成自签名证书</a></li><li><a href="/king-note/linux/命令/openssl进阶.html" class="sidebar-link">openssl进阶</a></li><li><a href="/king-note/linux/命令/x509v3扩展配置.html" class="sidebar-link">x509v3扩展配置</a></li><li><a href="/king-note/linux/命令/curl.html" class="sidebar-link">curl参数解析</a></li><li><a href="/king-note/linux/命令/包管理.html" class="sidebar-link">centos包管理</a></li><li><a href="/king-note/linux/命令/常用防火墙命令.html" class="sidebar-link">常用防火墙命令</a></li><li><a href="/king-note/linux/命令/screen终端命令.html" class="sidebar-link">【screen】终端命令</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>容器</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>系统</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>配置</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>k8s笔记</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>wenking</span>
+          
+        <!---->
+        2024
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">k8s笔记</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>wenking</span></i> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>2/11/2023</span></i> <!----> <i class="tags iconfont reco-tag" data-v-8a445198><span class="tag-item" data-v-8a445198>k8s</span></i></div></div> <div class="theme-reco-content content__default"><h2 id="pod"><a href="#pod" class="header-anchor">#</a> Pod</h2> <p>为什么需要 pod</p> <p>容器是为单个进程服务的，目的是为了更好的管理，为了让多个关系密切的容器进程绑定在一起， 需要pod这样的更高级别的结构</p> <p>同一pod中的容器之间是部分隔离</p> <p>他们共享同一个名称空间（主机名和网络接口）</p> <p>pod之间可以通过pod的ip地址进行通信，他们之间没有NAT网关</p> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Pod
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> kubia
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">create_method</span><span class="token punctuation">:</span> manual
+    <span class="token key atrule">env</span><span class="token punctuation">:</span> prod
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">nodeSelector</span><span class="token punctuation">:</span> <span class="token comment"># 节点选择器， 给节点打上标签后，可以指定部署到某个节点上</span>
+    <span class="token key atrule">gpu</span><span class="token punctuation">:</span> <span class="token string">&quot;true&quot;</span>
+  <span class="token key atrule">containers</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">images</span><span class="token punctuation">:</span> kubia
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> kubia
+      <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">containerPort</span><span class="token punctuation">:</span> <span class="token number">8080</span>
+          <span class="token key atrule">protocel</span><span class="token punctuation">:</span> TCP
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><p>label</p> <p>app: 指定pod 属于哪个应用，组件或微服务</p> <p>rel: 在pod中运行的应用程序版本， stable， beta， canary</p> <p>namespace</p> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Namespace
+<span class="token key atrule">metatada</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> customer<span class="token punctuation">-</span>namespace
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="存活探针"><a href="#存活探针" class="header-anchor">#</a> 存活探针</h3> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Pod
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> kubia<span class="token punctuation">-</span>liveness
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">containers</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">image</span><span class="token punctuation">:</span> kubia
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> kubia
+      <span class="token key atrule">livenessProbe</span><span class="token punctuation">:</span>
+        <span class="token key atrule">httpGet</span><span class="token punctuation">:</span>
+          <span class="token key atrule">path</span><span class="token punctuation">:</span> /
+          <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">8080</span>
+      <span class="token key atrule">initialDelaySeconds</span><span class="token punctuation">:</span> <span class="token number">15</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>当容器被强行终止时，会创建一个全新的容器—-而不是重启原来的容器</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>kubectl get po kubia-liveness <span class="token parameter variable">--previous</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="replicationcontroller"><a href="#replicationcontroller" class="header-anchor">#</a> ReplicationController</h3> <p>可以确保它的pod始终保持运行状态。如果pod因任何原因消失（例如节点从集群中消失或由于该pod已从节点中逐出）或者变多，
+则ReplicationController
+会注意到缺少或者增加的pod并创建新的/删除现有pod，使其始终维持一个稳定的数值。</p> <p>主要组成包含： 标签选择器、副本个数、pod模板</p> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> ReplicationController
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> kubia<span class="token punctuation">-</span>rc
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token number">3</span>
+  <span class="token key atrule">selector</span><span class="token punctuation">:</span>
+    <span class="token key atrule">app</span><span class="token punctuation">:</span> kubia
+  <span class="token key atrule">template</span><span class="token punctuation">:</span>
+    <span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+      <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+        <span class="token key atrule">app</span><span class="token punctuation">:</span> kubia
+    <span class="token key atrule">spec</span><span class="token punctuation">:</span>
+      <span class="token key atrule">containers</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> kubia
+          <span class="token key atrule">image</span><span class="token punctuation">:</span> kubia
+          <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+            <span class="token punctuation">-</span> <span class="token key atrule">containerPort</span><span class="token punctuation">:</span> <span class="token number">8080</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><h2 id="service-服务"><a href="#service-服务" class="header-anchor">#</a> Service（服务）</h2> <h3 id="服务介绍和基础"><a href="#服务介绍和基础" class="header-anchor">#</a> 服务介绍和基础</h3> <p>需要服务的原因：</p> <ol><li>pod是短暂的， 随时会启动或者关闭</li> <li>k8s到pod启动前会给已经调度到节点的pod分配ip地址，因此客户端不能提前知道提供服务的pod的ip地址</li> <li>水平伸缩，多个pod可能提供相同的服务，客户端无须关心后端pod的数量以及各自对应的ip地址， 所有pod通过单一的ip地址进行访问</li></ol> <p>服务：</p> <p>定义：为一组功能相同的pod提供单一不变的接入点资源 是一种资源类型。</p> <p>服务的后端可以有不止一个pod，服务的连接对所有的后端pod是负载均衡的，需要准确定义哪些pod属于服务，哪些不属于。</p> <p>服务创建示例</p> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Service
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> kubia
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">ports</span><span class="token punctuation">:</span> <span class="token comment"># 同一个服务可以暴露多个端口</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">80</span>                      <span class="token comment"># 指定服务端口</span>
+      <span class="token key atrule">targetPort</span><span class="token punctuation">:</span> <span class="token number">8080</span>              <span class="token comment"># 指定服务转发到容器的端口</span>
+  <span class="token key atrule">selector</span><span class="token punctuation">:</span>
+    <span class="token key atrule">app</span><span class="token punctuation">:</span> kubia                      <span class="token comment"># 具有 app=kubia标签的pod都属于该服务</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>查看服务创建命令</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 在命名空间下列出所有服务</span>
+kubectl get svc
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>内部集群测试服务</p> <ul><li>创建一个pod，然后将请求发送到服务的集群ip并记录响应</li> <li>ssh登录到其中一个k8s的node上，然后使用curl命令</li> <li>使用 kubectl exec 在一个已经运行的pod上执行 curl 命令</li></ul> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>kubectl <span class="token builtin class-name">exec</span> kubia-7nogl -- <span class="token function">curl</span> <span class="token parameter variable">-s</span> http: //10 .111. <span class="token number">249</span> .153
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><blockquote><p>提示： 双横杠（--） 表示 kubectl命令项结束， 后面的内容是指在pod中需要执行的命令</p></blockquote> <p>服务的会话亲和性</p> <p>通常服务将每个请求随机指向后端pod中的一个，如果希望客户端所有请求每次指向同一个pod，可以设置服务
+的sessionAffinity属性为ClientIP（None 为默认值）</p> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> vl
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Service
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+<span class="token key atrule">sessionAffini七y</span><span class="token punctuation">:</span> Clien七IP
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><blockquote><p>问题： 为什么亲和性不能指定为cookie</p> <p>答： k8s服务不是工作在http层，服务处理TCP和UDP包，并不关心其中的载荷</p></blockquote> <p>同一个服务可以暴露多个端口</p> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> vl
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Service
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> kubia
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> http
+      <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">80</span>
+      <span class="token key atrule">targetPort</span><span class="token punctuation">:</span> <span class="token number">8080</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> https
+      <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">443</span>
+      <span class="token key atrule">targetPort</span><span class="token punctuation">:</span> <span class="token number">8443</span>
+  <span class="token key atrule">selector</span><span class="token punctuation">:</span>
+    <span class="token key atrule">app</span><span class="token punctuation">:</span> kubia
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><blockquote><p>在创建一个有多个端口的服务的时候，必须给每个端口指定名字。</p></blockquote> <p>给端口号命名</p> <p>好处： 即使更换端口号，无需更改服务的spec</p> <p>pod 端口号命名</p> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">kind</span><span class="token punctuation">:</span> Pod
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">containers</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> kubia
+      <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> http
+          <span class="token key atrule">containerPort</span><span class="token punctuation">:</span> <span class="token number">8080</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> https
+          <span class="token key atrule">containerPort</span><span class="token punctuation">:</span> <span class="token number">8443</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>服务中引用命名的端口号</p> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> vl
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Service
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> kubia
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> http
+      <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">80</span>
+      <span class="token key atrule">targetPort</span><span class="token punctuation">:</span> http
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> https
+      <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">443</span>
+      <span class="token key atrule">targetPort</span><span class="token punctuation">:</span> https
+  <span class="token key atrule">selector</span><span class="token punctuation">:</span>
+    <span class="token key atrule">app</span><span class="token punctuation">:</span> kubia
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h3 id="服务发现"><a href="#服务发现" class="header-anchor">#</a> 服务发现</h3> <p>问题： 客户端 pod 是如何知道服务的 IP 和 端口？</p> <p>1.通过环境变量发现服务</p> <p>pod开始运行时， k8s会初始化一系列的环境变量指向现存服务。</p> <p>如果服务早于pod创建，可以通过环境变量发现，如果服务晚于pod创建，则需要删除之前的pod</p> <p>2.通过DNS服务发现</p> <p>kube-system命名空间下有个 kube-dns的 pod，集群中的其他pod（k8s修改容器的 /etc/resolv.conf文件实现）
+在进行dns查询都会被k8s自身的DNS服务响应，该服务器知道系统中运行的所有服务。</p> <p>通过pod中的spec的dnsPolicy属性决定是否使用内部的DNS服务器。</p> <p>3.通过全限定域名（FQDN）</p> <p>服务名.名称空间.集群本地服务名称</p> <h3 id="连接外部服务"><a href="#连接外部服务" class="header-anchor">#</a> 连接外部服务</h3> <p>endpoint</p> <p>Service不是和Pod直接相连的，中间存在Endpoint资源。在服务的spec定义了pod选择器，选择器用于 构建IP和端口列表，然后存储在Endpoint资源中</p> <p>如果创建了不包含pod选择器的服务，k8s将不会创建Endpoint资源，需要手动指定服务的 Endpoint列表</p> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> vl
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Service
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> ex<span class="token punctuation">-</span>svc
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> http
+      <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">80</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> vl
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Endpoint
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> ex<span class="token punctuation">-</span>svc     <span class="token comment"># Endpoint名称必须和服务的名称相匹配</span>
+<span class="token key atrule">subsets</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">addresses</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">ip</span><span class="token punctuation">:</span> 1.1.1.1
+      <span class="token punctuation">-</span> <span class="token key atrule">ip</span><span class="token punctuation">:</span> 2.2.2.2
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">80</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>将外部服务添加到当前的 Endpoint 资源中</p> <p>外部服务创建别名</p> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> vl
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Service
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> ex<span class="token punctuation">-</span>svc
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">type</span><span class="token punctuation">:</span> ExternalName
+  <span class="token key atrule">externalName</span><span class="token punctuation">:</span> someapi.somecompany.com
+  <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">80</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h3 id="将服务暴露给外部客户端"><a href="#将服务暴露给外部客户端" class="header-anchor">#</a> 将服务暴露给外部客户端</h3> <ul><li>服务类型设置为NodePort: 每个集群节点都会打开一个端口，并将在该端口接收到的流量重定向到基础服务</li> <li>服务类型设置为LoadBalance</li> <li>创建一个Ingress资源： 通过一个IP地址公开多个服务</li></ul> <p>NodePort</p> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> vl
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Service
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> kubia<span class="token punctuation">-</span>nodeport
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">type</span><span class="token punctuation">:</span> NodePort
+  <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">80</span>
+      <span class="token key atrule">targetPort</span><span class="token punctuation">:</span> <span class="token number">8080</span>
+      <span class="token key atrule">nodePort</span><span class="token punctuation">:</span> <span class="token number">30123</span>
+  <span class="token key atrule">selector</span><span class="token punctuation">:</span>
+    <span class="token key atrule">app</span><span class="token punctuation">:</span> kubia
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>防止不必要的跳数</p> <p>当外部客户端通过节点端口连接到服务时，<strong>随机选择的pod</strong>并不一定在接收连接的同一<strong>节点</strong>上运行，
+需要额外的网络跳转才能到达pod。可以通过将服务设置为仅将外部通信重定向到接收连接的节点上运行的pod来 阻止此额外跳数。
+如果本地没有pod存在，则连接将会挂起，因此需要确保负载均衡器 将连接转发到只有具有 1个pod 的节点上</p> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">externalTrafficPolicy</span><span class="token punctuation">:</span> Local
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>使用local外部流量策略的服务可能会导致跨pod的负载分布不均衡 eg： node1上有1个pod， node2上有2个pod， 则 node1: pod1 -&gt; 50% ,
+node2: pod1 -&gt; 25%, node2: pod2
+-&gt; 25%</p> <p>同时 nodeport 是不记录客户端ip 的，因为： 当节点端口收到连接时， 对数据包执行了（SNAT）</p> <p>Ingress</p> <p>客户端向 Ingress发送 http 请求时， Ingress会根据请求的主机名和路径决定请求转发到的服务</p> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> extension/v1beta1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Ingress
+<span class="token key atrule">metaname</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> kubia
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">tls</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">hosts</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> kubia.example.com
+      <span class="token key atrule">secretName</span><span class="token punctuation">:</span> tls<span class="token punctuation">-</span>secret            <span class="token comment"># 冲 Secret 中 获取 主机的 TLS 配置</span>
+
+  <span class="token key atrule">rules</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">host</span><span class="token punctuation">:</span> kubia.example.com           <span class="token comment"># 将域名 映射到服务</span>
+      <span class="token key atrule">http</span><span class="token punctuation">:</span>
+        <span class="token key atrule">paths</span><span class="token punctuation">:</span>
+          <span class="token punctuation">-</span> <span class="token key atrule">path</span><span class="token punctuation">:</span> /
+            <span class="token key atrule">backend</span><span class="token punctuation">:</span>
+              <span class="token key atrule">serviceName</span><span class="token punctuation">:</span> kubia<span class="token punctuation">-</span>nodeport   <span class="token comment"># 将所有请求转发到 kubia-nodeport 服务的80端口号</span>
+              <span class="token key atrule">servicePort</span><span class="token punctuation">:</span> <span class="token number">80</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><h3 id="就绪探针"><a href="#就绪探针" class="header-anchor">#</a> 就绪探针</h3> <p>就绪探针类型</p> <ul><li>Exec探针，执行进程的地方，程序的状态由进程的退出码确定</li> <li>Http GET 探针， 根据返回的状态码确认容器是否准备好</li> <li>TCP Socket探针， 连接容器指定端口，如果连接建立成功，则准备就绪</li></ul> <p>容器启动可以为 k8s 配置一个等待时间， 等待时间过后开始执行第一次就绪检查。 之后会周期性的调用就绪探针，
+如果pod未就绪，则会从服务中删除pod， 如果pod就绪，则会重新添加pod</p> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">containers</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> kubia
+      <span class="token key atrule">image</span><span class="token punctuation">:</span> luska/kubia
+      <span class="token key atrule">readinessProbe</span><span class="token punctuation">:</span>
+        <span class="token key atrule">exec</span><span class="token punctuation">:</span>
+          <span class="token key atrule">command</span><span class="token punctuation">:</span>
+            <span class="token punctuation">-</span> ls
+            <span class="token punctuation">-</span> /var/ready   
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h3 id="headless服务"><a href="#headless服务" class="header-anchor">#</a> headless服务</h3> <p>客户端 需要连接 所有 ip</p> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Service
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> kubia<span class="token punctuation">-</span>headless
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">clusterIP</span><span class="token punctuation">:</span> None                   <span class="token comment"># 指定为 headless服务</span>
+  <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">80</span>
+      <span class="token key atrule">targetPort</span><span class="token punctuation">:</span> <span class="token number">8080</span>
+  <span class="token key atrule">selector</span><span class="token punctuation">:</span>
+    <span class="token key atrule">app</span><span class="token punctuation">:</span> kubia
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>headless 服务任然提供跨pod的负载平衡，但是是通过dns轮询机制而不是客户端代理</p> <h2 id="配置pod"><a href="#配置pod" class="header-anchor">#</a> 配置Pod</h2> <h3 id="为容器设置环境变量"><a href="#为容器设置环境变量" class="header-anchor">#</a> 为容器设置环境变量</h3> <p>环境变量无法在pod创建后被修改</p> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Pod
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">containers</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">image</span><span class="token punctuation">:</span> kubia<span class="token punctuation">-</span>env
+      <span class="token key atrule">env</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> INTERVAL
+          <span class="token key atrule">value</span><span class="token punctuation">:</span> <span class="token string">&quot;30&quot;</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> TEXT
+          <span class="token key atrule">value</span><span class="token punctuation">:</span> <span class="token string">&quot;hello, k8s&quot;</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><blockquote><p>k8s 会暴露相同命名空间下每个service对应的环境变量。</p></blockquote> <h3 id="configmap"><a href="#configmap" class="header-anchor">#</a> configmap</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 使用指令创建 configmap</span>
+kubectl create configmap kubia-cfg --from-literal<span class="token operator">=</span>interval<span class="token operator">=</span><span class="token number">20</span> --from-literal<span class="token operator">=</span>text<span class="token operator">=</span><span class="token string">&quot;hello,k8s&quot;</span>
+
+<span class="token comment"># 从文件中创建 config.conf configmap条目 key ：config.conf 内容为 文件内容</span>
+kubectl create configmap my-cfg --from-file<span class="token operator">=</span>config.conf
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>pod中使用 configmap</p> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Pod
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">containers</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">image</span><span class="token punctuation">:</span> kubia<span class="token punctuation">-</span>cfg
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> INTERVAL
+      <span class="token key atrule">valueFrom</span><span class="token punctuation">:</span>
+        <span class="token key atrule">configMapKeyRef</span><span class="token punctuation">:</span>
+          <span class="token comment"># optional: true         # 容器是 启动如果缺少 configmap 会启动失败， 加上该配置 可以 忽略 configmap</span>
+          <span class="token key atrule">name</span><span class="token punctuation">:</span> kubia<span class="token punctuation">-</span>cfg
+          <span class="token key atrule">key</span><span class="token punctuation">:</span> interval
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Pod
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="命令"><a href="#命令" class="header-anchor">#</a> 命令</h2> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>
+
+<span class="token comment"># 删除所有pod</span>
+kubectl delete po <span class="token parameter variable">--all</span>
+
+<span class="token comment"># 查看 pod 中的环境变量</span>
+kubectl <span class="token builtin class-name">exec</span> kubia <span class="token function">env</span>
+
+<span class="token comment"># 进入容器执行命令</span>
+kubectl <span class="token builtin class-name">exec</span> <span class="token parameter variable">-it</span> kuia <span class="token function">bash</span>
+
+<span class="token comment"># 查看 endpoint</span>
+kubectl get endpoints kubia
+
+kubectl get po --all-namespaces 
+
+kubectl get ingresses
+
+kubectl create secret tls tls-secret <span class="token parameter variable">--cert</span><span class="token operator">=</span>tls.cert <span class="token parameter variable">--key</span><span class="token operator">=</span>tls.key
+
+kubectl get pods <span class="token parameter variable">-o</span> wide
+
+kubectl get po kubia <span class="token parameter variable">-o</span> yaml
+
+kubectl get po --show-labels
+
+kubectl get po <span class="token parameter variable">-l</span> <span class="token assign-left variable">create_method</span><span class="token operator">=</span>manual  <span class="token comment"># env, '!env', env!=prod, env in/notin (prod, dev)</span>
+
+kubectl get po <span class="token parameter variable">-L</span> env,create_method    <span class="token comment">#-L 指定标签名称</span>
+
+kubectl label po kubia <span class="token assign-left variable">create_method</span><span class="token operator">=</span>auto  <span class="token comment"># 添加标签， 如需修改， 添加 --overwrite 选项</span>
+
+kubectl annotation po kubia <span class="token assign-left variable">create_by</span><span class="token operator">=</span>wenking
+
+kubectl explain pods.spec
+
+kubectl logs kubia <span class="token parameter variable">-c</span> kubia1  <span class="token comment"># -c 指定 pod 中的容器（pod中有多个容器时使用）</span>
+
+kubectl get ns
+
+kubectl get po <span class="token parameter variable">-n</span> kube-system <span class="token comment"># -n == --namespaces</span>
+
+kubectl apply <span class="token parameter variable">-f</span> kubia.yml <span class="token parameter variable">-n</span> my-customer
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br></div></div></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/king-note/linux/%E5%AE%B9%E5%99%A8/k8s.html#pod" class="sidebar-link reco-side-pod" data-v-b57cc07c>Pod</a></li><li class="level-3" data-v-b57cc07c><a href="/king-note/linux/%E5%AE%B9%E5%99%A8/k8s.html#存活探针" class="sidebar-link reco-side-存活探针" data-v-b57cc07c>存活探针</a></li><li class="level-3" data-v-b57cc07c><a href="/king-note/linux/%E5%AE%B9%E5%99%A8/k8s.html#replicationcontroller" class="sidebar-link reco-side-replicationcontroller" data-v-b57cc07c>ReplicationController</a></li><li class="level-2" data-v-b57cc07c><a href="/king-note/linux/%E5%AE%B9%E5%99%A8/k8s.html#service-服务" class="sidebar-link reco-side-service-服务" data-v-b57cc07c>Service（服务）</a></li><li class="level-3" data-v-b57cc07c><a href="/king-note/linux/%E5%AE%B9%E5%99%A8/k8s.html#服务介绍和基础" class="sidebar-link reco-side-服务介绍和基础" data-v-b57cc07c>服务介绍和基础</a></li><li class="level-3" data-v-b57cc07c><a href="/king-note/linux/%E5%AE%B9%E5%99%A8/k8s.html#服务发现" class="sidebar-link reco-side-服务发现" data-v-b57cc07c>服务发现</a></li><li class="level-3" data-v-b57cc07c><a href="/king-note/linux/%E5%AE%B9%E5%99%A8/k8s.html#连接外部服务" class="sidebar-link reco-side-连接外部服务" data-v-b57cc07c>连接外部服务</a></li><li class="level-3" data-v-b57cc07c><a href="/king-note/linux/%E5%AE%B9%E5%99%A8/k8s.html#将服务暴露给外部客户端" class="sidebar-link reco-side-将服务暴露给外部客户端" data-v-b57cc07c>将服务暴露给外部客户端</a></li><li class="level-3" data-v-b57cc07c><a href="/king-note/linux/%E5%AE%B9%E5%99%A8/k8s.html#就绪探针" class="sidebar-link reco-side-就绪探针" data-v-b57cc07c>就绪探针</a></li><li class="level-3" data-v-b57cc07c><a href="/king-note/linux/%E5%AE%B9%E5%99%A8/k8s.html#headless服务" class="sidebar-link reco-side-headless服务" data-v-b57cc07c>headless服务</a></li><li class="level-2" data-v-b57cc07c><a href="/king-note/linux/%E5%AE%B9%E5%99%A8/k8s.html#配置pod" class="sidebar-link reco-side-配置pod" data-v-b57cc07c>配置Pod</a></li><li class="level-3" data-v-b57cc07c><a href="/king-note/linux/%E5%AE%B9%E5%99%A8/k8s.html#为容器设置环境变量" class="sidebar-link reco-side-为容器设置环境变量" data-v-b57cc07c>为容器设置环境变量</a></li><li class="level-3" data-v-b57cc07c><a href="/king-note/linux/%E5%AE%B9%E5%99%A8/k8s.html#configmap" class="sidebar-link reco-side-configmap" data-v-b57cc07c>configmap</a></li><li class="level-2" data-v-b57cc07c><a href="/king-note/linux/%E5%AE%B9%E5%99%A8/k8s.html#命令" class="sidebar-link reco-side-命令" data-v-b57cc07c>命令</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div><!----></div></div>
+    <script src="/king-note/assets/js/app.c35e827b.js" defer></script><script src="/king-note/assets/js/3.0c58560d.js" defer></script><script src="/king-note/assets/js/1.106b7e41.js" defer></script><script src="/king-note/assets/js/96.e95e2a67.js" defer></script><script src="/king-note/assets/js/13.9e611a45.js" defer></script>
+  </body>
+</html>

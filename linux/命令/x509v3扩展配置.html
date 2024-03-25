@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>x509v3扩展配置 | KingのNote</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/king-note/icon-256x256.png">
+    <link rel="manifest" href="/king-note/manifest.json">
+    <link rel="apple-touch-icon" href="/king-note/icon-192x192.png">
+    <link rel="mask-icon" href="/king-note/safari-pinned-tab.svg" color="#3eaf7c">
+    <link rel="stylesheet" href="/king-note/assets/icon-font/iconfont.css">
+    <meta name="description" content="Java全栈的成长之路！">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icon-192x192.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="author" content="King">
+    <meta name="keywords" content="vuepress, 个人博客, King">
+    
+    <link rel="preload" href="/king-note/assets/css/0.styles.98f879e0.css" as="style"><link rel="preload" href="/king-note/assets/js/app.c35e827b.js" as="script"><link rel="preload" href="/king-note/assets/js/3.0c58560d.js" as="script"><link rel="preload" href="/king-note/assets/js/1.106b7e41.js" as="script"><link rel="preload" href="/king-note/assets/js/85.42adf7a7.js" as="script"><link rel="preload" href="/king-note/assets/js/14.ae9db993.js" as="script"><link rel="preload" href="/king-note/assets/js/13.9e611a45.js" as="script"><link rel="prefetch" href="/king-note/assets/js/10.9f7c3e9e.js"><link rel="prefetch" href="/king-note/assets/js/100.e3c6162c.js"><link rel="prefetch" href="/king-note/assets/js/101.7f3b707c.js"><link rel="prefetch" href="/king-note/assets/js/102.3fd60534.js"><link rel="prefetch" href="/king-note/assets/js/103.3c912be0.js"><link rel="prefetch" href="/king-note/assets/js/104.150f0b74.js"><link rel="prefetch" href="/king-note/assets/js/105.e36ea1ff.js"><link rel="prefetch" href="/king-note/assets/js/106.827286b4.js"><link rel="prefetch" href="/king-note/assets/js/107.0e74a628.js"><link rel="prefetch" href="/king-note/assets/js/108.9d298900.js"><link rel="prefetch" href="/king-note/assets/js/109.1d38cc16.js"><link rel="prefetch" href="/king-note/assets/js/11.8582c9d4.js"><link rel="prefetch" href="/king-note/assets/js/110.43bdf7a4.js"><link rel="prefetch" href="/king-note/assets/js/111.581404fb.js"><link rel="prefetch" href="/king-note/assets/js/112.a5123599.js"><link rel="prefetch" href="/king-note/assets/js/113.1c98501a.js"><link rel="prefetch" href="/king-note/assets/js/114.2350184f.js"><link rel="prefetch" href="/king-note/assets/js/115.e9412ef0.js"><link rel="prefetch" href="/king-note/assets/js/116.7ca492e1.js"><link rel="prefetch" href="/king-note/assets/js/117.46fa9a15.js"><link rel="prefetch" href="/king-note/assets/js/118.072c0951.js"><link rel="prefetch" href="/king-note/assets/js/119.1f7eaebb.js"><link rel="prefetch" href="/king-note/assets/js/12.a536a535.js"><link rel="prefetch" href="/king-note/assets/js/120.30b0eef3.js"><link rel="prefetch" href="/king-note/assets/js/121.df90e302.js"><link rel="prefetch" href="/king-note/assets/js/122.c0337676.js"><link rel="prefetch" href="/king-note/assets/js/123.9458f6dc.js"><link rel="prefetch" href="/king-note/assets/js/124.f9ac444d.js"><link rel="prefetch" href="/king-note/assets/js/125.7997d8b6.js"><link rel="prefetch" href="/king-note/assets/js/126.73878af6.js"><link rel="prefetch" href="/king-note/assets/js/127.85d9ccd9.js"><link rel="prefetch" href="/king-note/assets/js/128.792c4981.js"><link rel="prefetch" href="/king-note/assets/js/129.64e89248.js"><link rel="prefetch" href="/king-note/assets/js/130.ef613731.js"><link rel="prefetch" href="/king-note/assets/js/131.9ac34cca.js"><link rel="prefetch" href="/king-note/assets/js/132.35d92291.js"><link rel="prefetch" href="/king-note/assets/js/133.e9693b98.js"><link rel="prefetch" href="/king-note/assets/js/134.de3f6b0b.js"><link rel="prefetch" href="/king-note/assets/js/135.394337f9.js"><link rel="prefetch" href="/king-note/assets/js/136.5b09cb85.js"><link rel="prefetch" href="/king-note/assets/js/137.0e9a0bee.js"><link rel="prefetch" href="/king-note/assets/js/138.4e71c893.js"><link rel="prefetch" href="/king-note/assets/js/139.52fe266c.js"><link rel="prefetch" href="/king-note/assets/js/140.56097299.js"><link rel="prefetch" href="/king-note/assets/js/141.826d4223.js"><link rel="prefetch" href="/king-note/assets/js/142.683939db.js"><link rel="prefetch" href="/king-note/assets/js/143.51c507ba.js"><link rel="prefetch" href="/king-note/assets/js/144.3a699ff4.js"><link rel="prefetch" href="/king-note/assets/js/145.7cc5c279.js"><link rel="prefetch" href="/king-note/assets/js/146.df158b70.js"><link rel="prefetch" href="/king-note/assets/js/147.2086e096.js"><link rel="prefetch" href="/king-note/assets/js/148.e545f315.js"><link rel="prefetch" href="/king-note/assets/js/149.bdb77460.js"><link rel="prefetch" href="/king-note/assets/js/15.72316799.js"><link rel="prefetch" href="/king-note/assets/js/150.b54319ea.js"><link rel="prefetch" href="/king-note/assets/js/151.b4078cf6.js"><link rel="prefetch" href="/king-note/assets/js/152.ea370eac.js"><link rel="prefetch" href="/king-note/assets/js/153.a2a86c48.js"><link rel="prefetch" href="/king-note/assets/js/154.558f9935.js"><link rel="prefetch" href="/king-note/assets/js/155.b141a13a.js"><link rel="prefetch" href="/king-note/assets/js/156.2f040fe2.js"><link rel="prefetch" href="/king-note/assets/js/157.05d171c3.js"><link rel="prefetch" href="/king-note/assets/js/158.f7c2ec4e.js"><link rel="prefetch" href="/king-note/assets/js/159.b80c1b25.js"><link rel="prefetch" href="/king-note/assets/js/16.9aa1810d.js"><link rel="prefetch" href="/king-note/assets/js/160.e01529f8.js"><link rel="prefetch" href="/king-note/assets/js/161.d14a7783.js"><link rel="prefetch" href="/king-note/assets/js/162.68e30c7c.js"><link rel="prefetch" href="/king-note/assets/js/163.def84183.js"><link rel="prefetch" href="/king-note/assets/js/164.bf401923.js"><link rel="prefetch" href="/king-note/assets/js/165.76e3e328.js"><link rel="prefetch" href="/king-note/assets/js/166.61115496.js"><link rel="prefetch" href="/king-note/assets/js/167.39c73abb.js"><link rel="prefetch" href="/king-note/assets/js/168.50b9536f.js"><link rel="prefetch" href="/king-note/assets/js/169.84a22563.js"><link rel="prefetch" href="/king-note/assets/js/17.714a746c.js"><link rel="prefetch" href="/king-note/assets/js/170.26ec7d8d.js"><link rel="prefetch" href="/king-note/assets/js/171.3050615f.js"><link rel="prefetch" href="/king-note/assets/js/18.81c24874.js"><link rel="prefetch" href="/king-note/assets/js/19.0afd5a27.js"><link rel="prefetch" href="/king-note/assets/js/20.9177bcbc.js"><link rel="prefetch" href="/king-note/assets/js/21.76505acd.js"><link rel="prefetch" href="/king-note/assets/js/22.76d037c6.js"><link rel="prefetch" href="/king-note/assets/js/23.6a676052.js"><link rel="prefetch" href="/king-note/assets/js/24.67c37a9d.js"><link rel="prefetch" href="/king-note/assets/js/25.d1ecb96f.js"><link rel="prefetch" href="/king-note/assets/js/26.657c410a.js"><link rel="prefetch" href="/king-note/assets/js/27.6c70436d.js"><link rel="prefetch" href="/king-note/assets/js/28.b2c54b6e.js"><link rel="prefetch" href="/king-note/assets/js/29.3c1f9400.js"><link rel="prefetch" href="/king-note/assets/js/30.389159ea.js"><link rel="prefetch" href="/king-note/assets/js/31.936cf894.js"><link rel="prefetch" href="/king-note/assets/js/32.0e8f4423.js"><link rel="prefetch" href="/king-note/assets/js/33.b6fb6106.js"><link rel="prefetch" href="/king-note/assets/js/34.f2c846b9.js"><link rel="prefetch" href="/king-note/assets/js/35.2132b7a4.js"><link rel="prefetch" href="/king-note/assets/js/36.db39b3e6.js"><link rel="prefetch" href="/king-note/assets/js/37.d7bd11f0.js"><link rel="prefetch" href="/king-note/assets/js/38.c6806504.js"><link rel="prefetch" href="/king-note/assets/js/39.33db0edb.js"><link rel="prefetch" href="/king-note/assets/js/4.eb29b0db.js"><link rel="prefetch" href="/king-note/assets/js/40.b937d5f4.js"><link rel="prefetch" href="/king-note/assets/js/41.c2df9002.js"><link rel="prefetch" href="/king-note/assets/js/42.92da6c8a.js"><link rel="prefetch" href="/king-note/assets/js/43.2b3c571d.js"><link rel="prefetch" href="/king-note/assets/js/44.8b3a7235.js"><link rel="prefetch" href="/king-note/assets/js/45.54cb68f7.js"><link rel="prefetch" href="/king-note/assets/js/46.be899df6.js"><link rel="prefetch" href="/king-note/assets/js/47.829f986b.js"><link rel="prefetch" href="/king-note/assets/js/48.b81f2683.js"><link rel="prefetch" href="/king-note/assets/js/49.aeb063b3.js"><link rel="prefetch" href="/king-note/assets/js/5.73ac522d.js"><link rel="prefetch" href="/king-note/assets/js/50.7d8d6af1.js"><link rel="prefetch" href="/king-note/assets/js/51.f880fe73.js"><link rel="prefetch" href="/king-note/assets/js/52.8c15b0fe.js"><link rel="prefetch" href="/king-note/assets/js/53.80e60ce9.js"><link rel="prefetch" href="/king-note/assets/js/54.4e9241e8.js"><link rel="prefetch" href="/king-note/assets/js/55.c71ba978.js"><link rel="prefetch" href="/king-note/assets/js/56.0cdcbb59.js"><link rel="prefetch" href="/king-note/assets/js/57.18d7c6e6.js"><link rel="prefetch" href="/king-note/assets/js/58.36f039ec.js"><link rel="prefetch" href="/king-note/assets/js/59.8120ce6c.js"><link rel="prefetch" href="/king-note/assets/js/6.611e3224.js"><link rel="prefetch" href="/king-note/assets/js/60.21c68c57.js"><link rel="prefetch" href="/king-note/assets/js/61.f5b67641.js"><link rel="prefetch" href="/king-note/assets/js/62.20c203f0.js"><link rel="prefetch" href="/king-note/assets/js/63.27cc2d95.js"><link rel="prefetch" href="/king-note/assets/js/64.8bce7306.js"><link rel="prefetch" href="/king-note/assets/js/65.76b14406.js"><link rel="prefetch" href="/king-note/assets/js/66.2098492d.js"><link rel="prefetch" href="/king-note/assets/js/67.2d44d7d5.js"><link rel="prefetch" href="/king-note/assets/js/68.ccbeb032.js"><link rel="prefetch" href="/king-note/assets/js/69.dda30607.js"><link rel="prefetch" href="/king-note/assets/js/7.ac83456f.js"><link rel="prefetch" href="/king-note/assets/js/70.8d2b295b.js"><link rel="prefetch" href="/king-note/assets/js/71.24585b2d.js"><link rel="prefetch" href="/king-note/assets/js/72.1e1049f0.js"><link rel="prefetch" href="/king-note/assets/js/73.33fcb48c.js"><link rel="prefetch" href="/king-note/assets/js/74.33958229.js"><link rel="prefetch" href="/king-note/assets/js/75.0f29925a.js"><link rel="prefetch" href="/king-note/assets/js/76.e60f61c4.js"><link rel="prefetch" href="/king-note/assets/js/77.17c40deb.js"><link rel="prefetch" href="/king-note/assets/js/78.7ae5e3a0.js"><link rel="prefetch" href="/king-note/assets/js/79.b455f456.js"><link rel="prefetch" href="/king-note/assets/js/8.31a563e4.js"><link rel="prefetch" href="/king-note/assets/js/80.f9c2c924.js"><link rel="prefetch" href="/king-note/assets/js/81.6f07ed5b.js"><link rel="prefetch" href="/king-note/assets/js/82.8535b1f2.js"><link rel="prefetch" href="/king-note/assets/js/83.14357127.js"><link rel="prefetch" href="/king-note/assets/js/84.6ed15a58.js"><link rel="prefetch" href="/king-note/assets/js/86.459f3e0b.js"><link rel="prefetch" href="/king-note/assets/js/87.5a8b4b45.js"><link rel="prefetch" href="/king-note/assets/js/88.600a4ea1.js"><link rel="prefetch" href="/king-note/assets/js/89.c95946aa.js"><link rel="prefetch" href="/king-note/assets/js/9.a1abcc8a.js"><link rel="prefetch" href="/king-note/assets/js/90.f224309f.js"><link rel="prefetch" href="/king-note/assets/js/91.e9d8b2f6.js"><link rel="prefetch" href="/king-note/assets/js/92.876540be.js"><link rel="prefetch" href="/king-note/assets/js/93.b2445663.js"><link rel="prefetch" href="/king-note/assets/js/94.35082f90.js"><link rel="prefetch" href="/king-note/assets/js/95.7c3a296f.js"><link rel="prefetch" href="/king-note/assets/js/96.e95e2a67.js"><link rel="prefetch" href="/king-note/assets/js/97.1b35b55a.js"><link rel="prefetch" href="/king-note/assets/js/98.027abd90.js"><link rel="prefetch" href="/king-note/assets/js/99.42ba2a89.js">
+    <link rel="stylesheet" href="/king-note/assets/css/0.styles.98f879e0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>KingのNote</h3> <p class="description" data-v-59e6cb88>Java全栈的成长之路！</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>wenking</span>
+          
+        <!---->
+        2024
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/king-note/" class="home-link router-link-active"><img src="/king-note/assets/img/logo.png" alt="KingのNote" class="logo"> <span class="site-name">KingのNote</span></a> <div class="links"><!----> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/king-note/java/基础/JavaSE常用类合集.html" class="nav-link"><i class="iconfont icon-redis"></i>
+  Java
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont icon-linux"></i>
+      Linux
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/linux/命令/命令集合.html" class="nav-link"><i class="iconfont icon-command"></i>
+  命令
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/linux/容器/docker常用命令.html" class="nav-link"><i class="iconfont icon-docker"></i>
+  容器
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/linux/系统/linux环境变量.html" class="nav-link"><i class="iconfont icon-system"></i>
+  系统
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/linux/配置/ssh.html" class="nav-link"><i class="iconfont icon-setting"></i>
+  配置
+</a></li></ul></div></div><div class="nav-item"><a href="/king-note/front/基础/html标签/" class="nav-link"><i class="iconfont icon-web"></i>
+  前端
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont icon-component"></i>
+      中间件
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/中间件/mysql/环境搭建/" class="nav-link"><i class="iconfont icon-mysql"></i>
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/中间件/redis/环境搭建/" class="nav-link"><i class="iconfont icon-redis"></i>
+  redis
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/中间件/kafka/环境搭建/" class="nav-link"><i class="iconfont icon-shujujieruKafkajiqun"></i>
+  kafka
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/中间件/nginx/环境搭建/" class="nav-link"><i class="iconfont icon-nginx"></i>
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/中间件/elasticsearch/JavaAPI/" class="nav-link"><i class="iconfont icon-elasticsearch"></i>
+  elasticsearch
+</a></li></ul></div></div><div class="nav-item"><a href="/king-note/其他/idea.html" class="nav-link"><i class="iconfont icon-menu"></i>
+  其他
+</a></div><div class="nav-item"><a href="/king-note/其他/推荐站点导航.html" class="nav-link"><i class="iconfont icon-menu2"></i>
+  站点推荐
+</a></div><div class="nav-item"><a href="/king-note/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/king-note/timeline/" class="nav-link"><i class="iconfont icon-timeline"></i>
+  时间线
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><!----> <h3 class="name" data-v-1fad0c41>
+    wenking
+  </h3> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>154</h3> <h6 data-v-1fad0c41>Articles</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>53</h3> <h6 data-v-1fad0c41>Tags</h6></div></div> <ul class="social-links" data-v-1fad0c41><li class="social-item" data-v-1fad0c41><i class="iconfont reco-github" style="color:#f8b26a;" data-v-1fad0c41></i></li></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/king-note/java/基础/JavaSE常用类合集.html" class="nav-link"><i class="iconfont icon-redis"></i>
+  Java
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont icon-linux"></i>
+      Linux
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/linux/命令/命令集合.html" class="nav-link"><i class="iconfont icon-command"></i>
+  命令
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/linux/容器/docker常用命令.html" class="nav-link"><i class="iconfont icon-docker"></i>
+  容器
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/linux/系统/linux环境变量.html" class="nav-link"><i class="iconfont icon-system"></i>
+  系统
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/linux/配置/ssh.html" class="nav-link"><i class="iconfont icon-setting"></i>
+  配置
+</a></li></ul></div></div><div class="nav-item"><a href="/king-note/front/基础/html标签/" class="nav-link"><i class="iconfont icon-web"></i>
+  前端
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont icon-component"></i>
+      中间件
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/king-note/中间件/mysql/环境搭建/" class="nav-link"><i class="iconfont icon-mysql"></i>
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/中间件/redis/环境搭建/" class="nav-link"><i class="iconfont icon-redis"></i>
+  redis
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/中间件/kafka/环境搭建/" class="nav-link"><i class="iconfont icon-shujujieruKafkajiqun"></i>
+  kafka
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/中间件/nginx/环境搭建/" class="nav-link"><i class="iconfont icon-nginx"></i>
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/king-note/中间件/elasticsearch/JavaAPI/" class="nav-link"><i class="iconfont icon-elasticsearch"></i>
+  elasticsearch
+</a></li></ul></div></div><div class="nav-item"><a href="/king-note/其他/idea.html" class="nav-link"><i class="iconfont icon-menu"></i>
+  其他
+</a></div><div class="nav-item"><a href="/king-note/其他/推荐站点导航.html" class="nav-link"><i class="iconfont icon-menu2"></i>
+  站点推荐
+</a></div><div class="nav-item"><a href="/king-note/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/king-note/timeline/" class="nav-link"><i class="iconfont icon-timeline"></i>
+  时间线
+</a></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>命令</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/king-note/linux/命令/命令集合.html" class="sidebar-link">命令集合</a></li><li><a href="/king-note/linux/命令/cfssl.html" class="sidebar-link">cfssl生成自签名证书</a></li><li><a href="/king-note/linux/命令/openssl.html" class="sidebar-link">openssl生成自签名证书</a></li><li><a href="/king-note/linux/命令/openssl进阶.html" class="sidebar-link">openssl进阶</a></li><li><a href="/king-note/linux/命令/x509v3扩展配置.html" class="active sidebar-link">x509v3扩展配置</a></li><li><a href="/king-note/linux/命令/curl.html" class="sidebar-link">curl参数解析</a></li><li><a href="/king-note/linux/命令/包管理.html" class="sidebar-link">centos包管理</a></li><li><a href="/king-note/linux/命令/常用防火墙命令.html" class="sidebar-link">常用防火墙命令</a></li><li><a href="/king-note/linux/命令/screen终端命令.html" class="sidebar-link">【screen】终端命令</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>容器</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>系统</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>配置</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>x509v3扩展配置</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>wenking</span>
+          
+        <!---->
+        2024
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">x509v3扩展配置</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>wenking</span></i> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>7/24/2023</span></i> <!----> <i class="tags iconfont reco-tag" data-v-8a445198><span class="tag-item" data-v-8a445198>证书</span><span class="tag-item" data-v-8a445198>openssl</span></i></div></div> <div class="theme-reco-content content__default"><h2 id="github证书格式"><a href="#github证书格式" class="header-anchor">#</a> github证书格式</h2> <details class="custom-block details"><summary>参考文档</summary> <p><a href="https://www.openssl.org/docs/man3.0/man5/x509v3_config.html" target="_blank" rel="noopener noreferrer">x509v3参数解释<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></details> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 下载 github 证书</span>
+openssl s_client <span class="token parameter variable">-connect</span> github.com:443 <span class="token parameter variable">-showcerts</span> <span class="token operator">|</span> <span class="token function">sed</span> <span class="token parameter variable">-n</span> <span class="token string">'/-----BEGIN/,/-----END/p'</span> <span class="token operator">&gt;</span> github.com.crt
+
+<span class="token comment"># 打印证书内容</span>
+openssl x509 <span class="token parameter variable">-in</span> github.com.crt <span class="token parameter variable">-text</span> <span class="token parameter variable">-noout</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>github证书内容如下：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            0c:d0:a8:be:c6:32:cf:e6:45:ec:a0:a9:b0:84:fb:1c
+    Signature Algorithm: ecdsa-with-SHA384
+        Issuer: C=US, O=DigiCert Inc, CN=DigiCert TLS Hybrid ECC SHA384 2020 CA1
+        Validity
+            Not Before: Feb 14 00:00:00 2023 GMT
+            Not After : Mar 14 23:59:59 2024 GMT
+        Subject: C=US, ST=California, L=San Francisco, O=GitHub, Inc., CN=github.com
+        Subject Public Key Info:
+            Public Key Algorithm: id-ecPublicKey
+                Public-Key: (256 bit)
+                pub: 
+                    04:a3:a4:03:46:03:df:46:51:56:cb:c9:39:ab:22:
+                    cd:e7:6c:59:96:7a:93:a0:fb:b9:40:1c:90:32:88:
+                    36:c6:09:76:9c:50:f5:55:f7:76:5e:68:20:9c:ee:
+                    22:ed:83:0c:15:30:10:41:44:5e:32:ac:90:a1:d5:
+                    aa:f2:e5:43:b3
+                ASN1 OID: prime256v1
+                NIST CURVE: P-256
+        X509v3 extensions:
+            X509v3 Authority Key Identifier: 
+                keyid:0A:BC:08:29:17:8C:A5:39:6D:7A:0E:CE:33:C7:2E:B3:ED:FB:C3:7A
+
+            X509v3 Subject Key Identifier: 
+                C7:07:27:78:85:F2:9D:33:C9:4C:5E:56:7D:5C:D6:8E:72:67:EB:DE
+            X509v3 Subject Alternative Name: 
+                DNS:github.com, DNS:www.github.com
+            X509v3 Key Usage: critical
+                Digital Signature
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication, TLS Web Client Authentication
+            X509v3 CRL Distribution Points: 
+
+                Full Name:
+                  URI:http://crl3.digicert.com/DigiCertTLSHybridECCSHA3842020CA1-1.crl
+
+                Full Name:
+                  URI:http://crl4.digicert.com/DigiCertTLSHybridECCSHA3842020CA1-1.crl
+
+            X509v3 Certificate Policies: 
+                Policy: 2.23.140.1.2.2
+                  CPS: http://www.digicert.com/CPS
+
+            Authority Information Access: 
+                OCSP - URI:http://ocsp.digicert.com
+                CA Issuers - URI:http://cacerts.digicert.com/DigiCertTLSHybridECCSHA3842020CA1-1.crt
+
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            CT Precertificate SCTs: 
+                Signed Certificate Timestamp:
+                    Version   : v1(0)
+                    Log ID    : EE:CD:D0:64:D5:DB:1A:CE:C5:5C:B7:9D:B4:CD:13:A2:
+                                32:87:46:7C:BC:EC:DE:C3:51:48:59:46:71:1F:B5:9B
+                    Timestamp : Feb 14 16:58:33.338 2023 GMT
+                    Extensions: none
+                    Signature : ecdsa-with-SHA256
+                                30:46:02:21:00:E4:16:AE:D3:E2:2C:BA:82:9F:A9:79:
+                                F2:4B:C6:94:52:ED:4D:E0:87:CC:50:CA:69:B1:B4:8F:
+                                05:77:3A:94:EB:02:21:00:B5:9F:C3:F9:CB:0F:AD:D0:
+                                60:F2:30:1B:71:05:72:12:0D:BD:65:1F:07:A9:9C:53:
+                                4B:76:95:12:04:A6:BF:2E
+                Signed Certificate Timestamp:
+                    Version   : v1(0)
+                    Log ID    : 48:B0:E3:6B:DA:A6:47:34:0F:E5:6A:02:FA:9D:30:EB:
+                                1C:52:01:CB:56:DD:2C:81:D9:BB:BF:AB:39:D8:84:73
+                    Timestamp : Feb 14 16:58:33.387 2023 GMT
+                    Extensions: none
+                    Signature : ecdsa-with-SHA256
+                                30:45:02:20:1E:3C:60:32:7E:20:51:F5:D6:E1:AF:7D:
+                                4D:F5:97:C4:48:2E:46:57:6B:86:05:37:32:4F:25:04:
+                                36:B1:F7:B7:02:21:00:FC:09:7E:C0:7C:03:83:26:36:
+                                BD:A7:5B:EB:1D:13:59:F6:62:20:8E:6D:6F:B7:0D:31:
+                                EB:DB:F5:11:EE:5B:D4
+                Signed Certificate Timestamp:
+                    Version   : v1(0)
+                    Log ID    : 3B:53:77:75:3E:2D:B9:80:4E:8B:30:5B:06:FE:40:3B:
+                                67:D8:4F:C3:F4:C7:BD:00:0D:2D:72:6F:E1:FA:D4:17
+                    Timestamp : Feb 14 16:58:33.402 2023 GMT
+                    Extensions: none
+                    Signature : ecdsa-with-SHA256
+                                30:46:02:21:00:CC:E0:6B:F4:E6:74:FB:A3:92:67:21:
+                                53:8B:2C:0D:EB:83:F2:B0:DD:05:2D:E2:D1:C8:BE:63:
+                                98:4B:18:AC:36:02:21:00:EE:D2:3B:60:5A:23:08:29:
+                                4E:82:33:47:4A:72:A5:16:2E:46:85:13:6D:DC:DA:25:
+                                80:85:80:07:AA:B1:51:47
+    Signature Algorithm: ecdsa-with-SHA384
+         30:64:02:30:04:dc:0d:d4:de:34:99:0a:9c:1f:a8:e1:c1:76:
+         5c:62:f4:04:a0:29:35:3e:c2:0d:2a:c3:71:6a:b5:f4:37:d4:
+         ec:0b:60:57:71:87:43:25:36:4f:c7:c2:48:d1:49:68:02:30:
+         56:d0:bc:c9:17:10:fb:cd:be:fe:2d:df:42:ba:c6:da:46:db:
+         aa:a6:67:ee:8e:88:84:81:20:85:cc:96:35:a7:b2:26:11:d6:
+         0c:99:9d:3c:c8:83:70:10:4b:0e:15:9b
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br></div></div><p>我们可以看到，证书主要包含两个部分， 分别为 数据载体和数据签名，其中数据签名使用ca的私钥对数据载体进行数据hash后的结果。我们主要看数据载体的内容。</p> <p>数据载体主要包括：</p> <ul><li>证书颁发者信息 （Issuer）</li> <li>证书主体信息 （Validity、Subject、Subject Public Key Info）</li> <li>证书扩展信息 （X509v3 extensions）</li></ul> <p>下面，我们主要解释一下证书扩展信息相关参数信息</p> <h2 id="配置参数书写格式"><a href="#配置参数书写格式" class="header-anchor">#</a> 配置参数书写格式</h2> <p>配置项可以写成单行（短形式），如下</p> <div class="language- line-numbers-mode"><pre class="language-text"><code># name = [critical, ]value(s)
+
+basicConstraints = critical, CA:true, pathlen:1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>也可以写成多行（长形式）形式：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[extensions]
+basicConstraints = critical, @basic_constraints
+
+[basic_constraints]
+CA = true
+pathlen = 1
+
+# url = URI:ldap://somehost.com/CN=foo,OU=bar  multi-valued包含“，”，必须写为多行形式
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><div class="custom-block tip"><p class="title"></p><p>如果多值 value 中包含<code>,</code>，则必须写成多行形式（长形式）</p></div><p>其中value的格式主要有一下四类，我们编写配置的时候，主要用到前面两个（string、multi-valued）：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>string                  
+multi-valued		  
+raw
+arbitrary
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="basic-constraints"><a href="#basic-constraints" class="header-anchor">#</a> Basic  Constraints</h2> <p>值类型：<code>multi-valued</code></p> <p>作用：标识该证书是否是<code>CA</code>证书， 如果<code>CA</code>为 <code>TRUE</code>，则可以包含可选的路径长度名称，后跟非负值。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>basicConstraints = CA:FALSE
+
+basicConstraints = critical, CA:TRUE, pathlen:1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><div class="custom-block tip"><p class="title"></p><p>如果是CA证书，该值必须为TRUE，终端实体证书该字符需为FALSE或被忽略；pathlen 表示证书链的长度，为1表示只能签署一个中间人CA证书</p></div><h2 id="key-usage"><a href="#key-usage" class="header-anchor">#</a> Key Usage<span class="badge tip" style="vertical-align:top;" data-v-8f29db2c>重要</span></h2> <p>值类型：<code>multi-valued</code></p> <p>作用：声明证书中公钥的用途。
+包含一下几个值： <code>digitalSignature</code>, <code>nonRepudiation</code>, <code>keyEncipherment</code>, <code>dataEncipherment</code>, <code>keyAgreement</code>, <code>keyCertSign</code>, <code>cRLSign</code>, <code>encipherOnly</code>,
+and <code>decipherOnly</code>.</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>keyUsage = digitalSignature, nonRepudiation
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="extended-key-usage"><a href="#extended-key-usage" class="header-anchor">#</a> Extended Key Usage<span class="badge tip" style="vertical-align:top;" data-v-8f29db2c>重要</span></h2> <p>值类型：<code>multi-valued</code></p> <p>作用：对证书公钥的用途进行补充。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>Value                  Meaning according to RFC 5280 etc.
+-----                  ----------------------------------
+serverAuth             SSL/TLS WWW Server Authentication
+clientAuth             SSL/TLS WWW Client Authentication
+codeSigning            Code Signing
+emailProtection        E-mail Protection (S/MIME)
+timeStamping           Trusted Timestamping
+OCSPSigning            OCSP Signing
+ipsecIKE               ipsec Internet Key Exchange
+msCodeInd              Microsoft Individual Code Signing (authenticode)
+msCodeCom              Microsoft Commercial Code Signing (authenticode)
+msCTLSign              Microsoft Trust List Signing
+msEFS                  Microsoft Encrypted File System
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code># 对等认证
+extendedKeyUsage = serverAuth, clientAuth
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><div class="custom-block tip"><p class="title"></p><p>虽然 IETF RFC 5280 规定 id-kp-serverAuth 和 id-kp-clientAuth 仅适用于 WWW，但实际上它们用于各种 TLS 客户端和服务器。</p></div><h2 id="subject-key-identifier"><a href="#subject-key-identifier" class="header-anchor">#</a> Subject Key Identifier</h2> <p>值类型：<code>string</code>；可选值包括：none，hash，hex string；</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>subjectKeyIdentifier = hash
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="authority-key-identifier"><a href="#authority-key-identifier" class="header-anchor">#</a> Authority Key Identifier</h2> <p>值类型：<code>string</code></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>authorityKeyIdentifier = keyid, issuer
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="subject-alternative-name"><a href="#subject-alternative-name" class="header-anchor">#</a> Subject Alternative Name  <span class="badge tip" style="vertical-align:top;" data-v-8f29db2c>重要</span></h2> <p>值类型：<code>multi-valued</code></p> <p>作用：主要用作证书验证的；我们知道证书主题中有个<code>Common Name</code>
+的字段，该字段服务端证书通常填写的是域名，而有时候我们该证书需要使用到多个域名或IP，此时我们可以将内容写在字段下面，作为扩展验证；</p> <div class="custom-block tip"><p class="title"></p><p>现在大多数主流验证程序先验证Subject中的CN字段，如果不相同，转而验证SAN(Subject Alternative Name)的内容。</p></div><p>该字段包含一下几种值：</p> <ul><li><p>email</p> <p>email包含2个特殊的值：copy：将证书主题中的邮箱地址复制到扩展字段中； move：将证书主题中的邮箱地址移动到扩展字段中，主题中将不包含邮箱地址；</p></li> <li><p>URI</p></li> <li><p><strong>DNS</strong>：常用作服务器扩展域名验证</p></li> <li><p>RID</p></li> <li><p><strong>IP</strong>： 常用作服务器扩展IP地址验证</p></li> <li><p>dirName(a distinguished name)</p></li> <li><p>otherName</p></li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>subjectAltName = IP:13::17, IP: 192.168.1.128
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="crl-distribution-points"><a href="#crl-distribution-points" class="header-anchor">#</a> CRL distribution points</h2> <p>值类型：<code>multi-valued</code>
+作用： 标识了当前CA下吊销列表文件的下载地址， 判断当前证书是否吊销了，如果被吊销则被判定为无效证书。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>crlDistributionPoints = URI:http://example.com/myca.crl, URI:http://example.org/my.crl
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="ct-precertificate-scts"><a href="#ct-precertificate-scts" class="header-anchor">#</a> CT Precertificate SCTs</h2> <p>作用： 证书透明度(Certificate Transparency); 这个是标准中没有提到的一个比较新的拓展。CT主要搭配了CA服务器上公开的Log，将记录CA的行为日志，
+而每一个与当前证书相关的日志将被计入此字段，并被CA进行签名。校验阶段可以根据Log ID和timestamp查找日志中的对应操作，对证书进行审计以确定当前证书的合法性。</p> <p>用途： 该字段的提出主要就是防止CA被入侵者利用后获取大量非法签发证书，而透明性的日志保证了证书的签发是到受到严格监控的。</p> <h2 id="authority-information-access"><a href="#authority-information-access" class="header-anchor">#</a> Authority Information Access</h2> <p>作用：标识了CA Issuer的信息，包括OCSP服务的网址与CA证书的下载地址。该部分在TLS很重要。OCSP服务会在后续CRL中提到。</p> <h2 id="使用-x509v3配置"><a href="#使用-x509v3配置" class="header-anchor">#</a> 使用 x509v3配置</h2> <p>我们在提交完成csr文件后，需要通过证书扩展配置来扩展证书用途，使用方式如下：</p> <ol><li>首先我们编写扩展配置文件</li></ol> <p>以服务端为例，我们需要使用证书作为服务端证书，创建<code>server-ext.conf</code>文件，进行如下配置：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>subjectAltName = IP:192.168.1.128, DNS:king.com, DNS:king.site
+extendedKeyUsage = serverAuth
+subjectKeyIdentifier = hash
+authorityKeyIdentifier = keyid, issuer
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>使用证书，需要校验服务端的IP或DNS是否为扩展配置的内容。</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>openssl x509 <span class="token parameter variable">-req</span> <span class="token parameter variable">-in</span> server.csr <span class="token parameter variable">-out</span> server-cert.pem <span class="token parameter variable">-CA</span> ca.pem <span class="token parameter variable">-CAkey</span> ca-key.pem <span class="token parameter variable">-CAcreateserial</span> <span class="token parameter variable">-days</span> <span class="token number">365</span> <span class="token parameter variable">-extfile</span> server-ext.conf
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>查看证书</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>openssl x509 <span class="token parameter variable">-in</span> server-cert.pem <span class="token parameter variable">-noout</span> <span class="token parameter variable">-text</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/king-note/linux/命令/openssl进阶.html" class="prev">
+          openssl进阶
+        </a></span> <span class="next"><a href="/king-note/linux/命令/curl.html">
+          curl参数解析
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/king-note/linux/%E5%91%BD%E4%BB%A4/x509v3%E6%89%A9%E5%B1%95%E9%85%8D%E7%BD%AE.html#github证书格式" class="sidebar-link reco-side-github证书格式" data-v-b57cc07c>github证书格式</a></li><li class="level-2" data-v-b57cc07c><a href="/king-note/linux/%E5%91%BD%E4%BB%A4/x509v3%E6%89%A9%E5%B1%95%E9%85%8D%E7%BD%AE.html#配置参数书写格式" class="sidebar-link reco-side-配置参数书写格式" data-v-b57cc07c>配置参数书写格式</a></li><li class="level-2" data-v-b57cc07c><a href="/king-note/linux/%E5%91%BD%E4%BB%A4/x509v3%E6%89%A9%E5%B1%95%E9%85%8D%E7%BD%AE.html#basic-constraints" class="sidebar-link reco-side-basic-constraints" data-v-b57cc07c>Basic  Constraints</a></li><li class="level-2" data-v-b57cc07c><a href="/king-note/linux/%E5%91%BD%E4%BB%A4/x509v3%E6%89%A9%E5%B1%95%E9%85%8D%E7%BD%AE.html#key-usage" class="sidebar-link reco-side-key-usage" data-v-b57cc07c>Key Usage</a></li><li class="level-2" data-v-b57cc07c><a href="/king-note/linux/%E5%91%BD%E4%BB%A4/x509v3%E6%89%A9%E5%B1%95%E9%85%8D%E7%BD%AE.html#extended-key-usage" class="sidebar-link reco-side-extended-key-usage" data-v-b57cc07c>Extended Key Usage</a></li><li class="level-2" data-v-b57cc07c><a href="/king-note/linux/%E5%91%BD%E4%BB%A4/x509v3%E6%89%A9%E5%B1%95%E9%85%8D%E7%BD%AE.html#subject-key-identifier" class="sidebar-link reco-side-subject-key-identifier" data-v-b57cc07c>Subject Key Identifier</a></li><li class="level-2" data-v-b57cc07c><a href="/king-note/linux/%E5%91%BD%E4%BB%A4/x509v3%E6%89%A9%E5%B1%95%E9%85%8D%E7%BD%AE.html#authority-key-identifier" class="sidebar-link reco-side-authority-key-identifier" data-v-b57cc07c>Authority Key Identifier</a></li><li class="level-2" data-v-b57cc07c><a href="/king-note/linux/%E5%91%BD%E4%BB%A4/x509v3%E6%89%A9%E5%B1%95%E9%85%8D%E7%BD%AE.html#subject-alternative-name" class="sidebar-link reco-side-subject-alternative-name" data-v-b57cc07c>Subject Alternative Name</a></li><li class="level-2" data-v-b57cc07c><a href="/king-note/linux/%E5%91%BD%E4%BB%A4/x509v3%E6%89%A9%E5%B1%95%E9%85%8D%E7%BD%AE.html#crl-distribution-points" class="sidebar-link reco-side-crl-distribution-points" data-v-b57cc07c>CRL distribution points</a></li><li class="level-2" data-v-b57cc07c><a href="/king-note/linux/%E5%91%BD%E4%BB%A4/x509v3%E6%89%A9%E5%B1%95%E9%85%8D%E7%BD%AE.html#ct-precertificate-scts" class="sidebar-link reco-side-ct-precertificate-scts" data-v-b57cc07c>CT Precertificate SCTs</a></li><li class="level-2" data-v-b57cc07c><a href="/king-note/linux/%E5%91%BD%E4%BB%A4/x509v3%E6%89%A9%E5%B1%95%E9%85%8D%E7%BD%AE.html#authority-information-access" class="sidebar-link reco-side-authority-information-access" data-v-b57cc07c>Authority Information Access</a></li><li class="level-2" data-v-b57cc07c><a href="/king-note/linux/%E5%91%BD%E4%BB%A4/x509v3%E6%89%A9%E5%B1%95%E9%85%8D%E7%BD%AE.html#使用-x509v3配置" class="sidebar-link reco-side-使用-x509v3配置" data-v-b57cc07c>使用 x509v3配置</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div><!----></div></div>
+    <script src="/king-note/assets/js/app.c35e827b.js" defer></script><script src="/king-note/assets/js/3.0c58560d.js" defer></script><script src="/king-note/assets/js/1.106b7e41.js" defer></script><script src="/king-note/assets/js/85.42adf7a7.js" defer></script><script src="/king-note/assets/js/14.ae9db993.js" defer></script><script src="/king-note/assets/js/13.9e611a45.js" defer></script>
+  </body>
+</html>
