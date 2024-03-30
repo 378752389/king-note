@@ -3,7 +3,6 @@ title: Nginx-SSL证书配置
 date: 2023-07-25
 categories:
   - 中间件
-sidebar: false
 tags:
   - nginx
   - 证书
