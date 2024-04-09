@@ -61,3 +61,32 @@ spring:
 
 ## Filter
 可以的Filter包括： AddRequestHeader、AddRequestHeadersIfNotPresent、AddRequestParameter、AddResponseHeader...
+
+
+## 导入依赖
+
+[SpringCloud与SpringBoot项目依赖关系传送门](https://spring.io/projects/spring-cloud)
+
+```xml
+ <dependencyManagement>
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-dependencies -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-dependencies</artifactId>
+            <version>${spring-boot.version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-dependencies</artifactId>
+            <version>${spring-cloud.version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+```
+
