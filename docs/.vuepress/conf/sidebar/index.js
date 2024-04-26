@@ -9,5 +9,6 @@ module.exports = {
     "/计算机基础/": require("./modules/computeBase"),
     "/微服务/": require("./modules/microService"),
     "/其他/": require("./modules/other"),
+    "/系统设计/": require("./modules/systemDesign"),
     "/中间件/": require("./modules/middleComponents"),
 }
