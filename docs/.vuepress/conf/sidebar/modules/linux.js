@@ -10,6 +10,7 @@ module.exports = [
             '/linux/命令/包管理',
             '/linux/命令/常用防火墙命令',
             '/linux/命令/screen终端命令',
+            '/linux/命令/awk入门',
         ]
     },
     {
