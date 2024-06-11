@@ -15,6 +15,7 @@ module.exports = [
             '/java/jvm/jstack线程栈分析',
             '/java/jvm/cpu飙升问题排查',
             '/java/jvm/常见线程状态分析',
+            '/java/jvm/类路径',
         ]
     },
     {
