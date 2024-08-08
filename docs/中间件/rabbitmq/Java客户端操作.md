@@ -1,5 +1,5 @@
 ---
-title: Rabbitmq-核心概念
+title: Rabbitmq-Java客户端操作
 date: 2024-03-17
 categories:
   - 中间件

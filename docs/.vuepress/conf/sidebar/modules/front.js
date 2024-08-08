@@ -15,13 +15,16 @@ module.exports = [
             '/front/基础/XMLHttpRequest使用',
             '/front/基础/位置属性',
             '/front/基础/拖拽API',
+            '/front/基础/null和undefined区别',
+            '/front/基础/null和undefined区别',
         ]
     },
-    // {
-    //     title: 'Vue', children: [
-    //         '/front/vue/vue',
-    //     ]
-    // },
+    {
+        title: 'Vue', children: [
+            '/front/vue/vue',
+            '/front/vue/函数式组件封装',
+        ]
+    },
     {
         title: 'Vuepress建站笔记', children: [
             '/front/vuepress/默认主题和基础配置',

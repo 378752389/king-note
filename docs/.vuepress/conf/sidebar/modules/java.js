@@ -57,6 +57,7 @@ module.exports = [
         title: 'Spring',
         children: [
             '/java/spring/note/事务失效场景',
+            '/java/spring/note/FactoryBean用途',
         ]
     },
     {
