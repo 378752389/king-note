@@ -19,6 +19,7 @@ docker run -d -p 8080:80 --name myredis redis
 # 默认情况下 启动 redis服务的时候如果我们没有用 -v 命令指定容器挂载目录时，都会在 /var/lib/docker/volumes 目录下创建一个随机字符串的目录存放容器运行时保存的数据，
 # 此时如果我们不小心把容器删除了，我们可能需要一个一个的到 /var/lib/docker/volumes 去找容器数据，而我们创建具名卷后 则可以更好的确认卷的用途，之后重启容器指定该卷数据任然存在
 # 具体镜像暴露出来的卷可以通过 docker inspect 镜像名 进行查看
+# -v 宿主机路径:容器路径
 docker volumn create redis_vol
 docker run -d -p 6379:6379 --name myredis -v redis_vol:/data redis
 
