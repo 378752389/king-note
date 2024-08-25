@@ -10,6 +10,7 @@ module.exports = [
     {
         title: 'redis', children: [
             '/中间件/redis/环境搭建',
+            '/中间件/redis/客户端命令',
             '/中间件/redis/缓存一致性',
             '/中间件/redis/核心概念',
         ]
