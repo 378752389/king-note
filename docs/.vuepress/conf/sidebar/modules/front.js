@@ -22,6 +22,7 @@ module.exports = [
         title: 'Vue', children: [
             '/front/vue/vue',
             '/front/vue/函数式组件封装',
+            '/front/vue/展示组件设计',
         ]
     },
     {
