@@ -6,7 +6,7 @@ module.exports = {
     title: 'KingのNote',
     description: 'Java全栈的成长之路！',
 
-    base: '/king-note/',
+    // base: '/king-note/',
 
     head: [
         // http://favicon.io  favicon 搜索网站
@@ -30,9 +30,6 @@ module.exports = {
 
     markdown: {
         lineNumbers: true,
-        assets: {
-            absolutePathPrependBase: true,
-        }
     },
 
     // 导入插件
