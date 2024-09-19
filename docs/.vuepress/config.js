@@ -29,7 +29,10 @@ module.exports = {
     ],
 
     markdown: {
-        lineNumbers: true
+        lineNumbers: true,
+        assets: {
+            absolutePathPrependBase: true,
+        }
     },
 
     // 导入插件
