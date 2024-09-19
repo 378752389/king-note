@@ -9,7 +9,7 @@ tags:
 
 ## 1、 Java IO流 体系
 
-![IOStream](/king-note/assets/img/java/IOStream.jpeg)
+![IOStream](/assets/img/java/IOStream.jpeg)
 
 ## 2、 数据源
 

@@ -37,7 +37,7 @@ location模块分类有3类： 精确、正则和非正则。
 静态资源的路径配置包括 root 和 alias。
 
 <span class="red">root命令指定的必须是目录。（末尾加不加斜杠都无所谓）。结果为：root + uri</span>
-```nginx.conf
+```
 server {
     server_name  www.xxx.com;
     
@@ -52,7 +52,7 @@ server {
 
 <span class="red">alias命令必须指定目录，并且目录末尾的斜杠必须和pattern中的斜杠同时出现，或者同时不写。结果为：uri后面未匹配到pattern的部分 + alias</span>
 
-```nginx.conf
+```
 server {
     server_name  www.xxx.com;
     
@@ -76,7 +76,7 @@ server {
 - 如果有 / ： 则返回结果为：proxy_pass  + 将uri中未匹配到的（pattern）部分。
 - 如果没有 / ： 则返回结果为： proxy_pass + uri。
 
-```nginx.conf
+```
 server {
     server_name  www.xxx.com;
     
@@ -100,7 +100,7 @@ rewrite指定：对请求的URI做正则匹配，不包括域名和查询参数�
 
 replacement 指定的 regex 对应解析的字符串是 请求的 uri。
 
-```nginx.conf
+```
 server {
     server_name  www.xxx.com;
     
@@ -135,7 +135,7 @@ server {
 
 正常线上应用配置：
 
-```nginx.conf
+```
 server {
     server_name  www.xxx.com;
     
@@ -148,7 +148,7 @@ server {
 
 现在，由于订单接口存在问题，我想临时关闭该接口，我们可以进行如下配置：
 
-```nginx.conf
+```
 server {
     server_name  www.xxx.com;
     

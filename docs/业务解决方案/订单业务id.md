@@ -6,7 +6,7 @@ title :订单相关业务
 
 ### 雪花算法
 
-![snowflake](/king-note/assets/img/business/snowflake.png)
+![snowflake](/assets/img/business/snowflake.png)
 
 生成一个64bit的long类型唯一id
 

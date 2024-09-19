@@ -231,7 +231,7 @@ export default {
       <div class="head">{{ card.head }}</div>
       <div class="body">
         <a class="item" :href="site.url" target="_blank" :key="index" v-for="(site, index) in card.recommendSites">
-          <img class="pic" :src="site.icon || '/king-note/assets/img/other/laughyouth.png'" :alt="site.title"/>
+          <img class="pic" :src="site.icon || '/assets/img/other/laughyouth.png'" :alt="site.title"/>
           <div>
             <div class="title">{{ site.title }}</div>
             <div class="desc">{{ site.desc || site.title }}</div>
@@ -244,7 +244,7 @@ export default {
         <a :href="`#${item.head}`" @click="currentIdx = index" :class="['level', {'active': index === currentIdx}]" :key="item.head" v-for="(item, index) in pageData">
           {{item.head}}
         </a>
-      <a href="/king-note/" class="level back-index">回到主页</a>
+      <a href="/" class="level back-index">回到主页</a>
     </div>
   </div>
 </template>
