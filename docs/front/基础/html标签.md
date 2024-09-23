@@ -580,7 +580,7 @@ for (var i = 0, len = span.length; i < len; i++) {
 
 下载之后解压文件，目录结构如下：
 
-![](/king-note/assets/img/front/base/iconfont目录结构.png)
+![](/assets/img/front/base/iconfont目录结构.png)
 
 其中demo_index.html 用于显示给我们选择的字体样式 `class="..."`；iconfont.css、iconfont.ttf、iconfont.woff、iconfont.woff2为必要文件；
 

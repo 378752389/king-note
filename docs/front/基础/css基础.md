@@ -571,7 +571,7 @@ transform
 
 概念：改变盒子在平面内的形态（位移、旋转、缩放、倾斜），一般与过渡(transition)配合使用
 
-![](/king-note/assets/img/front/base/平面转换坐标方向.png)
+![](/assets/img/front/base/平面转换坐标方向.png)
 
 **平移**
 
@@ -917,7 +917,7 @@ button {
 
 ### 3、空间转换
 
-![](/king-note/assets/img/front/base/空间转换坐标方向.png)
+![](/assets/img/front/base/空间转换坐标方向.png)
 
 Z轴位置与视线方向相同， 正向指向用户
 
@@ -1256,7 +1256,7 @@ steps
 
 总结：网页的分辨率是参考屏幕的逻辑分辨率
 
-![](/king-note/assets/img/front/base/手机分辨率.png)
+![](/assets/img/front/base/手机分辨率.png)
 
 **视口**
 
