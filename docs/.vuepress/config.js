@@ -85,6 +85,8 @@ module.exports = {
         sidebar: sidebarConf,
         // 每篇问文章的子菜单配置
         subSidebar: 'auto',
+        // 代码主体
+        codeTheme: 'tomorrow',
 
         // 暂时 取消取色选项
         modePicker: false,

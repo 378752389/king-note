@@ -1,5 +1,5 @@
 @import "cursor.styl"
-@import "iconfont.styl"
+//@import "iconfont.styl"
 
 * {
   margin 0;
@@ -8,9 +8,13 @@
   font-family KING_FONT;
 }
 
+main
+  font-size 18px;
+
 @font-face
   font-family: "KING_FONT";
-  src: url(https://dragon-chen777.github.io/assets/fonts/Alimama_DongFangDaKai_Regular.woff) format("woff");
+  src: url(/assets/font/Alimama_DongFangDaKai_Regular.woff) format("woff");
+  //src: url(https://dragon-chen777.github.io/assets/fonts/Alimama_DongFangDaKai_Regular.woff) format("woff");
   //src: url("/assets/font/沐瑶随心手写体.ttf");
 
 
@@ -68,8 +72,8 @@ titleHeight = 50px;
     padding 0 !important;
     color themeColor !important;
 
-
-//.sub-sidebar
-//  .level-2
-//    .sidebar-link
-//      font-weight 700
+pre
+  code
+    .token
+      font-size 16px
+      font-family "Microsoft YaHei" !important

@@ -1,6 +1,8 @@
 @font-face {
-  font-family: "iconfont"; /* Project id  */
-  src: url('iconfont.ttf?t=1689321847581') format('truetype');
+  font-family: "iconfont"; /* Project id 4461289 */
+  src: url('iconfont.woff2?t=1727072275443') format('woff2'),
+       url('iconfont.woff?t=1727072275443') format('woff'),
+       url('iconfont.ttf?t=1727072275443') format('truetype');
 }
 
 .iconfont {
@@ -9,6 +11,94 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-command:before {
+  content: "\e628";
+}
+
+.icon-system:before {
+  content: "\e806";
+}
+
+.icon-setting:before {
+  content: "\e6f0";
+}
+
+.icon-HBASE:before {
+  content: "\e8b7";
+}
+
+.icon-SEATA:before {
+  content: "\e625";
+}
+
+.icon-web:before {
+  content: "\e68b";
+}
+
+.icon-timeline:before {
+  content: "\e64e";
+}
+
+.icon-java:before {
+  content: "\ec0a";
+}
+
+.icon-style:before {
+  content: "\ebde";
+}
+
+.icon-component:before {
+  content: "\e84f";
+}
+
+.icon-nginx:before {
+  content: "\e63c";
+}
+
+.icon-docker:before {
+  content: "\e659";
+}
+
+.icon-vuejs:before {
+  content: "\f25f";
+}
+
+.icon-H:before {
+  content: "\e65a";
+}
+
+.icon-peizhi-xitongpeizhi:before {
+  content: "\e624";
+}
+
+.icon-linux:before {
+  content: "\e6cf";
+}
+
+.icon-shujujieruKafkajiqun:before {
+  content: "\e64f";
+}
+
+.icon-mysql:before {
+  content: "\e623";
+}
+
+.icon-elasticsearch:before {
+  content: "\eb85";
+}
+
+.icon-redis:before {
+  content: "\ec7c";
+}
+
+.icon-springboot:before {
+  content: "\e6c3";
+}
+
+.icon-fenbushi:before {
+  content: "\e680";
 }
 
 .icon-new:before {
