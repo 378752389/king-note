@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>命令集合 | KingのNote</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/icon-256x256.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icon-192x192.png">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#3eaf7c">
+    <link rel="stylesheet" href="/assets/icon-font/iconfont.css">
+    <meta name="description" content="Java全栈的成长之路！">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icon-192x192.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="author" content="King">
+    <meta name="keywords" content="vuepress, 个人博客, King">
+    
+    <link rel="preload" href="/assets/css/0.styles.5fe49070.css" as="style"><link rel="preload" href="/assets/js/app.092c5895.js" as="script"><link rel="preload" href="/assets/js/7.ee7992c9.js" as="script"><link rel="preload" href="/assets/js/2.57d6fdee.js" as="script"><link rel="preload" href="/assets/js/1.bf31dc8e.js" as="script"><link rel="preload" href="/assets/js/134.79cf11da.js" as="script"><link rel="preload" href="/assets/js/43.1206b94d.js" as="script"><link rel="prefetch" href="/assets/js/10.d5ed3abf.js"><link rel="prefetch" href="/assets/js/100.19409c51.js"><link rel="prefetch" href="/assets/js/101.80b9e637.js"><link rel="prefetch" href="/assets/js/102.ad877248.js"><link rel="prefetch" href="/assets/js/103.c0e40b4a.js"><link rel="prefetch" href="/assets/js/104.67871d85.js"><link rel="prefetch" href="/assets/js/105.f1b0c610.js"><link rel="prefetch" href="/assets/js/106.c5d457ef.js"><link rel="prefetch" href="/assets/js/107.f7e17eab.js"><link rel="prefetch" href="/assets/js/108.5a9e93f0.js"><link rel="prefetch" href="/assets/js/109.64275b01.js"><link rel="prefetch" href="/assets/js/11.4bc5cdcf.js"><link rel="prefetch" href="/assets/js/110.e32b1d9a.js"><link rel="prefetch" href="/assets/js/111.e77fcb86.js"><link rel="prefetch" href="/assets/js/112.4718e7f6.js"><link rel="prefetch" href="/assets/js/113.c067a80f.js"><link rel="prefetch" href="/assets/js/114.e5e7b09f.js"><link rel="prefetch" href="/assets/js/115.54857ab8.js"><link rel="prefetch" href="/assets/js/116.7c66c5a5.js"><link rel="prefetch" href="/assets/js/117.22732b93.js"><link rel="prefetch" href="/assets/js/118.fa9dfe1a.js"><link rel="prefetch" href="/assets/js/119.5b38b9f0.js"><link rel="prefetch" href="/assets/js/120.c78e8cb7.js"><link rel="prefetch" href="/assets/js/121.ee2f80c2.js"><link rel="prefetch" href="/assets/js/122.5e5e719a.js"><link rel="prefetch" href="/assets/js/123.8897a9ee.js"><link rel="prefetch" href="/assets/js/124.52b4fb42.js"><link rel="prefetch" href="/assets/js/125.b92da46b.js"><link rel="prefetch" href="/assets/js/126.88e5326f.js"><link rel="prefetch" href="/assets/js/127.f8727ca5.js"><link rel="prefetch" href="/assets/js/128.2d0dff61.js"><link rel="prefetch" href="/assets/js/129.e0ec851e.js"><link rel="prefetch" href="/assets/js/130.6356cbac.js"><link rel="prefetch" href="/assets/js/131.fc80152e.js"><link rel="prefetch" href="/assets/js/132.f7c58d01.js"><link rel="prefetch" href="/assets/js/133.7ffce90a.js"><link rel="prefetch" href="/assets/js/135.f09d4d89.js"><link rel="prefetch" href="/assets/js/136.c4325b01.js"><link rel="prefetch" href="/assets/js/137.b18694d1.js"><link rel="prefetch" href="/assets/js/138.2ebdd526.js"><link rel="prefetch" href="/assets/js/139.9fe4c0c5.js"><link rel="prefetch" href="/assets/js/14.f1573cd2.js"><link rel="prefetch" href="/assets/js/140.3a63b494.js"><link rel="prefetch" href="/assets/js/141.990f3f55.js"><link rel="prefetch" href="/assets/js/142.9a698e3b.js"><link rel="prefetch" href="/assets/js/143.613bedb1.js"><link rel="prefetch" href="/assets/js/144.bc6caf1c.js"><link rel="prefetch" href="/assets/js/145.9040e2fc.js"><link rel="prefetch" href="/assets/js/146.b0ebf07f.js"><link rel="prefetch" href="/assets/js/147.06e6ed2b.js"><link rel="prefetch" href="/assets/js/148.6738a8e0.js"><link rel="prefetch" href="/assets/js/149.754bf6d6.js"><link rel="prefetch" href="/assets/js/15.5fa7565f.js"><link rel="prefetch" href="/assets/js/150.0e78aca1.js"><link rel="prefetch" href="/assets/js/151.cb247f05.js"><link rel="prefetch" href="/assets/js/152.d6f62847.js"><link rel="prefetch" href="/assets/js/153.7f37994c.js"><link rel="prefetch" href="/assets/js/154.15b5c804.js"><link rel="prefetch" href="/assets/js/155.c7a50da6.js"><link rel="prefetch" href="/assets/js/156.4ac59480.js"><link rel="prefetch" href="/assets/js/157.a51c838b.js"><link rel="prefetch" href="/assets/js/158.173336f5.js"><link rel="prefetch" href="/assets/js/159.e2f5f265.js"><link rel="prefetch" href="/assets/js/16.ae0a179c.js"><link rel="prefetch" href="/assets/js/160.0e78a789.js"><link rel="prefetch" href="/assets/js/161.a556ef68.js"><link rel="prefetch" href="/assets/js/162.14fbe1c9.js"><link rel="prefetch" href="/assets/js/163.6e01e32c.js"><link rel="prefetch" href="/assets/js/164.e2c16de3.js"><link rel="prefetch" href="/assets/js/165.3af85838.js"><link rel="prefetch" href="/assets/js/166.13a132d4.js"><link rel="prefetch" href="/assets/js/167.305d4bb5.js"><link rel="prefetch" href="/assets/js/168.17d2c9f0.js"><link rel="prefetch" href="/assets/js/169.b3709cf2.js"><link rel="prefetch" href="/assets/js/17.ebd2d22b.js"><link rel="prefetch" href="/assets/js/170.74be0c0b.js"><link rel="prefetch" href="/assets/js/171.d7bdb89f.js"><link rel="prefetch" href="/assets/js/172.db1090d9.js"><link rel="prefetch" href="/assets/js/173.9fd4a28b.js"><link rel="prefetch" href="/assets/js/174.7cd35c44.js"><link rel="prefetch" href="/assets/js/175.3c17e675.js"><link rel="prefetch" href="/assets/js/176.d9298c51.js"><link rel="prefetch" href="/assets/js/177.b6e3e3b6.js"><link rel="prefetch" href="/assets/js/178.b62ff180.js"><link rel="prefetch" href="/assets/js/179.46d7ffe8.js"><link rel="prefetch" href="/assets/js/18.10566f37.js"><link rel="prefetch" href="/assets/js/180.96ecc031.js"><link rel="prefetch" href="/assets/js/181.dc50adbe.js"><link rel="prefetch" href="/assets/js/182.9dc19980.js"><link rel="prefetch" href="/assets/js/183.ad9acc4f.js"><link rel="prefetch" href="/assets/js/184.98f71f06.js"><link rel="prefetch" href="/assets/js/185.94413f15.js"><link rel="prefetch" href="/assets/js/186.104ecf89.js"><link rel="prefetch" href="/assets/js/187.4a23f3cc.js"><link rel="prefetch" href="/assets/js/188.9c3cc1e2.js"><link rel="prefetch" href="/assets/js/189.7024f296.js"><link rel="prefetch" href="/assets/js/19.5e17ee14.js"><link rel="prefetch" href="/assets/js/190.3ed374b0.js"><link rel="prefetch" href="/assets/js/191.160ba6ba.js"><link rel="prefetch" href="/assets/js/192.cf34efe8.js"><link rel="prefetch" href="/assets/js/193.c1b877f0.js"><link rel="prefetch" href="/assets/js/194.e16f8f17.js"><link rel="prefetch" href="/assets/js/195.19831aac.js"><link rel="prefetch" href="/assets/js/196.a5aa5a01.js"><link rel="prefetch" href="/assets/js/197.870a4cb9.js"><link rel="prefetch" href="/assets/js/198.3be341c2.js"><link rel="prefetch" href="/assets/js/199.9c33b791.js"><link rel="prefetch" href="/assets/js/20.bbf2ccc1.js"><link rel="prefetch" href="/assets/js/200.c83386f3.js"><link rel="prefetch" href="/assets/js/201.6d9ee45b.js"><link rel="prefetch" href="/assets/js/202.5a2a4313.js"><link rel="prefetch" href="/assets/js/203.255d64ef.js"><link rel="prefetch" href="/assets/js/204.9df7016e.js"><link rel="prefetch" href="/assets/js/205.784abb5f.js"><link rel="prefetch" href="/assets/js/206.f41fa08d.js"><link rel="prefetch" href="/assets/js/207.4e574af4.js"><link rel="prefetch" href="/assets/js/208.5e477cb8.js"><link rel="prefetch" href="/assets/js/209.b56572fe.js"><link rel="prefetch" href="/assets/js/21.10fdc62e.js"><link rel="prefetch" href="/assets/js/210.8da07319.js"><link rel="prefetch" href="/assets/js/211.3b1e203d.js"><link rel="prefetch" href="/assets/js/212.f0dcf91e.js"><link rel="prefetch" href="/assets/js/213.3dbd6cee.js"><link rel="prefetch" href="/assets/js/214.764086c4.js"><link rel="prefetch" href="/assets/js/215.e1f13f6c.js"><link rel="prefetch" href="/assets/js/216.d8add10a.js"><link rel="prefetch" href="/assets/js/217.41c9c9c8.js"><link rel="prefetch" href="/assets/js/218.2d05f12a.js"><link rel="prefetch" href="/assets/js/219.3cda7919.js"><link rel="prefetch" href="/assets/js/22.6a272da7.js"><link rel="prefetch" href="/assets/js/220.13ce36bf.js"><link rel="prefetch" href="/assets/js/221.34897764.js"><link rel="prefetch" href="/assets/js/222.55d63662.js"><link rel="prefetch" href="/assets/js/223.1ae2ff4d.js"><link rel="prefetch" href="/assets/js/224.6bdad6be.js"><link rel="prefetch" href="/assets/js/23.df234b0c.js"><link rel="prefetch" href="/assets/js/24.bfa1aba5.js"><link rel="prefetch" href="/assets/js/25.9d20a896.js"><link rel="prefetch" href="/assets/js/26.644d7b1f.js"><link rel="prefetch" href="/assets/js/27.0f8d4fa2.js"><link rel="prefetch" href="/assets/js/28.d0a289fb.js"><link rel="prefetch" href="/assets/js/29.8c4f9c06.js"><link rel="prefetch" href="/assets/js/3.7f7da9eb.js"><link rel="prefetch" href="/assets/js/30.8c35cb34.js"><link rel="prefetch" href="/assets/js/31.df909006.js"><link rel="prefetch" href="/assets/js/32.bf44466b.js"><link rel="prefetch" href="/assets/js/33.22ae079f.js"><link rel="prefetch" href="/assets/js/34.796afeac.js"><link rel="prefetch" href="/assets/js/35.ddbc9bfb.js"><link rel="prefetch" href="/assets/js/36.3cc2d659.js"><link rel="prefetch" href="/assets/js/37.60c48d89.js"><link rel="prefetch" href="/assets/js/38.9925cd1c.js"><link rel="prefetch" href="/assets/js/39.79814a24.js"><link rel="prefetch" href="/assets/js/4.c0fde1f0.js"><link rel="prefetch" href="/assets/js/40.f31e09bf.js"><link rel="prefetch" href="/assets/js/41.b377572b.js"><link rel="prefetch" href="/assets/js/42.8d064e2f.js"><link rel="prefetch" href="/assets/js/44.0cb6dc6b.js"><link rel="prefetch" href="/assets/js/45.bbbc0fc4.js"><link rel="prefetch" href="/assets/js/46.6e10b801.js"><link rel="prefetch" href="/assets/js/47.05478f9f.js"><link rel="prefetch" href="/assets/js/48.e63266fc.js"><link rel="prefetch" href="/assets/js/49.8337202d.js"><link rel="prefetch" href="/assets/js/5.c869570b.js"><link rel="prefetch" href="/assets/js/50.c668c156.js"><link rel="prefetch" href="/assets/js/51.370bfefb.js"><link rel="prefetch" href="/assets/js/52.610838ad.js"><link rel="prefetch" href="/assets/js/53.3a511a59.js"><link rel="prefetch" href="/assets/js/54.b03fae38.js"><link rel="prefetch" href="/assets/js/55.e12f1400.js"><link rel="prefetch" href="/assets/js/56.c4e544f1.js"><link rel="prefetch" href="/assets/js/57.cdd88949.js"><link rel="prefetch" href="/assets/js/58.2964d69f.js"><link rel="prefetch" href="/assets/js/59.6097d094.js"><link rel="prefetch" href="/assets/js/6.c190288c.js"><link rel="prefetch" href="/assets/js/60.fb9a0125.js"><link rel="prefetch" href="/assets/js/61.e574db4b.js"><link rel="prefetch" href="/assets/js/62.d3e91493.js"><link rel="prefetch" href="/assets/js/63.c631c8c0.js"><link rel="prefetch" href="/assets/js/64.e48fc67d.js"><link rel="prefetch" href="/assets/js/65.810de46c.js"><link rel="prefetch" href="/assets/js/66.fbce6bfb.js"><link rel="prefetch" href="/assets/js/67.0c68e1f6.js"><link rel="prefetch" href="/assets/js/68.5c44d458.js"><link rel="prefetch" href="/assets/js/69.788b3af7.js"><link rel="prefetch" href="/assets/js/70.a5a83a4c.js"><link rel="prefetch" href="/assets/js/71.7b1c914d.js"><link rel="prefetch" href="/assets/js/72.12157062.js"><link rel="prefetch" href="/assets/js/73.c8e14ac8.js"><link rel="prefetch" href="/assets/js/74.1625527d.js"><link rel="prefetch" href="/assets/js/75.b6fa379c.js"><link rel="prefetch" href="/assets/js/76.f5dee9a9.js"><link rel="prefetch" href="/assets/js/77.112f39c1.js"><link rel="prefetch" href="/assets/js/78.320887a2.js"><link rel="prefetch" href="/assets/js/79.5825d226.js"><link rel="prefetch" href="/assets/js/8.bb1d6ce3.js"><link rel="prefetch" href="/assets/js/80.b4b8f02e.js"><link rel="prefetch" href="/assets/js/81.88e3ac8d.js"><link rel="prefetch" href="/assets/js/82.e124fff9.js"><link rel="prefetch" href="/assets/js/83.82daa898.js"><link rel="prefetch" href="/assets/js/84.cd4b3f9e.js"><link rel="prefetch" href="/assets/js/85.dfac5caa.js"><link rel="prefetch" href="/assets/js/86.cfc869ce.js"><link rel="prefetch" href="/assets/js/87.f0ccbb96.js"><link rel="prefetch" href="/assets/js/88.1fce6c35.js"><link rel="prefetch" href="/assets/js/89.9dd1f3f0.js"><link rel="prefetch" href="/assets/js/9.b5ddc111.js"><link rel="prefetch" href="/assets/js/90.9c26c502.js"><link rel="prefetch" href="/assets/js/91.8899d9d5.js"><link rel="prefetch" href="/assets/js/92.2dd10adb.js"><link rel="prefetch" href="/assets/js/93.02fd474a.js"><link rel="prefetch" href="/assets/js/94.178fe841.js"><link rel="prefetch" href="/assets/js/95.6a9c8d71.js"><link rel="prefetch" href="/assets/js/96.82579691.js"><link rel="prefetch" href="/assets/js/97.4eef93f2.js"><link rel="prefetch" href="/assets/js/98.36ed6495.js"><link rel="prefetch" href="/assets/js/99.4c7434df.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.1cd503e1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5fe49070.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>KingのNote</h3> <p class="description" data-v-59e6cb88>Java全栈的成长之路！</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>wenking</span>
+          
+        <!---->
+        2024
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/logo.png" alt="KingのNote" class="logo"> <span class="site-name">KingのNote</span></a> <div class="links"><!----> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/java/基础/JavaSE常用类合集.html" class="nav-link"><i class="iconfont icon-redis"></i>
+  Java
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont icon-linux"></i>
+      Linux
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/命令/命令集合.html" class="nav-link"><i class="iconfont icon-command"></i>
+  命令
+</a></li><li class="dropdown-item"><!----> <a href="/linux/容器/docker常用命令.html" class="nav-link"><i class="iconfont icon-docker"></i>
+  容器
+</a></li><li class="dropdown-item"><!----> <a href="/linux/系统/linux环境变量.html" class="nav-link"><i class="iconfont icon-system"></i>
+  系统
+</a></li><li class="dropdown-item"><!----> <a href="/linux/配置/ssh.html" class="nav-link"><i class="iconfont icon-setting"></i>
+  配置
+</a></li></ul></div></div><div class="nav-item"><a href="/front/基础/html标签/" class="nav-link"><i class="iconfont icon-web"></i>
+  前端
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont icon-component"></i>
+      中间件
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/中间件/mysql/环境搭建/" class="nav-link"><i class="iconfont icon-mysql"></i>
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/中间件/redis/环境搭建/" class="nav-link"><i class="iconfont icon-redis"></i>
+  redis
+</a></li><li class="dropdown-item"><!----> <a href="/中间件/kafka/环境搭建/" class="nav-link"><i class="iconfont icon-shujujieruKafkajiqun"></i>
+  kafka
+</a></li><li class="dropdown-item"><!----> <a href="/中间件/nginx/Location路径配置.html" class="nav-link"><i class="iconfont icon-nginx"></i>
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/中间件/elasticsearch/JavaAPI/" class="nav-link"><i class="iconfont icon-elasticsearch"></i>
+  elasticsearch
+</a></li></ul></div></div><div class="nav-item"><a href="/其他/idea.html" class="nav-link"><i class="iconfont icon-menu"></i>
+  其他
+</a></div><div class="nav-item"><a href="/其他/推荐站点导航.html" class="nav-link"><i class="iconfont icon-menu2"></i>
+  站点推荐
+</a></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont icon-timeline"></i>
+  时间线
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><!----> <h3 class="name" data-v-1fad0c41>
+    wenking
+  </h3> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>174</h3> <h6 data-v-1fad0c41>Articles</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>56</h3> <h6 data-v-1fad0c41>Tags</h6></div></div> <ul class="social-links" data-v-1fad0c41><li class="social-item" data-v-1fad0c41><i class="iconfont reco-github" style="color:#67cc86;" data-v-1fad0c41></i></li></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/java/基础/JavaSE常用类合集.html" class="nav-link"><i class="iconfont icon-redis"></i>
+  Java
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont icon-linux"></i>
+      Linux
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/命令/命令集合.html" class="nav-link"><i class="iconfont icon-command"></i>
+  命令
+</a></li><li class="dropdown-item"><!----> <a href="/linux/容器/docker常用命令.html" class="nav-link"><i class="iconfont icon-docker"></i>
+  容器
+</a></li><li class="dropdown-item"><!----> <a href="/linux/系统/linux环境变量.html" class="nav-link"><i class="iconfont icon-system"></i>
+  系统
+</a></li><li class="dropdown-item"><!----> <a href="/linux/配置/ssh.html" class="nav-link"><i class="iconfont icon-setting"></i>
+  配置
+</a></li></ul></div></div><div class="nav-item"><a href="/front/基础/html标签/" class="nav-link"><i class="iconfont icon-web"></i>
+  前端
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont icon-component"></i>
+      中间件
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/中间件/mysql/环境搭建/" class="nav-link"><i class="iconfont icon-mysql"></i>
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/中间件/redis/环境搭建/" class="nav-link"><i class="iconfont icon-redis"></i>
+  redis
+</a></li><li class="dropdown-item"><!----> <a href="/中间件/kafka/环境搭建/" class="nav-link"><i class="iconfont icon-shujujieruKafkajiqun"></i>
+  kafka
+</a></li><li class="dropdown-item"><!----> <a href="/中间件/nginx/Location路径配置.html" class="nav-link"><i class="iconfont icon-nginx"></i>
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/中间件/elasticsearch/JavaAPI/" class="nav-link"><i class="iconfont icon-elasticsearch"></i>
+  elasticsearch
+</a></li></ul></div></div><div class="nav-item"><a href="/其他/idea.html" class="nav-link"><i class="iconfont icon-menu"></i>
+  其他
+</a></div><div class="nav-item"><a href="/其他/推荐站点导航.html" class="nav-link"><i class="iconfont icon-menu2"></i>
+  站点推荐
+</a></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont icon-timeline"></i>
+  时间线
+</a></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>命令</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/linux/命令/命令集合.html" class="active sidebar-link">命令集合</a></li><li><a href="/linux/命令/cfssl.html" class="sidebar-link">cfssl生成自签名证书</a></li><li><a href="/linux/命令/openssl.html" class="sidebar-link">openssl生成自签名证书</a></li><li><a href="/linux/命令/openssl进阶.html" class="sidebar-link">openssl进阶</a></li><li><a href="/linux/命令/x509v3扩展配置.html" class="sidebar-link">x509v3扩展配置</a></li><li><a href="/linux/命令/curl.html" class="sidebar-link">curl参数解析</a></li><li><a href="/linux/命令/包管理.html" class="sidebar-link">centos包管理</a></li><li><a href="/linux/命令/常用防火墙命令.html" class="sidebar-link">常用防火墙命令</a></li><li><a href="/linux/命令/screen终端命令.html" class="sidebar-link">【screen】终端命令</a></li><li><a href="/linux/命令/awk入门.html" class="sidebar-link">awk入门</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>容器</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>系统</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>配置</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>命令集合</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>wenking</span>
+          
+        <!---->
+        2024
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">命令集合</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>wenking</span></i> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>7/11/2023</span></i> <!----> <i class="tags iconfont reco-tag" data-v-8a445198><span class="tag-item" data-v-8a445198>linux命令</span></i></div></div> <div class="theme-reco-content content__default"><h2 id="工具命令"><a href="#工具命令" class="header-anchor">#</a> 工具命令</h2> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 统计目录下文件个数</span>
+<span class="token function">ls</span> <span class="token operator">|</span> <span class="token function">wc</span> <span class="token parameter variable">-l</span>
+
+<span class="token comment"># 对当前目录下的文件名进行排序   sort: -u 去除重复行   -r 降序 -o 重定向</span>
+<span class="token function">ls</span> <span class="token operator">|</span> <span class="token function">sort</span> 
+<span class="token function">ls</span> <span class="token operator">|</span> <span class="token function">sort</span> <span class="token operator">|</span> <span class="token function">head</span> <span class="token parameter variable">-2</span>
+<span class="token comment"># sort -r number.txt &gt; number.txt  这种方式无效</span>
+<span class="token function">sort</span> <span class="token parameter variable">-r</span> number.txt <span class="token parameter variable">-o</span> number.txt
+
+<span class="token comment"># linux 中 对字符串进行编码</span>
+<span class="token builtin class-name">echo</span> <span class="token parameter variable">-n</span> <span class="token string">'hello, world!'</span> <span class="token operator">|</span> base64        
+<span class="token builtin class-name">echo</span> <span class="token parameter variable">-n</span> <span class="token string">'aGVsbG8sIHdvcmxkIQ=='</span> <span class="token operator">|</span> base64 <span class="token parameter variable">--decode</span>
+<span class="token builtin class-name">echo</span> <span class="token parameter variable">-n</span> <span class="token string">'hello, world!'</span> <span class="token operator">|</span> openssl md5
+<span class="token builtin class-name">echo</span> <span class="token parameter variable">-n</span> <span class="token string">'hello, world!'</span> <span class="token operator">|</span> openssl sha256
+
+<span class="token comment"># 读取当前目录下文件名</span>
+<span class="token function">ls</span> <span class="token operator">|</span> <span class="token keyword">while</span> <span class="token builtin class-name">read</span> line
+<span class="token keyword">do</span>
+	<span class="token builtin class-name">echo</span> <span class="token string">&quot;said: <span class="token variable">$line</span>&quot;</span>
+<span class="token keyword">done</span>
+
+<span class="token comment"># cat 创建文件</span>
+<span class="token function">cat</span> <span class="token operator">&lt;&lt;</span>EOF <span class="token operator">&gt;</span> hello.txt
+<span class="token operator">&gt;</span>hello, world<span class="token operator">!</span>
+<span class="token operator">&gt;</span>EOF
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div><h2 id="系统命令"><a href="#系统命令" class="header-anchor">#</a> 系统命令</h2> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 杀死指定进程名的进程</span>
+<span class="token function">pkill</span> <span class="token parameter variable">-f</span> boot:backend:hello
+
+<span class="token comment"># 查看系统发行版</span>
+lsb_release <span class="token parameter variable">-a</span>
+
+<span class="token comment"># java 启动进程并给进程命名</span>
+<span class="token function">nohup</span> <span class="token function">java</span> <span class="token parameter variable">-jar</span> hello.jar boot:backend:hello <span class="token number">1</span> <span class="token operator">&gt;</span> /dev/null <span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span>error.out <span class="token operator">&amp;</span>
+<span class="token comment"># 暂停进程</span>
+ctrl + z
+<span class="token comment"># 查看暂停的进程编号</span>
+<span class="token function">jobs</span> 
+<span class="token comment"># 后台运行 暂停的进程编号</span>
+<span class="token function">bg</span> <span class="token punctuation">[</span>num<span class="token punctuation">]</span>
+
+<span class="token comment"># 系统时间同步</span>
+yum <span class="token parameter variable">-y</span> <span class="token function">install</span> ntpdate
+ntpdate cn.pool.ntp.org
+
+
+<span class="token comment">#centos修改为静态ip地址</span>
+<span class="token function">vim</span> /etc/sysconfig/network-scripts/ifcfg-ens33
+<span class="token assign-left variable">BOOTPROTO</span><span class="token operator">=</span><span class="token string">&quot;static&quot;</span>
+<span class="token assign-left variable">IPADDR</span><span class="token operator">=</span><span class="token number">192.168</span>.0.202         <span class="token comment">#ip地址</span>
+<span class="token assign-left variable">NETMASK</span><span class="token operator">=</span><span class="token number">255.255</span>.255.0    <span class="token comment">#掩码</span>
+<span class="token assign-left variable">GATEWAY</span><span class="token operator">=</span><span class="token number">192.168</span>.0.1         <span class="token comment">#网关</span>
+<span class="token assign-left variable">DNS1</span><span class="token operator">=</span><span class="token number">192.168</span>.0.1                 <span class="token comment">#域名服务器1</span>
+<span class="token assign-left variable">DNS2</span><span class="token operator">=</span><span class="token number">8.8</span>.8.8                          <span class="token comment">#域名服务器1</span>
+
+nameserver <span class="token number">8.8</span>.8.8 <span class="token comment">#google域名服务器</span>
+nameserver <span class="token number">8.8</span>.4.4 <span class="token comment">#google域名服务器</span>
+
+<span class="token comment">#重启网卡相关命令</span>
+<span class="token function">ifconfig</span> eth0 down/up
+systemctl restart network
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br></div></div><h3 id="top"><a href="#top" class="header-anchor">#</a> top</h3> <p>参数介绍</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>PID         进程id
+USER        进程所有者
+PR          进程优先级
+NI          nice值。负值表示高优先级，正值表示低优先级
+VIRT        进程使用的虚拟内存总量，单位kb。VIRT=SWAP+RES
+RES         进程使用的、未被换出的物理内存大小，单位kb。RES=CODE+DATA
+SHR         共享内存大小，单位kb
+S           进程状态。D=不可中断的睡眠状态 R=运行 S=睡眠 T=跟踪/停止 Z=僵尸进程，N表示该进程优先
+值是负数。
+%CPU        上次更新到现在的CPU时间占用百分比
+%MEM        进程使用的物理内存百分比
+TIME+       进程使用的CPU时间总计，单位1/100秒
+COMMAND     进程名称（命令名/命令行）
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>交互命令</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;空格&gt;：立刻刷新。
+P：根据CPU使用大小进行排序。
+T：根据时间、累计时间排序。
+q：退出top命令。
+m：切换显示内存信息。
+t：切换显示进程和CPU状态信息。
+c：切换显示命令名称和完整命令行。
+M：根据使用内存大小进行排序。
+W：将当前设置写入~/.toprc文件中。这是写top配置文件的推荐方法。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h2 id="文件、磁盘相关"><a href="#文件、磁盘相关" class="header-anchor">#</a> 文件、磁盘相关</h2> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># which </span>
+<span class="token comment"># 查找类型：二进制文件；</span>
+<span class="token comment"># 检索范围：PATH环境变量里面指定的路径中查找；</span>
+<span class="token function">which</span> <span class="token function">mkdir</span>
+
+<span class="token comment"># whereis</span>
+<span class="token comment"># 查找类型：二进制文件，man帮助文件，及源代码文件；</span>
+<span class="token comment"># 检索范围：/usr目录</span>
+<span class="token function">whereis</span> gcc
+
+<span class="token comment"># find</span>
+<span class="token comment"># 查找类型：所有文件；</span>
+<span class="token comment"># 检索范围：指定路径；</span>
+<span class="token comment"># -type d: 查找目录； -type f: 查找普通文件； -type l: 查找软链接文件;</span>
+<span class="token function">find</span> / <span class="token parameter variable">-type</span> d <span class="token parameter variable">-name</span> log
+
+
+<span class="token comment"># 按照日期排序列出文件目录</span>
+<span class="token function">ls</span> <span class="token parameter variable">-lrt</span>
+
+<span class="token comment"># 查看centos版本</span>
+<span class="token function">cat</span> /etc/redhat-release
+
+
+<span class="token comment"># 查看命令是否存在</span>
+<span class="token builtin class-name">type</span> <span class="token function">wget</span>
+
+<span class="token comment"># 查看盘块 大小</span>
+<span class="token function">df</span> <span class="token parameter variable">-h</span>   
+<span class="token comment"># 查看文件夹 占用大小</span>
+<span class="token function">du</span> <span class="token parameter variable">-sh</span> *
+
+<span class="token comment"># 查看文件类型</span>
+<span class="token function">file</span> flannel-v0.19.0-linux-amd64.tar.gz
+
+<span class="token comment"># 文件上传命令</span>
+rz <span class="token parameter variable">-bey</span>
+<span class="token comment"># 文件下载命令</span>
+sz fi-support.jar
+
+<span class="token comment"># 查看文件有多少行</span>
+<span class="token function">wc</span> <span class="token parameter variable">-l</span> filename
+
+<span class="token comment"># 比较2个文件</span>
+<span class="token function">diff</span> <span class="token parameter variable">-u</span> <span class="token number">1</span>.txt <span class="token number">2</span>.txt
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br></div></div><h2 id="日志相关"><a href="#日志相关" class="header-anchor">#</a> 日志相关</h2> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 显示日志从第4行开始</span>
+<span class="token function">cat</span> error.log <span class="token operator">|</span> <span class="token function">sed</span> <span class="token parameter variable">-n</span> <span class="token string">'4,$p'</span>
+
+<span class="token comment"># 查询  etcd  进程的pid</span>
+<span class="token function">ps</span> <span class="token parameter variable">-ef</span> <span class="token operator">|</span> <span class="token function">grep</span> etcd <span class="token operator">|</span> <span class="token function">grep</span> <span class="token parameter variable">-v</span> <span class="token function">grep</span> <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'{print $2}'</span>
+
+<span class="token comment"># grep 命令排除日志中包含asd、zxc、qwe的记录</span>
+<span class="token function">cat</span> error.log <span class="token operator">|</span> <span class="token function">grep</span> <span class="token parameter variable">-v</span> <span class="token string">&quot;asd\|zxc\|qwe&quot;</span>
+
+<span class="token comment"># 查看指定时间段日志      note： 开始时间和结束时间必须都存在， 否则将查询不到结果或者查询有误</span>
+<span class="token function">sed</span> <span class="token parameter variable">-n</span> <span class="token string">'/2022-08-28 00:00/,/2022-08-28 01:00/p'</span> error.log
+<span class="token function">sed</span> <span class="token parameter variable">-n</span> <span class="token string">'/2019-10-24 21*/,/2019-10-24 22*/p'</span> error.log
+
+<span class="token comment"># 生成128bit位的 随机数，格式化用16进制输出， 以2个字节为一组（默认以4个字节为一组）</span>
+<span class="token function">head</span> <span class="token parameter variable">-c</span> <span class="token number">16</span> /dev/urandom <span class="token operator">|</span> od <span class="token parameter variable">-An</span> <span class="token parameter variable">-tx2</span> <span class="token operator">|</span> <span class="token function">tr</span> <span class="token parameter variable">-d</span> <span class="token string">' '</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><h2 id="解压命令"><a href="#解压命令" class="header-anchor">#</a> 解压命令</h2> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 压缩文件</span>
+<span class="token function">tar</span> <span class="token parameter variable">-czvf</span>  压缩后的文件名 需要压缩的文件列表<span class="token punctuation">..</span>.
+<span class="token function">tar</span> <span class="token parameter variable">-zcvf</span> kube-controller-manager.kubeconfig.tar.gz kube-controller-manager.kubeconfig
+
+<span class="token comment"># 解压缩文件</span>
+<span class="token function">tar</span>  xzvf 压缩文件名 <span class="token parameter variable">-C</span> 指定目录
+
+<span class="token comment">#Gzip 算法被设计用来压缩单个文件。 以 .tar.gz 结尾的文件，是使用 gzip 压缩的 .tar 归档文件。</span>
+<span class="token comment"># 解压文件 </span>
+<span class="token function">gzip</span> <span class="token parameter variable">-d</span> file.gz
+<span class="token comment">#  保留原来的gz压缩文件</span>
+<span class="token function">gzip</span> <span class="token parameter variable">-dc</span> outcome.map.gz <span class="token operator">&gt;</span> a.map
+<span class="token comment"># 压缩文件</span>
+<span class="token function">gzip</span> a.txt
+
+<span class="token comment"># zip压缩</span>
+<span class="token function">zip</span> <span class="token parameter variable">-r</span> fi-v2.zip fi-normal/ fi-xs-normal/
+<span class="token comment"># 解压</span>
+<span class="token function">unzip</span> fi-v2.zip
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><h2 id="引号区别"><a href="#引号区别" class="header-anchor">#</a> 引号区别</h2> <p>Linux中单引号被称为强<em>Strong</em>引号，而双引号被称为弱<em>Weak</em>引号。</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 1. 展开遍历</span>
+<span class="token assign-left variable">word</span><span class="token operator">=</span>Wild
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;<span class="token variable">$word</span>&quot;</span>   <span class="token comment"># Wild</span>
+<span class="token builtin class-name">echo</span> <span class="token string">'$word'</span>   <span class="token comment"># $word</span>
+
+<span class="token comment"># 2. 展开命令</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;<span class="token variable"><span class="token variable">`</span><span class="token function">ls</span> /home<span class="token variable">`</span></span>&quot;</span>  <span class="token comment"># /bin  /usr ...</span>
+<span class="token builtin class-name">echo</span> <span class="token string">'`ls /home`'</span>  <span class="token comment"># `ls /home`       `命令`  &lt;====&gt;  $(命令)</span>
+
+<span class="token comment"># 3. 引号嵌套</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;'<span class="token variable"><span class="token variable">`</span><span class="token function">ls</span> /home<span class="token variable">`</span></span>'&quot;</span>   <span class="token comment"># '/bin /usr ...'</span>
+<span class="token builtin class-name">echo</span> <span class="token string">'&quot;`ls /home`&quot;'</span>   <span class="token comment"># &quot;`ls /home`&quot;</span>
+
+<span class="token comment"># 4. 转义字符</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;这件衣服售价\<span class="token variable">$100</span>&quot;</span>   <span class="token comment"># 这件衣服售价$100</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;这件衣服售价<span class="token variable">$100</span>&quot;</span>    <span class="token comment"># 这件衣服售价00</span>
+<span class="token builtin class-name">echo</span> <span class="token string">'这件衣服售价$100'</span>    <span class="token comment"># 这件衣服售价$100</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><h2 id="cron表达式"><a href="#cron表达式" class="header-anchor">#</a> cron表达式</h2> <p><a href="https://help.aliyun.com/document_detail/64769.html" target="_blank" rel="noopener noreferrer">参考博客<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>基本格式：  <strong>秒(0-59)     分(0-59)    时(0-23)    天(0-31)    月(0-11)    [周(1-7)    年(1970-2099)]</strong></p> <p>特殊说明：</p> <ul><li>周1-7， 其中1是星期天， 2是星期一，类推；</li> <li>元素可以是： <strong>具体值(2)</strong>， <strong>连续区间(7-11)</strong>,  <strong>间隔时间(0/5)[从0开始，每5个单位执行一次]</strong>， <strong>列表(1,3,5)</strong>,  *
+<em>通配符(</em>)**</li></ul> <h2 id="linux三剑客"><a href="#linux三剑客" class="header-anchor">#</a> linux三剑客</h2> <p><strong>awk</strong></p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment">#查看第二行到第四行的数据</span>
+<span class="token function">netstat</span> <span class="token parameter variable">-nltp</span> <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'NR == 2, NR == 4'</span>
+
+<span class="token comment">#查看第二行和第四行的数据</span>
+<span class="token function">netstat</span> <span class="token parameter variable">-nltp</span> <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'NR == 2; NR == 4'</span>
+
+<span class="token comment">#输出第4列和最后一列的数据</span>
+<span class="token function">netstat</span> <span class="token parameter variable">-nltp</span> <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'{print $4，$NF}'</span>
+
+<span class="token comment">#指定分隔符</span>
+<span class="token function">awk</span> <span class="token parameter variable">-F</span> <span class="token string">':'</span> <span class="token string">'{print $NF}'</span>
+
+<span class="token comment">#查询第一列以tcp6 开头的行</span>
+<span class="token function">netstat</span> <span class="token parameter variable">-nltp</span> <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'$1~/^tcp6/{print}'</span>
+
+
+<span class="token comment">#组合</span>
+<span class="token function">netstat</span> <span class="token parameter variable">-nltp</span> <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'NR == 3, NR == 5 {print $4}'</span> <span class="token operator">|</span> <span class="token function">awk</span> <span class="token parameter variable">-F</span> <span class="token string">':'</span> <span class="token string">'{print $NF}'</span> 
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p><strong>sed</strong></p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment">#在第一行插入一条记录 （从第一个有效字符开始插入，空格忽略）</span>
+<span class="token function">sed</span> <span class="token parameter variable">-i</span> <span class="token string">'1i hello,world'</span> state
+
+<span class="token comment">#在第一行删除一条记录</span>
+<span class="token function">sed</span> <span class="token parameter variable">-i</span> <span class="token string">'1d hello,world'</span> state
+
+<span class="token comment">#在以 tcp6 开头 行 添加 hello， 以 tcp6 结尾的行 添加 bye，tcp6</span>
+<span class="token function">netstat</span> <span class="token parameter variable">-nltp</span> <span class="token operator">|</span> <span class="token function">sed</span> <span class="token parameter variable">-e</span> <span class="token string">'/^tcp6/i hello, tcp6'</span> <span class="token parameter variable">-e</span> <span class="token string">'/tcp6$/a bye, tcp6'</span>
+
+<span class="token comment"># 修改以tcp6开头的行， 替换为 tcp8</span>
+<span class="token function">sed</span> <span class="token string">&quot;s/^tcp6/tcp8/g&quot;</span> state 
+<span class="token function">cat</span> redis.conf <span class="token operator">|</span> <span class="token function">sed</span> <span class="token string">'/^port/s/6379/7001/g'</span>
+
+<span class="token function">cat</span> redis.conf <span class="token operator">|</span> <span class="token function">sed</span> <span class="token string">'/^daemon/d'</span>
+
+<span class="token function">cat</span> redis.conf <span class="token operator">|</span> <span class="token function">sed</span> <span class="token string">'s/6379/1&amp;/'</span>
+
+<span class="token comment">#在匹配行之后插入 China</span>
+<span class="token function">sed</span> ‘/2004/a<span class="token punctuation">\</span>China’ mysed.txt
+<span class="token comment">#在匹配行之前插入 China</span>
+<span class="token function">sed</span> ‘/2004/i<span class="token punctuation">\</span>China’ mysed.txt
+
+
+
+<span class="token comment"># 按照时间逆序列出距今 排名 前三之外的所有 文件</span>
+<span class="token function">ls</span> error.log*.log <span class="token operator">|</span> <span class="token function">sort</span> <span class="token parameter variable">-r</span> <span class="token operator">|</span> <span class="token function">sed</span> <span class="token parameter variable">-n</span> <span class="token string">'4,$p'</span>
+
+<span class="token parameter variable">-i</span> 是写入磁盘的意思
+<span class="token parameter variable">-e</span> 是多个条件并行
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div><p><strong>grep</strong></p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 查找 0.0.0.0 的行</span>
+<span class="token function">netstat</span> <span class="token parameter variable">-nltp</span> <span class="token operator">|</span> <span class="token function">grep</span> <span class="token string">&quot;0.0.0.0&quot;</span>
+
+<span class="token comment"># 查找 0.0.0.0 下3行</span>
+<span class="token function">netstat</span> <span class="token parameter variable">-nltp</span> <span class="token operator">|</span> <span class="token function">grep</span> <span class="token parameter variable">-a3</span> <span class="token string">'0.0.0.0'</span>
+
+<span class="token comment"># 查找 0.0.0.0 上3行</span>
+<span class="token function">netstat</span> <span class="token parameter variable">-nltp</span> <span class="token operator">|</span> <span class="token function">grep</span> <span class="token parameter variable">-b3</span> <span class="token string">'0.0.0.0'</span>
+
+<span class="token comment"># 查找 0.0.0.0 上、下3行</span>
+<span class="token function">netstat</span> <span class="token parameter variable">-nltp</span> <span class="token operator">|</span> <span class="token function">grep</span> <span class="token parameter variable">-c3</span> <span class="token string">'0.0.0.0'</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h2 id="固定ip"><a href="#固定ip" class="header-anchor">#</a> 固定ip</h2> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 固定ip</span>
+<span class="token function">vi</span> etc/sysconfig/network-scripts/ifcfg-ens33
+
+<span class="token assign-left variable">ONBOOT</span><span class="token operator">=</span>yes
+<span class="token assign-left variable">BOOTPROTO</span><span class="token operator">=</span>static
+<span class="token assign-left variable">IPADDR</span><span class="token operator">=</span><span class="token number">192.168</span>.1.101
+<span class="token assign-left variable">NETMASK</span><span class="token operator">=</span><span class="token number">255.255</span>.255.0
+<span class="token assign-left variable">GATEWAY</span><span class="token operator">=</span><span class="token number">192.168</span>.1.102
+<span class="token assign-left variable">DNS1</span><span class="token operator">=</span><span class="token number">114.114</span>.114.114
+<span class="token assign-left variable">DNS2</span><span class="token operator">=</span><span class="token number">8.8</span>.8.8
+systemctl restart network
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h2 id="集群管理"><a href="#集群管理" class="header-anchor">#</a> 集群管理</h2> <h3 id="rsync"><a href="#rsync" class="header-anchor">#</a> rsync</h3> <p>rsync（remote synchronize）是Liunx/Unix下的一个远程数据同步工具。利用rsync算法（差分编码）以减少数据的传输。</p> <p>rsync算法：并不是每一次都整份传输，而是只传输两个文件的不同部分，因此其传输速度相当快。
+除此之外，rsync可拷贝、显示目录属性，以及拷贝文件，并可选择性的压缩以及递归拷贝。</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 目录同步  前期得启动后台程序 或者 指定了 私钥文件</span>
+<span class="token function">rsync</span> <span class="token parameter variable">-rvl</span> /etc/hosts root@192.168.1.6:/etc/hosts
+
+<span class="token comment"># 目录同步 指定私钥文件</span>
+<span class="token function">rsync</span> <span class="token parameter variable">-rvl</span> /etc/hosts root@192.168.1.130:/etc/hosts  <span class="token parameter variable">-e</span> <span class="token string">&quot;ssh -i /root/.ssh/id_rsa -p 22&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="xargs"><a href="#xargs" class="header-anchor">#</a> xargs</h3> <p>假设aaa.txt 文件内容如下：</p> <div class="language-text line-numbers-mode"><pre class="language-text"><code>aRpT3RFC7kb2FM9Xxmq5fvq8hsLurTrYR239nNz4
+E309EX8jIkJ9T/jGyh8VzRA4Q8mI6VDOjzZCDaUq
+5NkoXNMuEDijxbijlg7b33bptdD/2jNGNgJhEBGY
+IqD9Q3wmUtEqSwWumijh4YQ0bgtfSmb1Ra/ncreN
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>如果执行  <code>cat aaa.txt | echo -n</code>, 将不会有任何数据打印出来</p> <p>原因：从管道收到的数据为 数据流， 不能被 管道后的命令 解析为参数</p> <p>解决办法： <code>cat aaa.txt | xargs echo -n</code></p> <p>xargs 将 管道 或 stdin 转换成命令行参数， 能够被 其他命令解析</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># xargs 默认的参数分隔符为换行，将多行数据转换为一行参数</span>
+<span class="token function">cat</span> aaa.txt <span class="token operator">|</span> <span class="token function">xargs</span>
+aRpT3RFC7kb2FM9Xxmq5fvq8hsLurTrYR239nNz4 E309EX8jIkJ9T/jGyh8VzRA4Q8mI6VDOjzZCDaUq 5NkoXNMuEDijxbijlg7b33bptdD/2jNGNgJhEBGY IqD9Q3wmUtEqSwWumijh4YQ0bgtfSmb1Ra/ncreN
+
+<span class="token comment"># 将多行数据转换 以2 列为一组的参数</span>
+<span class="token function">cat</span> aaa.txt <span class="token operator">|</span> <span class="token function">xargs</span> <span class="token parameter variable">-n2</span>
+aRpT3RFC7kb2FM9Xxmq5fvq8hsLurTrYR239nNz4 E309EX8jIkJ9T/jGyh8VzRA4Q8mI6VDOjzZCDaUq 
+5NkoXNMuEDijxbijlg7b33bptdD/2jNGNgJhEBGY IqD9Q3wmUtEqSwWumijh4YQ0bgtfSmb1Ra/ncreN
+
+<span class="token comment"># 使用 -I 指定一个替换字符串 {}，这个字符串在 xargs 扩展时会被替换掉</span>
+<span class="token comment"># 挨个复制 当前目录下的 jpg文件 到 /data/images目录中</span>
+<span class="token function">ls</span> *.jpg <span class="token operator">|</span> <span class="token function">xargs</span> <span class="token parameter variable">-n1</span> <span class="token parameter variable">-I</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token function">cp</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> /data/images
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h2 id="参考"><a href="#参考" class="header-anchor">#</a> 参考</h2> <p>https://linux265.com/course/linux-commands.html</p></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/linux/命令/cfssl.html">
+          cfssl生成自签名证书
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/linux/%E5%91%BD%E4%BB%A4/%E5%91%BD%E4%BB%A4%E9%9B%86%E5%90%88.html#工具命令" class="sidebar-link reco-side-工具命令" data-v-b57cc07c>工具命令</a></li><li class="level-2" data-v-b57cc07c><a href="/linux/%E5%91%BD%E4%BB%A4/%E5%91%BD%E4%BB%A4%E9%9B%86%E5%90%88.html#系统命令" class="sidebar-link reco-side-系统命令" data-v-b57cc07c>系统命令</a></li><li class="level-3" data-v-b57cc07c><a href="/linux/%E5%91%BD%E4%BB%A4/%E5%91%BD%E4%BB%A4%E9%9B%86%E5%90%88.html#top" class="sidebar-link reco-side-top" data-v-b57cc07c>top</a></li><li class="level-2" data-v-b57cc07c><a href="/linux/%E5%91%BD%E4%BB%A4/%E5%91%BD%E4%BB%A4%E9%9B%86%E5%90%88.html#文件、磁盘相关" class="sidebar-link reco-side-文件、磁盘相关" data-v-b57cc07c>文件、磁盘相关</a></li><li class="level-2" data-v-b57cc07c><a href="/linux/%E5%91%BD%E4%BB%A4/%E5%91%BD%E4%BB%A4%E9%9B%86%E5%90%88.html#日志相关" class="sidebar-link reco-side-日志相关" data-v-b57cc07c>日志相关</a></li><li class="level-2" data-v-b57cc07c><a href="/linux/%E5%91%BD%E4%BB%A4/%E5%91%BD%E4%BB%A4%E9%9B%86%E5%90%88.html#解压命令" class="sidebar-link reco-side-解压命令" data-v-b57cc07c>解压命令</a></li><li class="level-2" data-v-b57cc07c><a href="/linux/%E5%91%BD%E4%BB%A4/%E5%91%BD%E4%BB%A4%E9%9B%86%E5%90%88.html#引号区别" class="sidebar-link reco-side-引号区别" data-v-b57cc07c>引号区别</a></li><li class="level-2" data-v-b57cc07c><a href="/linux/%E5%91%BD%E4%BB%A4/%E5%91%BD%E4%BB%A4%E9%9B%86%E5%90%88.html#cron表达式" class="sidebar-link reco-side-cron表达式" data-v-b57cc07c>cron表达式</a></li><li class="level-2" data-v-b57cc07c><a href="/linux/%E5%91%BD%E4%BB%A4/%E5%91%BD%E4%BB%A4%E9%9B%86%E5%90%88.html#linux三剑客" class="sidebar-link reco-side-linux三剑客" data-v-b57cc07c>linux三剑客</a></li><li class="level-2" data-v-b57cc07c><a href="/linux/%E5%91%BD%E4%BB%A4/%E5%91%BD%E4%BB%A4%E9%9B%86%E5%90%88.html#固定ip" class="sidebar-link reco-side-固定ip" data-v-b57cc07c>固定ip</a></li><li class="level-2" data-v-b57cc07c><a href="/linux/%E5%91%BD%E4%BB%A4/%E5%91%BD%E4%BB%A4%E9%9B%86%E5%90%88.html#集群管理" class="sidebar-link reco-side-集群管理" data-v-b57cc07c>集群管理</a></li><li class="level-3" data-v-b57cc07c><a href="/linux/%E5%91%BD%E4%BB%A4/%E5%91%BD%E4%BB%A4%E9%9B%86%E5%90%88.html#rsync" class="sidebar-link reco-side-rsync" data-v-b57cc07c>rsync</a></li><li class="level-3" data-v-b57cc07c><a href="/linux/%E5%91%BD%E4%BB%A4/%E5%91%BD%E4%BB%A4%E9%9B%86%E5%90%88.html#xargs" class="sidebar-link reco-side-xargs" data-v-b57cc07c>xargs</a></li><li class="level-2" data-v-b57cc07c><a href="/linux/%E5%91%BD%E4%BB%A4/%E5%91%BD%E4%BB%A4%E9%9B%86%E5%90%88.html#参考" class="sidebar-link reco-side-参考" data-v-b57cc07c>参考</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div><!----></div></div>
+    <script src="/assets/js/app.092c5895.js" defer></script><script src="/assets/js/7.ee7992c9.js" defer></script><script src="/assets/js/2.57d6fdee.js" defer></script><script src="/assets/js/1.bf31dc8e.js" defer></script><script src="/assets/js/134.79cf11da.js" defer></script><script src="/assets/js/43.1206b94d.js" defer></script>
+  </body>
+</html>
