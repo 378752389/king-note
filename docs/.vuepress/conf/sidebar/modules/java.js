@@ -51,6 +51,8 @@ module.exports = [
             '/java/mybatisplus/逻辑删除',
             '/java/mybatisplus/表名映射（分表）',
             '/java/mybatisplus/通用字段填充',
+            '/java/mybatisplus/枚举映射',
+            '/java/mybatisplus/唯一索引和逻辑删除冲突',
         ]
     },
     {
